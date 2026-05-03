@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EarnProof | Real Online Earning Apps in Pakistan (2026 Guide)</title>
-    <meta name="description" content="Verified reviews of online earning apps in Pakistan. We test every app for JazzCash and EasyPaisa withdrawals. Honest and Scam-free guides.">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <title>EarnProof | Online Earning Categories (2026)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #0f1117;
@@ -15,20 +12,12 @@
             --border: #262d42;
             --text: #e8eaf0;
             --muted: #8b92a8;
-            --green: #22c55e;
-            --green-dim: #16a34a22;
             --accent: #60a5fa;
-            --red: #ef4444;
+            --green: #22c55e;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: 'IBM Plex Sans', sans-serif;
-            line-height: 1.6;
-        }
+        body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans', sans-serif; }
 
         /* Navigation */
         nav {
@@ -44,54 +33,135 @@
             backdrop-filter: blur(10px);
             z-index: 100;
         }
-        .brand { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .brand { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; }
         .brand span { color: var(--green); }
-        .nav-links { display: flex; gap: 1.5rem; }
-        .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--text); }
-        .contact-btn { background: var(--accent); color: #0f1117 !important; padding: 6px 16px; border-radius: 99px; }
 
-        /* Header */
+        /* Hero Header */
         header {
             padding: 5rem 1.5rem 3rem;
             text-align: center;
-            background: radial-gradient(circle at top, #1e2336 0%, #0f1117 70%);
+            background: radial-gradient(circle at top, #1e2336 0%, #0f1117 80%);
         }
-        header h1 {
-            font-family: 'Lora', serif;
-            font-size: clamp(2.2rem, 6vw, 4rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: #fff;
-        }
+        header h1 { font-family: 'Lora', serif; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; color: #fff; line-height: 1.2; }
         header h1 span { color: var(--accent); }
-        header p {
-            color: var(--muted);
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
+        header p { color: var(--muted); max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* Category Section Styling */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 5rem; }
+        
+        .category-block { margin-top: 4rem; }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+        }
+        .category-header h2 { font-family: 'Lora', serif; font-size: 1.7rem; color: var(--accent); }
+        .count-tag { background: var(--border); padding: 2px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--muted); font-weight: 700; }
+
+        /* Article Grid */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
         }
 
-        /* Main Content */
-        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
-        .section-title { font-family: 'Lora', serif; font-size: 1.8rem; margin-bottom: 2rem; color: #fff; }
-
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-
-        /* Cards */
-        .card {
+        .item-card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 2rem;
+            padding: 2.2rem;
+            border-radius: 28px;
             text-decoration: none;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
-        .card:hover { transform: translateY(-5px); border-color: var(--muted); }
+        .item-card:hover { border-color: var(--accent); transform: translateY(-5px); background: #1c2230; }
+        
+        .item-card h3 { color: #fff; margin-bottom: 1rem; font-size: 1.35rem; font-family: 'Lora', serif; }
+        .item-card p { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1; line-height: 1.6; }
+        
+        .card-footer {
+            border-top: 1px solid var(--border);
+            padding-top: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+        .tag { 
+            background: rgba(96, 165, 250, 0.08); 
+            color: var(--accent); 
+            font-size: 0.7rem; 
+            font-weight: 800; 
+            padding: 5px 12px; 
+            border-radius: 8px; 
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
 
-        .featured { grid-column: span 2; border: 1px solid var(--accent); position: relative; overflow: hidden; }
-        .featured::after { 
-            content: "RECOMMENDED"; position: absolute; top: 20px; left: -30px; 
-            background: var(--accent);
+        footer { text-align: center; padding: 4rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+
+        @media (max-width: 600px) {
+            header { padding: 4rem 1rem 2rem; }
+            .article-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav dir="ltr">
+        <a href="index.html" class="brand">EarnProof<span>.</span></a>
+    </nav>
+
+    <header>
+        <h1>Mukammal Earning <span>Categories</span></h1>
+        <p>Hamari website ek complete package hai. Niche di gayi categories mein apne pasand ka topic chunein aur kaam shuru karein.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="category-block">
+            <div class="category-header">
+                <h2>Earn with AI</h2>
+                <span class="count-tag">1 Course</span>
+            </div>
+            <div class="article-grid">
+                <a href="ai-labeling-master-guide-1.html" class="item-card">
+                    <h3>AI Data Labeling</h3>
+                    <p>Artificial Intelligence ko train karke dollar kamane ka sab se asaan rasta. Master guide for beginners.</p>
+                    <div class="card-footer">
+                        <span class="tag">Master Guide</span>
+                        <span class="tag">AI Training</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="category-block">
+            <div class="category-header">
+                <h2>Online Earning</h2>
+                <span class="count-tag">1 Platform</span>
+            </div>
+            <div class="article-grid">
+                <a href="ysense-review.html" class="item-card">
+                    <h3>ySense (Complete Setup)</h3>
+                    <p>Surveys, micro-tasks aur referral se earning ka trusted roadmap. Isme withdrawal guide bhi shamil hai.</p>
+                    <div class="card-footer">
+                        <span class="tag">Verified</span>
+                        <span class="tag">JazzCash Ready</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 EarnProof — Real Online Roadmap for Pakistan.</p>
+    </footer>
+
+</body>
+</html>
