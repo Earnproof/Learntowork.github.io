@@ -1,97 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Guide: How to Withdraw Money on ySense (Step-by-Step)</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
-        .article-content h2 { border-left: 4px solid #2563eb; padding-left: 15px; margin-top: 40px; margin-bottom: 20px; font-weight: 800; color: #0f172a; font-size: 1.5rem; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Guide: How to Withdraw Money on ySense (Step-by-Step) - EarnProof</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #181c27;
+      --surface-light: #1e2336;
+      --border: #262d42;
+      --text: #e8eaf0;
+      --muted: #8b92a8;
+      --green: #22c55e;
+      --accent: #60a5fa;
+      --accent-dim: #3b82f615;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif;
+      line-height: 1.8;
+    }
+
+    /* Navigation */
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      background: rgba(15, 17, 23, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    
+    .brand { font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .brand span { color: var(--green); }
+    
+    .nav-meta { display: flex; gap: 1rem; align-items: center; }
+    .nav-meta a { color: var(--muted); text-decoration: none; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* Article Layout */
+    .article-wrap { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; }
+
+    header { margin-bottom: 3.5rem; text-align: center; }
+    
+    .eyebrow {
+      color: var(--accent); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 1rem; display: block;
+    }
+
+    h1 {
+      font-family: 'Lora', serif; font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2; color: #fff; margin-bottom: 1.5rem;
+    }
+
+    .post-meta {
+      display: inline-flex; align-items: center; gap: 1rem; color: var(--muted); 
+      font-size: 0.8rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+    }
+
+    /* Content Body */
+    .content h2 { font-family: 'Lora', serif; color: #fff; font-size: 1.7rem; margin: 3rem 0 1.25rem; border-right: 4px solid var(--accent); padding-right: 15px; }
+    .content p { margin-bottom: 1.5rem; color: var(--text); font-size: 1.1rem; }
+    .content strong { color: var(--accent); }
+
+    /* Special Info Box */
+    .info-card {
+      background: var(--accent-dim); border: 1px solid #3b82f633;
+      padding: 2rem; border-radius: 24px; margin: 2.5rem 0;
+      position: relative;
+    }
+    .info-card h3 { color: var(--accent); font-size: 1.2rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .info-card p { font-size: 0.95rem; margin-bottom: 0; font-style: italic; color: #d1d5db; }
+
+    /* FAQ Section */
+    .faq-wrap {
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 2.5rem; border-radius: 32px; margin-top: 4rem;
+    }
+    .faq-wrap h2 { border: none !important; padding: 0 !important; margin-top: 0 !important; font-size: 1.5rem; margin-bottom: 2rem; }
+    
+    .faq-item { border-bottom: 1px solid var(--border); padding: 1.25rem 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; display: block; }
+    .faq-a { color: var(--muted); font-size: 0.9rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 4rem 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+
+    @media (max-width: 600px) {
+      .article-wrap { padding: 2rem 1rem; }
+      .post-meta { flex-direction: column; gap: 0.5rem; width: 100%; }
+    }
+  </style>
 </head>
-<body class="text-slate-800 antialiased">
+<body>
 
-    <nav class="border-b py-4 px-6 sticky top-0 bg-white/90 backdrop-blur-md z-50">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-black text-blue-600 tracking-tighter">EarnProof<span class="text-slate-300">.</span></a>
-            <div class="flex gap-4 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                <a href="index.html" class="hover:text-blue-600">Home</a>
-                <span class="text-slate-200">|</span>
-                <span class="text-blue-600 font-bold">Withdrawal Guide</span>
-            </div>
-        </div>
-    </nav>
+<nav dir="ltr">
+  <a href="index.html" class="brand">EarnProof<span>.</span></a>
+  <div class="nav-meta">
+    <a href="index.html">Home</a>
+  </div>
+</nav>
 
-    <div class="max-w-3xl mx-auto py-12 px-6">
-        <div class="mb-10 text-center md:text-left">
-            <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-6">
-                Quick Guide: How to Withdraw Money on ySense (2026 Updated)
-            </h1>
-            <div class="flex items-center justify-center md:justify-start gap-4 py-4 border-y border-slate-100">
-                <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                    <span class="text-blue-600">Admin: EarnProof Team</span>
-                    <span class="mx-2">•</span>
-                    <span>Updated: 3 May 2026</span>
-                    <span class="mx-2">•</span>
-                    <span>5 min read</span>
-                </div>
-            </div>
-        </div>
+<div class="article-wrap">
+  <header>
+    <span class="eyebrow">Payment Tutorial</span>
+    <h1>How to Withdraw Money on ySense<span>.</span></h1>
+    
+    <div class="post-meta">
+      <span>Admin: EarnProof Team</span>
+      <span style="opacity: 0.3;">|</span>
+      <span>Updated: May 3, 2026</span>
+    </div>
+  </header>
 
-        <div class="article-content text-slate-600 leading-relaxed text-lg">
-            <section>
-                <h2>Introduction to Cashing Out</h2>
-                <p>
-                    ySense se apni earnings nikalna aik intehai seedha process hai. Pakistan mein rehne wale users ke liye ye guide bohot zaroori hai kyunke yahan hum <strong>Payoneer</strong> aur <strong>JazzCash</strong> ka sahi rasta batayenge taake aapka paisa secure rahe.
-                </p>
-            </section>
+  <div class="content">
+    <section>
+      <h2>Paisa Nikalna (Withdrawal Intro)</h2>
+      <p>ySense se apni earnings nikalna aik intehai seedha process hai. Pakistan mein rehne wale users ke liye ye guide bohot zaroori hai kyunke yahan hum <strong>Payoneer</strong> aur <strong>JazzCash</strong> ka sahi rasta batayenge taake aapka paisa secure rahe aur kam se kam tax kategi.</p>
+    </section>
 
-            <section>
-                <h2>Accessing the Cash Out Feature</h2>
-                <p>
-                    Sab se pehle, ySense dashboard par jayye aur top menu mein <strong>'Cash Out'</strong> par click karein. Yahan aapko mukhtalif payout options nazar ayenge. Pakistan ke liye hum <strong>Payoneer</strong> suggest karte hain kyunke iska minimum withdrawal $52 hai.
-                </p>
-            </section>
+    <section>
+      <h2>Step 1: Cash Out Feature Tak Rasayi</h2>
+      <p>Sab se pehle apne dashboard par jayye aur top menu mein <strong>'Cash Out'</strong> ke button par click karein. Yahan aapko mukhtalif payout options nazar ayenge jaise Skrill, Payoneer, aur Amazon Gift Cards.</p>
+      <p><strong>Note:</strong> Pakistan ke liye hum hamesha <strong>Payoneer</strong> suggest karte hain kyunke iska rate sab se behtar milta hai.</p>
+    </section>
 
-            <div class="my-10 p-8 bg-blue-50 rounded-3xl border-l-4 border-blue-600 shadow-sm">
-                <h3 class="font-bold text-blue-900 mb-2">💡 Quick Pakistani Method:</h3>
-                <p class="text-blue-800 text-sm italic">
-                    Ek baar paise Payoneer mein aa jayein, to aap JazzCash app khol kar 'Payoneer' icon par click karein aur apna balance foran PKR mein withdraw kar lein. Ye instant aur sab se sasta tareeqa hai.
-                </p>
-            </div>
-
-            <section>
-                <h2>Verifying Your Account</h2>
-                <p>
-                    Redemption confirm karne ke liye ySense aapke mobile number par aik <strong>OTP code</strong> bhejay ga. Wo code enter karte hi aapki request submit ho jayegi. Yaad rakhein ke aapka Payoneer account pehle se ySense ke sath link hona chahiye.
-                </p>
-            </section>
-
-            <div class="mt-16 bg-slate-50 p-8 rounded-3xl">
-                <h2 class="!border-0 !pl-0 !mt-0 text-2xl font-black text-slate-900 mb-6 uppercase tracking-tighter">FAQ</h2>
-                <div class="space-y-6">
-                    <div class="border-b border-slate-200 pb-4">
-                        <p class="font-bold text-slate-900 text-sm mb-2">Q: How do I cash out my ySense earnings?</p>
-                        <p class="text-sm text-slate-500 italic">A: Aap Cash Out section mein ja kar Payoneer ya Gift Card select karke apni raqam nikal sakte hain.</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-slate-900 text-sm mb-2">Q: Is withdrawal to JazzCash possible?</p>
-                        <p class="text-sm text-slate-500 italic">A: Ji haan, Payoneer ke zariye aap direct JazzCash app mein paise hasil kar sakte hain.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="info-card">
+      <h3>💡 Pakistani Earning Hack:</h3>
+      <p>Ek baar paise Payoneer mein aa jayein, to aap JazzCash app khol kar 'Payoneer' icon par click karein aur apna balance foran PKR mein withdraw kar lein. Ye instant aur sab se sasta tareeqa hai.</p>
     </div>
 
-    <footer class="bg-white border-t py-12 mt-20 text-center">
-        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-loose">
-            Copyright © 2026 EarnProof Pakistan <br>
-            <span class="text-slate-200 font-normal tracking-normal">Online Earning Guidance & Trusted Reviews</span>
-        </p>
-    </footer>
+    <section>
+      <h2>Step 2: Account Verification</h2>
+      <p>Jab aap pehli baar withdrawal request karenge, ySense aapki security ke liye aapke mobile number par aik <strong>OTP code</strong> bhejay ga. Wo code enter karte hi aapki request submit ho jayegi.</p>
+      <p>Yaad rakhein ke aapka Payoneer account pehle se ySense ke sath link hona chahiye aur dono ka naam (Name) aik jaisa hona zaroori hai.</p>
+    </section>
+
+    <div class="faq-wrap">
+      <h2>Aam Sawalat (FAQ)</h2>
+      
+      <div class="faq-item">
+        <span class="faq-q">Q: ySense se paise kaise nikalein?</span>
+        <p class="faq-a">A: Aap Cash Out section mein ja kar Payoneer ya Skrill select karke apni raqam nikal sakte hain.</p>
+      </div>
+
+      <div class="faq-item">
+        <span class="faq-q">Q: Kya JazzCash mein withdrawal mil sakta hai?</span>
+        <p class="faq-a">A: Ji haan, Payoneer account ko JazzCash app se link karke aap direct paise hasil kar sakte hain.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="brand">EarnProof<span>.</span></div>
+  <p>Copyright © 2026 EarnProof Pakistan — Online Earning Guidance</p>
+</footer>
 
 </body>
 </html>
-
