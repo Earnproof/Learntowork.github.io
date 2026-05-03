@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="ur" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,10 +29,9 @@
       font-family: 'IBM Plex Sans', sans-serif;
       font-size: 16px;
       line-height: 1.8;
-      direction: rtl;
+      direction: ltr;
     }
 
-    /* NAV */
     nav {
       border-bottom: 1px solid var(--border);
       padding: 0 1.5rem;
@@ -53,10 +52,8 @@
     .back-link { color: var(--muted); font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
     .back-link:hover { color: var(--text); }
 
-    /* ARTICLE LAYOUT */
     .article-wrap { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
 
-    /* EYEBROW BADGE */
     .eyebrow {
       display: inline-flex; align-items: center; gap: 0.5rem;
       font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
@@ -82,7 +79,6 @@
       line-height: 1.6;
     }
 
-    /* META ROW */
     .meta-row {
       display: flex; align-items: center; gap: 1rem;
       padding: 1rem 0; border-top: 1px solid var(--border);
@@ -98,27 +94,24 @@
     .meta-text strong { color: var(--text); }
     .meta-dot { color: var(--border); }
     .verified-pill {
-      margin-right: auto; background: var(--green-dim); border: 1px solid #22c55e44;
+      margin-left: auto; background: var(--green-dim); border: 1px solid #22c55e44;
       color: var(--green); font-size: 0.75rem; font-weight: 600;
       padding: 3px 10px; border-radius: 99px;
     }
 
-    /* TOC */
     .toc {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem;
     }
     .toc-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 1rem; font-weight: 600; }
-    .toc ol { padding-right: 1.25rem; }
+    .toc ol { padding-left: 1.25rem; }
     .toc li { margin-bottom: 0.5rem; }
     .toc a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
     .toc a:hover { text-decoration: underline; }
 
-    /* PROSE */
     .prose p { color: #c5c9d6; margin-bottom: 1.25rem; line-height: 1.9; }
     .prose p strong { color: var(--text); }
 
-    /* SECTION HEADINGS */
     .section-heading {
       font-family: 'Lora', serif;
       font-size: 1.45rem;
@@ -133,7 +126,6 @@
       margin: 1.5rem 0 0.6rem;
     }
 
-    /* PLATFORM HEADER CARD */
     .platform-header {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -154,7 +146,6 @@
     .platform-header-info p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; margin: 0; }
     .platform-num { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 0.2rem; }
 
-    /* STEPS */
     .steps-list { list-style: none; padding: 0; }
     .steps-list li {
       display: flex; gap: 1rem; align-items: flex-start;
@@ -172,7 +163,6 @@
     .steps-list li p { color: #b0b6c8; font-size: 0.95rem; margin: 0; line-height: 1.7; }
     .steps-list li strong { color: var(--text); }
 
-    /* EARNING GRID */
     .earn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.25rem 0; }
     .earn-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -188,22 +178,20 @@
       margin: 0.75rem 0 1.25rem; font-size: 1.05rem;
     }
 
-    /* INFO BOX */
     .info-box {
-      background: var(--surface2); border-right: 3px solid var(--accent);
+      background: var(--surface2); border-left: 3px solid var(--accent);
       border-radius: 0 8px 8px 0; padding: 1rem 1.25rem;
       margin: 1rem 0; color: #a0aec0; font-size: 0.95rem;
     }
     .info-box strong { color: var(--text); }
 
     .tip-box {
-      background: #1c1a0e; border-right: 3px solid var(--gold);
+      background: #1c1a0e; border-left: 3px solid var(--gold);
       border-radius: 0 8px 8px 0; padding: 1rem 1.25rem;
       margin: 1rem 0; color: #c8b87a; font-size: 0.95rem;
     }
     .tip-box::before { content: "💡 Tip: "; font-weight: 700; color: var(--gold); }
 
-    /* WITHDRAWAL BOX */
     .withdrawal-box {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1rem 0;
@@ -217,7 +205,6 @@
     }
     .w-arrow { color: var(--muted); font-size: 0.8rem; }
 
-    /* WORK TYPE CARDS */
     .work-cards { display: grid; gap: 0.75rem; margin: 1rem 0; }
     .work-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -226,12 +213,10 @@
     .work-card h4 { color: var(--text); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.3rem; }
     .work-card p { color: var(--muted); font-size: 0.875rem; margin: 0; line-height: 1.6; }
 
-    /* DIVIDER */
     .section-divider {
       border: none; border-top: 1px solid var(--border); margin: 3rem 0;
     }
 
-    /* COMPARISON TABLE */
     .comp-table-wrap { overflow-x: auto; margin: 1.5rem 0; border-radius: 10px; border: 1px solid var(--border); }
     table { width: 100%; border-collapse: collapse; background: var(--surface); }
     thead tr { background: var(--surface2); border-bottom: 1px solid var(--border); }
@@ -239,12 +224,11 @@
     td { padding: 0.875rem 1rem; font-size: 0.9rem; text-align: center; border-bottom: 1px solid var(--border); color: var(--text); }
     tr:last-child td { border-bottom: none; }
     tr:hover td { background: var(--surface2); }
-    td.platform-name { font-weight: 700; text-align: right; }
+    td.platform-name { font-weight: 700; text-align: left; }
     .badge-easy { background: var(--green-dim); color: var(--green); border: 1px solid #22c55e33; padding: 2px 8px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
     .badge-med { background: #92400e22; color: #f59e0b; border: 1px solid #f59e0b33; padding: 2px 8px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
     .badge-hard { background: #7f1d1d22; color: #ef4444; border: 1px solid #ef444433; padding: 2px 8px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
 
-    /* FINAL VERDICT */
     .verdict-box {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -261,7 +245,6 @@
     }
     .cta-btn:hover { opacity: 0.88; }
 
-    /* PLATFORM CTA */
     .platform-cta {
       display: inline-flex; align-items: center; gap: 0.4rem;
       margin-top: 1.5rem; font-size: 0.875rem; font-weight: 600;
@@ -271,7 +254,6 @@
     }
     .platform-cta:hover { background: var(--accent-dim); }
 
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--border); text-align: center;
       padding: 2rem 1.5rem; color: var(--muted); font-size: 0.85rem;
@@ -280,7 +262,6 @@
     footer .brand-f { font-family: 'Lora', serif; font-weight: 700; color: var(--text); }
     footer .brand-f span { color: var(--green); }
 
-    /* RESPONSIVE */
     @media (max-width: 600px) {
       .earn-grid { grid-template-columns: 1fr; }
       .w-steps { flex-direction: column; align-items: flex-start; }
@@ -290,7 +271,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="index.html" class="brand">EarnProof<span>.</span></a>
   <ul class="nav-links">
@@ -302,7 +282,6 @@
   <a href="earning-apps.html" class="back-link">← Back to Guides</a>
 </nav>
 
-<!-- ARTICLE -->
 <div class="article-wrap">
 
   <div class="eyebrow">In-Depth Master Guide</div>
@@ -310,7 +289,6 @@
   <h1 class="article-title">Earn $100 to $300 Just by Labeling AI</h1>
   <p class="article-sub">Ghar baithay, beginner se lekar professional tak — account banana se lekar jeb mein paise aane tak. 4 tested platforms, step-by-step.</p>
 
-  <!-- META -->
   <div class="meta-row">
     <div class="meta-avatar">EP</div>
     <div class="meta-text">
@@ -322,7 +300,6 @@
     <span class="verified-pill">✓ Pakistan &amp; India Verified</span>
   </div>
 
-  <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Is Guide Mein</div>
     <ol>
@@ -336,7 +313,6 @@
     </ol>
   </div>
 
-  <!-- INTRO -->
   <div id="intro" class="prose">
     <h2 class="section-heading">AI Labeling Kya Hai?</h2>
     <p>Seedhi baat karein to duniya ki badi badi technology companies jaise Google, Tesla, aur Amazon apni AI ko train karne ke liye data chahti hain. Is data ko insaan tayyar karta hai. Jaise kisi gaari ki tasveer mein yeh batana ke yahan pedestrian hai, yahan traffic light hai, ya yahan doosri gaari hai. Yahi kaam AI Labeling kehlata hai, aur is kaam ki demand din ba din barh rahi hai.</p>
@@ -348,7 +324,6 @@
 
   <hr class="section-divider">
 
-  <!-- REMOTASKS -->
   <div id="remotasks">
     <div class="platform-header">
       <div class="platform-icon" style="background:#1d3a6e;">🔵</div>
@@ -358,7 +333,6 @@
         <p>Bilkul pehli baar shuruat karne walon ke liye sabse behtar platform. Scale AI ne banaya hai.</p>
       </div>
     </div>
-
     <div class="prose">
       <h3 class="sub-heading">Kaam Kya Hota Hai?</h3>
       <div class="work-cards">
@@ -371,7 +345,6 @@
           <p>Self-driving cars ke sensor data ko label karna. Thora mushkil lekin zyada paying. Thodi practice ke baad seekha ja sakta hai.</p>
         </div>
       </div>
-
       <h3 class="sub-heading">Step-by-Step Shuruat Kaise Karein?</h3>
       <ul class="steps-list">
         <li><div class="step-num">01</div><p>remotasks.com par jaakar bilkul <strong>free account</strong> banayein.</p></li>
@@ -379,7 +352,6 @@
         <li><div class="step-num">03</div><p>Har course ke baad ek chota <strong>test</strong> hota hai — pass karo aur woh kaam aapke dashboard mein aa jata hai.</p></li>
         <li><div class="step-num">04</div><p>Ek ghante ki lagan se training mukammal karein aur <strong>pehla task</strong> uthayein.</p></li>
       </ul>
-
       <h3 class="sub-heading">Paison ka Hisab</h3>
       <div class="earn-grid">
         <div class="earn-card">
@@ -394,7 +366,6 @@
         </div>
       </div>
       <div class="earn-highlight">Monthly Earning: $100 – $200</div>
-
       <h3 class="sub-heading">Withdrawal — Paisa Jeb Mein Kaise Aayega?</h3>
       <div class="withdrawal-box">
         <div class="w-label">Payment Flow</div>
@@ -407,14 +378,12 @@
         </div>
       </div>
       <div class="tip-box">Remotasks ka sabse bara faida: har haftay <strong>Wednesday</strong> ko payment! Kisi international bank ki zaroorat nahi.</div>
-
       <a href="https://www.remotasks.com" target="_blank" class="platform-cta">Remotasks Join Karein →</a>
     </div>
   </div>
 
   <hr class="section-divider">
 
-  <!-- APPEN -->
   <div id="appen">
     <div class="platform-header">
       <div class="platform-icon" style="background:#2e1a4e;">🟣</div>
@@ -424,7 +393,6 @@
         <p>1996 se kaam kar raha hai. Long-term, stable income chahne walon ke liye ideal.</p>
       </div>
     </div>
-
     <div class="prose">
       <h3 class="sub-heading">Kaam Kya Hota Hai?</h3>
       <div class="work-cards">
@@ -437,7 +405,6 @@
           <p>Facebook ya Instagram jaise platforms ki posts ko review karna. Ek baar select ho gaye to pakki aamdani set hai — jaise part-time job.</p>
         </div>
       </div>
-
       <h3 class="sub-heading">Step-by-Step Shuruat Kaise Karein?</h3>
       <ul class="steps-list">
         <li><div class="step-num">01</div><p>appen.com par jaakar bilkul free <strong>account banayein</strong>.</p></li>
@@ -445,7 +412,6 @@
         <li><div class="step-num">03</div><p>Jab koi project aapki profile se match karta hai, <strong>email aa jati hai</strong> — us mein project join karne ka link hoga.</p></li>
         <li><div class="step-num">04</div><p><strong>Email regularly check karte rahein</strong> — yahi aapka main gateway hai projects tak.</p></li>
       </ul>
-
       <h3 class="sub-heading">Paison ka Hisab</h3>
       <div class="earn-grid">
         <div class="earn-card">
@@ -459,7 +425,6 @@
           <div class="unit">mahine (long-term)</div>
         </div>
       </div>
-
       <h3 class="sub-heading">Withdrawal — Paisa Jeb Mein Kaise Aayega?</h3>
       <div class="withdrawal-box">
         <div class="w-label">Payment Flow — Mahine Mein Ek Baar</div>
@@ -472,14 +437,12 @@
         </div>
       </div>
       <div class="tip-box">Payoneer ka free account pehle se bana lein. Transfer 2 se 3 business days mein complete hota hai.</div>
-
       <a href="https://appen.com" target="_blank" class="platform-cta">Appen Par Register Hon →</a>
     </div>
   </div>
 
   <hr class="section-divider">
 
-  <!-- TELUS -->
   <div id="telus">
     <div class="platform-header">
       <div class="platform-icon" style="background:#0d3330;">🟢</div>
@@ -489,7 +452,6 @@
         <p>Canadian company. Sabse reliable aur professional platform — ek baar qualify, mahine ki guaranteed income.</p>
       </div>
     </div>
-
     <div class="prose">
       <h3 class="sub-heading">Kaam Kya Hota Hai?</h3>
       <div class="work-cards">
@@ -502,7 +464,6 @@
           <p>Google Maps ki galtiyan theek karna — galat naam, galat address, galat category. Bahut safe aur legal kaam hai.</p>
         </div>
       </div>
-
       <h3 class="sub-heading">Step-by-Step Shuruat Kaise Karein?</h3>
       <ul class="steps-list">
         <li><div class="step-num">01</div><p>TELUS International ki website par jaakar apne mulk ke mutabiq <strong>apply karein</strong>.</p></li>
@@ -510,9 +471,7 @@
         <li><div class="step-num">03</div><p>Parhai ke baad ek <strong>Online Exam</strong> hota hai. Thora mushkil hai, lekin guidelines achhi tarah parh li hain to pass ho jata hai.</p></li>
         <li><div class="step-num">04</div><p>Exam pass — aur aap <strong>Qualified Rater</strong> ban jaate hain. Mahine ki pakki aamdani shuru!</p></li>
       </ul>
-
       <div class="info-box"><strong>Pro Tip:</strong> Guidelines document ko ek baar nahi, do baar parhen. Exam mein aksar wahi sawaal aate hain jo log ignore kar dete hain.</div>
-
       <h3 class="sub-heading">Paison ka Hisab</h3>
       <div class="earn-grid">
         <div class="earn-card">
@@ -526,7 +485,6 @@
           <div class="unit">ek trained rater ke liye</div>
         </div>
       </div>
-
       <h3 class="sub-heading">Withdrawal — Paisa Jeb Mein Kaise Aayega?</h3>
       <div class="withdrawal-box">
         <div class="w-label">Payment Flow — Mahine Mein Ek Baar</div>
@@ -538,14 +496,12 @@
           <div class="w-step">JazzCash</div>
         </div>
       </div>
-
       <a href="https://www.telusinternational.com" target="_blank" class="platform-cta">TELUS Jobs Check Karein →</a>
     </div>
   </div>
 
   <hr class="section-divider">
 
-  <!-- CLOUDFACTORY -->
   <div id="cloudfactory">
     <div class="platform-header">
       <div class="platform-icon" style="background:#3a1f06;">🟠</div>
@@ -555,7 +511,6 @@
         <p>Nepal-based company, team-based kaam. Ek baar accept ho gaye to long-term stable job ki tarah hai.</p>
       </div>
     </div>
-
     <div class="prose">
       <h3 class="sub-heading">Kaam Kya Hota Hai?</h3>
       <div class="work-cards">
@@ -564,7 +519,6 @@
           <p>Text files mein se specific information nikaalna, forms fill karna, ya simple image tagging. Sabse asaan kaam — team mein milkar karna hota hai.</p>
         </div>
       </div>
-
       <h3 class="sub-heading">Step-by-Step Shuruat Kaise Karein?</h3>
       <ul class="steps-list">
         <li><div class="step-num">01</div><p>cloudfactory.com par jaakar <strong>"Work With Us"</strong> section mein apply karein.</p></li>
@@ -572,7 +526,6 @@
         <li><div class="step-num">03</div><p>Accept hone par aapko ek <strong>supervisor ke sath team mein shamil</strong> kar diya jayega.</p></li>
         <li><div class="step-num">04</div><p>Yeh zyada se zyada ek <strong>regular part-time job</strong> ki tarah hai — long-term aur stable.</p></li>
       </ul>
-
       <h3 class="sub-heading">Paison ka Hisab</h3>
       <div class="earn-grid">
         <div class="earn-card">
@@ -586,7 +539,6 @@
           <div class="unit">estimated</div>
         </div>
       </div>
-
       <h3 class="sub-heading">Withdrawal — Paisa Jeb Mein Kaise Aayega?</h3>
       <div class="withdrawal-box">
         <div class="w-label">Payment Flow — Mahine Mein Ek Baar</div>
@@ -598,21 +550,19 @@
           <div class="w-step">JazzCash</div>
         </div>
       </div>
-
       <a href="https://www.cloudfactory.com" target="_blank" class="platform-cta">CloudFactory Apply Karein →</a>
     </div>
   </div>
 
   <hr class="section-divider">
 
-  <!-- COMPARISON -->
   <div id="comparison">
     <h2 class="section-heading">Comparison Table — Charon Platforms Ek Jagah</h2>
     <div class="comp-table-wrap">
       <table>
         <thead>
           <tr>
-            <th style="text-align:right;">Platform</th>
+            <th style="text-align:left;">Platform</th>
             <th>Mushkil</th>
             <th>Payment</th>
             <th>Zariya</th>
@@ -655,7 +605,6 @@
 
   <hr class="section-divider">
 
-  <!-- FINAL ADVICE -->
   <div id="advice" class="verdict-box">
     <h3>Aakhri Mashwara</h3>
     <p>Agar aap bilkul pehli baar shuruat kar rahe hain to <strong>Remotasks</strong> se shuruat karein. Wahan training karein, practice karein aur pehle $50 nikaal kar dekhein. Jab confidence aa jaye to saath saath <strong>Appen</strong> par bhi apply kar dein. Aur jab thodi experience ho jaye to <strong>TELUS</strong> ka exam de dein.</p>
@@ -667,9 +616,8 @@
     <a href="index.html" style="color: var(--muted); font-size:0.85rem; text-decoration:none;">← Wapas Home Page par Jayein</a>
   </div>
 
-</div><!-- end article-wrap -->
+</div>
 
-<!-- FOOTER -->
 <footer>
   <div class="brand-f">EarnProof<span>.</span></div>
   <p style="margin-top:0.5rem;">Pakistan's #1 Trusted Earning Guide</p>
@@ -682,4 +630,4 @@
 </footer>
 
 </body>
-</html>
+        </html>
