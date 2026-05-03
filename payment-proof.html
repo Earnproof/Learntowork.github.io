@@ -1,31 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Payment Proofs | JazzCash & EasyPaisa Receipts</title>
-    <script src="https://cdn.tailwindcss.com/"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Payment Proofs | JazzCash & EasyPaisa Receipts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #181c27;
+      --border: #262d42;
+      --text: #e8eaf0;
+      --muted: #8b92a8;
+      --green: #22c55e;
+      --green-dim: #16a34a22;
+      --accent: #60a5fa;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif;
+      line-height: 1.8;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 100;
+    }
+    
+    .brand { font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .brand span { color: var(--green); }
+    
+    .back-link { color: var(--muted); font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
+    .back-link:hover { color: var(--text); }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--green);
+      background: var(--green-dim); border: 1px solid #22c55e33;
+      padding: 4px 12px; border-radius: 99px; margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .sub-text {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .proof-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 1.25rem;
+      transition: transform 0.3s ease, border-color 0.3s;
+    }
+
+    .proof-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--green);
+    }
+
+    .image-placeholder {
+      aspect-ratio: 9 / 16;
+      background: #0f1117;
+      border-radius: 16px;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed var(--border);
+      overflow: hidden;
+    }
+
+    .image-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .proof-info h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .proof-info p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .method-tag {
+      background: #1e2336;
+      color: var(--accent);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2.5rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
-<body class="bg-slate-50">
-    <nav class="bg-white border-b p-4">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold text-blue-600">EarnProof.</a>
-        </div>
-    </nav>
+<body>
 
-    <main class="max-w-5xl mx-auto px-4 py-12">
-        <h1 class="text-3xl font-bold mb-2">Withdrawal Receipts</h1>
-        <p class="text-slate-500 mb-10">Hum sirf wahi apps share karte hain jo waqai paise deti hain.</p>
+<nav dir="ltr">
+  <a href="index.html" class="brand">EarnProof<span>.</span></a>
+  <a href="index.html" class="back-link">← Wapas</a>
+</nav>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
-                <div class="aspect-[9/16] bg-slate-100 rounded-lg mb-4 flex items-center justify-center text-slate-400">
-                    Proof Image Yahan Ayegi
-                </div>
-                <h3 class="font-bold">ySense $25 Payout</h3>
-                <p class="text-xs text-slate-400">Received via JazzCash</p>
-            </div>
-        </div>
-    </main>
+<div class="container">
+  <div class="eyebrow">Real Evidence</div>
+  <h1>Withdrawal Receipts<span>.</span></h1>
+  <p class="sub-text">Hum sirf wahi apps share karte hain jo waqai paise deti hain. Neeche hamare apne account ke live proofs mojood hain.</p>
+
+  <div class="proof-grid">
+    <div class="proof-card">
+      <div class="image-placeholder">
+        <span style="color: var(--muted); font-size: 0.8rem;">[Proof Image Yahan Ayegi]</span>
+      </div>
+      <div class="proof-info">
+        <h3>ySense $25 Payout</h3>
+        <p>
+          <span class="method-tag">JazzCash</span>
+          • Received May 2026
+        </p>
+      </div>
+    </div>
+
+    </div>
+</div>
+
+<footer>
+  <p>© 2026 EarnProof — Pakistan's Trusted Earning Guide</p>
+</footer>
+
 </body>
 </html>
