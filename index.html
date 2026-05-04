@@ -156,7 +156,7 @@
         <section class="category-block">
             <div class="category-header">
                 <h2>Earn with AI</h2>
-                <span class="count-tag">1 Course</span>
+                <span class="count-tag">2 Courses</span>
             </div>
             <div class="article-grid">
                 <a href="ai-labeling-master-guide-1.html" class="item-card">
@@ -165,6 +165,15 @@
                     <div class="card-footer">
                         <span class="tag">Master Guide</span>
                         <span class="tag">AI Training</span>
+                    </div>
+                </a>
+
+                <a href="ai-prompt-engineering-pakistan" class="item-card">
+                    <h3>AI Prompt Engineering</h3>
+                    <p>ChatGPT aur Midjourney jaise tools se $500/month kamayein. Pakistan ke liye complete roadmap 2026.</p>
+                    <div class="card-footer">
+                        <span class="tag">Learn Skill</span>
+                        <span class="tag">Start Earning</span>
                     </div>
                 </a>
             </div>
@@ -195,3 +204,77 @@
 
 </body>
 </html>
+
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans', sans-serif; }
+
+        /* Navigation */
+        nav {
+            border-bottom: 1px solid var(--border);
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+            position: sticky;
+            top: 0;
+            background: rgba(15, 17, 23, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .brand { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; }
+        .brand span { color: var(--green); }
+
+        /* Hero Header */
+        header {
+            padding: 5rem 1.5rem 3rem;
+            text-align: center;
+            background: radial-gradient(circle at top, #1e2336 0%, #0f1117 80%);
+        }
+        header h1 { font-family: 'Lora', serif; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; color: #fff; line-height: 1.2; }
+        header h1 span { color: var(--accent); }
+        header p { color: var(--muted); max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* Category Section Styling */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 5rem; }
+        
+        .category-block { margin-top: 4rem; }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+        }
+        .category-header h2 { font-family: 'Lora', serif; font-size: 1.7rem; color: var(--accent); }
+        .count-tag { background: var(--border); padding: 2px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--muted); font-weight: 700; }
+
+        /* Article Grid */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .item-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2.2rem;
+            border-radius: 28px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .item-card:hover { border-color: var(--accent); transform: translateY(-5px); background: #1c2230; }
+        
+        .item-card h3 { color: #fff; margin-bottom: 1rem; font-size: 1.35rem; font-family: 'Lora', serif; }
+        .item-card p { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1; line-height: 1.6; }
+        
+        .card-footer {
+            border-top: 1px solid var(--border);
+            padding-top: 1.25rem;
+            display: flex;
