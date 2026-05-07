@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LearnToEarn - Learn Skills, Earn Money Online 2026</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <meta name="description" content="Learn to earn money online with complete guides. AI earning, freelancing, surveys, content creation. Honest reviews, trusted payment methods. Start earning today!">
+  <meta name="keywords" content="earn online, make money online, AI earning, freelancing, online courses, earning apps, payment methods">
+  <meta name="author" content="LearnToEarn">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://learntowork.online/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LearnToEarn - Learn Skills, Earn Money Online 2026">
+  <meta property="og:description" content="Complete earning guides: AI, freelancing, surveys & more. Honest reviews, trusted platforms, payment methods included.">
+  <meta property="og:url" content="https://learntowork.online/">
+  <meta property="og:image" content="https://learntowork.online/Image.png">
+  <meta property="og:site_name" content="LearnToEarn">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0e27;
+      --surface: #1a1f3a;
+      --surface2: #242d4a;
+      --border: #374151;
+      --text: #f5f7fa;
+      --muted: #9ca3af;
+      --green: #10b981;
+      --green-dim: #10b98120;
+      --blue: #3b82f6;
+      --blue-dim: #3b82f615;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: sticky;
+      top: 0;
+      background: rgba(10, 14, 39, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand { 
+      font-family: 'Lora', serif; 
+      font-size: 1.4rem; 
+      font-weight: 700; 
+      background: linear-gradient(135deg, #f5f7fa 0%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links { display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; font-weight: 500; white-space: nowrap; }
+    .nav-links a:hover { color: var(--green); transform: translateY(-2px); }
+
+    .nav-cta {
+      background: var(--green);
+      color: var(--bg);
+      padding: 0.6rem 1.3rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .nav-cta:hover { background: #059669; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .hero {
+      padding: 5rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+      border-radius: 20px;
+      margin: 3rem 1.5rem 0;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero h1 { 
+      font-family: 'Lora', serif; 
+      font-size: clamp(2.2rem, 6vw, 3.5rem); 
+      font-weight: 700; 
+      margin-bottom: 1rem; 
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subtitle { font-size: 1.15rem; color: var(--muted); margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+
+    .cta-btn { padding: 0.9rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; font-size: 1rem; border: none; cursor: pointer; display: inline-block; }
+
+    .cta-primary { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #fff; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); }
+    .cta-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4); }
+
+    .cta-secondary { background: transparent; color: var(--blue); border: 2px solid var(--blue); }
+    .cta-secondary:hover { background: var(--blue-dim); transform: translateY(-3px); }
+
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 4rem 0; }
+
+    .stat-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), var(--blue));
+    }
+
+    .stat-box:hover { border-color: var(--green); transform: translateY(-5px); box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2); }
+
+    .stat-number { font-family: 'Lora', serif; font-size: 2.5rem; background: linear-gradient(135deg, var(--green), var(--blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; margin-bottom: 0.5rem; }
+    .stat-label { color: var(--muted); font-size: 0.95rem; font-weight: 500; }
+
+    .content-wrapper { margin: 5rem 0; }
+
+    .accordion-item { margin-bottom: 1.5rem; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); overflow: hidden; transition: all 0.3s ease; }
+    .accordion-item:hover { border-color: var(--green); box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15); }
+
+    .accordion-header { padding: 1.8rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: all 0.3s ease; user-select: none; background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%); }
+    .accordion-header:hover { background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%); }
+
+    .accordion-title { display: flex; align-items: center; gap: 1rem; font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 600; color: #fff; }
+    .accordion-icon { font-size: 1.8rem; }
+    .accordion-toggle { font-size: 1.5rem; color: var(--green); transition: transform 0.3s ease; }
+    .accordion-item.active .accordion-toggle { transform: rotate(180deg); }
+
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .accordion-item.active .accordion-content { max-height: 2000px; }
+
+    .articles-list { padding: 0 1.8rem 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+
+    .article-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .article-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent); transition: left 0.5s ease; }
+    .article-card:hover::before { left: 100%; }
+    .article-card:hover { border-color: var(--green); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2); }
+
+    .article-icon { font-size: 2.2rem; margin-bottom: 0.8rem; }
+    .article-card h3 { font-family: 'Lora', serif; font-size: 1.15rem; margin-bottom: 0.8rem; font-weight: 600; color: #fff; line-height: 1.4; }
+    .article-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.2rem; flex-grow: 1; line-height: 1.6; }
+
+    .article-footer { display: flex; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .article-cta { color: var(--green); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; margin-left: auto; }
+    .article-card:hover .article-cta { gap: 0.8rem; color: var(--blue); }
+
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 3rem 1.5rem 2rem; margin-top: 5rem; }
+    .footer-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; }
+    .footer-section h4 { margin-bottom: 1.2rem; color: var(--green); font-family: 'Lora', serif; font-size: 1.1rem; }
+    .footer-section p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.8rem; }
+    .footer-links a { color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .footer-links a:hover { color: var(--green); transform: translateX(3px); }
+
+    .footer-cta { background: var(--green); color: var(--bg); padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block; margin-top: 1rem; }
+    .footer-cta:hover { background: #059669; transform: translateY(-2px); }
+
+    .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--muted); }
+    .footer-bottom p { margin: 0.5rem 0; font-size: 0.9rem; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem; height: auto; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .hero { padding: 3rem 1rem; margin: 2rem 1rem 0; }
+      .hero h1 { font-size: 1.8rem; }
+      .cta-buttons { flex-direction: column; }
+      .cta-btn { width: 100%; }
+      .articles-list { grid-template-columns: 1fr; }
+      .accordion-header { padding: 1.3rem; }
+      .accordion-title { font-size: 1.1rem; gap: 0.7rem; }
+      .footer-content { grid-template-columns: 1fr; }
+      .stat-box { padding: 1.5rem 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .brand { font-size: 1.1rem; }
+      .hero h1 { font-size: 1.4rem; }
+      .hero .subtitle { font-size: 0.95rem; }
+      .stat-number { font-size: 2rem; }
+      .accordion-title { font-size: 1rem; }
+      .article-card { padding: 1.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="/" class="brand">LearnToEarn</a>
+    <div class="nav-links">
+      <a href="#categories">Explore</a>
+      <a href="#footer" class="nav-cta">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Learn Skills, <span>Earn Money</span>, Build Your Future</h1>
+        <p class="subtitle">Complete, honest guides to earning real money online. From AI to freelancing, from surveys to content creation. Trusted by thousands worldwide.</p>
+        <div class="cta-buttons">
+          <button class="cta-btn cta-primary" onclick="scrollToCategories()">Explore Guides →</button>
+          <a href="#footer" class="cta-btn cta-secondary">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Complete Guides</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">$300-800</div>
+        <div class="stat-label">Monthly Earning Potential</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Honest & Verified</div>
+      </div>
+    </div>
+
+    <div class="content-wrapper" id="categories">
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span class="accordion-icon">🤖</span>
+            Earn with AI
+          </div>
+          <span class="accordion-toggle">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="articles-list">
+            <a href="ai-data-labeling" class="article-card">
+              <div class="article-icon">🏷️</div>
+              <h3>AI Data Labeling Master</h3>
+              <p>Earn $100-300/month by labeling data for AI companies. Complete guide to Remotasks, Appen, Telus, and more with Pakistan payment methods.</p>
+              <div class="article-footer">
+                <span class="article-cta">Read Guide</span>
+              </div>
+            </a>
+
+            <a href="ai-prompt-engineering-pakistan" class="article-card">
+              <div class="article-icon">💬</div>
+              <h3>Prompt Engineering 2026</h3>
+              <p>Make $500+/month creating AI prompts. Master ChatGPT, Midjourney, Claude. Complete roadmap with real earnings and payment guides.</p>
+              <div class="article-footer">
+                <span class="article-cta">Read Guide</span>
+              </div>
+            </a>
+
+            <a href="ai-chatbot-monetization-guide" class="article-card">
+              <div class="article-icon">🤖</div>
+              <h3>AI Chatbot Monetization</h3>
+              <p>Build AI chatbots and earn $300-800/month. No coding required. 5 proven methods with step-by-step setup and Pakistan payment integration.</p>
+              <div class="article-footer">
+                <span class="article-cta">Read Guide</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span class="accordion-icon">✅</span>
+            Reviews & Trust
+          </div>
+          <span class="accordion-toggle">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="articles-list">
+            <a href="ysense-review/" class="article-card">
+              <div class="article-icon">⭐</div>
+              <h3>ySense Review 2026</h3>
+              <p>Is ySense legit or a scam? Complete honest review with real earnings, withdrawal guides, JazzCash setup, and Pakistan tips.</p>
+              <div class="article-footer">
+                <span class="article-cta">Read Review</span>
+              </div>
+            </a>
+
+            <a href="earning-apps/" class="article-card">
+              <div class="article-icon">📱</div>
+              <h3>Verified Earning Apps 2026</h3>
+              <p>Trusted list of legitimate earning apps in Pakistan. JazzCash & EasyPaisa payments. Scam alert list and complete safety guidelines.</p>
+              <div class="article-footer">
+                <span class="article-cta">Read Guide</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span class="accordion-icon">💳</span>
+            Withdrawal & Setup
+          </div>
+          <span class="accordion-toggle">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="articles-list">
+            <a href="ysense-withdrawal-guide/" class="article-card">
+              <div class="article-icon">💰</div>
+              <h3>How to Withdraw to JazzCash</h3>
+              <p>Step-by-step guide to withdraw earnings directly to JazzCash. Fast, easy, secure. Works with ySense and other platforms.</p>
+              <div class="article-footer">
+                <span class="article-cta">Read Guide</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>🎓 About LearnToEarn</h4>
+        <p>Complete earning education platform. Honest guides, real earnings data, trusted platforms, and proven payment methods for students and professionals worldwide.</p>
+      </div>
+      <div class="footer-section">
+        <h4>📧 Contact & Support</h4>
+        <p>Questions? Suggestions? Found an error? We'd love to hear from you!</p>
+        <a href="contact/" class="footer-cta">Get in Touch</a>
+      </div>
+      <div class="footer-section">
+        <h4>🌍 Payment Methods</h4>
+        <ul class="footer-links">
+          <li><a href="#">JazzCash & EasyPaisa</a></li>
+          <li><a href="#">Payoneer Transfers</a></li>
+          <li><a href="#">Wise Withdrawals</a></li>
+          <li><a href="#">Pakistan Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LearnToEarn. All guides are honest, practical, and thoroughly verified.</p>
+      <p>Learn Skills → Earn Money → Build Your Future 🚀</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('active');
+      });
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+
+    function scrollToCategories() {
+      document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.addEventListener('load', function() {
+      const firstItem = document.querySelector('.accordion-item');
+      if (firstItem) {
+        firstItem.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
