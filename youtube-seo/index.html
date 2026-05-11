@@ -139,6 +139,42 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Table of Contents */
+        .table-of-contents {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .table-of-contents h2 {
+            color: var(--green);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Lora', serif;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .toc-list a {
+            color: var(--blue);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .toc-list a:hover {
+            color: var(--green);
+            padding-left: 5px;
+        }
+
         /* Article Body */
         .article-body {
             background: rgba(26, 31, 58, 0.5);
@@ -156,6 +192,7 @@
             color: var(--text);
             border-left: 4px solid var(--green);
             padding-left: 1rem;
+            scroll-margin-top: 100px;
         }
 
         h2:first-child {
@@ -204,7 +241,6 @@
             margin: 1.5rem 0;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             display: block;
-            loading: lazy;
         }
 
         .image-caption {
@@ -288,7 +324,7 @@
             color: var(--text);
         }
 
-        /* Related Articles */
+        /* Related Articles - Magazine Style */
         .related-articles {
             margin-top: 3rem;
             padding-top: 2rem;
@@ -299,39 +335,56 @@
             margin-top: 0;
         }
 
-        .article-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .article-card {
+        .related-card {
             background: rgba(26, 31, 58, 0.8);
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
             text-decoration: none;
+            color: var(--text);
             transition: all 0.3s;
-            cursor: pointer;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
         }
 
-        .article-card:hover {
+        .related-card:hover {
             border-color: var(--green);
-            transform: translateY(-4px);
             box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+            transform: translateY(-3px);
         }
 
-        .article-card h3 {
+        .related-card-image {
+            flex-shrink: 0;
+            width: 250px;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .related-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .related-card-content {
+            flex-grow: 1;
+        }
+
+        .related-card h3 {
             margin-top: 0;
             margin-bottom: 0.8rem;
             color: var(--green);
+            font-size: 1.2rem;
         }
 
-        .article-card p {
-            margin: 0;
-            font-size: 0.95rem;
+        .related-card p {
+            margin-bottom: 0;
             color: var(--muted);
+            font-size: 0.95rem;
         }
 
         /* Footer */
@@ -368,8 +421,14 @@
                 font-size: 1.4rem;
             }
 
-            .nav-container {
-                padding: 0 1rem;
+            .related-card {
+                flex-direction: column;
+                padding: 1.5rem;
+            }
+
+            .related-card-image {
+                width: 100%;
+                height: 200px;
             }
 
             .container {
@@ -378,6 +437,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -403,9 +463,28 @@
             <div class="author">By Isabella</div>
         </div>
 
+        <!-- Table of Contents -->
+        <div class="table-of-contents">
+            <h2>📑 Table of Contents</h2>
+            <ul class="toc-list">
+                <li><a href="#intro">Introduction: The 1M View Reality</a></li>
+                <li><a href="#algorithm">Understanding the YouTube Algorithm</a></li>
+                <li><a href="#title">The High-CTR Title Formula</a></li>
+                <li><a href="#thumbnail">Thumbnail Mastery</a></li>
+                <li><a href="#hook">First 3 Seconds Hook</a></li>
+                <li><a href="#description">Description & Keywords</a></li>
+                <li><a href="#timing">Upload Timing Strategy</a></li>
+                <li><a href="#playlist">Playlist Strategy</a></li>
+                <li><a href="#pakistan">Pakistan Opportunity</a></li>
+                <li><a href="#mistakes">Common Mistakes</a></li>
+                <li><a href="#tools">Tools & Resources</a></li>
+                <li><a href="#checklist">Pre-Upload Checklist</a></li>
+            </ul>
+        </div>
+
         <!-- Article Body -->
         <article class="article-body">
-            <h2>Introduction: The 1M View Reality</h2>
+            <h2 id="intro">Introduction: The 1M View Reality</h2>
             <p>
                 You've seen them—those videos with 1 million views that seem to come out of nowhere. The creator uploaded just one week ago, and suddenly their video is everywhere. You wonder: <strong>How did they do it? What's the secret?</strong>
             </p>
@@ -426,7 +505,7 @@
             <img src="/images/youtube-seo/youtube-algorithm-overview.png" alt="YouTube Algorithm Overview - CTR Watch Time Engagement" class="article-image" loading="lazy">
             <div class="image-caption">The three pillars of YouTube success: CTR, Watch Time, and Engagement</div>
 
-            <h2>Section 1: Understanding the YouTube Algorithm (The Real Way)</h2>
+            <h2 id="algorithm">Section 1: Understanding the YouTube Algorithm (The Real Way)</h2>
             
             <h3>How YouTube Actually Ranks Videos</h3>
             <p>
@@ -466,7 +545,7 @@
             <img src="/images/youtube-seo/ctr-impact.png" alt="Click Through Rate Impact on Views - Real Data Graph" class="article-image" loading="lazy">
             <div class="image-caption">CTR directly correlates to impressions and total views (data from 500+ analyzed videos)</div>
 
-            <h2>Section 2: The High-CTR Title Formula</h2>
+            <h2 id="title">Section 2: The High-CTR Title Formula</h2>
 
             <h3>Why Your Title is 50% of Your Success</h3>
             <p>
@@ -487,348 +566,92 @@
                 <strong>Formula:</strong> [Specific Number] + [Curiosity Gap] + [Benefit]
             </p>
 
-            <h3>Real Examples That Work</h3>
-            <table style="width: 100%; color: #d1d5db; margin: 1.5rem 0; border-collapse: collapse;">
-                <tr style="border-bottom: 1px solid var(--border);">
-                    <td style="padding: 0.8rem;">❌ Bad Title</td>
-                    <td style="padding: 0.8rem;">✅ Good Title</td>
-                    <td style="padding: 0.8rem;">CTR Increase</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--border);">
-                    <td style="padding: 0.8rem;">"How to Make Money"</td>
-                    <td style="padding: 0.8rem;">"How I Made $5000 in 7 Days (Secret Method)"</td>
-                    <td style="padding: 0.8rem;">+340%</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--border);">
-                    <td style="padding: 0.8rem;">"YouTube Tips"</td>
-                    <td style="padding: 0.8rem;">"YouTube Algorithm Secret: 1M Views Without Viral"</td>
-                    <td style="padding: 0.8rem;">+420%</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--border);">
-                    <td style="padding: 0.8rem;">"Pakistani Opportunities"</td>
-                    <td style="padding: 0.8rem;">"Pakistani Creators Are Winning: Here's Why (Data)"</td>
-                    <td style="padding: 0.8rem;">+280%</td>
-                </tr>
-            </table>
+            <img src="/images/youtube-seo/thumbnail-formula.png" alt="High CTR Thumbnail Formula - Shocked Face Bold Colors Text" class="article-image" loading="lazy">
+            <div class="image-caption">Professional thumbnail design: emotional face + bold colors + clear text</div>
 
-            <div class="callout">
-                <strong>YouTube Algorithm Hack:</strong> Use brackets or parentheses in your title. Example: "Make $1000 [LIVE PROOF]" or "YouTube Secret (Creators Hide This)". The brackets catch people's eyes and increase CTR by 15-25%.
-            </div>
-
-            <h2>Section 3: Thumbnail Mastery—The Real 1M View Weapon</h2>
+            <h2 id="thumbnail">Section 3: Thumbnail Mastery</h2>
 
             <h3>Why Thumbnails Matter More Than Content</h3>
             <p>
-                I know that sounds harsh, but data doesn't lie. A video with amazing content but a boring thumbnail gets 30-40% fewer views than the same video with an optimized thumbnail.
-            </p>
-            <p>
-                Why? Because your thumbnail is seen THOUSANDS of times before your video is clicked. Every search result, every recommendation, every subscriber's homepage—your thumbnail is competing with hundreds of other videos for that ONE click.
+                Your thumbnail is seen THOUSANDS of times before your video is clicked. Every search result, every recommendation, every subscriber's homepage—your thumbnail is competing with hundreds of other videos for that ONE click.
             </p>
 
-            <h3>The High-CTR Thumbnail Formula</h3>
-            <ul>
-                <li><strong>Face (Shocked/Excited):</strong> 70% of viral thumbnails have a human face with high emotion</li>
-                <li><strong>Bold Colors:</strong> Use contrasting colors (yellow on blue, red on white, green on dark)</li>
-                <li><strong>Large Text:</strong> Max 3-4 words, bold, readable at 150px width</li>
-                <li><strong>Eye Line:</strong> Direct eye contact or pointing at the text</li>
-                <li><strong>No Blur:</strong> Crystal sharp, maximum contrast</li>
-            </ul>
+            <img src="/images/youtube-seo/description-optimization.png" alt="YouTube Description Optimization Example - Keywords Timestamps Links" class="article-image" loading="lazy">
+            <div class="image-caption">Proper description structure with keywords, timestamps, and links</div>
 
-            <img src="/images/youtube-seo/thumbnail-formula.png" alt="High CTR Thumbnail Formula - Shocked Face Bold Colors Text" class="article-image" loading="lazy">
-            <div class="image-caption">Left: Low CTR thumbnail (boring). Right: High CTR thumbnail (shocked face, bold colors, clear text). CTR difference: 4.2% vs 11.8%</div>
+            <h2 id="hook">Section 4: First 3 Seconds Hook</h2>
 
-            <h3>Real Numbers from Creators</h3>
-            <p>
-                One creator I know tested 50 different thumbnails for the same video content:
-            </p>
-            <ul>
-                <li>Generic thumbnail: 2.1% CTR</li>
-                <li>Thumbnail with face: 7.3% CTR</li>
-                <li>Thumbnail with shocked face + bold text: <strong>13.4% CTR</strong></li>
-            </ul>
-
-            <p>
-                That 13.4% CTR thumbnail version got 280,000 more views than the generic one. Same video. Different thumbnail. That's the power of optimization.
-            </p>
-
-            <h2>Section 4: The First 3 Seconds Hook—Make Them Stay</h2>
-
-            <h3>Why the First 3 Seconds Determine Everything</h3>
-            <p>
-                YouTube measures "average view duration." If someone clicks your video and leaves in 5 seconds, that's bad for your ranking. But if they watch 80% of your video, that's GOLD.
-            </p>
+            <h3>Make Them Stay</h3>
             <p>
                 The first 3 seconds determine whether they stay or bounce. YouTube's algorithm tracks this metric closely. If your average view duration jumps from 3 minutes to 6 minutes, your video gets massively promoted.
             </p>
 
-            <h3>Hook Formulas That Work</h3>
-            <ol>
-                <li><strong>Ask a Question:</strong> "Do you know the real reason you're not making money?"</li>
-                <li><strong>Curiosity Gap:</strong> "Wait for the ending... it's insane."</li>
-                <li><strong>Controversy/Debate:</strong> "Everyone's doing YouTube SEO wrong. Here's proof."</li>
-                <li><strong>Show Results Early:</strong> Show the outcome in the first 5 seconds, then explain how</li>
-                <li><strong>Urgency:</strong> "I'm only sharing this because platforms keep banning me."</li>
-            </ol>
-
-            <div class="callout success">
-                <strong>Tested & Proven:</strong> Videos that start with a question or curiosity hook have 40% higher average view duration than videos that start with slow intros.
-            </div>
-
-            <h2>Section 5: Description & Keyword Optimization</h2>
+            <h2 id="description">Section 5: Description & Keywords</h2>
 
             <h3>The Description is NOT Optional</h3>
             <p>
-                Most creators ignore the description. It's just a text field, right? Wrong. The description is where you:
+                The description is where you rank for keywords in both YouTube AND Google search. The first 150 characters are critical. Include timestamps to increase watch time and improve ranking.
             </p>
-            <ol>
-                <li>Rank for keywords in search (YouTube AND Google)</li>
-                <li>Include timestamps (increases watch time, improves ranking)</li>
-                <li>Add affiliate links or CTAs</li>
-                <li>Signal topic relevance to the algorithm</li>
-            </ol>
 
-            <h3>How to Write Descriptions That Rank</h3>
+            <h2 id="timing">Section 6: Upload Timing Strategy</h2>
+
+            <h3>First 48 Hours = Critical</h3>
             <p>
-                <strong>First 150 characters are critical.</strong> YouTube shows only this much in the collapsed description. Make it count:
-            </p>
-            <p style="background: rgba(16, 185, 129, 0.1); padding: 1rem; border-radius: 8px; color: var(--text);">
-                "1M views in 7 days YouTube SEO secret. Real algorithm tactics, step-by-step blueprint. Learn what creators hide. 🚀"
+                YouTube gives new uploads a "honeymoon period"—the first 48 hours. During this time, the algorithm is watching your metrics closely. If your video performs WELL in the first 48 hours, YouTube promotes it aggressively.
             </p>
 
+            <h2 id="playlist">Section 7: Playlist Strategy</h2>
+
+            <h3>The Hidden Ranking Factor</h3>
             <p>
-                <strong>Keywords to Include:</strong> Use your main keyword 1-2 times naturally. Related keywords sprinkled throughout.
+                Playlists are YouTube's FAVORITE feature because they keep people watching. Create a playlist where your video is the #1 entry, then add related videos. YouTube will autoplay your next video to viewers, dramatically increasing watch time.
             </p>
 
-            <h3>Timestamps Increase Watch Time</h3>
-            <p>
-                Add timestamps in this format:
-            </p>
-            <ul>
-                <li>0:00 - Intro & Hook</li>
-                <li>0:45 - Why This Works</li>
-                <li>2:30 - Strategy #1</li>
-                <li>5:00 - Real Example</li>
-                <li>8:30 - How to Implement</li>
-                <li>11:00 - Common Mistakes</li>
-            </ul>
-            <p>
-                Why? Timestamps let viewers jump to the section they want. YouTube tracks this and considers your video highly engaging. Plus, viewers who jump around still count as watch time.
-            </p>
-
-            <img src="/images/youtube-seo/description-optimization.png" alt="YouTube Description Optimization Example - Keywords Timestamps Links" class="article-image" loading="lazy">
-            <div class="image-caption">Proper description structure: Hook (150 chars) + Keywords + Timestamps + Links</div>
-
-            <h2>Section 6: Upload Timing & First 48 Hours Strategy</h2>
-
-            <h3>Why Upload Time Matters (More Than You Think)</h3>
-            <p>
-                YouTube gives new uploads a "honeymoon period"—the first 48 hours. During this time, the algorithm is watching your metrics closely:
-            </p>
-            <ul>
-                <li>How many clicks in the first hour?</li>
-                <li>What's the CTR?</li>
-                <li>How long are people watching?</li>
-            </ul>
-
-            <p>
-                If your video performs WELL in the first 48 hours, YouTube promotes it aggressively. If it underperforms, YouTube buries it.
-            </p>
-
-            <h3>Best Times to Upload</h3>
-            <table style="width: 100%; color: #d1d5db; margin: 1.5rem 0; border-collapse: collapse;">
-                <tr style="border-bottom: 1px solid var(--border);">
-                    <td style="padding: 0.8rem;"><strong>Audience Region</strong></td>
-                    <td style="padding: 0.8rem;"><strong>Best Upload Time</strong></td>
-                    <td style="padding: 0.8rem;"><strong>Why</strong></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--border);">
-                    <td style="padding: 0.8rem;">US Audience</td>
-                    <td style="padding: 0.8rem;">6-9 PM EST (Wed-Fri)</td>
-                    <td style="padding: 0.8rem;">Peak evening viewing</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--border);">
-                    <td style="padding: 0.8rem;">Pakistan Audience</td>
-                    <td style="padding: 0.8rem;">9-11 PM PKT (Wed-Fri)</td>
-                    <td style="padding: 0.8rem;">After dinner, family time</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--border);">
-                    <td style="padding: 0.8rem;">International</td>
-                    <td style="padding: 0.8rem;">Spread uploads (6am UTC)</td>
-                    <td style="padding: 0.8rem;">Catches multiple timezones</td>
-                </tr>
-            </table>
-
-            <h3>The 48-Hour Action Plan</h3>
-            <p>
-                Upload your video, then execute this plan:
-            </p>
-            <ol>
-                <li><strong>Hour 1-4:</strong> Share on social media (WhatsApp groups, Facebook, TikTok)</li>
-                <li><strong>Hour 4-12:</strong> Engage with comments (reply to every comment, like them)</li>
-                <li><strong>Hour 12-24:</strong> Monitor CTR & AVD, adjust tags if needed</li>
-                <li><strong>Hour 24-48:</strong> Push harder on social media (now people can see your video is trending)</li>
-            </ol>
-
-            <div class="callout">
-                <strong>Real Case Study:</strong> Creator uploaded same video twice. First upload at 2 PM with no promotion: 15k views in 48 hours. Second upload at 8 PM with 48-hour social media push: 180k views in 48 hours. Same content. Different execution.
-            </div>
-
-            <h2>Section 7: Playlist Strategy (The Hidden Ranking Factor)</h2>
-
-            <h3>Why Playlists Generate More Watch Time</h3>
-            <p>
-                Most creators ignore playlists. But playlists are YouTube's FAVORITE feature. Why? Because they keep people watching.
-            </p>
-            <p>
-                Create a playlist where your video is the #1 entry. Then add 10-15 related videos (even from other channels). YouTube will autoplay your next video to viewers. This DRAMATICALLY increases watch time.
-            </p>
-
-            <h3>Playlist Formula for 1M Views</h3>
-            <ol>
-                <li>Create a playlist with a compelling title: "YouTube SEO Secrets Revealed"</li>
-                <li>Add your video as the first entry</li>
-                <li>Add 4-5 of your most popular videos next</li>
-                <li>Add 5-10 related videos from other creators (people stay, watch time increases)</li>
-                <li>Order by watch time (longest videos first for sustained views)</li>
-            </ol>
-
-            <p>
-                <strong>Real Impact:</strong> Videos in active playlists see 200-400% more watch time than standalone videos.
-            </p>
-
-            <h2>Section 8: Pakistan Opportunity - Why Pakistani Creators Win</h2>
+            <h2 id="pakistan">Section 8: Pakistan Opportunity</h2>
 
             <img src="/images/youtube-seo/pakistan-opportunity.png" alt="Pakistan YouTube Opportunity - Low Competition High Audience" class="article-image" loading="lazy">
-            <div class="image-caption">Pakistan is the 2nd largest YouTube audience by country. Competition is LOW compared to US/UK.</div>
+            <div class="image-caption">Pakistan is the 2nd largest YouTube audience. Competition is LOW.</div>
 
-            <h3>The Pakistan Advantage</h3>
+            <h3>Why Pakistani Creators Win</h3>
             <p>
-                Pakistan has over 77 million YouTube users. But the number of high-quality creators is still relatively small compared to the US or India. This means:
+                Pakistan has over 77 million YouTube users. The number of high-quality creators is still relatively small compared to the US or India. This means low competition and an underserved audience hungry for quality content.
             </p>
-            <ul>
-                <li><strong>Low Competition:</strong> It's easier to rank for Pakistani searches</li>
-                <li><strong>Growing Audience:</strong> YouTube usage is increasing 40% year-over-year</li>
-                <li><strong>Underserved Niches:</strong> Many topics have NO good videos in Urdu/Pakistani context</li>
-                <li><strong>High Loyalty:</strong> Pakistani audiences are extremely loyal to creators they connect with</li>
-            </ul>
 
-            <h3>High-CPM Niches in Pakistan</h3>
-            <p>
-                Want to make money? Focus on these niches (they have the highest CPM rates):
-            </p>
+            <h2 id="mistakes">Section 9: Common Mistakes That Kill Your Views</h2>
+
+            <h3>Avoid These 5 Mistakes</h3>
             <ol>
-                <li><strong>Finance & Investment:</strong> Stock market, forex, cryptocurrency (CPM: $8-15)</li>
-                <li><strong>Tech Reviews & Tutorials:</strong> Gadgets, software, apps (CPM: $6-12)</li>
-                <li><strong>Business & Startups:</strong> How to start a business, entrepreneurship (CPM: $10-18)</li>
-                <li><strong>Online Earning Methods:</strong> Freelancing, remote jobs, side hustles (CPM: $7-13)</li>
-                <li><strong>Education & Self-Improvement:</strong> Courses, certifications, skills (CPM: $5-10)</li>
+                <li><strong>Ignoring Keywords:</strong> Upload with a generic title and lose search traffic</li>
+                <li><strong>Slow Intro:</strong> Lose 30% of viewers in first 10 seconds</li>
+                <li><strong>Bad Thumbnail:</strong> CTR drops to 1-2% instead of 8-12%</li>
+                <li><strong>No Call-to-Action:</strong> Viewers don't subscribe or like</li>
+                <li><strong>Inconsistent Schedule:</strong> Algorithm treats you as inactive</li>
             </ol>
 
-            <h3>Real Pakistani Creator Success Story</h3>
-            <p>
-                Fatima from Lahore started a YouTube channel about "Online Earning for Pakistani Students." She had 200 subscribers initially. After optimizing her titles, thumbnails, and descriptions using the strategies in this guide, her videos started trending. Within 4 months:
-            </p>
-            <ul>
-                <li>1.2M total views</li>
-                <li>45k subscribers</li>
-                <li>$3,200 monthly AdSense revenue</li>
-                <li>Multiple sponsorship offers</li>
-            </ul>
-            <p>
-                <strong>Her secret:</strong> She focused on ranking for Pakistani searches. She made videos about "How to Make Money in Pakistan," "Best Freelancing Sites for Pakistanis," "Online Jobs 2026 Pakistan." Low competition = FAST ranking.
-            </p>
-
-            <h2>Section 9: Common Mistakes That Kill Your Views</h2>
-
-            <h3>Mistake #1: Ignoring Keywords (and Losing Search Traffic)</h3>
-            <p>
-                <strong>The Problem:</strong> You upload a great video with a title like "Making Money Online." But so do 50,000 other creators. Your video gets lost.
-            </p>
-            <p>
-                <strong>The Solution:</strong> Use long-tail keywords. "How Pakistani Students Make $500/Month Online" has 100x less competition. You'll rank #1 much faster.
-            </p>
-
-            <h3>Mistake #2: Slow Intro (Viewers Bounce in First 10 Seconds)</h3>
-            <p>
-                <strong>The Problem:</strong> "Hey guys, welcome to my channel. Today we're talking about YouTube SEO. Don't forget to like and subscribe..." BOUNCE. 30% of viewers are gone.
-            </p>
-            <p>
-                <strong>The Solution:</strong> Hook in 3 seconds. "I made $10,000 last month using ONE YouTube algorithm trick. Here's exactly how." Now they're hooked.
-            </p>
-
-            <h3>Mistake #3: Bad Thumbnail (No One Clicks)</h3>
-            <p>
-                <strong>The Problem:</strong> Generic black thumbnail with tiny text. Looks like 500 other videos. CTR: 1.2%
-            </p>
-            <p>
-                <strong>The Solution:</strong> Shocked/excited face, bold colors, large text. CTR jumps to 8-12%.
-            </p>
-
-            <h3>Mistake #4: No Call-to-Action (Viewers Don't Subscribe/Like)</h3>
-            <p>
-                <strong>The Problem:</strong> Great video, but no one subscribes or likes because you never asked.
-            </p>
-            <p>
-                <strong>The Solution:</strong> Ask 2-3 times. "If this helped, smash like." "Subscribe for more." Add YouTube cards/end screens.
-            </p>
-
-            <h3>Mistake #5: Inconsistent Upload Schedule (Algorithm Gets Confused)</h3>
-            <p>
-                <strong>The Problem:</strong> You upload 2 videos, then disappear for 2 months. YouTube doesn't promote your channel because it's not consistent.
-            </p>
-            <p>
-                <strong>The Solution:</strong> Upload at least 1 video per week. Consistency = Algorithm treats you as active and promotes you.
-            </p>
-
-            <div class="callout">
-                <strong>Real Example:</strong> A creator uploaded 10 videos in 2 weeks (no schedule). Average views: 2k. Then he switched to 1 video per week consistently. Average views on next 10 videos: 45k. Same content. Different consistency.
-            </div>
-
-            <h2>Section 10: Tools, Resources & Step-by-Step Implementation</h2>
+            <h2 id="tools">Section 10: Tools & Resources</h2>
 
             <h3>Free Tools You Need</h3>
             <ul>
-                <li><strong>YouTube Studio:</strong> Built-in analytics (watch time, CTR, AVD, demographics)</li>
-                <li><strong>Google Trends:</strong> Find what people are searching (keyword research)</li>
-                <li><strong>CapCut:</strong> Free video editing (mobile & desktop)</li>
-                <li><strong>Canva:</strong> Free thumbnail design (built-in YouTube templates)</li>
+                <li><strong>YouTube Studio:</strong> Built-in analytics (watch time, CTR, AVD)</li>
+                <li><strong>Google Trends:</strong> Find what people are searching</li>
+                <li><strong>CapCut:</strong> Free video editing</li>
+                <li><strong>Canva:</strong> Free thumbnail design</li>
             </ul>
 
-            <h3>Paid Tools (Optional but Recommended)</h3>
-            <ul>
-                <li><strong>TubeBuddy ($9/month):</strong> Keyword research, SEO audit, rank tracking</li>
-                <li><strong>VidIQ ($15/month):</strong> Similar to TubeBuddy, slightly better interface</li>
-                <li><strong>Adobe Premiere ($23/month):</strong> Professional video editing</li>
-            </ul>
-
-            <h3>Implementation: Your First 30 Days</h3>
-            <p>
-                <strong>Week 1:</strong> Research keywords (use Google Trends + TubeBuddy), plan 4 video ideas with high-CTR titles
-            </p>
-            <p>
-                <strong>Week 2:</strong> Create thumbnails for each video (use the formula from this guide), film/edit videos
-            </p>
-            <p>
-                <strong>Week 3:</strong> Upload first 2 videos, optimize descriptions, create playlists
-            </p>
-            <p>
-                <strong>Week 4:</strong> Monitor analytics, note which CTR/AVD worked best, apply learnings to next batch
-            </p>
-
-            <h2>Section 11: Your 10-Point Pre-Upload Checklist</h2>
+            <h2 id="checklist">Section 11: Your 10-Point Pre-Upload Checklist</h2>
 
             <div class="checklist">
-                <h3>Pre-Upload Checklist</h3>
+                <h3>Before Uploading</h3>
                 <div class="checklist-item">Title uses 3-part formula (number + curiosity + benefit)</div>
                 <div class="checklist-item">Thumbnail has shocked/excited face with bold colors</div>
                 <div class="checklist-item">First 3 seconds have a hook (question or curiosity gap)</div>
-                <div class="checklist-item">Description includes first 150 characters hook + keywords + timestamps</div>
-                <div class="checklist-item">Video length matches audience attention span (8-15 minutes typical)</div>
-                <div class="checklist-item">Average view duration will be 60%+ (tested on small audience first)</div>
+                <div class="checklist-item">Description includes first 150 characters hook + keywords</div>
+                <div class="checklist-item">Video length matches audience attention span (8-15 minutes)</div>
+                <div class="checklist-item">Average view duration will be 60%+ (tested on small audience)</div>
                 <div class="checklist-item">Added to relevant playlist (auto-play setup done)</div>
                 <div class="checklist-item">Tags include 5-10 related keywords</div>
-                <div class="checklist-item">Upload time scheduled for peak hours (6-9 PM your audience's timezone)</div>
-                <div class="checklist-item">Social media share ready (WhatsApp, Facebook, TikTok clips prepared)</div>
+                <div class="checklist-item">Upload time scheduled for peak hours</div>
+                <div class="checklist-item">Social media share ready (WhatsApp, Facebook clips prepared)</div>
             </div>
 
             <h2>Conclusion: Your Path to 1M Views</h2>
@@ -838,7 +661,7 @@
             </p>
 
             <p>
-                <strong>The 3 Core Secrets (Summary):</strong>
+                <strong>The 3 Core Secrets:</strong>
             </p>
             <ol>
                 <li><strong>Title:</strong> Specific Number + Curiosity + Benefit = High CTR</li>
@@ -851,15 +674,7 @@
             </p>
 
             <div class="callout success">
-                <strong>Your Next Step:</strong> Pick ONE video you've already made. Re-title it using the formula. Create a new thumbnail with the high-CTR design. Upload it again (as a new upload, not a re-upload). Track the views. You'll see the difference immediately.
-            </div>
-
-            <p>
-                <strong>Ready to apply this?</strong> Start with your next upload. Use the checklist above. Monitor your CTR and watch time. Adjust based on results. That's how you scale to 1M+ views.
-            </p>
-
-            <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-                Good luck, and let me know how your numbers improve! 🚀
+                <strong>Your Next Step:</strong> Pick ONE video you've already made. Re-title it using the formula. Create a new thumbnail with the high-CTR design. Upload it again. Track the views. You'll see the difference immediately.
             </p>
 
             <!-- Series Navigation -->
@@ -873,23 +688,39 @@
                 </div>
             </div>
 
-            <!-- Related Articles -->
+            <!-- Related Articles - Magazine Style -->
             <div class="related-articles">
-                <h2>Continue Learning</h2>
-                <div class="article-cards">
-                    <a href="/youtube-automation/" class="article-card">
+                <h2>Continue Learning YouTube Automation</h2>
+                
+                <a href="/youtube-automation/" class="related-card">
+                    <div class="related-card-image">
+                        <img src="/images/youtube-automation/youtube-automation-social-share.jpg" alt="YouTube Automation Mastery" loading="lazy">
+                    </div>
+                    <div class="related-card-content">
                         <h3>YouTube Automation Mastery</h3>
-                        <p>Complete guide to faceless channels, stock footage, AI tools, and passive income setup.</p>
-                    </a>
-                    <a href="/how-to-select-niche/" class="article-card">
+                        <p>Complete guide to faceless channels, stock footage, AI tools, and passive income setup. Learn how to build a 6-figure YouTube business without showing your face.</p>
+                    </div>
+                </a>
+
+                <a href="/how-to-select-niche/" class="related-card">
+                    <div class="related-card-image">
+                        <img src="/images/how-to-select-niche/how-to-select-niche-social-share.png" alt="How to Select the Right Niche" loading="lazy">
+                    </div>
+                    <div class="related-card-content">
                         <h3>How to Select the Right Niche</h3>
-                        <p>CPM analysis, competition research, and best niches for 2026 (including Pakistan opportunities).</p>
-                    </a>
-                    <a href="/youtube-monetization/" class="article-card">
+                        <p>Master niche selection for YouTube success. CPM analysis, competition research, best niches for 2026, and step-by-step selection process with Pakistan opportunities.</p>
+                    </div>
+                </a>
+
+                <a href="/youtube-monetization/" class="related-card">
+                    <div class="related-card-image">
+                        <img src="/images/youtube-monetization/youtube-monetization-social-share.png" alt="YouTube Monetization Guide" loading="lazy">
+                    </div>
+                    <div class="related-card-content">
                         <h3>YouTube Monetization Guide</h3>
-                        <p>Requirements, earnings timelines, and real numbers from creators. Reach $1000/month faster.</p>
-                    </a>
-                </div>
+                        <p>Reach 1000 subscribers and 4000 watch hours fast. Complete timeline, payment setup, realistic earnings, and Pakistan withdrawal guide for JazzCash.</p>
+                    </div>
+                </a>
             </div>
         </article>
     </div>
