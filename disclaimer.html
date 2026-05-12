@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G023112WHJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G023112WHJ');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Disclaimer | LearnToWork</title>
+  <title>Disclaimer | Learn To Work</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <meta name="description" content="Disclaimer for LearnToWork. Important information about earnings, results, and content accuracy.">
+  <meta name="description" content="Disclaimer for Learn To Work. Important information about earnings, results, and content accuracy.">
   <meta name="robots" content="noindex, follow">
 
   <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Disclaimer | LearnToWork">
-  <meta property="og:description" content="Disclaimer for LearnToWork.">
+  <meta property="og:title"       content="Disclaimer | Learn To Work">
+  <meta property="og:description" content="Disclaimer for Learn To Work.">
   <meta property="og:url"         content="https://learntowork.online/disclaimer.html">
   <meta property="og:image"       content="https://learntowork.online/Image.png">
-  <meta property="og:site_name"   content="LearnToWork">
+  <meta property="og:site_name"   content="Learn To Work">
 
   <link rel="canonical" href="https://learntowork.online/disclaimer.html">
 
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     :root {
-      --bg: #0a0e27;
-      --surface: #1a1f3a;
-      --border: #374151;
-      --text: #f5f7fa;
-      --muted: #9ca3af;
+      --bg: #020617;
+      --surface: rgba(15, 23, 42, 0.7);
+      --border: rgba(148, 163, 184, 0.1);
+      --text: #f8fafc;
+      --muted: #94a3b8;
       --green: #10b981;
       --accent: #3b82f6;
+      --gold: #d4af37;
       --warning: #f59e0b;
+      --primary-light: #1e293b;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: linear-gradient(135deg, var(--bg) 0%, #0f1535 100%);
+      background: var(--bg);
       color: var(--text);
       font-family: 'IBM Plex Sans', sans-serif;
       line-height: 1.8;
@@ -43,47 +56,74 @@
       min-height: 100vh;
     }
 
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse at 20% 30%, rgba(59, 130, 246, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
     nav {
       border-bottom: 1px solid var(--border);
-      padding: 0 1.5rem;
+      padding: 1.2rem 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 60px;
+      height: 70px;
       position: sticky;
       top: 0;
-      background: rgba(10, 14, 39, 0.95);
+      background: transparent;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(2, 6, 23, 0.95);
       backdrop-filter: blur(10px);
-      z-index: 100;
     }
 
-    .brand { 
-      font-family: 'Lora', serif; 
-      font-size: 1.3rem; 
-      font-weight: 700; 
-      background: linear-gradient(135deg, var(--text), var(--green));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-decoration: none; 
+    .brand {
+      font-family: 'Lora', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
 
-    .back-link { 
-      color: var(--muted); 
-      font-size: 0.9rem; 
-      text-decoration: none; 
-      display: flex; 
-      align-items: center; 
+    .brand i {
+      color: var(--gold);
+      font-size: 1.3rem;
+    }
+
+    .back-link {
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
       gap: 0.4rem;
-      transition: color 0.3s;
+      font-weight: 500;
+      transition: all 0.3s ease;
     }
-    .back-link:hover { color: var(--green); }
 
-    .content-wrap { 
+    .back-link:hover {
+      color: var(--text);
+      transform: translateX(-3px);
+    }
+
+    .content-wrap {
       flex: 1;
-      max-width: 850px; 
-      margin: 0 auto; 
-      padding: 3rem 2rem; 
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 3rem 5%;
     }
 
     h1 {
@@ -104,10 +144,10 @@
     h2 {
       font-family: 'Lora', serif;
       font-size: 1.2rem;
-      color: var(--green);
+      color: var(--accent);
       margin-top: 2.5rem;
       margin-bottom: 1rem;
-      border-left: 3px solid var(--accent);
+      border-left: 3px solid var(--green);
       padding-left: 1rem;
     }
 
@@ -116,13 +156,13 @@
     }
 
     p {
-      color: #d1d5db;
+      color: var(--muted);
       margin-bottom: 1.2rem;
       font-size: 0.95rem;
     }
 
     strong {
-      color: var(--green);
+      color: var(--text);
       font-weight: 600;
     }
 
@@ -133,15 +173,16 @@
 
     li {
       margin-bottom: 0.6rem;
-      color: #d1d5db;
+      color: var(--muted);
     }
 
     .warning-box {
-      background: rgba(245, 158, 11, 0.1);
+      background: rgba(245, 158, 11, 0.08);
       border-left: 4px solid var(--warning);
       padding: 1.5rem;
-      border-radius: 8px;
+      border-radius: 12px;
       margin-bottom: 2rem;
+      border: 1px solid rgba(245, 158, 11, 0.2);
     }
 
     .warning-box p {
@@ -149,42 +190,70 @@
       color: #fbbf24;
     }
 
-    a { 
-      color: var(--green); 
+    a {
+      color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
+      transition: all 0.3s ease;
     }
-    a:hover { text-decoration: underline; }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .bottom-line {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
 
     footer {
       border-top: 1px solid var(--border);
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 5% 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
       color: var(--muted);
       font-size: 0.85rem;
     }
-    footer a { 
-      color: var(--green); 
-      text-decoration: none; 
-      margin: 0 0.5rem; 
-      font-weight: 500;
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
     }
-    footer a:hover { 
-      color: var(--text); 
-      text-decoration: underline;
+
+    footer a:hover {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 768px) {
+      nav { padding: 1.2rem 5%; }
       h1 { font-size: 1.6rem; }
-      .content-wrap { padding: 2rem 1.5rem; }
+      .content-wrap { padding: 2rem 5%; }
     }
   </style>
+<base target="_blank">
 </head>
 <body>
 
-<nav>
-  <a href="/" class="brand">LearnToWork</a>
-  <a href="/" class="back-link">← Home</a>
+<nav id="navbar">
+  <a href="/" class="brand">
+    <i class="fas fa-rocket"></i>
+    Learn To Work
+  </a>
+  <a href="/" class="back-link">
+    <i class="fas fa-arrow-left"></i>
+    Home
+  </a>
 </nav>
 
 <div class="content-wrap">
@@ -192,11 +261,11 @@
   <span class="last-updated">Last Updated: May 12, 2026</span>
 
   <div class="warning-box">
-    <p><strong>⚠️ Important:</strong> Please read this carefully before using LearnToWork. The information on this site is for educational purposes only.</p>
+    <p><strong>⚠️ Important:</strong> Please read this carefully before using Learn To Work. The information on this site is for educational purposes only.</p>
   </div>
 
   <h2>1. About Earnings & Income Claims</h2>
-  <p>Let me be clear: <strong>I can't promise you'll make money.</strong> Everything you see on LearnToWork is based on my personal experience and research, but your results will be completely different. It depends on how much time you spend, your skills, your niche, market conditions, and honestly—a lot of luck.</p>
+  <p>Let me be clear: <strong>I can't promise you'll make money.</strong> Everything you see on Learn To Work is based on my personal experience and research, but your results will be completely different. It depends on how much time you spend, your skills, your niche, market conditions, and honestly—a lot of luck.</p>
   <p>I've tested these methods myself and earned money through them. But just because I made $X doesn't mean you will. I've also tried things that failed completely. The strategies I share have worked for some people, not worked for others, and sometimes it takes months to see results.</p>
   <p>If someone tells you they can guarantee earnings online, they're lying. Don't trust them. Not even me. Always verify information and test it yourself first.</p>
 
@@ -245,10 +314,10 @@
   <p>I might update this disclaimer anytime. If I do, the changes take effect immediately. Keep checking back occasionally to see what's changed.</p>
 
   <h2>10. Questions?</h2>
-  <p>If you have concerns or questions about anything on LearnToWork, reach out:</p>
+  <p>If you have concerns or questions about anything on Learn To Work, reach out:</p>
   <p><strong>Email:</strong> <a href="mailto:hello.littleboom@gmail.com">hello.littleboom@gmail.com</a></p>
 
-  <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem;">
+  <p class="bottom-line">
     <strong>Bottom line:</strong> Use your judgment. Test things yourself. Don't risk money you can't afford to lose. And if something doesn't feel right, trust your gut.
   </p>
 </div>
@@ -261,8 +330,22 @@
     <a href="/disclaimer.html">Disclaimer</a>
     <a href="/contact.html">Contact</a>
   </p>
-  <p>© 2026 LearnToWork — Pakistan's Trusted Earning Guide</p>
+  <div class="footer-bottom">
+    <p>© 2026 Learn To Work — Pakistan's Trusted Earning Guide</p>
+  </div>
 </footer>
+
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
 
 </body>
 </html>
