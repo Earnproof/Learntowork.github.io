@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | LearnToWork</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta name="description" content="Contact LearnToWork. Have questions, feedback, or want to report a scam? Get in touch with us.">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Contact Us | LearnToWork">
+  <meta property="og:description" content="Contact LearnToWork. We'd love to hear from you.">
+  <meta property="og:url"         content="https://learntowork.online/contact.html">
+  <meta property="og:image"       content="https://learntowork.online/Image.png">
+  <meta property="og:site_name"   content="LearnToWork">
+
+  <link rel="canonical" href="https://learntowork.online/contact.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #181c27;
+      --border: #262d42;
+      --text: #e8eaf0;
+      --muted: #8b92a8;
+      --green: #22c55e;
+      --accent: #60a5fa;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 100;
+    }
+
+    .brand { font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .brand span { color: var(--green); }
+
+    .back-link { color: var(--muted); font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
+    .back-link:hover { color: var(--text); }
+
+    .content-wrap { 
+      flex: 1;
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 3rem 1.5rem; 
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent);
+      background: #3b82f615; border: 1px solid #3b82f633;
+      padding: 4px 12px; border-radius: 99px; margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .sub-text {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-card h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      border-left: 3px solid var(--green);
+      padding-left: 1rem;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .method-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .method-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .method-label {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+    }
+
+    .method-value {
+      color: var(--muted);
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    .method-value a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .method-value a:hover {
+      text-decoration: underline;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--muted); text-decoration: none; margin: 0 0.5rem; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 480px) {
+      .content-wrap { padding: 2rem 1rem; }
+      .contact-card { padding: 1.5rem; }
+      .method-item { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="brand">LearnToWork<span>.</span></a>
+  <a href="index.html" class="back-link">← Home</a>
+</nav>
+
+<div class="content-wrap">
+  <div class="eyebrow">Get In Touch</div>
+  <h1>We'd Love to Hear From You<span>.</span></h1>
+  <p class="sub-text">Have questions, feedback, or want to report a scam? Reach out to us anytime. We read every message.</p>
+
+  <div class="contact-methods">
+    <div class="method-item">
+      <div class="method-icon">✉️</div>
+      <div class="method-label">Email</div>
+      <div class="method-value">
+        <a href="mailto:hello.littleboom@gmail.com">hello.littleboom@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="method-item">
+      <div class="method-icon">🌐</div>
+      <div class="method-label">Website</div>
+      <div class="method-value">
+        <a href="https://learntowork.online">learntowork.online</a>
+      </div>
+    </div>
+
+    <div class="method-item">
+      <div class="method-icon">🇵🇰</div>
+      <div class="method-label">Based In</div>
+      <div class="method-value">Pakistan</div>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <h2>What to Contact Us About</h2>
+    <p><strong>Questions about earning?</strong> Ask anything. We answer questions about YouTube, affiliate marketing, freelancing, and more.</p>
+    <p><strong>Found an error?</strong> If you spot a mistake or outdated info on our site, let us know. We fix it quickly.</p>
+    <p><strong>Want to collaborate?</strong> Interested in partnerships or guest posts? We're open to hearing ideas.</p>
+    <p><strong>Found a scam?</strong> Encountered a fake earning opportunity? Report it so we can warn others.</p>
+    <p><strong>Have feedback?</strong> Love the site? Have suggestions for improvement? We'd love to hear it.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>Response Time</h2>
+    <p>We try to respond to all emails within 24-48 hours. During busy periods, it might take up to a week. We appreciate your patience.</p>
+    <p>If you don't hear back, please check your spam folder or try emailing again.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>Privacy</h2>
+    <p>Your email and message are private. We don't sell your information, share it with third parties, or use it for marketing. We only use it to respond to you.</p>
+    <p>For more details, read our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+  </div>
+</div>
+
+<footer>
+  <p>
+    <a href="about.html">About</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="contact.html">Contact</a>
+  </p>
+  <p>© 2026 LearnToWork — Pakistan's Trusted Earning Guide</p>
+</footer>
+
+</body>
+</html>
