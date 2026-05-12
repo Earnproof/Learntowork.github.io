@@ -359,7 +359,7 @@
       line-height: 1.7;
     }
 
-    /* Categories Grid */
+    /* Categories Grid - FIXED: Only title and explore are clickable */
     .categories-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -372,7 +372,6 @@
       border-radius: 16px;
       padding: 2rem;
       transition: all 0.3s ease;
-      cursor: pointer;
       position: relative;
     }
 
@@ -398,11 +397,23 @@
     .cat-reviews .category-icon { background: rgba(16, 185, 129, 0.1); color: #10b981; }
     .cat-payment .category-icon { background: rgba(212, 175, 55, 0.1); color: var(--gold); }
 
+    /* Category title is now a link */
+    .category-title-link {
+      text-decoration: none;
+      color: var(--light);
+      display: block;
+    }
+
     .category-card h3 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.15rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .category-title-link:hover h3 {
+      color: var(--accent);
     }
 
     .category-card p {
@@ -440,6 +451,7 @@
     .cat-reviews .earning-range { color: #10b981; }
     .cat-payment .earning-range { color: var(--gold); }
 
+    /* Explore link - only clickable part */
     .explore-link {
       display: inline-flex;
       align-items: center;
@@ -449,11 +461,14 @@
       font-weight: 500;
       font-size: 0.85rem;
       transition: all 0.3s;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
     }
 
-    .category-card:hover .explore-link {
+    .explore-link:hover {
       color: var(--accent);
       gap: 0.6rem;
+      background: rgba(59, 130, 246, 0.1);
     }
 
     /* Articles Section */
@@ -865,57 +880,52 @@
     </div>
   </section>
 
-  <!-- Categories Section -->
+  <!-- Categories Section - FIXED -->
   <section id="categories">
     <div class="section-header">
       <div class="section-tag">Browse by Category</div>
       <h2>Pick Your <span>Income Path</span></h2>
-      <p>I've organized everything by skill type so you can find exactly what you need. Click any category to explore all the guides inside.</p>
+      <p>I've organized everything by skill type so you can find exactly what you need. Click any category name or Explore button to see all guides.</p>
     </div>
     <div class="categories-grid">
-      <a href="ai-earning.html" class="category-card cat-ai">
+
+      <!-- Category 1: AI -->
+      <div class="category-card cat-ai">
         <div class="category-icon"><i class="fas fa-robot"></i></div>
-        <h3>Earn with AI</h3>
+        <!-- Only title is clickable -->
+        <a href="ai-earning.html" class="category-title-link">
+          <h3>Earn with AI</h3>
+        </a>
         <p>AI data labeling, prompt engineering, chatbot monetization, and AI-powered income streams.</p>
         <div class="article-count"><i class="fas fa-file-alt"></i> 3 Guides</div>
         <div class="category-meta">
           <span class="earning-range">$100-800/mo</span>
-          <span class="explore-link">Explore <i class="fas fa-arrow-right"></i></span>
+          <!-- Only explore button is clickable -->
+          <a href="ai-earning.html" class="explore-link">
+            Explore <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-      </a>
+      </div>
 
-      <a href="video-automation.html" class="category-card cat-video">
+      <!-- Category 2: Video -->
+      <div class="category-card cat-video">
         <div class="category-icon"><i class="fab fa-youtube"></i></div>
-        <h3>Video Automation</h3>
+        <a href="video-automation.html" class="category-title-link">
+          <h3>Video Automation</h3>
+        </a>
         <p>YouTube automation, niche selection, monetization, and SEO strategies for faceless channels.</p>
         <div class="article-count"><i class="fas fa-file-alt"></i> 4 Guides</div>
         <div class="category-meta">
           <span class="earning-range">$500-2,000/mo</span>
-          <span class="explore-link">Explore <i class="fas fa-arrow-right"></i></span>
+          <a href="video-automation.html" class="explore-link">
+            Explore <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-      </a>
+      </div>
 
-      <a href="reviews-trust.html" class="category-card cat-reviews">
-        <div class="category-icon"><i class="fas fa-shield-alt"></i></div>
-        <h3>Reviews & Trust</h3>
-        <p>Honest platform reviews, verified earning apps, scam alerts, and safety guidelines.</p>
-        <div class="article-count"><i class="fas fa-file-alt"></i> 2 Guides</div>
-        <div class="category-meta">
-          <span class="earning-range">Verified Only</span>
-          <span class="explore-link">Explore <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
+      <!-- Category 3: Reviews -->
 
-      <a href="withdrawal-setup.html" class="category-card cat-payment">
-        <div class="category-icon"><i class="fas fa-wallet"></i></div>
-        <h3>Withdrawal & Setup</h3>
-        <p>Step-by-step payment setup guides for JazzCash, EasyPaisa, Payoneer, and more.</p>
-        <div class="article-count"><i class="fas fa-file-alt"></i> 1 Guide</div>
-        <div class="category-meta">
-          <span class="earning-range">Fast & Secure</span>
-          <span class="explore-link">Explore <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
+      <!-- Category 4: Payment -->
     </div>
   </section>
 
@@ -1017,45 +1027,6 @@
           </div>
         </div>
       </a>
-
-      <a href="ysense-review.html" class="article-card">
-        <div class="article-thumb">⭐</div>
-        <div class="article-info">
-          <h4>ySense Review 2026</h4>
-          <p>Is ySense legit or a scam? My complete honest review with real earnings, withdrawal guides, JazzCash setup, and Pakistan tips.</p>
-          <div class="article-tags">
-            <span class="tag">Review</span>
-            <span class="tag">Surveys</span>
-            <span class="tag">Honest</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="earning-apps.html" class="article-card">
-        <div class="article-thumb">📱</div>
-        <div class="article-info">
-          <h4>Verified Earning Apps 2026</h4>
-          <p>Trusted list of legitimate earning apps in Pakistan. JazzCash & EasyPaisa payments. Scam alert list and complete safety guidelines.</p>
-          <div class="article-tags">
-            <span class="tag">Apps</span>
-            <span class="tag">Verified</span>
-            <span class="tag">Safety</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="ysense-withdrawal-guide.html" class="article-card">
-        <div class="article-thumb">💳</div>
-        <div class="article-info">
-          <h4>How to Withdraw to JazzCash</h4>
-          <p>Step-by-step guide to withdraw earnings directly to JazzCash. Fast, easy, secure. Works with ySense and other platforms.</p>
-          <div class="article-tags">
-            <span class="tag">Payments</span>
-            <span class="tag">JazzCash</span>
-            <span class="tag">Tutorial</span>
-          </div>
-        </div>
-      </a>
     </div>
   </section>
 
@@ -1131,10 +1102,8 @@
       <div class="footer-links">
         <h4>Categories</h4>
         <ul>
-          <li><a href="#categories">Earn with AI</a></li>
-          <li><a href="#categories">Video Automation</a></li>
-          <li><a href="#categories">Reviews & Trust</a></li>
-          <li><a href="#categories">Withdrawal & Setup</a></li>
+          <li><a href="ai-earning.html">Earn with AI</a></li>
+          <li><a href="video-automation.html">Video Automation</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -1218,4 +1187,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
