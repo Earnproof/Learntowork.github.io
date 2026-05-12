@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G023112WHJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G023112WHJ');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms and Conditions | LearnToWork</title>
+  <title>Terms and Conditions | Learn To Work</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <meta name="description" content="Terms and Conditions for LearnToWork. Read our rules and policies.">
+  <meta name="description" content="Terms and Conditions for Learn To Work. Read our rules and policies.">
   <meta name="robots" content="noindex, follow">
 
   <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Terms and Conditions | LearnToWork">
-  <meta property="og:description" content="Terms and Conditions for LearnToWork.">
+  <meta property="og:title"       content="Terms and Conditions | Learn To Work">
+  <meta property="og:description" content="Terms and Conditions for Learn To Work.">
   <meta property="og:url"         content="https://learntowork.online/terms.html">
   <meta property="og:image"       content="https://learntowork.online/Image.png">
-  <meta property="og:site_name"   content="LearnToWork">
+  <meta property="og:site_name"   content="Learn To Work">
 
   <link rel="canonical" href="https://learntowork.online/terms.html">
 
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     :root {
-      --bg: #0a0e27;
-      --surface: #1a1f3a;
-      --border: #374151;
-      --text: #f5f7fa;
-      --muted: #9ca3af;
+      --bg: #020617;
+      --surface: rgba(15, 23, 42, 0.7);
+      --border: rgba(148, 163, 184, 0.1);
+      --text: #f8fafc;
+      --muted: #94a3b8;
       --green: #10b981;
       --accent: #3b82f6;
+      --gold: #d4af37;
+      --primary-light: #1e293b;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: linear-gradient(135deg, var(--bg) 0%, #0f1535 100%);
+      background: var(--bg);
       color: var(--text);
       font-family: 'IBM Plex Sans', sans-serif;
       line-height: 1.8;
@@ -42,47 +55,74 @@
       min-height: 100vh;
     }
 
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse at 20% 30%, rgba(59, 130, 246, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
     nav {
       border-bottom: 1px solid var(--border);
-      padding: 0 1.5rem;
+      padding: 1.2rem 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 60px;
+      height: 70px;
       position: sticky;
       top: 0;
-      background: rgba(10, 14, 39, 0.95);
+      background: transparent;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(2, 6, 23, 0.95);
       backdrop-filter: blur(10px);
-      z-index: 100;
     }
 
-    .brand { 
-      font-family: 'Lora', serif; 
-      font-size: 1.3rem; 
-      font-weight: 700; 
-      background: linear-gradient(135deg, var(--text), var(--green));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-decoration: none; 
+    .brand {
+      font-family: 'Lora', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
 
-    .back-link { 
-      color: var(--muted); 
-      font-size: 0.9rem; 
-      text-decoration: none; 
-      display: flex; 
-      align-items: center; 
+    .brand i {
+      color: var(--gold);
+      font-size: 1.3rem;
+    }
+
+    .back-link {
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
       gap: 0.4rem;
-      transition: color 0.3s;
+      font-weight: 500;
+      transition: all 0.3s ease;
     }
-    .back-link:hover { color: var(--green); }
 
-    .content-wrap { 
+    .back-link:hover {
+      color: var(--text);
+      transform: translateX(-3px);
+    }
+
+    .content-wrap {
       flex: 1;
-      max-width: 850px; 
-      margin: 0 auto; 
-      padding: 3rem 2rem; 
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 3rem 5%;
     }
 
     h1 {
@@ -103,10 +143,10 @@
     h2 {
       font-family: 'Lora', serif;
       font-size: 1.2rem;
-      color: var(--green);
+      color: var(--accent);
       margin-top: 2.5rem;
       margin-bottom: 1rem;
-      border-left: 3px solid var(--accent);
+      border-left: 3px solid var(--green);
       padding-left: 1rem;
     }
 
@@ -115,13 +155,13 @@
     }
 
     p {
-      color: #d1d5db;
+      color: var(--muted);
       margin-bottom: 1.2rem;
       font-size: 0.95rem;
     }
 
     strong {
-      color: var(--green);
+      color: var(--text);
       font-weight: 600;
     }
 
@@ -132,55 +172,83 @@
 
     li {
       margin-bottom: 0.6rem;
-      color: #d1d5db;
+      color: var(--muted);
     }
 
-    a { 
-      color: var(--green); 
+    a {
+      color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
+      transition: all 0.3s ease;
     }
-    a:hover { text-decoration: underline; }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .bottom-line {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
 
     footer {
       border-top: 1px solid var(--border);
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 5% 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
       color: var(--muted);
       font-size: 0.85rem;
     }
-    footer a { 
-      color: var(--green); 
-      text-decoration: none; 
-      margin: 0 0.5rem; 
-      font-weight: 500;
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
     }
-    footer a:hover { 
-      color: var(--text); 
-      text-decoration: underline;
+
+    footer a:hover {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 768px) {
+      nav { padding: 1.2rem 5%; }
       h1 { font-size: 1.6rem; }
-      .content-wrap { padding: 2rem 1.5rem; }
+      .content-wrap { padding: 2rem 5%; }
     }
   </style>
+<base target="_blank">
 </head>
 <body>
 
-<nav>
-  <a href="/" class="brand">LearnToWork</a>
-  <a href="/" class="back-link">← Home</a>
+<nav id="navbar">
+  <a href="/" class="brand">
+    <i class="fas fa-rocket"></i>
+    Learn To Work
+  </a>
+  <a href="/" class="back-link">
+    <i class="fas fa-arrow-left"></i>
+    Home
+  </a>
 </nav>
 
 <div class="content-wrap">
   <h1>Terms and Conditions</h1>
   <span class="last-updated">Last Updated: May 12, 2026</span>
 
-  <p><strong>Quick summary:</strong> Use LearnToWork for educational purposes. Don't steal our content or blame us if things don't work out. That's basically it.</p>
+  <p><strong>Quick summary:</strong> Use Learn To Work for educational purposes. Don't steal our content or blame us if things don't work out. That's basically it.</p>
 
-  <h2>1. Who Can Use LearnToWork?</h2>
-  <p>You can use this site if you're at least 13 years old. If you're under 18, you might need parental permission depending on your location. By visiting LearnToWork, you agree to follow these terms. If you don't agree, please don't use the site.</p>
+  <h2>1. Who Can Use Learn To Work?</h2>
+  <p>You can use this site if you're at least 13 years old. If you're under 18, you might need parental permission depending on your location. By visiting Learn To Work, you agree to follow these terms. If you don't agree, please don't use the site.</p>
 
   <h2>2. What You Can and Can't Do</h2>
   <p><strong>You CAN:</strong></p>
@@ -202,15 +270,15 @@
   </ul>
 
   <h2>3. About Our Content</h2>
-  <p>All the articles, guides, images, and content on LearnToWork are owned by us. You can read and use them for personal learning, but you can't republish or sell them without permission.</p>
+  <p>All the articles, guides, images, and content on Learn To Work are owned by us. You can read and use them for personal learning, but you can't republish or sell them without permission.</p>
 
   <p>If you find a mistake or want to use something specific, email me at <a href="mailto:hello.littleboom@gmail.com">hello.littleboom@gmail.com</a> and we can discuss it.</p>
 
   <h2>4. If You Submit Something to Us</h2>
-  <p>If you email me feedback, a question, or suggestion about the site, I own that content and can use it to improve LearnToWork. I won't publish your personal info without permission.</p>
+  <p>If you email me feedback, a question, or suggestion about the site, I own that content and can use it to improve Learn To Work. I won't publish your personal info without permission.</p>
 
   <h2>5. Affiliate Links & Money</h2>
-  <p>LearnToWork includes affiliate links. If you click them and buy something, I earn a commission. This doesn't affect the price you pay. I only recommend things I genuinely believe are useful.</p>
+  <p>Learn To Work includes affiliate links. If you click them and buy something, I earn a commission. This doesn't affect the price you pay. I only recommend things I genuinely believe are useful.</p>
 
   <h2>6. No Guarantees</h2>
   <p>I'm not responsible for:</p>
@@ -225,21 +293,21 @@
   <p>Use everything at your own risk. Do your own research. Think critically. Don't blindly trust anyone online—including me.</p>
 
   <h2>7. External Links</h2>
-  <p>LearnToWork links to YouTube, Upwork, Amazon, and other sites. I'm not responsible for what's on those sites or if they change their policies. Read their terms and privacy policies too.</p>
+  <p>Learn To Work links to YouTube, Upwork, Amazon, and other sites. I'm not responsible for what's on those sites or if they change their policies. Read their terms and privacy policies too.</p>
 
   <h2>8. What If Something Is Wrong?</h2>
   <p>If you find an error, inaccuracy, or dead link, please let me know so I can fix it. Email: <a href="mailto:hello.littleboom@gmail.com">hello.littleboom@gmail.com</a></p>
 
   <h2>9. Changes to These Terms</h2>
-  <p>I might update these terms anytime. When I do, the date at the top will change. Your continued use of LearnToWork means you accept the new terms.</p>
+  <p>I might update these terms anytime. When I do, the date at the top will change. Your continued use of Learn To Work means you accept the new terms.</p>
 
   <h2>10. Pakistan Laws</h2>
-  <p>LearnToWork is based in Pakistan and follows Pakistani laws. If there's a legal dispute, it would be resolved under Pakistan law.</p>
+  <p>Learn To Work is based in Pakistan and follows Pakistani laws. If there's a legal dispute, it would be resolved under Pakistan law.</p>
 
   <h2>11. Final Word</h2>
-  <p>These terms exist to protect both of us. I want LearnToWork to be a helpful resource, and I want you to use it responsibly. If you have questions, just ask.</p>
+  <p>These terms exist to protect both of us. I want Learn To Work to be a helpful resource, and I want you to use it responsibly. If you have questions, just ask.</p>
 
-  <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem;">
+  <p class="bottom-line">
     <strong>Questions?</strong> Email me: <a href="mailto:hello.littleboom@gmail.com">hello.littleboom@gmail.com</a>
   </p>
 </div>
@@ -252,8 +320,22 @@
     <a href="/disclaimer.html">Disclaimer</a>
     <a href="/contact.html">Contact</a>
   </p>
-  <p>© 2026 LearnToWork — Pakistan's Trusted Earning Guide</p>
+  <div class="footer-bottom">
+    <p>© 2026 Learn To Work — Pakistan's Trusted Earning Guide</p>
+  </div>
 </footer>
+
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
 
 </body>
 </html>
