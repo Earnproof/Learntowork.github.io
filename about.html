@@ -12,42 +12,40 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Learn To Work</title>
+  <title>About Isabella | Learn To Work</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <meta name="description" content="LearnToWork helps Pakistanis and beginners worldwide learn how to earn online through YouTube, Pinterest, affiliate marketing, and more.">
+  <meta name="description" content="Meet Isabella — the Pakistani creator behind Learn To Work. Free, honest guides to earning money online from someone who actually did it first.">
 
-  <meta property="og:type"        content="website">
-  <meta property="og:title"       content="About Us | Learn To Work">
-  <meta property="og:description" content="LearnToWork helps Pakistanis and beginners worldwide learn how to earn online.">
-  <meta property="og:url"         content="https://learntowork.online/about.html">
-  <meta property="og:image"       content="https://learntowork.online/Image.png">
-  <meta property="og:site_name"   content="LearnToWork">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Isabella | Learn To Work">
+  <meta property="og:description" content="Meet Isabella — the Pakistani creator behind Learn To Work. Free, honest guides to earning money online.">
+  <meta property="og:url" content="https://learntowork.online/about.html">
+  <meta property="og:image" content="https://learntowork.online/Image.png">
+  <meta property="og:site_name" content="Learn To Work">
 
   <link rel="canonical" href="https://learntowork.online/about.html">
 
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     :root {
-      --bg: #020617;
-      --surface: rgba(15, 23, 42, 0.7);
+      --primary: #0f172a; --primary-light: #1e293b;
+      --accent: #3b82f6; --accent-hover: #2563eb;
+      --gold: #d4af37; --green: #10b981;
+      --dark: #020617; --light: #f8fafc;
+      --gray: #94a3b8; --gray-dark: #475569;
       --border: rgba(148, 163, 184, 0.1);
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --green: #10b981;
-      --accent: #3b82f6;
-      --gold: #d4af37;
-      --primary-light: #1e293b;
+      --card-bg: rgba(15, 23, 42, 0.7);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'IBM Plex Sans', sans-serif;
+      background: var(--dark);
+      color: var(--light);
+      font-family: 'Inter', sans-serif;
       line-height: 1.8;
       display: flex;
       flex-direction: column;
@@ -55,14 +53,11 @@
     }
 
     body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
+      content: ''; position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%; z-index: -1;
       background:
-        radial-gradient(ellipse at 20% 30%, rgba(59, 130, 246, 0.04) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+        radial-gradient(ellipse at 20% 30%, rgba(59,130,246,0.04) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 70%, rgba(212,175,55,0.03) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -81,283 +76,318 @@
     }
 
     nav.scrolled {
-      background: rgba(2, 6, 23, 0.95);
+      background: rgba(2,6,23,0.95);
       backdrop-filter: blur(10px);
     }
 
     .brand {
-      font-family: 'Lora', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--light); text-decoration: none;
+      display: flex; align-items: center; gap: 0.6rem;
+      letter-spacing: -0.5px;
     }
 
-    .brand i {
-      color: var(--gold);
-      font-size: 1.3rem;
-    }
+    .brand i { color: var(--gold); font-size: 1.3rem; }
 
     .back-link {
-      color: var(--muted);
-      font-size: 0.95rem;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
+      color: var(--gray); font-size: 0.95rem;
+      text-decoration: none; display: flex;
+      align-items: center; gap: 0.4rem;
+      font-weight: 500; transition: all 0.3s ease;
     }
 
-    .back-link:hover {
-      color: var(--text);
-      transform: translateX(-3px);
-    }
+    .back-link:hover { color: var(--light); transform: translateX(-3px); }
 
     .content-wrap {
-      flex: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 3rem 5%;
+      flex: 1; max-width: 800px;
+      margin: 0 auto; padding: 4rem 5%;
       text-align: center;
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gold);
-      background: rgba(212, 175, 55, 0.05);
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--gold); background: rgba(212,175,55,0.05);
       border: 1px solid var(--border);
-      padding: 0.4rem 1rem;
-      border-radius: 50px;
-      margin-bottom: 1.5rem;
+      padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 1.5rem;
     }
 
     h1 {
-      font-family: 'Lora', serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 1rem;
+      font-weight: 700; color: #fff; margin-bottom: 1rem;
+      letter-spacing: -1px;
     }
 
-    h1 span {
-      color: var(--accent);
-    }
+    h1 span { color: var(--accent); }
 
     .sub-text {
-      color: var(--muted);
-      font-size: 1.1rem;
-      margin-bottom: 3rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      color: var(--gray); font-size: 1.1rem;
+      margin-bottom: 3rem; max-width: 600px;
+      margin-left: auto; margin-right: auto;
+    }
+
+    /* Pakistan Badge */
+    .pakistan-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(16,185,129,0.08);
+      border: 1px solid rgba(16,185,129,0.2);
+      color: var(--green); padding: 0.4rem 1rem;
+      border-radius: 50px; font-size: 0.85rem;
+      font-weight: 600; margin-bottom: 2rem;
     }
 
     .about-card {
-      background: var(--surface);
+      background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.5rem;
-      text-align: left;
-      margin-bottom: 1.5rem;
+      border-radius: 16px; padding: 2.5rem;
+      text-align: left; margin-bottom: 1.5rem;
       transition: all 0.3s ease;
     }
 
     .about-card:hover {
-      border-color: rgba(59, 130, 246, 0.3);
+      border-color: rgba(59,130,246,0.3);
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     }
 
     .about-card h2 {
-      font-family: 'Lora', serif;
-      font-size: 1.3rem;
-      color: var(--accent);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem; color: var(--accent);
       margin-bottom: 1rem;
       border-left: 3px solid var(--green);
       padding-left: 1rem;
     }
 
     .about-card p {
-      color: var(--muted);
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
+      color: var(--gray);
+      margin-bottom: 1rem; font-size: 0.97rem;
+      line-height: 1.85;
     }
 
+    .about-card p:last-child { margin-bottom: 0; }
+
+    .about-card strong { color: var(--light); }
+
+    .about-card a { color: var(--accent); text-decoration: none; transition: color 0.3s; }
+    .about-card a:hover { color: var(--gold); text-decoration: underline; }
+
+    /* Stats */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
+      gap: 1.5rem; margin: 2rem 0;
     }
 
     .stat-item {
-      text-align: center;
-      padding: 1.5rem;
-      background: var(--surface);
+      text-align: center; padding: 1.5rem;
+      background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      transition: all 0.3s ease;
+      border-radius: 14px; transition: all 0.3s ease;
     }
 
     .stat-item:hover {
-      border-color: rgba(59, 130, 246, 0.3);
+      border-color: rgba(59,130,246,0.3);
       transform: translateY(-3px);
     }
 
     .stat-number {
-      font-family: 'Lora', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--green);
-      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--green); display: block;
+      line-height: 1.3;
     }
 
     .stat-label {
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-top: 0.3rem;
+      color: var(--gray); font-size: 0.82rem; margin-top: 0.4rem;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: all 0.3s ease;
+    /* Quote box */
+    .quote-box {
+      background: linear-gradient(135deg, rgba(59,130,246,0.06) 0%, rgba(212,175,55,0.04) 100%);
+      border: 1px solid rgba(59,130,246,0.2);
+      border-radius: 16px; padding: 2rem;
+      margin: 2rem 0; text-align: center;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .quote-box p {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem; color: var(--light);
+      font-style: italic; line-height: 1.7;
+    }
+
+    .quote-box span {
+      display: block; color: var(--gray);
+      font-size: 0.85rem; margin-top: 0.8rem;
     }
 
     footer {
       border-top: 1px solid var(--border);
       text-align: center;
-      padding: 3rem 5% 1.5rem;
-      max-width: 1400px;
-      margin: 0 auto;
-      color: var(--muted);
-      font-size: 0.85rem;
+      padding: 2rem 5% 1.5rem;
+      max-width: 1400px; margin: 0 auto;
+      color: var(--gray); font-size: 0.85rem;
     }
 
     footer a {
-      color: var(--muted);
-      text-decoration: none;
-      margin: 0 0.5rem;
-      transition: color 0.3s;
+      color: var(--gray); text-decoration: none;
+      margin: 0 0.5rem; transition: color 0.3s;
     }
 
-    footer a:hover {
-      color: var(--text);
-    }
+    footer a:hover { color: var(--light); }
 
     .footer-bottom {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
+      margin-top: 1.5rem; padding-top: 1.5rem;
       border-top: 1px solid var(--border);
     }
 
+    /* Cookie Banner */
+    .cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--primary-light); border-top: 2px solid var(--accent);
+      padding: 1.5rem; display: none; flex-wrap: wrap;
+      gap: 1.5rem; align-items: center; justify-content: space-between;
+      z-index: 999; box-shadow: 0 -4px 15px rgba(0,0,0,0.3); font-size: 0.9rem;
+    }
+    .cookie-banner.show { display: flex; }
+    .cookie-message { flex: 1; min-width: 250px; color: var(--gray); }
+    .cookie-message a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .cookie-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .cookie-btn { padding: 0.6rem 1.2rem; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 0.9rem; }
+    .cookie-accept { background: var(--accent); color: white; }
+    .cookie-accept:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .cookie-decline { background: transparent; color: var(--gray); border: 1px solid var(--border); }
+    .cookie-decline:hover { border-color: var(--accent); color: var(--light); }
+
     @media (max-width: 768px) {
-      nav { padding: 1.2rem 5%; }
       .content-wrap { padding: 2rem 5%; }
       .about-card { padding: 1.5rem; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .cookie-banner { flex-direction: column; padding: 1rem; }
+      .cookie-buttons { width: 100%; flex-direction: column; }
+      .cookie-btn { width: 100%; }
     }
 
     @media (max-width: 480px) {
       .brand { font-size: 1.2rem; }
       h1 { font-size: 1.8rem; }
-      .stats-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
-<base target="_blank">
+  <base target="_blank">
 </head>
 <body>
 
 <nav id="navbar">
-  <a href="index.html" class="brand">
+  <a href="/" class="brand">
     <i class="fas fa-rocket"></i>
     Learn To Work
   </a>
-  <a href="index.html" class="back-link">
+  <a href="/" class="back-link">
     <i class="fas fa-arrow-left"></i>
     Home
   </a>
 </nav>
 
 <div class="content-wrap">
-  <div class="eyebrow">About Us</div>
-  <h1>We Help You Earn Online<span>.</span></h1>
-  <p class="sub-text">Learn To Work is a free resource for Pakistanis and beginners worldwide who want to learn real ways to make money online.</p>
 
-  <div class="about-card">
-    <h2>Our Mission</h2>
-    <p>We believe everyone deserves access to honest, practical information about online earning. Whether you are a student looking for pocket money, a stay-at-home parent seeking flexible income, or someone ready to build a full-time online business — we are here to guide you with step-by-step strategies that actually work.</p>
+  <div class="eyebrow"><i class="fas fa-user"></i> About</div>
+  <h1>Hi, I'm <span>Isabella</span> 👋</h1>
+  <p class="sub-text">I'm a Pakistani content creator sharing free, honest guides to help you earn real money online — no fluff, no scams, just what actually works.</p>
+  <div class="pakistan-badge">
+    <i class="fas fa-map-marker-alt"></i> Based in Pakistan 🇵🇰
   </div>
 
   <div class="about-card">
-    <h2>What We Cover</h2>
-    <p>Our guides focus on proven methods like YouTube automation, Pinterest marketing, affiliate marketing, freelancing, and digital product creation. We test strategies ourselves, share real data, and never promote scams or "get rich quick" schemes.</p>
+    <h2>My Story</h2>
+    <p>I started this journey the same way most people do — searching YouTube at midnight for "how to earn money online in Pakistan," finding endless videos promising thousands of dollars overnight, and feeling more confused than when I started.</p>
+    <p>The truth is, I tried a lot of things before finding what actually works. I made mistakes, wasted time on methods that led nowhere, and spent months figuring out what nobody was being honest about. That frustration is exactly why I built <strong>Learn To Work</strong>.</p>
+    <p>I wanted to create the resource I wish I had found on day one — real strategies, realistic income expectations, and payment solutions that actually work from Pakistan. No hype. No fake screenshots. Just step-by-step guides from someone who figured it out the hard way so you don't have to.</p>
   </div>
 
+  <div class="quote-box">
+    <p>"If I can learn this sitting in Pakistan with nothing but a laptop and internet — so can you. Location is not a limitation anymore."</p>
+    <span>— Isabella, Founder of Learn To Work</span>
+  </div>
+
+  <div class="about-card">
+    <h2>What I Cover</h2>
+    <p>Every guide on this site is something I've personally researched, tested, or verified before publishing. I focus on methods that work for people starting from zero — no big investment, no prior experience required.</p>
+    <p>Right now my library covers <strong>YouTube automation</strong>, <strong>AI earning methods</strong>, <strong>Shopify dropshipping</strong>, <strong>print on demand</strong>, <strong>prompt engineering</strong>, and much more — with a dedicated Pakistan section in every guide covering payment methods like Payoneer, JazzCash, and EasyPaisa.</p>
+    <p>I update existing guides regularly and publish new ones as I discover and verify new methods. This is a growing library — not a static website.</p>
+  </div>
+
+  <!-- Stats — no specific numbers that need updating -->
   <div class="stats-grid">
     <div class="stat-item">
-      <span class="stat-number">10+</span>
-      <span class="stat-label">Free Guides</span>
+      <span class="stat-number">Growing<br>Library</span>
+      <span class="stat-label">Of Free Guides</span>
     </div>
     <div class="stat-item">
       <span class="stat-number">100%</span>
       <span class="stat-label">Honest Content</span>
     </div>
     <div class="stat-item">
-      <span class="stat-number">2026</span>
-      <span class="stat-label">Fresh & Updated</span>
+      <span class="stat-number">Always<br>Updated</span>
+      <span class="stat-label">Fresh for 2026</span>
     </div>
     <div class="stat-item">
-      <span class="stat-number">0$</span>
+      <span class="stat-number">$0</span>
       <span class="stat-label">Cost to You</span>
     </div>
   </div>
 
   <div class="about-card">
-    <h2>Contact Us</h2>
-    <p>Have questions, feedback, or want to report a scam? We would love to hear from you.</p>
-    <p><strong>Email:</strong> <a href="mailto:hello.littleboom@gmail.com">hello.littleboom@gmail.com</a><br>
-    <strong>Website:</strong> <a href="https://learntowork.online">learntowork.online</a></p>
+    <h2>Why Pakistan?</h2>
+    <p>Because I know what it feels like to search for an earning method and see "not available in your country." I know the frustration of finding a perfect guide that has zero information about how to actually get paid from Pakistan.</p>
+    <p>Every single guide I publish has a <strong>Pakistan-specific section</strong> — covering payment setup, withdrawal methods, platform availability, and local workarounds. But my content works for beginners worldwide, not just Pakistan. Whether you're in India, Bangladesh, Nigeria, or anywhere else — the strategies here work from wherever you are.</p>
+    <p><strong>Your country is not your limit. Your internet connection is your passport.</strong></p>
   </div>
+
+  <div class="about-card">
+    <h2>Get in Touch</h2>
+    <p>Have a question about a guide? Found something that doesn't work the way I described? Want to suggest a topic? I genuinely read every message and try to respond to everyone.</p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:hello.littleboom@gmail.com">hello.littleboom@gmail.com</a><br>
+      <strong>Website:</strong> <a href="https://learntowork.online">learntowork.online</a>
+    </p>
+  </div>
+
 </div>
 
 <footer>
   <p>
-    <a href="about.html">About</a>
-    <a href="privacy-policy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="disclaimer.html">Disclaimer</a>
-    <a href="contact.html">Contact</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/contact.html">Contact</a>
   </p>
   <div class="footer-bottom">
-    <p>© 2026 Learn To Work — Pakistan's Trusted Earning Guide</p>
+    <p>© 2026 Learn To Work — Built with passion for free education by Isabella 🚀</p>
   </div>
 </footer>
 
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-message">
+    🍪 We use cookies and Google Analytics to improve your experience. By continuing, you agree to our <a href="/privacy-policy.html">Privacy Policy</a>.
+  </div>
+  <div class="cookie-buttons">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+  </div>
+</div>
+
 <script>
-  // Navbar scroll effect
   window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
   });
+  function showCookieBanner() { if (!localStorage.getItem('cookieConsent')) document.getElementById('cookieBanner').classList.add('show'); }
+  function acceptCookies() { localStorage.setItem('cookieConsent', 'accepted'); document.getElementById('cookieBanner').classList.remove('show'); }
+  function declineCookies() { localStorage.setItem('cookieConsent', 'declined'); document.getElementById('cookieBanner').classList.remove('show'); }
+  window.addEventListener('load', showCookieBanner);
 </script>
 
 </body>
