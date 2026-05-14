@@ -15,7 +15,6 @@
   <title>Learn To Work - Free Guides to Earn Money Online | 2026</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Primary Meta Tags -->
   <meta name="description" content="Free, honest guides to earning real money online by Isabella. Learn YouTube automation, AI tools, freelancing, and verified earning methods. Step-by-step strategies with Pakistan payment methods like JazzCash & EasyPaisa.">
   <meta name="keywords" content="earn money online, make money online, free guides, YouTube automation, AI earning, freelancing, passive income, work from home, Pakistan earning, JazzCash, EasyPaisa, online income 2026">
   <meta name="author" content="Isabella">
@@ -23,7 +22,6 @@
   <meta name="googlebot" content="index, follow">
   <link rel="canonical" href="https://learntowork.online/">
 
-  <!-- Open Graph / Facebook / WhatsApp / Pinterest -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://learntowork.online/">
   <meta property="og:title" content="Learn To Work - Free Guides to Earn Money Online | 2026">
@@ -35,7 +33,6 @@
   <meta property="og:site_name" content="Learn To Work">
   <meta property="og:locale" content="en_US">
 
-  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://learntowork.online/">
   <meta property="twitter:title" content="Learn To Work - Free Guides to Earn Money Online | 2026">
@@ -43,10 +40,8 @@
   <meta property="twitter:image" content="https://learntowork.online/Image.png">
   <meta property="twitter:creator" content="@learntowork">
 
-  <!-- Pinterest -->
   <meta name="pinterest-rich-pin" content="true">
 
-  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -97,710 +92,122 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark);
-      color: var(--light);
-      line-height: 1.6;
-    }
-
+    body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--light); line-height: 1.6; }
     body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-      background:
-        radial-gradient(ellipse at 20% 30%, rgba(59, 130, 246, 0.04) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+      content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+      background: radial-gradient(ellipse at 20% 30%, rgba(59,130,246,0.04) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 70%, rgba(212,175,55,0.03) 0%, transparent 60%);
       pointer-events: none;
     }
 
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 1.2rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      background: transparent;
-      transition: all 0.3s ease;
-      height: 70px;
-    }
+    nav { position: fixed; top: 0; width: 100%; padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: transparent; transition: all 0.3s ease; height: 70px; }
+    nav.scrolled { background: rgba(2,6,23,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+    .logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--light); text-decoration: none; display: flex; align-items: center; gap: 0.6rem; letter-spacing: -0.5px; }
+    .logo i { color: var(--gold); font-size: 1.3rem; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--gray); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: all 0.3s ease; white-space: nowrap; }
+    .nav-links a:hover { color: var(--light); transform: translateY(-2px); }
+    .nav-cta { background: var(--accent); color: white; padding: 0.7rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; border: none; cursor: pointer; display: inline-block; }
+    .nav-cta:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59,130,246,0.3); }
+    .mobile-menu-btn { display: none; background: none; border: none; color: var(--light); font-size: 1.5rem; cursor: pointer; }
 
-    nav.scrolled {
-      background: rgba(2, 6, 23, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
+    .hero { min-height: 85vh; display: flex; align-items: center; padding: 6rem 5% 0; max-width: 1400px; margin: 0 auto; }
+    .hero-content { max-width: 650px; }
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 3.8rem; font-weight: 700; line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: -1px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { font-size: 1.15rem; color: var(--gray); margin-bottom: 2.5rem; max-width: 520px; line-height: 1.7; }
+    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: white; padding: 1rem 2.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59,130,246,0.25); }
+    .btn-secondary { background: transparent; color: var(--light); padding: 1rem 2.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; border: 1px solid var(--border); cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .btn-secondary:hover { border-color: var(--gray-dark); background: rgba(148,163,184,0.05); }
+    .hero-stats { display: flex; gap: 3rem; margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .stat { text-align: left; }
+    .stat-number { font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--light); }
+    .stat-label { font-size: 0.85rem; color: var(--gray); margin-top: 0.2rem; }
 
-    .logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--light);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      letter-spacing: -0.5px;
-    }
+    section { padding: 5rem 5%; max-width: 1400px; margin: 0 auto; }
+    .section-header { text-align: center; max-width: 650px; margin: 0 auto 3.5rem; }
+    .section-tag { display: inline-block; border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; color: var(--gold); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; background: rgba(212,175,55,0.05); }
+    .section-header h2 { font-family: 'Space Grotesk', sans-serif; font-size: 2.6rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.5px; }
+    .section-header h2 span { color: var(--accent); }
+    .section-header p { color: var(--gray); font-size: 1.05rem; line-height: 1.7; }
 
-    .logo i {
-      color: var(--gold);
-      font-size: 1.3rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--gray);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover {
-      color: var(--light);
-      transform: translateY(-2px);
-    }
-
-    .nav-cta {
-      background: var(--accent);
-      color: white;
-      padding: 0.7rem 1.8rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      display: inline-block;
-    }
-
-    .nav-cta:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--light);
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    /* Hero */
-    .hero {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      padding: 6rem 5% 0;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .hero-content {
-      max-width: 650px;
-    }
-
-    .hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 3.8rem;
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
-      letter-spacing: -1px;
-    }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: var(--gray);
-      margin-bottom: 2.5rem;
-      max-width: 520px;
-      line-height: 1.7;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: white;
-      padding: 1rem 2.5rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--light);
-      padding: 1rem 2.5rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      border: 1px solid var(--border);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--gray-dark);
-      background: rgba(148, 163, 184, 0.05);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 3rem;
-      margin-top: 3.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .stat {
-      text-align: left;
-    }
-
-    .stat-number {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--light);
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--gray);
-      margin-top: 0.2rem;
-    }
-
-    /* Sections */
-    section {
-      padding: 5rem 5%;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 650px;
-      margin: 0 auto 3.5rem;
-    }
-
-    .section-tag {
-      display: inline-block;
-      border: 1px solid var(--border);
-      padding: 0.4rem 1rem;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      color: var(--gold);
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 600;
-      background: rgba(212, 175, 55, 0.05);
-    }
-
-    .section-header h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.6rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: -0.5px;
-    }
-
-    .section-header h2 span {
-      color: var(--accent);
-    }
-
-    .section-header p {
-      color: var(--gray);
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-
-    /* Categories Grid - FIXED: Only title and explore are clickable */
-    .categories-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .category-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .category-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(59, 130, 246, 0.3);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .category-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .cat-ai .category-icon { background: rgba(59, 130, 246, 0.1); color: var(--accent); }
-    .cat-video .category-icon { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
-    .cat-store .category-icon { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
-    .cat-reviews .category-icon { background: rgba(16, 185, 129, 0.1); color: #10b981; }
-    .cat-payment .category-icon { background: rgba(212, 175, 55, 0.1); color: var(--gold); }
-
-    /* Category title is now a link */
-    .category-title-link {
-      text-decoration: none;
-      color: var(--light);
-      display: block;
-    }
-
-    .category-card h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      transition: color 0.3s ease;
-    }
-
-    .category-title-link:hover h3 {
-      color: var(--accent);
-    }
-
-    .category-card p {
-      color: var(--gray);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .article-count {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--gray-dark);
-      font-size: 0.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .category-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .earning-range {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
+    .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .category-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: all 0.3s ease; position: relative; }
+    .category-card:hover { transform: translateY(-4px); border-color: rgba(59,130,246,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+    .category-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.2rem; }
+    .cat-ai .category-icon { background: rgba(59,130,246,0.1); color: var(--accent); }
+    .cat-video .category-icon { background: rgba(239,68,68,0.1); color: #ef4444; }
+    .cat-store .category-icon { background: rgba(139,92,246,0.1); color: #8b5cf6; }
+    .category-title-link { text-decoration: none; color: var(--light); display: block; }
+    .category-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; transition: color 0.3s ease; }
+    .category-title-link:hover h3 { color: var(--accent); }
+    .category-card p { color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.6; }
+    .article-count { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--gray-dark); font-size: 0.8rem; margin-bottom: 1rem; }
+    .category-meta { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .earning-range { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.95rem; }
     .cat-ai .earning-range { color: var(--accent); }
     .cat-video .earning-range { color: #ef4444; }
     .cat-store .earning-range { color: #8b5cf6; }
-    .cat-reviews .earning-range { color: #10b981; }
-    .cat-payment .earning-range { color: var(--gold); }
+    .explore-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--gray); text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: all 0.3s; padding: 0.3rem 0.6rem; border-radius: 6px; }
+    .explore-link:hover { color: var(--accent); gap: 0.6rem; background: rgba(59,130,246,0.1); }
 
-    /* Explore link - only clickable part */
-    .explore-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--gray);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.85rem;
-      transition: all 0.3s;
-      padding: 0.3rem 0.6rem;
-      border-radius: 6px;
-    }
+    .articles-section { background: rgba(15,23,42,0.3); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
+    .article-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; transition: all 0.3s ease; display: flex; gap: 1.2rem; align-items: flex-start; cursor: pointer; text-decoration: none; color: var(--light); }
+    .article-card:hover { border-color: rgba(59,130,246,0.3); transform: translateY(-3px); }
+    .article-thumb { width: 60px; height: 60px; border-radius: 12px; background: rgba(59,130,246,0.08); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; color: var(--accent); }
+    .article-info h4 { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; line-height: 1.4; }
+    .article-info p { color: var(--gray); font-size: 0.85rem; margin-bottom: 0.6rem; line-height: 1.5; }
+    .article-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .tag { background: rgba(148,163,184,0.08); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; color: var(--gray); }
 
-    .explore-link:hover {
-      color: var(--accent);
-      gap: 0.6rem;
-      background: rgba(59, 130, 246, 0.1);
-    }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .feature-item { text-align: center; padding: 2rem 1.5rem; }
+    .feature-icon { width: 65px; height: 65px; border-radius: 18px; background: var(--card-bg); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.5rem; color: var(--gold); transition: all 0.3s ease; }
+    .feature-item:hover .feature-icon { border-color: var(--gold); transform: translateY(-3px); }
+    .feature-item h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; margin-bottom: 0.8rem; font-weight: 600; }
+    .feature-item p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; }
 
-    /* Articles Section */
-    .articles-section {
-      background: rgba(15, 23, 42, 0.3);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
+    .cta-section { text-align: center; }
+    .cta-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 4rem 3rem; max-width: 750px; margin: 0 auto; }
+    .cta-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: 2.4rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.5px; }
+    .cta-box h2 span { color: var(--accent); }
+    .cta-box p { color: var(--gray); font-size: 1.05rem; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.7; }
 
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 1.5rem;
-    }
+    footer { border-top: 1px solid var(--border); padding: 3rem 5% 1.5rem; max-width: 1400px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem; }
+    .footer-brand .logo { margin-bottom: 1rem; display: inline-flex; }
+    .footer-brand p { color: var(--gray); font-size: 0.9rem; line-height: 1.7; }
+    .footer-links h4 { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.2rem; color: var(--light); }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 0.7rem; }
+    .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--light); }
+    .social-links { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
+    .social-links a { width: 38px; height: 38px; border-radius: 10px; background: var(--card-bg); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--gray); text-decoration: none; transition: all 0.3s ease; font-size: 0.9rem; }
+    .social-links a:hover { background: var(--accent); border-color: var(--accent); color: white; transform: translateY(-2px); }
+    .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--gray-dark); font-size: 0.85rem; }
 
-    .article-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.8rem;
-      transition: all 0.3s ease;
-      display: flex;
-      gap: 1.2rem;
-      align-items: flex-start;
-      cursor: pointer;
-      text-decoration: none;
-      color: var(--light);
-    }
-
-    .article-card:hover {
-      border-color: rgba(59, 130, 246, 0.3);
-      transform: translateY(-3px);
-    }
-
-    .article-thumb {
-      width: 60px;
-      height: 60px;
-      border-radius: 12px;
-      background: rgba(59, 130, 246, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-      color: var(--accent);
-    }
-
-    .article-info h4 {
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
-      line-height: 1.4;
-    }
-
-    .article-info p {
-      color: var(--gray);
-      font-size: 0.85rem;
-      margin-bottom: 0.6rem;
-      line-height: 1.5;
-    }
-
-    .article-tags {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      background: rgba(148, 163, 184, 0.08);
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      color: var(--gray);
-    }
-
-    /* Features Section */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .feature-item {
-      text-align: center;
-      padding: 2rem 1.5rem;
-    }
-
-    .feature-icon {
-      width: 65px;
-      height: 65px;
-      border-radius: 18px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      margin: 0 auto 1.5rem;
-      color: var(--gold);
-      transition: all 0.3s ease;
-    }
-
-    .feature-item:hover .feature-icon {
-      border-color: var(--gold);
-      transform: translateY(-3px);
-    }
-
-    .feature-item h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.1rem;
-      margin-bottom: 0.8rem;
-      font-weight: 600;
-    }
-
-    .feature-item p {
-      color: var(--gray);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    /* CTA Section */
-    .cta-section {
-      text-align: center;
-    }
-
-    .cta-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 4rem 3rem;
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    .cta-box h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: -0.5px;
-    }
-
-    .cta-box h2 span {
-      color: var(--accent);
-    }
-
-    .cta-box p {
-      color: var(--gray);
-      font-size: 1.05rem;
-      margin-bottom: 2rem;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.7;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 3rem 5% 1.5rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-brand .logo {
-      margin-bottom: 1rem;
-      display: inline-flex;
-    }
-
-    .footer-brand p {
-      color: var(--gray);
-      font-size: 0.9rem;
-      line-height: 1.7;
-    }
-
-    .footer-links h4 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 1.2rem;
-      color: var(--light);
-    }
-
-    .footer-links ul {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 0.7rem;
-    }
-
-    .footer-links a {
-      color: var(--gray);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.3s;
-    }
-
-    .footer-links a:hover {
-      color: var(--light);
-    }
-
-    .social-links {
-      display: flex;
-      gap: 0.8rem;
-      margin-top: 1.5rem;
-    }
-
-    .social-links a {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gray);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 0.9rem;
-    }
-
-    .social-links a:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      color: var(--gray-dark);
-      font-size: 0.85rem;
-    }
-
-    /* Cookie Banner */
-    .cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: var(--primary-light);
-      border-top: 2px solid var(--accent);
-      padding: 1.5rem;
-      display: none;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 999;
-      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
+    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--primary-light); border-top: 2px solid var(--accent); padding: 1.5rem; display: none; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; z-index: 999; box-shadow: 0 -4px 15px rgba(0,0,0,0.3); font-size: 0.9rem; line-height: 1.6; }
     .cookie-banner.show { display: flex; }
-
-    .cookie-message {
-      flex: 1;
-      min-width: 250px;
-      color: var(--gray);
-    }
-
-    .cookie-message a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
+    .cookie-message { flex: 1; min-width: 250px; color: var(--gray); }
+    .cookie-message a { color: var(--accent); text-decoration: none; font-weight: 600; }
     .cookie-message a:hover { text-decoration: underline; }
+    .cookie-buttons { display: flex; gap: 1rem; flex-wrap: wrap; min-width: 200px; }
+    .cookie-btn { padding: 0.6rem 1.2rem; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 0.9rem; }
+    .cookie-accept { background: var(--accent); color: white; }
+    .cookie-accept:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .cookie-decline { background: transparent; color: var(--gray); border: 1px solid var(--border); }
+    .cookie-decline:hover { border-color: var(--accent); color: var(--light); }
 
-    .cookie-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      min-width: 200px;
-    }
-
-    .cookie-btn {
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      font-size: 0.9rem;
-    }
-
-    .cookie-accept {
-      background: var(--accent);
-      color: white;
-    }
-
-    .cookie-accept:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-    }
-
-    .cookie-decline {
-      background: transparent;
-      color: var(--gray);
-      border: 1px solid var(--border);
-    }
-
-    .cookie-decline:hover {
-      border-color: var(--accent);
-      color: var(--light);
-    }
-
-    /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--dark); }
     ::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--gray-dark); }
 
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .hero h1 { font-size: 3rem; }
-    }
-
+    @media (max-width: 1024px) { .hero h1 { font-size: 3rem; } }
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
       .mobile-menu-btn { display: block; }
@@ -818,11 +225,9 @@
       .cookie-buttons { width: 100%; flex-direction: column; }
       .cookie-btn { width: 100%; }
     }
-
     @media (max-width: 480px) {
       .logo { font-size: 1.2rem; }
       .hero h1 { font-size: 1.8rem; }
-      .hero .subtitle { font-size: 0.95rem; }
       .stat-number { font-size: 1.3rem; }
       .section-header h2 { font-size: 1.6rem; }
       .cta-box { padding: 2.5rem 1.5rem; }
@@ -833,12 +238,8 @@
 </head>
 
 <body>
-  <!-- Navigation -->
   <nav id="navbar">
-    <a href="/" class="logo">
-      <i class="fas fa-rocket"></i>
-      Learn To Work
-    </a>
+    <a href="/" class="logo"><i class="fas fa-rocket"></i> Learn To Work</a>
     <ul class="nav-links">
       <li><a href="#categories">Categories</a></li>
       <li><a href="#articles">Guides</a></li>
@@ -849,20 +250,13 @@
     <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Learn Skills,<br><span>Earn Money,</span><br>Build Your Future</h1>
       <p>Hi, I'm Isabella! I create free, honest guides to help you earn real money online. From AI tools to YouTube automation — no cost, no catch, just real strategies that work.</p>
       <div class="hero-buttons">
-        <a href="#categories" class="btn-primary">
-          Explore Guides
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="contact.html" class="btn-secondary">
-          <i class="fas fa-envelope"></i>
-          Get in Touch
-        </a>
+        <a href="#categories" class="btn-primary">Explore Guides <i class="fas fa-arrow-right"></i></a>
+        <a href="contact.html" class="btn-secondary"><i class="fas fa-envelope"></i> Get in Touch</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -881,7 +275,7 @@
     </div>
   </section>
 
-  <!-- Categories Section - FIXED -->
+  <!-- Categories -->
   <section id="categories">
     <div class="section-header">
       <div class="section-tag">Browse by Category</div>
@@ -890,60 +284,44 @@
     </div>
     <div class="categories-grid">
 
-      <!-- Category 1: AI -->
       <div class="category-card cat-ai">
         <div class="category-icon"><i class="fas fa-robot"></i></div>
-        <!-- Only title is clickable -->
-        <a href="ai-earning/" class="category-title-link">
-          <h3>Earn with AI</h3>
-        </a>
+        <a href="ai-earning/" class="category-title-link"><h3>Earn with AI</h3></a>
         <p>AI data labeling, prompt engineering, chatbot monetization, and AI-powered income streams.</p>
         <div class="article-count"><i class="fas fa-file-alt"></i> 3 Guides</div>
         <div class="category-meta">
           <span class="earning-range">$100-800/mo</span>
-          <!-- Only explore button is clickable -->
-          <a href="ai-earning/" class="explore-link">
-            Explore <i class="fas fa-arrow-right"></i>
-          </a>
+          <a href="ai-earning/" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
-      <!-- Category 2: Video -->
       <div class="category-card cat-video">
         <div class="category-icon"><i class="fab fa-youtube"></i></div>
-        <a href="video-automation/" class="category-title-link">
-          <h3>Video Automation</h3>
-        </a>
+        <a href="video-automation/" class="category-title-link"><h3>Video Automation</h3></a>
         <p>YouTube automation, niche selection, monetization, and SEO strategies for faceless channels.</p>
         <div class="article-count"><i class="fas fa-file-alt"></i> 4 Guides</div>
         <div class="category-meta">
           <span class="earning-range">$500-2,000/mo</span>
-          <a href="video-automation/" class="explore-link">
-            Explore <i class="fas fa-arrow-right"></i>
-          </a>
+          <a href="video-automation/" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
-      <!-- Category 3: Online Store -->
+      <!-- ✅ Online Store — 3 Guides updated -->
       <div class="category-card cat-store">
         <div class="category-icon"><i class="fas fa-store"></i></div>
-        <a href="online-store/" class="category-title-link">
-          <h3>Online Store</h3>
-        </a>
+        <a href="online-store/" class="category-title-link"><h3>Online Store</h3></a>
         <p>Build your own e-commerce business. Dropshipping, print-on-demand, and passive income stores.</p>
-        <div class="article-count"><i class="fas fa-file-alt"></i> 2 Guides</div>
+        <div class="article-count"><i class="fas fa-file-alt"></i> 3 Guides</div>
         <div class="category-meta">
           <span class="earning-range">$500-3,000/mo</span>
-          <a href="online-store/" class="explore-link">
-            Explore <i class="fas fa-arrow-right"></i>
-          </a>
+          <a href="online-store/" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Popular Articles Section -->
+  <!-- Articles -->
   <section id="articles" class="articles-section">
     <div class="section-header">
       <div class="section-tag">Trending Now</div>
@@ -951,16 +329,13 @@
       <p>These are the guides my readers love most. Start with what others found most valuable!</p>
     </div>
     <div class="articles-grid">
+
       <a href="ai-data-labeling-master/" class="article-card">
         <div class="article-thumb">🏷️</div>
         <div class="article-info">
           <h4>AI Data Labeling Master</h4>
           <p>Earn $100-300/month by labeling data for AI companies. Complete guide to Remotasks, Appen, Telus, and more with Pakistan payment methods.</p>
-          <div class="article-tags">
-            <span class="tag">AI</span>
-            <span class="tag">Beginner</span>
-            <span class="tag">Pakistan</span>
-          </div>
+          <div class="article-tags"><span class="tag">AI</span><span class="tag">Beginner</span><span class="tag">Pakistan</span></div>
         </div>
       </a>
 
@@ -969,11 +344,7 @@
         <div class="article-info">
           <h4>Prompt Engineering 2026</h4>
           <p>Make $500+/month creating AI prompts. Master ChatGPT, Midjourney, Claude. Complete roadmap with real earnings and payment guides.</p>
-          <div class="article-tags">
-            <span class="tag">AI</span>
-            <span class="tag">High Income</span>
-            <span class="tag">Skills</span>
-          </div>
+          <div class="article-tags"><span class="tag">AI</span><span class="tag">High Income</span><span class="tag">Skills</span></div>
         </div>
       </a>
 
@@ -982,11 +353,7 @@
         <div class="article-info">
           <h4>AI Chatbot Monetization</h4>
           <p>Build AI chatbots and earn $300-800/month. No coding required. 5 proven methods with step-by-step setup and Pakistan payment integration.</p>
-          <div class="article-tags">
-            <span class="tag">AI</span>
-            <span class="tag">No Code</span>
-            <span class="tag">Passive</span>
-          </div>
+          <div class="article-tags"><span class="tag">AI</span><span class="tag">No Code</span><span class="tag">Passive</span></div>
         </div>
       </a>
 
@@ -995,11 +362,7 @@
         <div class="article-info">
           <h4>YouTube Automation Mastery</h4>
           <p>Make $500-2000/month with YouTube automation. Complete guide to faceless channels, stock footage, AI tools, and passive income setup.</p>
-          <div class="article-tags">
-            <span class="tag">YouTube</span>
-            <span class="tag">Automation</span>
-            <span class="tag">Passive</span>
-          </div>
+          <div class="article-tags"><span class="tag">YouTube</span><span class="tag">Automation</span><span class="tag">Passive</span></div>
         </div>
       </a>
 
@@ -1008,11 +371,7 @@
         <div class="article-info">
           <h4>How to Select the Right Niche</h4>
           <p>Master niche selection for YouTube success. CPM analysis, competition research, best niches 2026, and step-by-step selection process.</p>
-          <div class="article-tags">
-            <span class="tag">Strategy</span>
-            <span class="tag">Research</span>
-            <span class="tag">YouTube</span>
-          </div>
+          <div class="article-tags"><span class="tag">Strategy</span><span class="tag">Research</span><span class="tag">YouTube</span></div>
         </div>
       </a>
 
@@ -1021,11 +380,7 @@
         <div class="article-info">
           <h4>YouTube Monetization Guide</h4>
           <p>Reach 1000 subs and 4000 watch hours fast. Complete timeline, payment setup, realistic earnings, and Pakistan-specific guide.</p>
-          <div class="article-tags">
-            <span class="tag">Monetization</span>
-            <span class="tag">Beginner</span>
-            <span class="tag">Pakistan</span>
-          </div>
+          <div class="article-tags"><span class="tag">Monetization</span><span class="tag">Beginner</span><span class="tag">Pakistan</span></div>
         </div>
       </a>
 
@@ -1034,43 +389,44 @@
         <div class="article-info">
           <h4>YouTube SEO & Ranking</h4>
           <p>Get 1M views: Algorithm secrets, CTR mastery, thumbnails, titles. Step-by-step blueprint to rank your videos.</p>
-          <div class="article-tags">
-            <span class="tag">SEO</span>
-            <span class="tag">Growth</span>
-            <span class="tag">Algorithm</span>
-          </div>
+          <div class="article-tags"><span class="tag">SEO</span><span class="tag">Growth</span><span class="tag">Algorithm</span></div>
         </div>
       </a>
 
-      <a href="online-store/shopify-dropshipping-guide/" class="article-card">
+      <!-- ✅ Fixed link — was online-store/shopify-dropshipping-guide/ -->
+      <a href="shopify-dropshipping-guide/" class="article-card">
         <div class="article-thumb">🛒</div>
         <div class="article-info">
           <h4>Shopify Dropshipping Complete Guide 2026</h4>
           <p>Start your Shopify dropshipping store step-by-step. Find winning products, set up your store, and make your first sale. Earn $500–2,000/month worldwide.</p>
-          <div class="article-tags">
-            <span class="tag">Shopify</span>
-            <span class="tag">Beginner</span>
-            <span class="tag">Worldwide</span>
-          </div>
+          <div class="article-tags"><span class="tag">Shopify</span><span class="tag">Beginner</span><span class="tag">Worldwide</span></div>
         </div>
       </a>
 
-      <a href="online-store/dropshipping-zero-investment/" class="article-card">
+      <!-- ✅ Fixed link — was online-store/dropshipping-zero-investment/ -->
+      <a href="dropshipping-zero-investment/" class="article-card">
         <div class="article-thumb">💸</div>
         <div class="article-info">
           <h4>How to Start Dropshipping with $0 Investment</h4>
           <p>Yes, free dropshipping is possible. Use Shopify free trial, free suppliers, and free marketing to launch without spending a single dollar.</p>
-          <div class="article-tags">
-            <span class="tag">Free</span>
-            <span class="tag">No Investment</span>
-            <span class="tag">Beginner</span>
-          </div>
+          <div class="article-tags"><span class="tag">Free</span><span class="tag">No Investment</span><span class="tag">Beginner</span></div>
         </div>
       </a>
+
+      <!-- ✅ New — Print on Demand article -->
+      <a href="print-on-demand-guide/" class="article-card">
+        <div class="article-thumb">🖨️</div>
+        <div class="article-info">
+          <h4>Print on Demand Complete Guide 2026</h4>
+          <p>Start a POD business with zero inventory. Use Printify or Printful, sell custom t-shirts, mugs, and more worldwide — earn $500–2,000/month.</p>
+          <div class="article-tags"><span class="tag">POD</span><span class="tag">Beginner</span><span class="tag">Worldwide</span></div>
+        </div>
+      </a>
+
     </div>
   </section>
 
-  <!-- Features Section -->
+  <!-- Features -->
   <section id="features">
     <div class="section-header">
       <div class="section-tag">Why Choose Us</div>
@@ -1111,14 +467,13 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- CTA -->
   <section id="cta" class="cta-section">
     <div class="cta-box">
       <h2>Ready to Start <span>Earning?</span></h2>
       <p>Join thousands of learners building their online income. No credit card required. No hidden fees. Just free, quality education from someone who's been there.</p>
-      <a href="#categories" class="btn-primary" style="font-size: 1.05rem; padding: 1rem 2.5rem;">
-        Browse All Guides
-        <i class="fas fa-arrow-right"></i>
+      <a href="#categories" class="btn-primary" style="font-size:1.05rem;padding:1rem 2.5rem;">
+        Browse All Guides <i class="fas fa-arrow-right"></i>
       </a>
     </div>
   </section>
@@ -1127,10 +482,7 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="logo">
-          <i class="fas fa-rocket"></i>
-          Learn To Work
-        </a>
+        <a href="/" class="logo"><i class="fas fa-rocket"></i> Learn To Work</a>
         <p>Empowering people worldwide with free, honest, and actionable guides to earning money online. No scams, no shortcuts — just real skills and real results. Built with passion by Isabella.</p>
         <div class="social-links">
           <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -1171,11 +523,8 @@
     </div>
   </footer>
 
-  <!-- Cookie Consent Banner -->
   <div class="cookie-banner" id="cookieBanner">
-    <div class="cookie-message">
-      🍪 We use cookies and Google Analytics to improve your experience. By continuing, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.
-    </div>
+    <div class="cookie-message">🍪 We use cookies and Google Analytics to improve your experience. By continuing, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</div>
     <div class="cookie-buttons">
       <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
       <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
@@ -1183,49 +532,22 @@
   </div>
 
   <script>
-    // Navbar scroll effect
     window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
-    // Cookie Consent
-    function showCookieBanner() {
-      const consent = localStorage.getItem('cookieConsent');
-      if (!consent) {
-        document.getElementById('cookieBanner').classList.add('show');
-      }
-    }
-
-    function acceptCookies() {
-      localStorage.setItem('cookieConsent', 'accepted');
-      document.getElementById('cookieBanner').classList.remove('show');
-    }
-
-    function declineCookies() {
-      localStorage.setItem('cookieConsent', 'declined');
-      document.getElementById('cookieBanner').classList.remove('show');
-    }
-
-    // Initialize
-    window.addEventListener('load', function() {
-      showCookieBanner();
-    });
+    function showCookieBanner() { if (!localStorage.getItem('cookieConsent')) document.getElementById('cookieBanner').classList.add('show'); }
+    function acceptCookies() { localStorage.setItem('cookieConsent', 'accepted'); document.getElementById('cookieBanner').classList.remove('show'); }
+    function declineCookies() { localStorage.setItem('cookieConsent', 'declined'); document.getElementById('cookieBanner').classList.remove('show'); }
+    window.addEventListener('load', showCookieBanner);
   </script>
 </body>
-                                                                 </html>
+</html>
