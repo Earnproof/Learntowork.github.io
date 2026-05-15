@@ -114,35 +114,35 @@
 
   <!-- Static Pages -->
   <url>
-    <loc>https://learntowork.online/about.html</loc>
+    <loc>https://learntowork.online/about/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://learntowork.online/contact.html</loc>
+    <loc>https://learntowork.online/contact/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://learntowork.online/privacy-policy.html</loc>
+    <loc>https://learntowork.online/privacy-policy/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://learntowork.online/terms.html</loc>
+    <loc>https://learntowork.online/terms/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://learntowork.online/disclaimer.html</loc>
+    <loc>https://learntowork.online/disclaimer/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
