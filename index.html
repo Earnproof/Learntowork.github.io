@@ -153,15 +153,75 @@
     .explore-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--gray); text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: all 0.3s; padding: 0.3rem 0.6rem; border-radius: 6px; }
     .explore-link:hover { color: var(--accent); gap: 0.6rem; background: rgba(59,130,246,0.1); }
 
+    /* ===== NEW: Featured Articles Grid (2 columns with images) ===== */
     .articles-section { background: rgba(15,23,42,0.3); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
-    .article-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; transition: all 0.3s ease; display: flex; gap: 1.2rem; align-items: flex-start; cursor: pointer; text-decoration: none; color: var(--light); }
-    .article-card:hover { border-color: rgba(59,130,246,0.3); transform: translateY(-3px); }
-    .article-thumb { width: 60px; height: 60px; border-radius: 12px; background: rgba(59,130,246,0.08); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; color: var(--accent); }
-    .article-info h4 { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; line-height: 1.4; }
-    .article-info p { color: var(--gray); font-size: 0.85rem; margin-bottom: 0.6rem; line-height: 1.5; }
-    .article-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .tag { background: rgba(148,163,184,0.08); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; color: var(--gray); }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .article-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: var(--light);
+      display: flex;
+      flex-direction: column;
+    }
+    .article-card:hover {
+      border-color: rgba(59,130,246,0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .article-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(212,175,55,0.05) 100%);
+    }
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .article-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-content h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
+    }
+    .article-content p {
+      color: var(--gray);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+    .article-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+    .tag {
+      background: rgba(148,163,184,0.08);
+      padding: 0.25rem 0.7rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
 
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
     .feature-item { text-align: center; padding: 2rem 1.5rem; }
@@ -220,7 +280,8 @@
       .section-header h2 { font-size: 2rem; }
       .cta-box h2 { font-size: 1.8rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .categories-grid, .articles-grid { grid-template-columns: 1fr; }
+      .categories-grid { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
       .cookie-banner { flex-direction: column; padding: 1rem; }
       .cookie-buttons { width: 100%; flex-direction: column; }
       .cookie-btn { width: 100%; }
@@ -236,6 +297,7 @@
   </style>
   <base href="https://learntowork.online/">
 <base target="_self">
+<base target="_blank">
 </head>
 
 <body>
@@ -265,7 +327,7 @@
           <div class="stat-label">Monthly Potential</div>
         </div>
         <div class="stat">
-          <div class="stat-number">12+</div>
+          <div class="stat-number">15+</div>
           <div class="stat-label">Free Guides</div>
         </div>
         <div class="stat">
@@ -289,7 +351,7 @@
         <div class="category-icon"><i class="fas fa-robot"></i></div>
         <a href="ai-earning/" class="category-title-link"><h3>Earn with AI</h3></a>
         <p>AI data labeling, prompt engineering, chatbot monetization, and AI-powered income streams.</p>
-        <div class="article-count"><i class="fas fa-file-alt"></i> 3 Guides</div>
+        <div class="article-count"><i class="fas fa-file-alt"></i> 4 Guides</div>
         <div class="category-meta">
           <span class="earning-range">$100-800/mo</span>
           <a href="ai-earning/" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
@@ -322,7 +384,7 @@
     </div>
   </section>
 
-  <!-- Articles -->
+  <!-- Featured Articles — Only 6 with Images -->
   <section id="articles" class="articles-section">
     <div class="section-header">
       <div class="section-tag">Trending Now</div>
@@ -331,121 +393,92 @@
     </div>
     <div class="articles-grid">
 
-      <a href="ai-data-labeling-master/" class="article-card">
-        <div class="article-thumb">🏷️</div>
-        <div class="article-info">
-          <h4>AI Data Labeling Master</h4>
-          <p>Earn $100-300/month by labeling data for AI companies. Complete guide to Remotasks, Appen, Telus, and more with Pakistan payment methods.</p>
-          <div class="article-tags"><span class="tag">AI</span><span class="tag">Beginner</span><span class="tag">Pakistan</span></div>
-        </div>
-      </a>
-
-      <a href="ai-prompt-engineering-pakistan/" class="article-card">
-        <div class="article-thumb">💬</div>
-        <div class="article-info">
-          <h4>Prompt Engineering 2026</h4>
-          <p>Make $500+/month creating AI prompts. Master ChatGPT, Midjourney, Claude. Complete roadmap with real earnings and payment guides.</p>
-          <div class="article-tags"><span class="tag">AI</span><span class="tag">High Income</span><span class="tag">Skills</span></div>
-        </div>
-      </a>
-
-      <a href="ai-chatbot-monetization-guide/" class="article-card">
-        <div class="article-thumb">🤖</div>
-        <div class="article-info">
-          <h4>AI Chatbot Monetization</h4>
-          <p>Build AI chatbots and earn $300-800/month. No coding required. 5 proven methods with step-by-step setup and Pakistan payment integration.</p>
-          <div class="article-tags"><span class="tag">AI</span><span class="tag">No Code</span><span class="tag">Passive</span></div>
-        </div>
-      </a>
-
-      <a href="youtube-automation/" class="article-card">
-        <div class="article-thumb">▶️</div>
-        <div class="article-info">
-          <h4>YouTube Automation Mastery</h4>
-          <p>Make $500-2000/month with YouTube automation. Complete guide to faceless channels, stock footage, AI tools, and passive income setup.</p>
-          <div class="article-tags"><span class="tag">YouTube</span><span class="tag">Automation</span><span class="tag">Passive</span></div>
-        </div>
-      </a>
-
+      <!-- 1. How to Select Niche (Most Viewed) -->
       <a href="how-to-select-niche/" class="article-card">
-        <div class="article-thumb">🎯</div>
-        <div class="article-info">
+        <div class="article-image">
+          <picture>
+            <source srcset="how-to-select-niche-social-share.webp" type="image/webp">
+            <img src="how-to-select-niche-social-share.png" alt="How to Select the Right Niche for YouTube" loading="lazy">
+          </picture>
+        </div>
+        <div class="article-content">
           <h4>How to Select the Right Niche</h4>
           <p>Master niche selection for YouTube success. CPM analysis, competition research, best niches 2026, and step-by-step selection process.</p>
           <div class="article-tags"><span class="tag">Strategy</span><span class="tag">Research</span><span class="tag">YouTube</span></div>
         </div>
       </a>
 
-      <a href="youtube-monetization/" class="article-card">
-        <div class="article-thumb">💰</div>
-        <div class="article-info">
-          <h4>YouTube Monetization Guide</h4>
-          <p>Reach 1000 subs and 4000 watch hours fast. Complete timeline, payment setup, realistic earnings, and Pakistan-specific guide.</p>
-          <div class="article-tags"><span class="tag">Monetization</span><span class="tag">Beginner</span><span class="tag">Pakistan</span></div>
+      <!-- 2. YouTube Automation -->
+      <a href="youtube-automation/" class="article-card">
+        <div class="article-image">
+          <picture>
+            <img src="youtube-automation-social-share.jpg" alt="YouTube Automation Mastery Guide" loading="lazy">
+          </picture>
+        </div>
+        <div class="article-content">
+          <h4>YouTube Automation Mastery</h4>
+          <p>Make $500-2000/month with YouTube automation. Complete guide to faceless channels, stock footage, AI tools, and passive income setup.</p>
+          <div class="article-tags"><span class="tag">YouTube</span><span class="tag">Automation</span><span class="tag">Passive</span></div>
         </div>
       </a>
 
-      <a href="youtube-seo/" class="article-card">
-        <div class="article-thumb">🚀</div>
-        <div class="article-info">
-          <h4>YouTube SEO & Ranking</h4>
-          <p>Get 1M views: Algorithm secrets, CTR mastery, thumbnails, titles. Step-by-step blueprint to rank your videos.</p>
-          <div class="article-tags"><span class="tag">SEO</span><span class="tag">Growth</span><span class="tag">Algorithm</span></div>
+      <!-- 3. AI Chatbot Monetization -->
+      <a href="ai-chatbot-monetization-guide/" class="article-card">
+        <div class="article-image">
+          <picture>
+            <source srcset="ai-chatbot-hero.webp" type="image/webp">
+            <img src="ai-chatbot-hero.png" alt="AI Chatbot Monetization Guide" loading="lazy">
+          </picture>
+        </div>
+        <div class="article-content">
+          <h4>AI Chatbot Monetization</h4>
+          <p>Build AI chatbots and earn $300-800/month. No coding required. 5 proven methods with step-by-step setup and Pakistan payment integration.</p>
+          <div class="article-tags"><span class="tag">AI</span><span class="tag">No Code</span><span class="tag">Passive</span></div>
         </div>
       </a>
 
-      <a href="ai-video-editing-guide/" class="article-card">
-        <div class="article-thumb">🎬</div>
-        <div class="article-info">
-          <h4>AI Video Editing: Zero Investment A to Z Guide 2026</h4>
-          <p>Ghar baithe AI se videos banao aur Fiverr pe becho. ChatGPT, Gemini, Flow AI & CapCut — sab free.</p>
-          <div class="article-tags"><span class="tag">Video</span><span class="tag">AI</span><span class="tag">No Investment</span></div>
-        </div>
-      </a>
-
+      <!-- 4. Shopify Dropshipping -->
       <a href="shopify-dropshipping-guide/" class="article-card">
-        <div class="article-thumb">🛒</div>
-        <div class="article-info">
+        <div class="article-image">
+          <picture>
+            <source srcset="shopify-dropshipping-guide-social-share.webp" type="image/webp">
+            <img src="shopify-dropshipping-guide-social-share.png" alt="Shopify Dropshipping Complete Guide 2026" loading="lazy">
+          </picture>
+        </div>
+        <div class="article-content">
           <h4>Shopify Dropshipping Complete Guide 2026</h4>
           <p>Start your Shopify dropshipping store step-by-step. Find winning products, set up your store, and make your first sale. Earn $500–2,000/month worldwide.</p>
           <div class="article-tags"><span class="tag">Shopify</span><span class="tag">Beginner</span><span class="tag">Worldwide</span></div>
         </div>
       </a>
 
-      <a href="dropshipping-zero-investment/" class="article-card">
-        <div class="article-thumb">💸</div>
-        <div class="article-info">
-          <h4>How to Start Dropshipping with $0 Investment</h4>
-          <p>Yes, free dropshipping is possible. Use Shopify free trial, free suppliers, and free marketing to launch without spending a single dollar.</p>
-          <div class="article-tags"><span class="tag">Free</span><span class="tag">No Investment</span><span class="tag">Beginner</span></div>
+      <!-- 5. AI Video Editing -->
+      <a href="ai-video-editing-guide/" class="article-card">
+        <div class="article-image">
+          <picture>
+            <source srcset="hero.webp" type="image/webp">
+            <img src="hero.png" alt="AI Video Editing Zero Investment Guide" loading="lazy">
+          </picture>
+        </div>
+        <div class="article-content">
+          <h4>AI Video Editing: Zero Investment A to Z Guide 2026</h4>
+          <p>Ghar baithe AI se videos banao aur Fiverr pe becho. ChatGPT, Gemini, Flow AI & CapCut — sab free.</p>
+          <div class="article-tags"><span class="tag">Video</span><span class="tag">AI</span><span class="tag">No Investment</span></div>
         </div>
       </a>
 
-      <a href="print-on-demand-guide/" class="article-card">
-        <div class="article-thumb">🖨️</div>
-        <div class="article-info">
-          <h4>Print on Demand Complete Guide 2026</h4>
-          <p>Start a POD business with zero inventory. Use Printify or Printful, sell custom t-shirts, mugs, and more worldwide — earn $500–2,000/month.</p>
-          <div class="article-tags"><span class="tag">POD</span><span class="tag">Beginner</span><span class="tag">Worldwide</span></div>
+      <!-- 6. Shopify AI Tools (NEW) -->
+      <a href="shopify-ai-tools/" class="article-card">
+        <div class="article-image">
+          <picture>
+            <source srcset="shopify-ai-tools-social-share.webp" type="image/webp">
+            <img src="shopify-ai-tools-social-share.png" alt="Shopify AI Tools 2026 Real Prompts and Results" loading="lazy">
+          </picture>
         </div>
-      </a>
-
-      <a href="winning-dropshipping-niches/" class="article-card">
-        <div class="article-thumb">🔥</div>
-        <div class="article-info">
-          <h4>Top 10 Winning Dropshipping Niches 2026</h4>
-          <p>Find your niche before your competitor does. Research-backed niches with high demand, great margins, and a Pakistan selling guide.</p>
-          <div class="article-tags"><span class="tag">Niches</span><span class="tag">Research</span><span class="tag">Worldwide</span></div>
-        </div>
-      </a>
-
-      <!-- NEW — Amazon FBA Article -->
-      <a href="amazon-fba-guide/" class="article-card">
-        <div class="article-thumb">📦</div>
-        <div class="article-info">
-          <h4>Amazon FBA Complete Guide 2026</h4>
-          <p>Real costs, honest earnings, step-by-step product research. Pakistan alternatives included. Start with $3,500–$8,000 investment and scale to $10K+/month.</p>
-          <div class="article-tags"><span class="tag">Amazon</span><span class="tag">FBA</span><span class="tag">Investment</span></div>
+        <div class="article-content">
+          <h4>Shopify AI Tools 2026: Real Prompts & Real Results</h4>
+          <p>Build your Shopify store using ChatGPT and Gemini. Real prompts, real outputs shown. Zero experience, zero investment needed.</p>
+          <div class="article-tags"><span class="tag">Shopify</span><span class="tag">AI Tools</span><span class="tag">Free</span></div>
         </div>
       </a>
 
@@ -576,4 +609,4 @@
     window.addEventListener('load', showCookieBanner);
   </script>
 </body>
-            </html>
+</html>
