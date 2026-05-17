@@ -4,7 +4,7 @@
   <!-- Homepage (Updated today) -->
   <url>
     <loc>https://learntowork.online/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- Category Pages -->
   <url>
     <loc>https://learntowork.online/ai-earning/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -49,6 +49,14 @@
   <url>
     <loc>https://learntowork.online/ai-chatbot-monetization-guide/</loc>
     <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ✅ NEW — Shopify AI Tools Article -->
+  <url>
+    <loc>https://learntowork.online/shopify-ai-tools/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
