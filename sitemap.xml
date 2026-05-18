@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage (Updated today) -->
+  <!-- Homepage -->
   <url>
     <loc>https://learntowork.online/</loc>
     <lastmod>2026-05-18</lastmod>
@@ -60,7 +60,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- NEW — Build Website with AI Article -->
   <url>
     <loc>https://learntowork.online/build-website-ai/</loc>
     <lastmod>2026-05-18</lastmod>
@@ -176,4 +175,4 @@
     <priority>0.4</priority>
   </url>
 
-</urlset>
+</urlset>    
