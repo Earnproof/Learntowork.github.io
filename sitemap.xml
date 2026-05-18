@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Homepage (Updated today) -->
   <url>
@@ -53,9 +53,16 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ✅ NEW — Shopify AI Tools Article -->
   <url>
     <loc>https://learntowork.online/shopify-ai-tools/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ✅ NEW — Build Website with AI Article -->
+  <url>
+    <loc>https://learntowork.online/build-website-ai/</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -126,7 +133,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ✅ NEW — Amazon FBA Article -->
   <url>
     <loc>https://learntowork.online/amazon-fba-guide/</loc>
     <lastmod>2026-05-17</lastmod>
