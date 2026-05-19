@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candlestick Patterns: Complete Guide — Basics to Expert | LearnToWork</title>
+  <meta name="description" content="Master candlestick patterns from basics to expert level. Learn to read charts, identify powerful patterns, use AI tools for analysis, and practice on a demo account — free trading education." />
+
+  <!-- Open Graph / Social Share -->
+  <meta property="og:title" content="Candlestick Patterns: Complete Guide — Basics to Expert" />
+  <meta property="og:description" content="Master candlestick patterns from basics to expert level. Learn chart reading, AI analysis tools, and practice risk-free on demo accounts." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://learntowork.online/trading-education/candlestick-patterns-guide/" />
+  <meta property="og:image" content="/images/candlestick-patterns-guide/candlestick-guide-social-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="LearnToWork" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Candlestick Patterns: Complete Guide — Basics to Expert" />
+  <meta name="twitter:description" content="Master candlestick patterns from basics to expert level. Free trading education." />
+  <meta name="twitter:image" content="/images/candlestick-patterns-guide/candlestick-guide-social-share.png" />
+
+  <base href="/" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Candlestick Patterns: Complete Guide — Basics to Expert",
+    "description": "Master candlestick patterns from basics to expert level. Learn to read charts, identify powerful patterns, use AI tools for analysis, and practice on a demo account.",
+    "image": "https://learntowork.online/images/candlestick-patterns-guide/candlestick-guide-social-share.png",
+    "author": {
+      "@type": "Organization",
+      "name": "LearnToWork"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LearnToWork",
+      "url": "https://learntowork.online"
+    },
+    "datePublished": "2026",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learntowork.online/trading-education/candlestick-patterns-guide/"
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to learn candlestick patterns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most beginners can learn the basics in 2–4 weeks of consistent study. Recognizing patterns in real-time takes 2–3 months of practice on a demo account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are candlestick patterns reliable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No single pattern is 100% reliable. Candlestick patterns work best when combined with other indicators like volume, support/resistance levels, and trend direction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use AI to identify candlestick patterns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. AI tools like TradingView's pattern recognition, Trade Ideas, and custom GPT prompts can help identify patterns — but always verify manually before making decisions."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G023112WHJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G023112WHJ');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark: #020617;
+      --dark-2: #0f172a;
+      --dark-3: #1e293b;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --gold: #d4af37;
+      --green: #10b981;
+      --gray: #94a3b8;
+      --white: #f8fafc;
+      --trading: #f59e0b;
+      --trading-dark: #d97706;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(2, 6, 23, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+      padding: 0 1.5rem;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); background: rgba(59,130,246,0.12); }
+    .nav-links a.active { color: var(--trading); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--gray);
+      border-radius: 2px;
+    }
+
+    /* ── HERO ── */
+    .article-hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #0c1a35 100%);
+      padding: 3.5rem 1.5rem 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .article-hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.83rem;
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .article-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: var(--trading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+    }
+
+    .article-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .article-hero h1 span { color: var(--trading); }
+
+    .article-intro {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      line-height: 1.75;
+      margin-bottom: 1.75rem;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      font-size: 0.82rem;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* ── HERO IMAGE ── */
+    .hero-img-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+    }
+
+    .hero-img-wrap picture img {
+      width: 100%;
+      max-height: 50vh;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-img-wrap picture img { max-height: 35vh; }
+    }
+
+    /* ── LAYOUT ── */
+    .article-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .sidebar { order: -1; }
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 1.5rem;
+      position: sticky;
+      top: 84px;
+    }
+
+    .toc h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+    }
+
+    .toc ol li {
+      counter-increment: toc;
+      margin-bottom: 0.5rem;
+    }
+
+    .toc ol li a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+      line-height: 1.4;
+    }
+
+    .toc ol li a::before {
+      content: counter(toc);
+      background: var(--accent);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .toc ol li a:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.04);
+    }
+
+    /* ── ARTICLE CONTENT ── */
+    .article-content h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--white);
+      margin: 2.5rem 0 1rem;
+      padding-top: 1rem;
+      line-height: 1.3;
+    }
+
+    .article-content h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--white);
+      margin: 1.75rem 0 0.75rem;
+    }
+
+    .article-content h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin: 1.25rem 0 0.5rem;
+    }
+
+    .article-content p {
+      color: #cbd5e1;
+      margin-bottom: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .article-content strong { color: var(--white); }
+
+    .article-content ul, .article-content ol {
+      color: #cbd5e1;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+
+    /* ── ARTICLE IMAGE ── */
+    .article-img-wrap {
+      margin: 2rem 0;
+    }
+
+    .article-img-wrap picture img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-top: 0.6rem;
+    }
+
+    @media (max-width: 768px) {
+      .article-img-wrap picture img { max-height: 250px; }
+    }
+
+    /* ── CALLOUT BOXES ── */
+    .callout {
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .callout-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+
+    .callout-content h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .callout-content p {
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .callout.warning {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-left: 4px solid var(--trading);
+    }
+
+    .callout.warning .callout-content h4 { color: var(--trading); }
+    .callout.warning .callout-content p { color: #cbd5e1; }
+
+    .callout.tip {
+      background: rgba(16, 185, 129, 0.07);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-left: 4px solid var(--green);
+    }
+
+    .callout.tip .callout-content h4 { color: var(--green); }
+    .callout.tip .callout-content p { color: #cbd5e1; }
+
+    .callout.info {
+      background: rgba(59, 130, 246, 0.07);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-left: 4px solid var(--accent);
+    }
+
+    .callout.info .callout-content h4 { color: var(--accent); }
+    .callout.info .callout-content p { color: #cbd5e1; }
+
+    /* ── PATTERN CARDS ── */
+    .pattern-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .pattern-card {
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: border-color 0.2s;
+    }
+
+    .pattern-card:hover { border-color: rgba(245,158,11,0.3); }
+
+    .pattern-emoji { font-size: 2rem; margin-bottom: 0.75rem; }
+
+    .pattern-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+
+    .pattern-signal {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 0.6rem;
+    }
+
+    .bullish { background: rgba(16,185,129,0.12); color: var(--green); }
+    .bearish { background: rgba(239,68,68,0.12); color: #f87171; }
+    .neutral { background: rgba(148,163,184,0.12); color: var(--gray); }
+
+    .pattern-desc { font-size: 0.83rem; color: var(--gray); line-height: 1.55; }
+
+    /* ── STEP BOXES ── */
+    .steps { margin: 1.5rem 0; }
+
+    .step {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .step-body h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+
+    .step-body p { font-size: 0.9rem; color: var(--gray); margin: 0; }
+
+    /* ── AI TOOLS TABLE ── */
+    .tools-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+    }
+
+    .tools-table th {
+      background: var(--dark-3);
+      color: var(--gray);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    .tools-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+
+    .tools-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .tool-name { color: var(--white); font-weight: 600; }
+
+    .free-badge {
+      font-size: 0.7rem;
+      background: rgba(16,185,129,0.12);
+      color: var(--green);
+      padding: 0.15rem 0.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .paid-badge {
+      font-size: 0.7rem;
+      background: rgba(245,158,11,0.1);
+      color: var(--trading);
+      padding: 0.15rem 0.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    /* ── PAKISTAN SECTION ── */
+    .pakistan-section {
+      background: rgba(59, 130, 246, 0.06);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 1.75rem;
+      margin: 2.5rem 0;
+    }
+
+    .pakistan-section h3 {
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .pakistan-section p { color: #cbd5e1; margin-bottom: 0.75rem; font-size: 0.9rem; }
+    .pakistan-section ul { color: #cbd5e1; font-size: 0.9rem; padding-left: 1.25rem; }
+    .pakistan-section li { margin-bottom: 0.4rem; }
+
+    /* ── FAQ ── */
+    .faq { margin: 2rem 0; }
+
+    .faq-item {
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.15rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      gap: 1rem;
+    }
+
+    .faq-q-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .faq-icon {
+      color: var(--trading);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-a {
+      display: none;
+      padding: 0 1.5rem 1.25rem;
+      color: var(--gray);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── DISCLAIMER ── */
+    .article-disclaimer {
+      background: rgba(245,158,11,0.06);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-left: 4px solid var(--trading);
+      border-radius: 0 12px 12px 0;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      line-height: 1.65;
+    }
+
+    .article-disclaimer strong { color: var(--trading); }
+
+    /* ── RELATED ARTICLES ── */
+    .related-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .related-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .related-card {
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      transition: all 0.25s;
+    }
+
+    .related-card:hover {
+      border-color: rgba(245,158,11,0.3);
+      transform: translateY(-3px);
+    }
+
+    .related-card-img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      background: var(--dark-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .related-card-body { padding: 1rem; }
+
+    .related-card-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--trading);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .related-card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+
+    .related-card-desc {
+      font-size: 0.8rem;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* ── SERIES NAV ── */
+    .series-nav {
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .series-nav h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+
+    .series-links {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .series-link {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .series-link span:first-child {
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+
+    .series-link span:last-child {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--trading);
+    }
+
+    .series-link:hover span:last-child { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark-2);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 3rem 1.5rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand .nav-logo { display: inline-block; margin-bottom: 0.75rem; }
+
+    .footer-brand p {
+      font-size: 0.875rem;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.6rem; }
+
+    .footer-col ul li a {
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--white); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom p { font-size: 0.8rem; color: #475569; }
+
+    .footer-legal { display: flex; gap: 1.5rem; }
+
+    .footer-legal a {
+      font-size: 0.8rem;
+      color: #475569;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-legal a:hover { color: var(--gray); }
+
+    /* ── COOKIE BANNER ── */
+    .cookie-banner {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 1.25rem 1.75rem;
+      max-width: 560px;
+      width: calc(100% - 2rem);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .cookie-banner.hidden { display: none; }
+
+    .cookie-text { font-size: 0.85rem; color: var(--gray); flex: 1; }
+    .cookie-text a { color: var(--accent); text-decoration: none; }
+
+    .cookie-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .cookie-btn:hover { background: var(--accent-hover); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        background: var(--dark-2);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 1rem;
+      }
+      .article-layout { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .pattern-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .pattern-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" target="_self">Learn<span>ToWork</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" target="_self">Home</a></li>
+      <li><a href="ai-earning/" target="_self">AI Earning</a></li>
+      <li><a href="video-automation/" target="_self">Video Automation</a></li>
+      <li><a href="online-store/" target="_self">Online Store</a></li>
+      <li><a href="trading-education/" class="active" target="_self">Trading Education</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="/" target="_self">Home</a> ›
+      <a href="trading-education/" target="_self">Trading Education</a> ›
+      <span>Candlestick Patterns Guide</span>
+    </nav>
+    <div class="article-tag">📈 Trading Education</div>
+    <h1>Candlestick Patterns: <span>Complete Guide</span><br>— Basics to Expert</h1>
+    <p class="article-intro">Everything you need to read the market's language — from understanding a single candle to spotting powerful multi-candle patterns, using AI tools, and practicing risk-free on a demo account.</p>
+    <div class="article-meta">
+      <span class="meta-item">🗓 2026</span>
+      <span class="meta-item">⏱ 15 min read</span>
+      <span class="meta-item">📊 Beginner to Expert</span>
+    </div>
+  </div>
+</section>
+
+<!-- HERO IMAGE -->
+<div class="hero-img-wrap">
+  <picture>
+    <source srcset="/images/candlestick-patterns-guide/candlestick-hero.webp" type="image/webp" />
+    <img src="/images/candlestick-patterns-guide/candlestick-hero.png" alt="Candlestick patterns trading chart with AI overlay" loading="lazy" />
+  </picture>
+</div>
+
+<!-- DISCLAIMER -->
+<div style="max-width:1100px;margin:1.5rem auto;padding:0 1.5rem;">
+  <div class="article-disclaimer">
+    <strong>⚠️ Educational Content Only:</strong> This guide is purely for learning purposes. Nothing here is financial advice. Trading involves significant risk — never invest money you cannot afford to lose. Always practice on a demo account before using real funds.
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="article-layout">
+
+  <!-- ARTICLE CONTENT -->
+  <article class="article-content">
+
+    <h2 id="what-is-candlestick">1. What Is a Candlestick?</h2>
+    <p>If the market is a conversation, candlesticks are its words. Every single candle on a chart tells you a story — where the price started, where it went, how far it pushed, and where it finally closed. Once you learn to read them, you stop looking at random lines and start seeing real market psychology.</p>
+    <p>Candlestick charts were developed in Japan in the 1700s by rice traders — centuries before modern stock markets even existed. Today, they are the most widely used chart type by professional traders worldwide. Every trading platform, every broker, and every serious trader uses candlestick charts.</p>
+    <p>The beauty of candlesticks is their simplicity. In one small graphic, they pack four critical pieces of data: the <strong>open price</strong>, the <strong>close price</strong>, the <strong>high</strong>, and the <strong>low</strong> for any given time period.</p>
+
+    <div class="article-img-wrap">
+      <picture>
+        <source srcset="/images/candlestick-patterns-guide/candlestick-anatomy.webp" type="image/webp" />
+        <img src="/images/candlestick-patterns-guide/candlestick-anatomy.png" alt="Anatomy of a candlestick showing body, wick, high, low, open and close" loading="lazy" />
+      </picture>
+      <p class="img-caption">Anatomy of a candlestick — the four key data points in one visual</p>
+    </div>
+
+    <h3>The Anatomy of a Single Candle</h3>
+    <p>Every candlestick has two main parts:</p>
+    <ul>
+      <li><strong>The Body:</strong> The wide rectangular part. It represents the range between the open and close price. A <strong>green (or white) body</strong> means the price closed higher than it opened — buyers won. A <strong>red (or black) body</strong> means the price closed lower — sellers won.</li>
+      <li><strong>The Wicks (Shadows):</strong> The thin lines extending above and below the body. The top wick shows the highest price reached. The bottom wick shows the lowest price reached during that period.</li>
+    </ul>
+
+    <div class="callout tip">
+      <span class="callout-icon">💡</span>
+      <div class="callout-content">
+        <h4>Quick Rule of Thumb</h4>
+        <p>Long body = strong conviction. Short body = indecision. Long wicks = price was rejected at that level — the market didn't want to stay there.</p>
+      </div>
+    </div>
+
+    <h2 id="why-candlesticks-matter">2. Why Candlesticks Matter</h2>
+    <p>Most beginners look at price and ask "is it going up or down?" Candlestick readers ask something deeper: "Who is in control — buyers or sellers — and is that control getting stronger or weaker?"</p>
+    <p>This distinction is everything. A price can be rising, but the candlesticks can be whispering that buyers are losing energy. A reversal is coming — and candlestick patterns will often show you before the price confirms it.</p>
+    <p>Professional traders use candlestick patterns alongside volume, support and resistance levels, and trend analysis to make high-probability decisions. No pattern works 100% of the time — but understanding them gives you a significant edge over random entry and exit decisions.</p>
+
+    <div class="callout warning">
+      <span class="callout-icon">⚠️</span>
+      <div class="callout-content">
+        <h4>The Most Common Beginner Mistake</h4>
+        <p>Trading based on a single pattern alone. Candlestick patterns are signals, not guarantees. Always confirm with at least one more indicator — volume, trend direction, or a key price level.</p>
+      </div>
+    </div>
+
+    <h2 id="basic-patterns">3. Basic Candlestick Patterns</h2>
+    <p>Let's start with the foundational patterns every trader must know. These are single-candle patterns — they appear frequently and are the building blocks for everything more advanced.</p>
+
+    <div class="article-img-wrap">
+      <picture>
+        <source srcset="/images/candlestick-patterns-guide/bullish-patterns.webp" type="image/webp" />
+        <img src="/images/candlestick-patterns-guide/bullish-patterns.png" alt="Bullish candlestick patterns - Hammer, Bullish Engulfing, Morning Star" loading="lazy" />
+      </picture>
+      <p class="img-caption">Common bullish reversal patterns — green signals potential upward movement</p>
+    </div>
+
+    <div class="pattern-grid">
+      <div class="pattern-card">
+        <div class="pattern-emoji">🔨</div>
+        <div class="pattern-name">Hammer</div>
+        <span class="pattern-signal bullish">Bullish</span>
+        <p class="pattern-desc">Small body at top, long lower wick. Sellers pushed price down hard but buyers fought back and closed near the open. Often signals a bottom.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">⭐</div>
+        <div class="pattern-name">Doji</div>
+        <span class="pattern-signal neutral">Neutral</span>
+        <p class="pattern-desc">Open and close are almost equal. Neither buyers nor sellers won. Signals indecision — watch what happens next carefully.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">🕯️</div>
+        <div class="pattern-name">Marubozu</div>
+        <span class="pattern-signal bullish">Strong Signal</span>
+        <p class="pattern-desc">Full body, no wicks. Whoever was in control (buyers or sellers) dominated the entire session without a fight. Very strong momentum signal.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">🌠</div>
+        <div class="pattern-name">Shooting Star</div>
+        <span class="pattern-signal bearish">Bearish</span>
+        <p class="pattern-desc">Small body at bottom, long upper wick. Buyers tried to push price up but failed and sellers closed the price near the open. Signals a top.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">🔄</div>
+        <div class="pattern-name">Spinning Top</div>
+        <span class="pattern-signal neutral">Neutral</span>
+        <p class="pattern-desc">Small body with equal-ish wicks on both sides. Market is uncertain. After a strong trend, this can signal exhaustion and potential reversal.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">🪝</div>
+        <div class="pattern-name">Inverted Hammer</div>
+        <span class="pattern-signal bullish">Bullish</span>
+        <p class="pattern-desc">Small body at bottom, long upper wick. After a downtrend, buyers tried to take over. Needs confirmation on the next candle.</p>
+      </div>
+    </div>
+
+    <h2 id="advanced-patterns">4. Advanced Multi-Candle Patterns</h2>
+    <p>Single candles tell you a sentence. Multi-candle patterns tell you a paragraph. These are the patterns professional traders watch most closely — because they require coordination across multiple sessions to form, making them statistically more reliable.</p>
+
+    <div class="article-img-wrap">
+      <picture>
+        <source srcset="/images/candlestick-patterns-guide/bearish-patterns.webp" type="image/webp" />
+        <img src="/images/candlestick-patterns-guide/bearish-patterns.png" alt="Bearish candlestick patterns - Shooting Star, Bearish Engulfing, Evening Star" loading="lazy" />
+      </picture>
+      <p class="img-caption">Bearish reversal patterns — these signal potential downward moves after an uptrend</p>
+    </div>
+
+    <h3>Bullish Reversal Patterns (Price May Go Up)</h3>
+
+    <div class="pattern-grid">
+      <div class="pattern-card">
+        <div class="pattern-emoji">🌅</div>
+        <div class="pattern-name">Morning Star</div>
+        <span class="pattern-signal bullish">Bullish</span>
+        <p class="pattern-desc">3-candle pattern. Big red candle → small indecision candle → big green candle. Classic bottom reversal signal after a downtrend.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">🤗</div>
+        <div class="pattern-name">Bullish Engulfing</div>
+        <span class="pattern-signal bullish">Bullish</span>
+        <p class="pattern-desc">A large green candle completely "engulfs" the previous red candle. Buyers took full control in one session. Strong reversal signal.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">👶</div>
+        <div class="pattern-name">Bullish Harami</div>
+        <span class="pattern-signal bullish">Bullish</span>
+        <p class="pattern-desc">Small green candle forms inside a large red candle. The downtrend is losing momentum — indecision forming inside the previous move.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">🌄</div>
+        <div class="pattern-name">Piercing Line</div>
+        <span class="pattern-signal bullish">Bullish</span>
+        <p class="pattern-desc">After a red candle, a green candle opens below but closes more than halfway up the red candle. Buyers are fighting back significantly.</p>
+      </div>
+    </div>
+
+    <h3>Bearish Reversal Patterns (Price May Go Down)</h3>
+
+    <div class="pattern-grid">
+      <div class="pattern-card">
+        <div class="pattern-emoji">🌆</div>
+        <div class="pattern-name">Evening Star</div>
+        <span class="pattern-signal bearish">Bearish</span>
+        <p class="pattern-desc">Opposite of Morning Star. Big green candle → small indecision → big red candle. Signals the top of an uptrend reversing down.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">😤</div>
+        <div class="pattern-name">Bearish Engulfing</div>
+        <span class="pattern-signal bearish">Bearish</span>
+        <p class="pattern-desc">A large red candle swallows the previous green candle entirely. Sellers took complete control. Strong signal after an uptrend.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">🌫️</div>
+        <div class="pattern-name">Dark Cloud Cover</div>
+        <span class="pattern-signal bearish">Bearish</span>
+        <p class="pattern-desc">Green candle followed by red candle opening higher but closing below the midpoint of the previous green candle. Sellers overpowering buyers.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-emoji">🌙</div>
+        <div class="pattern-name">Three Black Crows</div>
+        <span class="pattern-signal bearish">Bearish</span>
+        <p class="pattern-desc">Three consecutive red candles each closing lower. Sustained selling pressure — a powerful downtrend confirmation pattern.</p>
+      </div>
+    </div>
+
+    <h3>Continuation Patterns (Trend Continues)</h3>
+    <p>Not all patterns signal reversals. These patterns appear during a trend and suggest the current direction will continue after a brief pause.</p>
+    <ul>
+      <li><strong>Three White Soldiers:</strong> Three consecutive green candles, each closing higher — strong bullish momentum continuing</li>
+      <li><strong>Rising Three Methods:</strong> Long green candle, three small red ones, another long green — bullish trend pausing and resuming</li>
+      <li><strong>Falling Three Methods:</strong> The bearish equivalent — downtrend pausing before continuing lower</li>
+    </ul>
+
+    <h2 id="reading-charts">5. How to Read Charts Like a Pro</h2>
+    <p>Knowing individual patterns is only half the skill. Knowing <em>where</em> those patterns appear on a chart is what separates beginners from professionals.</p>
+
+    <h3>The Three Questions to Ask Every Time</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>What is the trend?</h4>
+          <p>Is price making higher highs and higher lows (uptrend)? Lower highs and lower lows (downtrend)? Or moving sideways (consolidation)? A bullish pattern in a downtrend carries far less weight than the same pattern at the end of a downtrend.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Where is price relative to support and resistance?</h4>
+          <p>A hammer at a key support level is a high-probability signal. The same hammer in the middle of nowhere carries much less significance. Always identify key price levels first.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>What is volume doing?</h4>
+          <p>A bullish engulfing pattern with high volume is far stronger than the same pattern on low volume. Volume confirms conviction. No volume, no conviction.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Timeframes — Which One to Use?</h3>
+    <p>Every candlestick represents a time period. A candle on a 1-hour chart shows one hour of price action. A candle on a daily chart shows one full day. Here's a general guide:</p>
+    <ul>
+      <li><strong>1-minute / 5-minute:</strong> Scalping — very fast trades, high noise, not recommended for beginners</li>
+      <li><strong>15-minute / 1-hour:</strong> Day trading — good balance of signals and noise</li>
+      <li><strong>4-hour / Daily:</strong> Swing trading — best for beginners, cleaner signals, less stress</li>
+      <li><strong>Weekly / Monthly:</strong> Position trading — long-term views, very reliable patterns</li>
+    </ul>
+
+    <div class="callout tip">
+      <span class="callout-icon">🎯</span>
+      <div class="callout-content">
+        <h4>Pro Tip: Multi-Timeframe Analysis</h4>
+        <p>Always check the higher timeframe first for trend direction, then drop to a lower timeframe to find your entry. A bullish signal on the 1-hour chart carries more weight if the 4-hour chart is also in an uptrend.</p>
+      </div>
+    </div>
+
+    <h2 id="ai-trading-tools">6. AI Tools That Help You Analyze Charts</h2>
+    <p>This is where modern trading gets exciting. AI has transformed how traders analyze markets. You no longer need to manually scan hundreds of charts to find patterns — AI tools do it in seconds.</p>
+
+    <div class="article-img-wrap">
+      <picture>
+        <source srcset="/images/candlestick-patterns-guide/ai-trading-tools.webp" type="image/webp" />
+        <img src="/images/candlestick-patterns-guide/ai-trading-tools.png" alt="AI tools analyzing trading charts with pattern recognition and signals" loading="lazy" />
+      </picture>
+      <p class="img-caption">AI-powered chart analysis — faster pattern recognition, smarter decisions</p>
+    </div>
+
+    <table class="tools-table">
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>What It Does</th>
+          <th>Best For</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tool-name">TradingView</span></td>
+          <td>Pattern recognition, AI screener, alerts</td>
+          <td>All levels</td>
+          <td><span class="free-badge">Free Plan</span></td>
+        </tr>
+        <tr>
+          <td><span class="tool-name">Trade Ideas</span></td>
+          <td>AI stock scanner with Holly AI signals</td>
+          <td>Day traders</td>
+          <td><span class="paid-badge">Paid</span></td>
+        </tr>
+        <tr>
+          <td><span class="tool-name">Tickeron</span></td>
+          <td>AI pattern recognition with confidence scores</td>
+          <td>Beginners</td>
+          <td><span class="free-badge">Free Trial</span></td>
+        </tr>
+        <tr>
+          <td><span class="tool-name">ChatGPT / Claude</span></td>
+          <td>Explain patterns, build trading checklists, backtest ideas</td>
+          <td>Learning &amp; research</td>
+          <td><span class="free-badge">Free</span></td>
+        </tr>
+        <tr>
+          <td><span class="tool-name">Finviz</span></td>
+          <td>Stock screener with chart pattern filters</td>
+          <td>Swing traders</td>
+          <td><span class="free-badge">Free Plan</span></td>
+        </tr>
+        <tr>
+          <td><span class="tool-name">MetaTrader 5 + AI EA</span></td>
+          <td>Automated pattern detection with custom indicators</td>
+          <td>Forex traders</td>
+          <td><span class="free-badge">Free</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>How to Use AI for Trading Education (Not Automation)</h3>
+    <p>AI tools are powerful, but they are learning tools first. Here is how to use them smartly as a beginner:</p>
+    <ul>
+      <li>Use <strong>TradingView's pattern recognition</strong> to check if you correctly identified a pattern — compare your reading to the AI's</li>
+      <li>Use <strong>ChatGPT or Claude</strong> to explain patterns to you in simple language, build study quizzes, or help you understand why a trade worked or failed</li>
+      <li>Use <strong>Tickeron</strong> to see AI confidence scores on patterns — learn what makes a pattern high or low quality</li>
+      <li>Never blindly follow AI signals — always understand the reasoning behind them first</li>
+    </ul>
+
+    <div class="callout info">
+      <span class="callout-icon">🤖</span>
+      <div class="callout-content">
+        <h4>AI Cannot Predict the Future</h4>
+        <p>No AI tool can guarantee trading outcomes. Markets are influenced by news, geopolitics, and human emotion — factors that break patterns regularly. Use AI to accelerate learning, not to replace judgment.</p>
+      </div>
+    </div>
+
+    <h2 id="demo-account">7. Demo Account — Practice Without Risk</h2>
+    <p>This is non-negotiable. Before you place a single trade with real money, you must practice extensively on a demo account. A demo account gives you real market conditions, real candlestick charts, and real price movements — with virtual money.</p>
+
+    <div class="article-img-wrap">
+      <picture>
+        <source srcset="/images/candlestick-patterns-guide/demo-account-practice.webp" type="image/webp" />
+        <img src="/images/candlestick-patterns-guide/demo-account-practice.png" alt="Demo account trading practice platform showing virtual balance and charts" loading="lazy" />
+      </picture>
+      <p class="img-caption">Practice on a demo account first — the best way to build real confidence</p>
+    </div>
+
+    <h3>Recommended Demo Account Platforms</h3>
+    <ul>
+      <li><strong>TradingView Paper Trading</strong> — Free, browser-based, excellent charting</li>
+      <li><strong>MetaTrader 4 / 5</strong> — Industry standard for Forex and CFDs, available globally</li>
+      <li><strong>Webull</strong> — Good for US stocks practice</li>
+      <li><strong>eToro Virtual Portfolio</strong> — $100,000 virtual money to practice with</li>
+      <li><strong>OANDA Practice Account</strong> — Forex-focused, reliable platform</li>
+    </ul>
+
+    <h3>How Long Should You Practice on Demo?</h3>
+    <p>There is no fixed answer, but a good rule of thumb is this: <strong>do not switch to real money until you have been consistently profitable on demo for at least 3 months.</strong> One or two good weeks is not enough. Markets change. You need to prove to yourself that your edge works across different market conditions.</p>
+
+    <div class="callout warning">
+      <span class="callout-icon">⚠️</span>
+      <div class="callout-content">
+        <h4>The FOMO Trap — The Most Expensive Mistake</h4>
+        <p>Seeing someone post profits online and immediately depositing money is how most new traders lose everything. Someone's highlight reel is not a trading education. Learn first. Practice second. Real money third — and only with money you can afford to lose completely.</p>
+      </div>
+    </div>
+
+    <h2 id="risk-management">8. Risk Management — The Skill Nobody Talks About Enough</h2>
+    <p>You can identify every candlestick pattern perfectly and still lose all your money if you ignore risk management. This is what professional traders say separates survivors from those who blow up their accounts.</p>
+
+    <h3>The Core Rules</h3>
+    <ul>
+      <li><strong>Never risk more than 1–2% of your account on a single trade.</strong> If you have $1,000, risk $10–$20 per trade — not $200.</li>
+      <li><strong>Always use a stop loss.</strong> A stop loss is an automatic exit order that limits your loss. Set it before you enter any trade.</li>
+      <li><strong>Aim for at least a 1:2 risk-reward ratio.</strong> If you risk $10, you should be aiming to make at least $20 on the trade.</li>
+      <li><strong>Do not average down on losing trades.</strong> If the market is going against you, do not add more money hoping it comes back.</li>
+      <li><strong>Keep a trading journal.</strong> Track every trade — why you entered, what pattern you saw, what happened, and what you learned.</li>
+    </ul>
+
+    <h3>Trading Psychology — Your Biggest Enemy Is Yourself</h3>
+    <p>Fear and greed are the two emotions that destroy traders. Fear makes you exit winning trades too early. Greed makes you hold losing trades too long hoping they recover. Recognizing these emotional patterns in yourself — the same way you recognize candlestick patterns on a chart — is what makes a trader truly advanced.</p>
+    <p>When you feel the urge to make a trade out of excitement or panic, step away from the screen. The market will always give you another opportunity. Your emotional capital is harder to recover than financial capital.</p>
+
+    <!-- PAKISTAN SECTION -->
+    <div class="pakistan-section">
+      <h3>🇵🇰 Trading Education in Pakistan</h3>
+      <p>Interest in financial trading has grown significantly in Pakistan in recent years, with many learners looking to supplement their income through forex and commodities markets. Here are some practical points for Pakistani learners:</p>
+      <ul>
+        <li><strong>Demo accounts are available globally</strong> — TradingView, MetaTrader 4/5, and OANDA all work in Pakistan</li>
+        <li><strong>Learn in your own language first</strong> — once fundamentals are clear in Urdu, reading English resources becomes much easier</li>
+        <li><strong>Use Forex.com or FXTM</strong> — these platforms accept Pakistani traders and offer demo accounts</li>
+        <li><strong>SECP regulates securities in Pakistan</strong> — always verify any local broker you consider using</li>
+        <li><strong>Start with only the money you can afford to lose</strong> — treat early trading like paying for education, not income</li>
+      </ul>
+    </div>
+
+    <h2 id="faq">9. Frequently Asked Questions</h2>
+
+    <div class="faq">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How long does it take to learn candlestick patterns?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Most beginners can learn the basic patterns in 2–4 weeks of consistent daily study. However, recognizing them instantly in real-time charts takes 2–3 months of active practice on a demo account. True proficiency — knowing which patterns matter in which context — often takes 6–12 months of consistent trading and journaling.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Are candlestick patterns reliable?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">No single pattern is 100% reliable — no pattern in trading ever is. Candlestick patterns work best when used together with trend analysis, support and resistance levels, and volume. A pattern that appears at a key level, in the direction of the trend, with above-average volume is statistically much stronger than the same pattern in isolation.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Can AI identify candlestick patterns automatically?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Yes. Tools like TradingView's pattern recognition engine, Tickeron, and Trade Ideas use AI to scan charts and flag patterns automatically. However, AI tools are best used as a second opinion to verify your own reading — not as a replacement for understanding. If you cannot explain why a pattern is significant, you should not trade it regardless of what the AI says.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What is the best candlestick pattern for beginners to start with?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Start with the Doji, Hammer, and Shooting Star — they are visually distinctive and easy to spot. Then progress to the Bullish and Bearish Engulfing patterns. Once those feel natural, move on to three-candle patterns like Morning Star and Evening Star. Master fewer patterns deeply rather than memorizing many patterns shallowly.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do candlestick patterns work on all markets — stocks, forex, crypto?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Yes. Candlestick patterns are universal — they work on any market where price action is plotted on a chart. Stocks, forex, commodities, crypto, indices — the same patterns appear everywhere because they reflect human psychology, which does not change based on what is being traded. The reliability can vary: patterns on liquid, high-volume markets tend to be more reliable than on thin, thinly-traded assets.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How much money do I need to start trading?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">You need zero money to start — demo accounts are free. When you eventually move to real trading, the answer depends on your market. Forex can technically start with as little as $50–$100 with micro-lot brokers, though this limits your ability to manage risk properly. US stocks require a minimum of $25,000 for pattern day trading, though swing trading has no minimum. Always start small and treat early real-money trading as paid practice.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is trading gambling?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Trading without a strategy, risk management, or understanding of what you are doing is very close to gambling. Trading with a well-defined edge, proper risk management, and emotional discipline is not gambling — it is probabilistic decision-making, similar to how an insurance company prices risk. The difference entirely lies in the approach. Most people who "gamble" in markets simply have not yet learned the craft.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Should I invest because someone I know is making money trading?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Absolutely not — and this is one of the most important lessons in trading. People share their wins and hide their losses. What you see on social media is a highlight reel, not a complete track record. Someone who made 50% in one month might have lost 80% the month before. Your decision to trade must be based on your own education, your own demo account performance, and your own financial situation — never on someone else's results that you cannot verify.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Which timeframe is best for reading candlestick patterns?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">For beginners, the 4-hour and daily charts offer the clearest, most reliable candlestick signals with the least noise. As your skill grows, you can incorporate lower timeframes for entries. Avoid the 1-minute and 5-minute charts until you have significant experience — the noise-to-signal ratio is very high and patterns form and fail quickly.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do professional traders still use candlestick patterns?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Yes — candlestick patterns remain widely used by professional traders, especially in technical analysis. Many institutional traders combine them with quantitative models and order flow analysis. The patterns themselves have been validated by hundreds of years of use. While algorithmic trading has made markets more efficient, price action and candlestick analysis remain valuable tools in any serious trader's toolkit.</div>
+      </div>
+
+    </div>
+
+    <!-- SERIES NAV -->
+    <div class="series-nav">
+      <h4>Trading Education Series</h4>
+      <div class="series-links">
+        <div style="flex:1">
+          <span style="font-size:0.75rem;color:var(--gray);">You are reading</span><br>
+          <span style="font-size:0.9rem;font-weight:600;color:var(--trading);">Candlestick Patterns — Complete Guide</span>
+        </div>
+        <a href="trading-education/" class="series-link" target="_self">
+          <span>View all guides →</span>
+          <span>Trading Education</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- RELATED ARTICLES -->
+    <div class="related-section">
+      <h2 class="related-title">Related Guides You'll Find Useful</h2>
+      <div class="related-grid">
+        <a href="ai-earning/ai-prompt-engineering-pakistan/" class="related-card" target="_self">
+          <div class="related-card-img">🤖</div>
+          <div class="related-card-body">
+            <span class="related-card-tag">AI Earning</span>
+            <div class="related-card-title">AI Prompt Engineering — Complete Guide</div>
+            <p class="related-card-desc">Use AI prompts to get better analysis, build tools, and work smarter in any field.</p>
+          </div>
+        </a>
+        <a href="ai-earning/ai-data-labeling-master/" class="related-card" target="_self">
+          <div class="related-card-img">🏷️</div>
+          <div class="related-card-body">
+            <span class="related-card-tag">AI Earning</span>
+            <div class="related-card-title">AI Data Labeling — Earn Online Guide</div>
+            <p class="related-card-desc">Learn how to earn online with AI data labeling tasks — no experience required.</p>
+          </div>
+        </a>
+        <a href="online-store/shopify-dropshipping-guide/" class="related-card" target="_self">
+          <div class="related-card-img">🛍️</div>
+          <div class="related-card-body">
+            <span class="related-card-tag">Online Store</span>
+            <div class="related-card-title">Shopify Dropshipping — Beginner's Guide</div>
+            <p class="related-card-desc">Build an online store without holding inventory — step-by-step from zero.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="toc">
+      <h3>📋 Table of Contents</h3>
+      <ol>
+        <li><a href="/trading-education/candlestick-patterns-guide/#what-is-candlestick" target="_self">What Is a Candlestick?</a></li>
+        <li><a href="/trading-education/candlestick-patterns-guide/#why-candlesticks-matter" target="_self">Why Candlesticks Matter</a></li>
+        <li><a href="/trading-education/candlestick-patterns-guide/#basic-patterns" target="_self">Basic Candlestick Patterns</a></li>
+        <li><a href="/trading-education/candlestick-patterns-guide/#advanced-patterns" target="_self">Advanced Multi-Candle Patterns</a></li>
+        <li><a href="/trading-education/candlestick-patterns-guide/#reading-charts" target="_self">How to Read Charts Like a Pro</a></li>
+        <li><a href="/trading-education/candlestick-patterns-guide/#ai-trading-tools" target="_self">AI Tools for Chart Analysis</a></li>
+        <li><a href="/trading-education/candlestick-patterns-guide/#demo-account" target="_self">Demo Account Practice</a></li>
+        <li><a href="/trading-education/candlestick-patterns-guide/#risk-management" target="_self">Risk Management</a></li>
+        <li><a href="/trading-education/candlestick-patterns-guide/#faq" target="_self">FAQ</a></li>
+      </ol>
+    </div>
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" target="_self">Learn<span>ToWork</span></a>
+        <p>Free online earning education for learners worldwide. Learn skills, build income, grow at your own pace.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="ai-earning/" target="_self">AI Earning</a></li>
+          <li><a href="video-automation/" target="_self">Video Automation</a></li>
+          <li><a href="online-store/" target="_self">Online Store</a></li>
+          <li><a href="trading-education/" target="_self">Trading Education</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="about.html" target="_self">About</a></li>
+          <li><a href="contact.html" target="_self">Contact</a></li>
+          <li><a href="privacy-policy.html" target="_self">Privacy Policy</a></li>
+          <li><a href="terms.html" target="_self">Terms</a></li>
+          <li><a href="disclaimer.html" target="_self">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LearnToWork.online — Made with ❤️ for learners worldwide</p>
+      <div class="footer-legal">
+        <a href="privacy-policy.html" target="_self">Privacy</a>
+        <a href="terms.html" target="_self">Terms</a>
+        <a href="disclaimer.html" target="_self">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p class="cookie-text">We use cookies to improve your experience. <a href="privacy-policy.html" target="_self">Learn more</a>.</p>
+  <button class="cookie-btn" onclick="acceptCookies()">Accept</button>
+</div>
+
+<script>
+  if (localStorage.getItem('cookieAccepted')) {
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function acceptCookies() {
+    localStorage.setItem('cookieAccepted', 'true');
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
