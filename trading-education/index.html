@@ -431,6 +431,103 @@
 
     .article-card:hover .card-arrow { gap: 0.5rem; }
 
+    /* ── QUIZ CARDS ── */
+    .quiz-card {
+      background: var(--dark-2);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quiz-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--trading), var(--trading-dark));
+    }
+
+    .quiz-card:hover {
+      border-color: rgba(245, 158, 11, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(245, 158, 11, 0.1);
+    }
+
+    .quiz-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .quiz-icon {
+      font-size: 2rem;
+    }
+
+    .quiz-score-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.7rem;
+      border-radius: 50px;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--trading);
+    }
+
+    .quiz-score-badge.empty {
+      background: var(--dark-3);
+      color: #475569;
+    }
+
+    .quiz-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .quiz-desc {
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .quiz-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .quiz-count {
+      font-size: 0.78rem;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .quiz-btn {
+      font-size: 0.85rem;
+      color: var(--trading);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: gap 0.2s;
+    }
+
+    .quiz-card:hover .quiz-btn { gap: 0.5rem; }
+
     /* ── COMING SOON CARDS ── */
     .coming-soon-card {
       background: var(--dark-2);
@@ -676,6 +773,7 @@
       .learn-grid { grid-template-columns: 1fr; }
     }
   </style>
+<base target="_blank">
 </head>
 <body>
 
@@ -722,12 +820,12 @@
 
   <div class="section-header">
     <h2 class="section-title">Trading Guides</h2>
-    <span class="articles-count">4 articles</span>
+    <span class="articles-count">4 articles + 4 quizzes</span>
   </div>
 
   <div class="articles-grid">
 
-    <!-- Article 1: Live -->
+    <!-- Article 1: Candlestick Patterns -->
     <a href="candlestick-patterns-guide/" class="article-card" target="_self">
       <picture><img src="images/candlestick-patterns-guide/candlestick-guide-social-share.png" class="card-img" alt="Candlestick Patterns Guide" loading="lazy" /></picture>
       <div class="card-body">
@@ -744,7 +842,21 @@
       </div>
     </a>
 
-    <!-- Article 2: Live -->
+    <!-- Quiz 1: Candlestick Patterns -->
+    <a href="candlestick-patterns-guide/quiz/" class="quiz-card" target="_self">
+      <div class="quiz-header">
+        <span class="quiz-icon">🕯️</span>
+        <span class="quiz-score-badge empty" id="badge-candlesticks">Not taken yet</span>
+      </div>
+      <h3 class="quiz-title">Test Your Candlestick Knowledge</h3>
+      <p class="quiz-desc">Hammer, Doji, Engulfing, Morning Star — can you spot them all? 15 MCQs to prove you mastered the guide.</p>
+      <div class="quiz-footer">
+        <span class="quiz-count">📝 15 Questions</span>
+        <span class="quiz-btn">Take Quiz →</span>
+      </div>
+    </a>
+
+    <!-- Article 2: AI Chart Analysis -->
     <a href="ai-chart-analysis-guide/" class="article-card" target="_self">
       <picture><img src="images/ai-chart-analysis-guide/ai-chart-analysis-social-share.png" class="card-img" alt="AI Chart Analysis Guide" loading="lazy" /></picture>
       <div class="card-body">
@@ -761,7 +873,21 @@
       </div>
     </a>
 
-    <!-- Article 3: Live -->
+    <!-- Quiz 2: AI Chart Analysis -->
+    <a href="ai-chart-analysis-guide/quiz/" class="quiz-card" target="_self">
+      <div class="quiz-header">
+        <span class="quiz-icon">🤖</span>
+        <span class="quiz-score-badge empty" id="badge-aichart">Not taken yet</span>
+      </div>
+      <h3 class="quiz-title">Test Your AI Chart Analysis Skills</h3>
+      <p class="quiz-desc">TradingView AI, ChatGPT prompts, Smart Screener — how well do you know AI trading tools? 15 MCQs.</p>
+      <div class="quiz-footer">
+        <span class="quiz-count">📝 15 Questions</span>
+        <span class="quiz-btn">Take Quiz →</span>
+      </div>
+    </a>
+
+    <!-- Article 3: How AI Is Changing Trading -->
     <a href="how-ai-is-changing-trading/" class="article-card" target="_self">
       <picture><img src="images/how-ai-is-changing-trading/how-ai-is-changing-trading-social-share.png" class="card-img" alt="How AI Is Changing Trading 2026" loading="lazy" /></picture>
       <div class="card-body">
@@ -778,24 +904,51 @@
       </div>
     </a>
 
-    <!-- Article 4: Live -->
-<a href="technical-indicators-guide/" class="article-card" target="_self">
-  <picture><img src="images/technical-indicators-guide/technical-indicators-social-share.png" 
-  class="card-img" alt="Technical Indicators Guide" loading="lazy" /></picture>
-  <div class="card-body">
-    <div class="card-meta">
-      <span class="card-tag">Basics to Expert</span>
-      <span class="card-date">🗓 2026</span>
-    </div>
-    <h3 class="card-title">RSI, MACD & Bollinger Bands: Complete Technical Indicators Guide</h3>
-    <p class="card-desc">Master every major technical indicator — RSI, MACD, Bollinger Bands, Moving Averages — plus how to combine AI with indicators for smarter trading.</p>
-    <div class="card-footer">
-      <span class="card-read-time">⏱ 18 min read</span>
-      <span class="card-arrow">Read Guide →</span>
-    </div>
-  </div>
-</a>
-    
+    <!-- Quiz 3: How AI Is Changing Trading -->
+    <a href="how-ai-is-changing-trading/quiz/" class="quiz-card" target="_self">
+      <div class="quiz-header">
+        <span class="quiz-icon">🚀</span>
+        <span class="quiz-score-badge empty" id="badge-aitrading">Not taken yet</span>
+      </div>
+      <h3 class="quiz-title">Test Your AI Trading Knowledge</h3>
+      <p class="quiz-desc">Bots, signal decay, curve fitting, risk management — test your AI trading strategy knowledge. 15 MCQs.</p>
+      <div class="quiz-footer">
+        <span class="quiz-count">📝 15 Questions</span>
+        <span class="quiz-btn">Take Quiz →</span>
+      </div>
+    </a>
+
+    <!-- Article 4: Technical Indicators -->
+    <a href="technical-indicators-guide/" class="article-card" target="_self">
+      <picture><img src="images/technical-indicators-guide/technical-indicators-social-share.png" class="card-img" alt="Technical Indicators Guide" loading="lazy" /></picture>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-tag">Basics to Expert</span>
+          <span class="card-date">🗓 2026</span>
+        </div>
+        <h3 class="card-title">RSI, MACD & Bollinger Bands: Complete Technical Indicators Guide</h3>
+        <p class="card-desc">Master every major technical indicator — RSI, MACD, Bollinger Bands, Moving Averages — plus how to combine AI with indicators for smarter trading.</p>
+        <div class="card-footer">
+          <span class="card-read-time">⏱ 18 min read</span>
+          <span class="card-arrow">Read Guide →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Quiz 4: Technical Indicators -->
+    <a href="technical-indicators-guide/quiz/" class="quiz-card" target="_self">
+      <div class="quiz-header">
+        <span class="quiz-icon">📊</span>
+        <span class="quiz-score-badge empty" id="badge-indicators">Not taken yet</span>
+      </div>
+      <h3 class="quiz-title">Test Your Technical Indicators Skills</h3>
+      <p class="quiz-desc">RSI, MACD, Bollinger Bands, Moving Averages — test your indicator knowledge and combinations. 15 MCQs.</p>
+      <div class="quiz-footer">
+        <span class="quiz-count">📝 15 Questions</span>
+        <span class="quiz-btn">Take Quiz →</span>
+      </div>
+    </a>
+
   </div>
 
   <!-- WHAT YOU WILL LEARN -->
@@ -908,7 +1061,25 @@
   function toggleNav() {
     document.getElementById('navLinks').classList.toggle('open');
   }
+
+  // Load quiz scores
+  (function() {
+    const quizzes = [
+      { key: 'trading_quiz_candlesticks_score', badge: 'badge-candlesticks' },
+      { key: 'trading_quiz_indicators_score', badge: 'badge-indicators' },
+      { key: 'trading_quiz_aichart_score', badge: 'badge-aichart' },
+      { key: 'trading_quiz_aitrading_score', badge: 'badge-aitrading' }
+    ];
+    quizzes.forEach(q => {
+      const score = localStorage.getItem(q.key);
+      const el = document.getElementById(q.badge);
+      if (score && el) {
+        el.innerText = '⭐ ' + score + '%';
+        el.classList.remove('empty');
+      }
+    });
+  })();
 </script>
 
 </body>
-</html>
+                                   </html>
