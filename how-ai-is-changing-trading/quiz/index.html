@@ -1,0 +1,163 @@
+
+# Quiz 3: How AI Is Changing Trading
+quiz3_html = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Trading Knowledge Quiz — Test Your Skills | Learn To Work</title>
+  <meta name="description" content="Test your AI trading knowledge with 15 MCQs. Bots, strategies, risk management, and the future of AI in trading." />
+  <meta property="og:title" content="AI Trading Knowledge Quiz — Learn To Work" />
+  <meta property="og:description" content="15 questions to test your AI trading strategy knowledge." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://learntowork.online/how-ai-is-changing-trading/quiz/" />
+  <meta property="og:image" content="/images/how-ai-is-changing-trading/ai-trading-quiz-social.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <base href="/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G023112WHJ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G023112WHJ');</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--dark:#020617;--dark-2:#0f172a;--dark-3:#1e293b;--accent:#3b82f6;--accent-hover:#2563eb;--gold:#d4af37;--green:#10b981;--green-dark:#059669;--red:#ef4444;--red-dark:#dc2626;--gray:#94a3b8;--gray-light:#cbd5e1;--white:#f8fafc;--trading:#f59e0b;--trading-dark:#d97706;--trading-light:rgba(245,158,11,0.1)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--white);line-height:1.6;min-height:100vh}
+    h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(2,6,23,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(59,130,246,0.15);padding:0 1.5rem}
+    .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:0.5rem}
+    .nav-logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:0.25rem;list-style:none}
+    .nav-links a{color:var(--gray);text-decoration:none;font-size:0.9rem;font-weight:500;padding:0.5rem 0.85rem;border-radius:8px;transition:all 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);background:rgba(59,130,246,0.12)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--gray);border-radius:2px}
+    .quiz-hero{background:linear-gradient(135deg,var(--dark) 0%,#0c1a35 50%,var(--dark) 100%);padding:3rem 1.5rem 2rem;text-align:center;position:relative;overflow:hidden}
+    .quiz-hero::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(245,158,11,0.08) 0%,transparent 70%);pointer-events:none}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:0.85rem;color:var(--gray);margin-bottom:1rem}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .breadcrumb a:hover{text-decoration:underline}
+    .quiz-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--trading-light);border:1px solid rgba(245,158,11,0.3);color:var(--trading);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:50px;margin-bottom:1rem}
+    .quiz-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:0.75rem}
+    .quiz-hero h1 .highlight{color:var(--trading)}
+    .quiz-hero p{font-size:1rem;color:var(--gray);max-width:500px;margin:0 auto 1.5rem}
+    .progress-container{max-width:600px;margin:0 auto 2rem;padding:0 1.5rem}
+    .progress-info{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;font-size:0.85rem;color:var(--gray)}
+    .progress-info .question-counter{font-weight:600;color:var(--trading)}
+    .progress-bar{width:100%;height:6px;background:var(--dark-3);border-radius:3px;overflow:hidden}
+    .progress-fill{height:100%;background:linear-gradient(90deg,var(--trading),var(--trading-dark));border-radius:3px;transition:width 0.4s ease;width:0%}
+    .quiz-container{max-width:720px;margin:0 auto;padding:0 1.5rem 3rem}
+    .start-screen{text-align:center;padding:3rem 1.5rem}
+    .start-screen .quiz-icon-big{font-size:4rem;margin-bottom:1rem}
+    .start-screen h2{font-size:1.8rem;margin-bottom:1rem}
+    .start-screen p{color:var(--gray);max-width:450px;margin:0 auto 2rem}
+    .quiz-info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:500px;margin:0 auto 2rem}
+    .quiz-info-item{background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:1rem;text-align:center}
+    .quiz-info-item .info-num{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--trading);display:block}
+    .quiz-info-item .info-label{font-size:0.75rem;color:var(--gray);text-transform:uppercase;letter-spacing:0.06em}
+    .question-card{background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:2rem;margin-bottom:1.5rem;transition:all 0.3s ease;display:none}
+    .question-card.active{display:block;animation:fadeIn 0.3s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .question-number{font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--trading);margin-bottom:1rem}
+    .question-text{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:1.5rem;color:var(--white)}
+    .options-list{display:flex;flex-direction:column;gap:0.75rem}
+    .option-btn{background:var(--dark-3);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:1rem 1.25rem;color:var(--gray-light);font-size:0.95rem;font-family:'Inter',sans-serif;cursor:pointer;transition:all 0.2s ease;text-align:left;display:flex;align-items:center;gap:0.75rem}
+    .option-btn:hover{border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.05);color:var(--white)}
+    .option-btn .option-letter{width:28px;height:28px;background:rgba(255,255,255,0.06);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:var(--gray);flex-shrink:0;transition:all 0.2s}
+    .option-btn:hover .option-letter{background:rgba(245,158,11,0.15);color:var(--trading)}
+    .option-btn.selected{border-color:var(--trading);background:rgba(245,158,11,0.08);color:var(--white)}
+    .option-btn.selected .option-letter{background:var(--trading);color:var(--dark)}
+    .option-btn.correct{border-color:var(--green);background:rgba(16,185,129,0.08);color:var(--white);cursor:default}
+    .option-btn.correct .option-letter{background:var(--green);color:white}
+    .option-btn.wrong{border-color:var(--red);background:rgba(239,68,68,0.08);color:var(--white);cursor:default}
+    .option-btn.wrong .option-letter{background:var(--red);color:white}
+    .option-btn.disabled{pointer-events:none;opacity:0.6}
+    .explanation-box{margin-top:1.25rem;padding:1rem 1.25rem;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.15);border-radius:10px;display:none}
+    .explanation-box.show{display:block;animation:fadeIn 0.3s ease}
+    .explanation-box p{font-size:0.9rem;color:var(--gray-light);line-height:1.6}
+    .explanation-box strong{color:var(--accent)}
+    .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.06)}
+    .btn{padding:0.75rem 1.5rem;border-radius:10px;font-size:0.9rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all 0.2s;border:none;display:inline-flex;align-items:center;gap:0.5rem}
+    .btn-primary{background:var(--trading);color:var(--dark)}
+    .btn-primary:hover{background:var(--trading-dark);transform:translateY(-1px)}
+    .btn-primary:disabled{background:var(--dark-3);color:var(--gray);cursor:not-allowed;transform:none}
+    .btn-secondary{background:transparent;color:var(--gray);border:1px solid rgba(255,255,255,0.1)}
+    .btn-secondary:hover{border-color:var(--gray);color:var(--white)}
+    .btn-secondary:disabled{opacity:0.4;cursor:not-allowed}
+    .results-screen{display:none;text-align:center;padding:2rem 1.5rem 3rem}
+    .results-screen.show{display:block;animation:fadeIn 0.5s ease}
+    .score-circle{width:160px;height:160px;border-radius:50%;background:conic-gradient(var(--trading) calc(var(--score)*1%),var(--dark-3) 0);margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;position:relative}
+    .score-circle::before{content:'';position:absolute;width:130px;height:130px;background:var(--dark-2);border-radius:50%}
+    .score-text{position:relative;z-index:1}
+    .score-percent{font-family:'Space Grotesk',sans-serif;font-size:2.2rem;font-weight:700;color:var(--white);display:block}
+    .score-label{font-size:0.75rem;color:var(--gray);text-transform:uppercase;letter-spacing:0.06em}
+    .level-badge{display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1.25rem;border-radius:50px;font-size:0.9rem;font-weight:600;margin-bottom:1.5rem}
+    .level-beginner{background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);color:var(--red)}
+    .level-developing{background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);color:var(--trading)}
+    .level-intermediate{background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);color:var(--green)}
+    .level-expert{background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);color:var(--accent)}
+    .results-message{font-size:1.1rem;color:var(--gray-light);max-width:500px;margin:0 auto 2rem;line-height:1.7}
+    .results-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+    .results-summary{background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:1.5rem;max-width:500px;margin:0 auto 2rem;text-align:left}
+    .results-summary h4{font-size:0.9rem;color:var(--gray);margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.06em}
+    .summary-item{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:0.9rem}
+    .summary-item:last-child{border-bottom:none}
+    .summary-status{display:flex;align-items:center;gap:0.3rem;font-size:0.85rem}
+    .status-correct{color:var(--green)}
+    .status-wrong{color:var(--red)}
+    footer{background:var(--dark-2);border-top:1px solid rgba(255,255,255,0.06);padding:3rem 1.5rem 2rem;margin-top:2rem}
+    .footer-inner{max-width:1200px;margin:0 auto}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-bottom p{font-size:0.8rem;color:#475569}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.quiz-hero{padding:2rem 1.25rem 1.5rem}.question-card{padding:1.5rem}.question-text{font-size:1.05rem}.quiz-info-grid{grid-template-columns:1fr}.score-circle{width:130px;height:130px}.score-circle::before{width:105px;height:105px}.score-percent{font-size:1.8rem}.results-actions{flex-direction:column;align-items:center}.results-actions .btn{width:100%;max-width:280px;justify-content:center}}
+  </style>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/" class="nav-logo">🚀 Learn To Work</a><ul class="nav-links" id="navLinks"><li><a href="/">Home</a></li><li><a href="ai-earning/">AI Earning</a></li><li><a href="video-automation/">Video Automation</a></li><li><a href="online-store/">Online Store</a></li><li><a href="trading-education/" class="active">Trading Education</a></li></ul><div class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div></div></nav>
+<section class="quiz-hero"><nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="trading-education/">Trading Education</a><span>›</span><a href="how-ai-is-changing-trading/">How AI Is Changing Trading</a><span>›</span><span>Quiz</span></nav><div class="quiz-badge">🚀 Quiz</div><h1>AI Trading Knowledge <span class="highlight">Quiz</span></h1><p>15 questions to test your knowledge of AI trading strategies, bots, risk management, and the future of trading.</p></section>
+<div class="progress-container" id="progressContainer" style="display:none;"><div class="progress-info"><span class="question-counter" id="questionCounter">Question 1 of 15</span><span id="scoreDisplay">Score: 0</span></div><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div></div>
+<div class="quiz-container" id="quizContainer">
+<div class="start-screen" id="startScreen"><div class="quiz-icon-big">🚀</div><h2>Ready to Test Your AI Trading Knowledge?</h2><p>This quiz covers everything from How AI Is Changing Trading — bots, strategies, risk management, and future trends.</p><div class="quiz-info-grid"><div class="quiz-info-item"><span class="info-num">15</span><span class="info-label">Questions</span></div><div class="quiz-info-item"><span class="info-num">5</span><span class="info-label">Minutes</span></div><div class="quiz-info-item"><span class="info-num">MCQ</span><span class="info-label">Format</span></div></div><button class="btn btn-primary" onclick="startQuiz()" style="font-size:1rem;padding:0.9rem 2rem;">Start Quiz →</button></div>
+<div id="questionsContainer"></div>
+<div class="results-screen" id="resultsScreen"><div class="score-circle" id="scoreCircle"><div class="score-text"><span class="score-percent" id="scorePercent">0%</span><span class="score-label">Score</span></div></div><div class="level-badge" id="levelBadge"></div><p class="results-message" id="resultsMessage"></p><div class="results-summary" id="resultsSummary"></div><div class="results-actions"><button class="btn btn-primary" onclick="retakeQuiz()">↻ Retake Quiz</button><a href="how-ai-is-changing-trading/" class="btn btn-secondary">📖 Back to Guide</a><a href="technical-indicators-guide/quiz/" class="btn btn-secondary">Next Quiz →</a></div></div>
+</div>
+<footer><div class="footer-inner"><div class="footer-bottom"><p>© 2026 LearnToWork.online — Made with ❤️ for learners worldwide</p><div style="display:flex;gap:1.5rem;"><a href="privacy-policy.html" style="font-size:0.8rem;color:#475569;text-decoration:none;">Privacy</a><a href="terms.html" style="font-size:0.8rem;color:#475569;text-decoration:none;">Terms</a></div></div></div></footer>
+<script>
+const quizData=[
+{question:"In 2026, AI trading tools for retail traders are:",options:["Only for institutions","Free and accessible","Very expensive","Not available"],correct:1,explanation:"In 2026, AI trading is not just for hedge funds. Retail traders have access to the same class of analytical tools that professional trading desks use."},
+{question:"AI has democratized trading by giving retail traders:",options:["More capital","Institutional-grade analysis tools","Guaranteed profits","Insider information"],correct:1,explanation:"What once required an entire team of data scientists now fits inside a free browser tab. AI has leveled the analytical playing field."},
+{question:"The forex market trades approximately how much per day?",options:["$1 trillion","$3 trillion","$7 trillion","$10 billion"],correct:2,explanation:"The forex market trades over $7 trillion per day and operates 24 hours, five days a week — making it perfect for AI monitoring."},
+{question:"AI's biggest advantage in forex trading is:",options:["Lower spreads","24/7 market monitoring","No volatility","Fixed exchange rates"],correct:1,explanation:"AI solves the problem that forex never sleeps but humans have to. Automated systems monitor your pairs around the clock."},
+{question:"AI sentiment analysis reads and interprets:",options:["Only price charts","News and social media for sentiment scores","Only company reports","Weather data"],correct:1,explanation:"AI can read thousands of news articles and social media posts simultaneously, then assign a sentiment score to any stock or asset."},
+{question:"AI trading bots work in which 4 steps?",options:["Random → Trade → Profit → Repeat","Data collection → Pattern analysis → Signal generation → Risk management","Buy → Sell → Buy → Sell","Guess → Trade → Hope → Repeat"],correct:1,explanation:"Good bots collect data, analyze patterns, generate signals, and manage risk with built-in stop-loss and take-profit levels."},
+{question:"For beginners, Level 1 (free) AI tools include:",options:["Trade Ideas Pro","TradingView, ChatGPT, Finviz","Bloomberg Terminal","Custom Python scripts"],correct:1,explanation:"TradingView (pattern recognition), ChatGPT (chart analysis), and Finviz (stock screening) are completely free and powerful enough for most retail traders."},
+{question:"The 'Golden Rule' of AI trading states:",options:["Always follow AI blindly","If you can't explain the trade logic, don't take the trade","AI knows best","Risk 10% per trade"],correct:1,explanation:"If you cannot explain exactly why you are entering a trade — not just 'the AI said so' — you should not take that trade."},
+{question:"Pakistani traders should verify brokers through:",options:["WhatsApp groups","SECP official list","Facebook recommendations","Telegram channels"],correct:1,explanation:"Pakistan's Securities and Exchange Commission (SECP) regulates securities trading. Always verify any broker through SECP's official list."},
+{question:"AI trading bots should be tested on demo for:",options:["1 day","1 week","2-3 months","No testing needed"],correct:2,explanation:"Always test any bot on a demo account for at least 2-3 months before using real money. This proves the strategy works in current market conditions."},
+{question:"Natural Language Trading allows you to:",options:["Code in Python","Describe trades in plain English","Only use technical terms","Trade without speaking"],correct:1,explanation:"Instead of configuring 15 technical filters, you simply say 'find me stocks breaking out with above-average volume' — and the AI does it."},
+{question:"The most honest indicator in trading is:",options:["RSI","MACD","Volume","Bollinger Bands"],correct:2,explanation:"Volume is the most honest indicator because it shows actual money moving in and out of an asset — not derived calculations."},
+{question:"AI pattern recognition at scale means:",options:["Looking at one chart for hours","Scanning thousands of charts in seconds","Manual pattern drawing","Only crypto charts"],correct:1,explanation:"AI tools can scan every stock on a major exchange and flag the ones forming specific patterns in real time — under 10 seconds."},
+{question:"Before using real money with AI tools, you should:",options:["Start immediately","Be consistently profitable on demo","Trust AI completely","Skip demo and go live"],correct:1,explanation:"Prove to yourself that you can trade consistently on a demo account. Then upgrade to real money when you're genuinely ready."},
+{question:"The future of AI trading includes:",options:["Only manual trading","Multimodal AI and dynamic risk management","No AI advancement","Slower, more expensive tools"],correct:1,explanation:"The next generation includes visual chart understanding, natural language trading, and AI that dynamically adjusts position sizes based on real-time volatility."}
+];
+let currentQuestion=0,score=0,userAnswers=[],answered=false;
+function startQuiz(){document.getElementById('startScreen').style.display='none';document.getElementById('progressContainer').style.display='block';const container=document.getElementById('questionsContainer');container.innerHTML='';quizData.forEach((q,index)=>{const card=document.createElement('div');card.className='question-card';card.id=`question-${index}`;const letters=['A','B','C','D'];card.innerHTML=`<div class="question-number">Question ${index+1} of ${quizData.length}</div><div class="question-text">${q.question}</div><div class="options-list">${q.options.map((opt,i)=>`<button class="option-btn" onclick="selectOption(${index},${i})" data-index="${i}"><span class="option-letter">${letters[i]}</span><span>${opt}</span></button>`).join('')}</div><div class="explanation-box" id="explanation-${index}"><p><strong>Explanation:</strong> ${q.explanation}</p></div><div class="quiz-nav"><button class="btn btn-secondary" onclick="prevQuestion()" id="prevBtn-${index}" disabled>← Previous</button><button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn-${index}" disabled>Next →</button></div>`;container.appendChild(card);});showQuestion(0);updateProgress()}
+function showQuestion(index){document.querySelectorAll('.question-card').forEach(card=>card.classList.remove('active'));document.getElementById(`question-${index}`).classList.add('active');document.querySelectorAll('[id^="prevBtn-"]').forEach(btn=>btn.disabled=index===0);answered=userAnswers[index]!==undefined;if(answered){const q=quizData[index],selected=userAnswers[index];const buttons=document.querySelectorAll(`#question-${index} .option-btn`);buttons.forEach((btn,i)=>{btn.classList.add('disabled');if(i===q.correct)btn.classList.add('correct');else if(i===selected&&selected!==q.correct)btn.classList.add('wrong')});document.getElementById(`explanation-${index}`).classList.add('show');document.getElementById(`nextBtn-${index}`).disabled=false}updateProgress()}
+function selectOption(qIndex,optionIndex){if(answered)return;answered=true;userAnswers[qIndex]=optionIndex;const q=quizData[qIndex];const buttons=document.querySelectorAll(`#question-${qIndex} .option-btn`);buttons.forEach((btn,i)=>{btn.classList.add('disabled');if(i===optionIndex)btn.classList.add('selected');if(i===q.correct)btn.classList.add('correct');else if(i===optionIndex&&i!==q.correct)btn.classList.add('wrong')});if(optionIndex===q.correct)score++;document.getElementById(`explanation-${qIndex}`).classList.add('show');document.getElementById(`nextBtn-${qIndex}`).disabled=false;updateProgress()}
+function nextQuestion(){if(currentQuestion<quizData.length-1){currentQuestion++;showQuestion(currentQuestion)}else{showResults()}}
+function prevQuestion(){if(currentQuestion>0){currentQuestion--;showQuestion(currentQuestion)}}
+function updateProgress(){const percent=((currentQuestion+1)/quizData.length)*100;document.getElementById('progressFill').style.width=percent+'%';document.getElementById('questionCounter').textContent=`Question ${currentQuestion+1} of ${quizData.length}`;document.getElementById('scoreDisplay').textContent=`Score: ${score}`}
+function showResults(){document.getElementById('progressContainer').style.display='none';document.getElementById('questionsContainer').style.display='none';const percent=Math.round((score/quizData.length)*100);localStorage.setItem('trading_quiz_aitrading_score',percent);localStorage.setItem('trading_quiz_aitrading_answers',JSON.stringify(userAnswers));document.getElementById('scoreCircle').style.setProperty('--score',percent);document.getElementById('scorePercent').textContent=percent+'%';const badge=document.getElementById('levelBadge');let levelClass,levelText,message;if(percent>=86){levelClass='level-expert';levelText='💎 Expert Level';message="Excellent! You understand the complete AI trading ecosystem. You're ready to use advanced AI tools with proper risk management."}else if(percent>=61){levelClass='level-intermediate';levelText='🟢 Advanced Level';message="Great job! You understand AI trading strategies well. Start practicing with free AI tools on a demo account."}else if(percent>=41){levelClass='level-developing';levelText='🟡 Developing Level';message="Good start! You know the basics. Focus on understanding how AI bots work and why risk management is crucial."}else{levelClass='level-beginner';levelText='🔴 Beginner Level';message="Keep learning! Start with free tools and demo accounts. Understanding AI trading takes time but is very rewarding."}badge.className='level-badge '+levelClass;badge.textContent=levelText;document.getElementById('resultsMessage').textContent=message;const summary=document.getElementById('resultsSummary');summary.innerHTML=`<h4>Question Summary</h4>${quizData.map((q,i)=>{const isCorrect=userAnswers[i]===q.correct;return`<div class="summary-item"><span>Q${i+1}. ${q.question.substring(0,40)}...</span><span class="summary-status ${isCorrect?'status-correct':'status-wrong'}">${isCorrect?'✓ Correct':'✗ Wrong'}</span></div>`}).join('')}`;document.getElementById('resultsScreen').classList.add('show');document.getElementById('resultsScreen').scrollIntoView({behavior:'smooth'})}
+function retakeQuiz(){currentQuestion=0;score=0;userAnswers=[];answered=false;document.getElementById('resultsScreen').classList.remove('show');document.getElementById('questionsContainer').style.display='block';document.getElementById('progressContainer').style.display='block';startQuiz()}
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+</script>
+</body>
+</html>'''
+
+with open('/mnt/agents/output/how-ai-trading-quiz.html', 'w', encoding='utf-8') as f:
+    f.write(quiz3_html)
+
