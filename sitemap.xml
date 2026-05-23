@@ -207,6 +207,18 @@ updated_sitemap = '''<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.7</priority>
   </url>
 
+  <url>
+  <loc>https://learntowork.online/risk-management-guide/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://learntowork.online/risk-management-guide/quiz/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+  
   <!-- Static Pages -->
   <url>
     <loc>https://learntowork.online/about/</loc>
