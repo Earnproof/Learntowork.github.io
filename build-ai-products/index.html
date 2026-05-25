@@ -191,6 +191,25 @@
     .class-pill.locked-class { color: #475569; background: var(--dark-3); border-color: transparent; cursor: not-allowed; }
     .class-pill.coming { color: var(--gray); background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.08); }
 
+    /* WHO IS THIS FOR */
+    .audience-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .audience-card { background: var(--dark-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 1.25rem; display: flex; align-items: flex-start; gap: 0.85rem; transition: all 0.25s; }
+    .audience-card:hover { border-color: rgba(124,58,237,0.3); transform: translateY(-2px); }
+    .audience-icon { width: 40px; height: 40px; background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(59,130,246,0.15)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .audience-text h4 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.2rem; }
+    .audience-text p { font-size: 0.78rem; color: var(--gray); line-height: 1.4; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
+    .faq-item { background: var(--dark-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; overflow: hidden; transition: all 0.25s; }
+    .faq-item:hover { border-color: rgba(124,58,237,0.2); }
+    .faq-question { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 1.25rem; cursor: pointer; font-size: 0.9rem; font-weight: 600; color: var(--white); gap: 1rem; }
+    .faq-question::after { content: '+'; font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; color: var(--purple-light); flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-question::after { content: '−'; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 200px; }
+    .faq-answer-inner { padding: 0 1.25rem 1.1rem; font-size: 0.85rem; color: var(--gray); line-height: 1.7; }
+
     /* REQUIREMENTS */
     .req-section { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 3rem; }
     .req-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
@@ -252,6 +271,7 @@
       .course-stats { gap: 0.75rem; }
       .course-stat { min-width: 90px; padding: 0.75rem 1rem; }
       .build-grid { grid-template-columns: 1fr 1fr; }
+      .audience-grid { grid-template-columns: 1fr 1fr; }
       .cert-preview-wrap { grid-template-columns: 1fr; gap: 1.5rem; }
       .cert-img-wrap { order: -1; }
       .footer-top { grid-template-columns: 1fr; gap: 2rem; }
@@ -260,13 +280,15 @@
     }
     @media (max-width: 480px) {
       .build-grid { grid-template-columns: 1fr; }
+      .audience-grid { grid-template-columns: 1fr; }
     }
   </style>
+<base target="_blank">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<<nav>
   <div class="nav-inner">
     <a href="/" class="nav-logo" target="_self">🚀 Learn To Work</a>
     <ul class="nav-links" id="navLinks">
@@ -305,7 +327,7 @@
       <span class="course-stat-label">Series</span>
     </div>
     <div class="course-stat">
-      <span class="course-stat-num">0₨</span>
+      <span class="course-stat-num">$0</span>
       <span class="course-stat-label">Cost</span>
     </div>
     <div class="course-stat">
@@ -323,7 +345,7 @@
 <div class="section">
   <div class="section-label">What You'll Build</div>
   <h2 class="section-title">Real AI Products — Not Just Theory</h2>
-  <p class="section-desc">Har class ke baad aap kuch real build karenge — sirf seekhenge nahi!</p>
+  <p class="section-desc">After every class, you will build something real — not just learn!</p>
 
   <div class="build-grid">
     <div class="build-card">
@@ -367,7 +389,7 @@
 <div class="series-section">
   <div class="section-label">Course Structure</div>
   <h2 class="section-title" style="margin-bottom:0.5rem;">5 Series — 25 Classes</h2>
-  <p class="section-desc">Ek series complete karo — phir agla unlock hoga!</p>
+  <p class="section-desc">Complete one series — then the next one unlocks!</p>
 
   <!-- Series 1 -->
   <div class="series-card active-series">
@@ -376,15 +398,15 @@
         <div class="series-num">1</div>
         <div class="series-info">
           <h3>Series 1 — AI Foundations</h3>
-          <p>Bilkul zero se — AI kya hai, kaise kaam karta hai, tools aur prompting</p>
+          <p>From absolute zero — what is AI, how it works, tools and prompting</p>
         </div>
       </div>
       <span class="series-badge badge-live">🟢 Live Now</span>
     </div>
     <div class="series-classes">
-      <a href="build-ai-products/class-1/" class="class-pill" target="_self">G1 — AI Kya Hai?</a>
+      <a href="build-ai-products/class-1/" class="class-pill" target="_self">G1 — What Is AI?</a>
       <span class="class-pill coming">G2 — ChatGPT Mastery</span>
-      <span class="class-pill coming">G3 — Custom GPT Banana</span>
+      <span class="class-pill coming">G3 — Build a Custom GPT</span>
       <span class="class-pill coming">G4 — No-Code Chatbot</span>
       <span class="class-pill coming">G5 — AI Automation</span>
     </div>
@@ -397,7 +419,7 @@
         <div class="series-num">2</div>
         <div class="series-info">
           <h3>Series 2 — Build AI Chatbots</h3>
-          <p>Real AI chatbots banana — customer service, games, assistants</p>
+          <p>Build real AI chatbots — customer service, games, assistants</p>
         </div>
       </div>
       <span class="series-badge badge-soon">🔜 Coming Soon</span>
@@ -418,7 +440,7 @@
         <div class="series-num">3</div>
         <div class="series-info">
           <h3>Series 3 — Build AI Apps & Tools</h3>
-          <p>Voice AI, image generators, writing tools aur zyada</p>
+          <p>Voice AI, image generators, writing tools and more</p>
         </div>
       </div>
       <span class="series-badge badge-locked">🔒 Locked</span>
@@ -478,26 +500,106 @@
 
 <div class="divider"><hr /></div>
 
+<!-- WHO IS THIS FOR -->
+<div class="section">
+  <div class="section-label">Who Is This For</div>
+  <h2 class="section-title">Built for Beginners, Useful for Everyone</h2>
+  <p class="section-desc">No matter your background — if you are curious about AI, this is your starting point.</p>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="audience-icon">🎓</div>
+      <div class="audience-text"><h4>Students</h4><p>Explore tech careers without coding background</p></div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-icon">💼</div>
+      <div class="audience-text"><h4>Freelancers</h4><p>Add AI services to your skill set</p></div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-icon">🚀</div>
+      <div class="audience-text"><h4>Entrepreneurs</h4><p>Build your first AI product from scratch</p></div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-icon">🔄</div>
+      <div class="audience-text"><h4>Career Switchers</h4><p>Transition into AI and tech roles</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><hr /></div>
+
+<!-- FAQ -->
+<div class="section">
+  <div class="section-label">Common Questions</div>
+  <h2 class="section-title">Got Questions? We Got Answers</h2>
+  <p class="section-desc">Everything you need to know before starting.</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Is this course really free forever?
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Yes. Every class, every quiz, and the certificate — all free. No hidden fees, no upsells, no credit card required at any point.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Do I need a laptop or does my phone work?
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Your phone works perfectly for Series 1 and 2. For Series 4 and 5, a laptop makes building SaaS products and writing Python code much easier.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        How long is each class?
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Each class is designed to be 20–30 minutes. Short enough to finish in one sitting, long enough to actually build something.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Can I put the certificate on my resume or LinkedIn?
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Absolutely. The certificate is a downloadable PDF with your name on it. Add it to LinkedIn, your portfolio, or job applications.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What if I get stuck during a class?
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Every class includes step-by-step instructions. If you are still stuck, reach out via our contact page — we reply to every message.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><hr /></div>
+
 <!-- REQUIREMENTS -->
 <div class="req-section" style="padding-top:3rem;">
   <div class="section-label">Requirements</div>
-  <h2 class="section-title">Kya Chahiye Shuru Karne Ke Liye?</h2>
+  <h2 class="section-title">What Do You Need to Get Started?</h2>
   <div class="req-grid">
     <div class="req-item">
       <span class="req-icon">📱</span>
-      <div class="req-text"><strong>Phone ya Laptop</strong>Koi bhi device chalega</div>
+      <div class="req-text"><strong>Phone or Laptop</strong>Any device will work</div>
     </div>
     <div class="req-item">
       <span class="req-icon">🌐</span>
-      <div class="req-text"><strong>Internet Connection</strong>Bas itna hi chahiye</div>
+      <div class="req-text"><strong>Internet Connection</strong>That's all you need</div>
     </div>
     <div class="req-item">
       <span class="req-icon">💡</span>
-      <div class="req-text"><strong>Koi Coding Nahi</strong>Zero se shuru karte hain</div>
+      <div class="req-text"><strong>No Coding Required</strong>We start from zero</div>
     </div>
     <div class="req-item">
       <span class="req-icon">🆓</span>
-      <div class="req-text"><strong>Bilkul Free</strong>Koi payment nahi kabhi bhi</div>
+      <div class="req-text"><strong>Completely Free</strong>No payment ever required</div>
     </div>
   </div>
 </div>
@@ -509,13 +611,13 @@
   <div class="cert-preview-wrap">
     <div class="cert-text">
       <div class="section-label">Course Certificate</div>
-      <h2>Complete Karo —<br><span>Certificate Pao!</span></h2>
-      <p>Saari 25 classes complete karo, final exam pass karo — aur apna official LearnToWork certificate download karo. Apna naam khud daalo!</p>
+      <h2>Complete It —<<br><span>Get Your Certificate!</span></h2>
+      <p>Complete all 25 classes, pass the final exam — and download your official LearnToWork certificate. Add your own name!</p>
       <ul class="cert-requirements">
-        <li>Saari 5 series complete karni hogi</li>
-        <li>Har series ka quiz pass karna hoga</li>
-        <li>Final exam mein minimum 70% score</li>
-        <li>Apna naam certificate pe — PDF download</li>
+        <li>All 5 series must be completed</li>
+        <li>Pass the quiz for each series</li>
+        <li>Score at least 70% on the final exam</li>
+        <li>Your name on the certificate — PDF download</li>
       </ul>
     </div>
     <div class="cert-img-wrap">
@@ -523,14 +625,14 @@
       <div style="display:none;background:linear-gradient(135deg,#0f172a,#1e1040);border-radius:14px;padding:3rem;text-align:center;min-height:200px;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;">
         <div style="font-size:2.5rem;">🎓</div>
         <div style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;color:#d4af37;">Certificate Preview</div>
-        <div style="font-size:0.8rem;color:#94a3b8;">Course complete karne ke baad milega</div>
+        <div style="font-size:0.8rem;color:#94a3b8;">Available after completing the course</div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- FOOTER -->
-<footer>
+<<footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
