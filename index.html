@@ -52,6 +52,7 @@
       --primary: #0f172a; --primary-light: #1e293b; --accent: #3b82f6; --accent-hover: #2563eb;
       --gold: #d4af37; --dark: #020617; --light: #f8fafc; --gray: #94a3b8; --gray-dark: #475569;
       --border: rgba(148,163,184,0.1); --card-bg: rgba(15,23,42,0.7); --green: #10b981; --trading: #f59e0b;
+      --purple: #7c3aed; --purple-light: #a78bfa;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -196,12 +197,30 @@
     .cat-video .category-icon { background: rgba(239,68,68,0.1); color: #ef4444; }
     .cat-store .category-icon { background: rgba(139,92,246,0.1); color: #8b5cf6; }
     .cat-trading .category-icon { background: rgba(245,158,11,0.1); color: var(--trading); }
+
+    /* NEW: Build AI Products Category Styles */
+    .cat-ai-products .category-icon { 
+      background: rgba(124,58,237,0.1); 
+      color: var(--purple); 
+    }
+    .cat-ai-products:hover { 
+      border-color: rgba(124,58,237,0.3) !important; 
+    }
+    .cat-ai-products .earning-range { 
+      color: var(--purple); 
+    }
+    .cat-ai-products .explore-link:hover { 
+      color: var(--purple); 
+      background: rgba(124,58,237,0.1); 
+    }
+
     .category-title-link { text-decoration: none; color: var(--light); display: block; }
     .category-card h3 { 
       font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; transition: color 0.3s; 
     }
     .category-title-link:hover h3 { color: var(--accent); }
     .cat-trading .category-title-link:hover h3 { color: var(--trading); }
+    .cat-ai-products .category-title-link:hover h3 { color: var(--purple); }
     .category-card p { 
       color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.6; 
     }
@@ -274,6 +293,43 @@
     }
     .tag-new { background: rgba(16,185,129,0.1); color: var(--green); }
     .tag-trading { background: rgba(245,158,11,0.1); color: var(--trading); }
+    .tag-ai { background: rgba(124,58,237,0.1); color: var(--purple); }
+
+    /* SOCIAL SHARE BAR */
+    .social-share-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1rem 0;
+      border-top: 1px solid var(--border);
+      margin-top: 0.5rem;
+    }
+    .social-share-bar span {
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-right: 0.5rem;
+    }
+    .share-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .share-btn:hover {
+      border-color: var(--purple-light);
+      color: var(--white);
+      background: rgba(124,58,237,0.1);
+    }
 
     /* FEATURES */
     .features-grid { 
@@ -378,6 +434,7 @@
       .categories-grid { grid-template-columns: 1fr; }
       .cookie-buttons { width: 100%; flex-direction: column; }
       .section-header h2 { font-size: 1.7rem; }
+      .social-share-bar { flex-wrap: wrap; }
     }
 
     @media (max-width: 480px) {
@@ -389,6 +446,7 @@
     }
   </style>
   <base href="https://learntowork.online/">
+<base target="_blank">
 <base target="_blank">
 </head>
 <body>
@@ -436,19 +494,20 @@
       <h2>Pick Your <span>Income Path</span></h2>
       <p>I've organized everything by skill type. Click any category to see all guides.</p>
     </div>
-    
+
     <div class="categories-grid">
+      <!-- Build AI Products - FIRST POSITION -->
       <div class="category-card cat-ai-products">
-  <div class="category-icon"><i class="fas fa-robot"></i></div>
-  <a href="build-ai-products/" class="category-title-link" target="_self"><h3>Build AI Products</h3></a>
-  <p>Build chatbots, custom GPTs, and AI tools from scratch. 25-class free course — zero coding needed.</p>
-  <div class="article-count"><i class="fas fa-file-alt"></i> 1 Class</div>
-  <div class="category-meta">
-    <span class="earning-range">$1,000–5,000/mo</span>
-    <a href="build-ai-products/" class="explore-link" target="_self">Explore <i class="fas fa-arrow-right"></i></a>
-  </div>
+        <div class="category-icon"><i class="fas fa-robot"></i></div>
+        <a href="build-ai-products/" class="category-title-link" target="_self"><h3>Build AI Products</h3></a>
+        <p>Build chatbots, custom GPTs, and AI tools from scratch. 25-class free course — zero coding needed.</p>
+        <div class="article-count"><i class="fas fa-file-alt"></i> 1 Class</div>
+        <div class="category-meta">
+          <span class="earning-range">$1,000–5,000/mo</span>
+          <a href="build-ai-products/" class="explore-link" target="_self">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
-      
+
       <div class="category-card cat-ai">
         <div class="category-icon"><i class="fas fa-robot"></i></div>
         <a href="ai-earning/" class="category-title-link" target="_self"><h3>Earn with AI</h3></a>
@@ -499,6 +558,32 @@
       <p>Newest guides at the top — start fresh!</p>
     </div>
     <div class="articles-grid">
+
+      <!-- Build AI Products - FIRST POSITION (Featured) -->
+      <a href="build-ai-products/class-1/" class="article-card" target="_self">
+        <span class="new-badge">Featured</span>
+        <div class="article-image">
+          <img src="images/build-ai-products/class-1/og-social-share.png" alt="Build AI Products - Free 25-Class Course" loading="lazy">
+        </div>
+        <div class="article-content">
+          <h4>Build Your Own AI Products — Free 25-Class Course</h4>
+          <p>Learn what AI actually is, how it works, and build real AI products from scratch. Chatbots, custom GPTs, voice assistants, and more. Zero coding required. Certificate included.</p>
+          <div class="article-tags">
+            <span class="tag tag-ai">AI</span>
+            <span class="tag tag-new">Free Course</span>
+            <span class="tag">No Code</span>
+          </div>
+          <!-- Social Share Bar -->
+          <div class="social-share-bar">
+            <span>Share:</span>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Free+25-class+AI+course!+Learn+to+build+AI+products+from+scratch+with+zero+coding.+By+%40Isbella_esa+%F0%9F%9A%80&url=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+            <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="share-btn" href="https://wa.me/?text=Check+out+this+free+AI+course!+Build+AI+products+with+zero+coding%3A+https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a class="share-btn" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F&media=https%3A%2F%2Flearntowork.online%2Fimages%2Fbuild-ai-products%2Fclass-1%2Fog-social-share.png&description=Free+25-class+AI+course+-+Build+AI+products+from+scratch" target="_blank" rel="noopener" aria-label="Share on Pinterest"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </a>
 
       <!-- NEW 1 -->
       <a href="candlestick-patterns-guide/" class="article-card" target="_self">
@@ -747,4 +832,4 @@
     window.addEventListener('load', showCookieBanner);
   </script>
 </body>
-</html>
+            </html>
