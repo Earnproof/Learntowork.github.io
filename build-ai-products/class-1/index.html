@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Class 1 — What Is AI? Free Course for Beginners | Learn To Work</title>
 
-  <!-- Primary Meta Tags -->
   <meta name="description" content="Free Class 1: Learn what AI actually is, how it works, and write your first engineered prompt. No coding needed. Start building AI products from zero." />
   <meta name="keywords" content="what is AI, AI for beginners, learn AI free, AI course, no code AI, build AI products, AI explained simply, prompt engineering, free AI certification" />
   <meta name="author" content="Learn To Work" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://learntowork.online/build-ai-products/class-1/" />
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://learntowork.online/build-ai-products/class-1/" />
   <meta property="og:title" content="Class 1 — What Is AI? Free Course for Beginners | Learn To Work" />
@@ -25,7 +23,6 @@
   <meta property="article:section" content="AI Education" />
   <meta property="article:tag" content="AI, Beginners, Free Course, No Code" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://learntowork.online/build-ai-products/class-1/" />
   <meta name="twitter:title" content="Class 1 — What Is AI? Free Course for Beginners" />
@@ -33,15 +30,12 @@
   <meta name="twitter:image" content="https://learntowork.online/images/build-ai-products/class-1/og-social-share.png" />
   <meta name="twitter:creator" content="@Isbella_esa" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,13 +56,7 @@
     "timeRequired": "PT25M",
     "image": "https://learntowork.online/images/build-ai-products/class-1/og-social-share.png",
     "url": "https://learntowork.online/build-ai-products/class-1/",
-    "datePublished": "2026-05-25",
-    "coursePrerequisites": "None",
-    "educationalCredentialAwarded": {
-      "@type": "DefinedTerm",
-      "name": "LearnToWork AI Foundations Certificate",
-      "description": "Certificate awarded after completing all 25 classes and passing final exam"
-    }
+    "datePublished": "2026-05-25"
   }
   </script>
 
@@ -84,7 +72,6 @@
   }
   </script>
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G023112WHJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -95,7 +82,10 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { scroll-behavior: smooth; overflow-x: hidden; }
+
+    /* FIX: overflow-x hidden on html causes sticky issues on iOS — only on body */
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
 
     :root {
       --dark: #020617; --dark-2: #0f172a; --dark-3: #1e293b;
@@ -109,13 +99,13 @@
     h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; }
 
     /* === NAV === */
-    nav { position: sticky; top: 0; z-index: 1000; background: rgba(2,6,23,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(124,58,237,0.2); padding: 0 1.5rem; }
+    nav.main-nav { position: sticky; top: 0; z-index: 1000; background: rgba(2,6,23,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(124,58,237,0.2); padding: 0 1.5rem; }
     .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--white); text-decoration: none; }
     .class-progress { font-size: 0.8rem; color: var(--gray); }
     .class-progress span { color: var(--purple-light); font-weight: 600; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gray); border-radius: 2px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gray); border-radius: 2px; transition: all 0.3s; }
 
     /* === ARTICLE CONTAINER === */
     .article-wrap { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
@@ -129,45 +119,68 @@
     .class-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(124,58,237,0.12); border: 1px solid rgba(124,58,237,0.3); color: var(--purple-light); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 50px; margin-bottom: 1.25rem; }
     .class-badge::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
 
-    h1.article-title { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.2; margin-bottom: 1rem; }
+    h1.article-title { font-size: clamp(1.6rem, 5vw, 2.6rem); font-weight: 700; line-height: 1.2; margin-bottom: 1rem; }
     h1.article-title .gradient-text {
       background: linear-gradient(135deg, var(--purple-light) 0%, var(--blue-light) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
 
-    .article-meta { font-size: 0.85rem; color: var(--gray); margin-bottom: 2.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
-    .article-meta span { display: flex; align-items: center; gap: 0.4rem; }
+    .article-meta { font-size: 0.85rem; color: var(--gray); margin-bottom: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .article-meta span { display: flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
 
     /* === SECTIONS === */
     .article-section { margin-bottom: 3.5rem; }
-    .article-section h2 { font-size: 1.35rem; font-weight: 700; color: var(--white); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem; }
-    .article-section h2 .section-num { width: 36px; height: 36px; background: linear-gradient(135deg, var(--purple), var(--blue)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: white; flex-shrink: 0; font-family: 'Space Grotesk', sans-serif; }
+    .article-section h2 { font-size: clamp(1.1rem, 3vw, 1.35rem); font-weight: 700; color: var(--white); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem; }
+    .article-section h2 .section-num { width: 36px; height: 36px; min-width: 36px; background: linear-gradient(135deg, var(--purple), var(--blue)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: white; flex-shrink: 0; font-family: 'Space Grotesk', sans-serif; }
 
     .article-section p { font-size: 1rem; color: #cbd5e1; margin-bottom: 1.1rem; line-height: 1.8; }
-    .article-section p.lead { font-size: 1.15rem; color: var(--white); line-height: 1.7; }
+    .article-section p.lead { font-size: clamp(1rem, 2.5vw, 1.15rem); color: var(--white); line-height: 1.7; }
     .article-section strong { color: var(--white); }
     .article-section em { color: var(--purple-light); font-style: italic; }
 
-    /* === IMAGES === */
-    .img-wrap { margin: 2rem 0; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
-    .img-wrap img, .img-wrap picture { width: 100%; display: block; }
-    .img-caption { font-size: 0.85rem; color: var(--gray); text-align: center; margin-top: 0.75rem; margin-bottom: 1.5rem; font-style: italic; }
+    /* === IMAGES — KEY FIX === */
+    .img-wrap {
+      margin: 2rem 0;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+      /* FIX: ensure image container never overflows on any screen */
+      width: 100%;
+      max-width: 100%;
+    }
+    .img-wrap img,
+    .img-wrap picture {
+      width: 100%;
+      max-width: 100%;
+      height: auto;          /* FIX: auto height so images scale correctly */
+      display: block;
+      object-fit: cover;
+    }
+    /* FIX: picture tag itself must also be block-level */
+    .img-wrap picture {
+      display: block;
+    }
+    .img-caption { font-size: 0.85rem; color: var(--gray); text-align: center; margin-top: 0.75rem; margin-bottom: 1.5rem; font-style: italic; padding: 0 0.5rem; }
 
     /* === INTERACTIVE TOGGLE === */
     .human-ai-toggle { background: var(--dark-2); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 1.75rem; margin: 1.5rem 0; }
     .toggle-buttons { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; }
-    .toggle-btn { flex: 1; padding: 0.7rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: var(--gray); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; }
+    .toggle-btn { flex: 1; padding: 0.7rem 0.5rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: var(--gray); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; }
     .toggle-btn.active { background: rgba(124,58,237,0.2); color: var(--purple-light); border-color: rgba(124,58,237,0.4); }
     .toggle-content { font-size: 0.95rem; line-height: 1.7; color: #cbd5e1; min-height: 80px; padding: 0.5rem; }
     .toggle-content.hidden { display: none; }
     .reveal-btn { margin-top: 1.25rem; background: linear-gradient(135deg, var(--purple), var(--blue)); color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 10px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s; font-family: 'Space Grotesk', sans-serif; }
     .reveal-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.3); }
 
-    /* === COMPARISON TABLE === */
-    .compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
+    /* === COMPARISON TABLE — MOBILE FIX === */
+    .table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; }
+    .compare-table { width: 100%; min-width: 480px; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
     .compare-table th { background: rgba(124,58,237,0.1); color: var(--purple-light); padding: 0.85rem; text-align: left; font-weight: 600; border-bottom: 1px solid rgba(124,58,237,0.2); font-family: 'Space Grotesk', sans-serif; }
     .compare-table td { padding: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.06); color: #cbd5e1; }
     .compare-table td strong { color: var(--white); }
+
+    /* 3-col table on mobile */
+    .compare-table.three-col { min-width: 560px; }
 
     /* === MYTH CARDS === */
     .myth-grid { display: grid; gap: 1rem; margin: 1.5rem 0; }
@@ -182,8 +195,8 @@
     /* === BUILD-ALONG BOX === */
     .build-box { background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(59,130,246,0.08)); border: 1px solid rgba(124,58,237,0.25); border-radius: 18px; padding: 2rem; margin: 2rem 0; }
     .build-box h3 { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
-    .build-box .formula { font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; padding: 1rem; border-radius: 12px; margin: 1.25rem 0; text-align: center; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06); }
-    .build-box .formula span { margin: 0 0.2rem; font-weight: 700; }
+    .build-box .formula { font-family: 'Space Grotesk', sans-serif; font-size: clamp(0.9rem, 3vw, 1.15rem); padding: 1rem; border-radius: 12px; margin: 1.25rem 0; text-align: center; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06); display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem; align-items: center; }
+    .build-box .formula span { font-weight: 700; }
     .build-box .formula .role { color: var(--gold); }
     .build-box .formula .task { color: var(--blue-light); }
     .build-box .formula .context { color: var(--purple-light); }
@@ -204,9 +217,10 @@
     .save-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.3); }
     .save-confirm { font-size: 0.85rem; color: var(--green); margin-top: 0.75rem; display: none; align-items: center; gap: 0.4rem; }
 
-    /* === ROADMAP === */
-    .roadmap { display: flex; align-items: center; gap: 0.5rem; margin: 1.5rem 0; overflow-x: auto; padding-bottom: 0.5rem; }
-    .roadmap-node { flex-shrink: 0; width: 150px; text-align: center; padding: 1.25rem 0.75rem; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); background: var(--dark-2); transition: all 0.2s; }
+    /* === ROADMAP — HORIZONTAL SCROLL ON MOBILE === */
+    .roadmap-outer { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.75rem; }
+    .roadmap { display: flex; align-items: center; gap: 0.5rem; margin: 1.5rem 0; width: max-content; min-width: 100%; }
+    .roadmap-node { flex-shrink: 0; width: 130px; text-align: center; padding: 1.25rem 0.75rem; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); background: var(--dark-2); transition: all 0.2s; }
     .roadmap-node.active { border-color: rgba(124,58,237,0.4); background: rgba(124,58,237,0.08); }
     .roadmap-node .node-num { width: 32px; height: 32px; background: var(--dark-3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; margin: 0 auto 0.6rem; color: var(--gray); font-family: 'Space Grotesk', sans-serif; }
     .roadmap-node.active .node-num { background: linear-gradient(135deg, var(--purple), var(--blue)); color: white; }
@@ -215,8 +229,8 @@
     .roadmap-arrow { color: var(--gray); font-size: 1.2rem; flex-shrink: 0; }
 
     /* === QUIZ TRANSITION === */
-    .quiz-transition { text-align: center; padding: 3rem 1.5rem; background: linear-gradient(135deg, rgba(124,58,237,0.05), rgba(59,130,246,0.05)); border-radius: 20px; margin: 3rem 0; border: 1px solid rgba(124,58,237,0.15); }
-    .quiz-transition h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .quiz-transition { text-align: center; padding: 3rem 1.5rem; background: linear-gradient(135deg, rgba(124,58,237,0.05), rgba(59,130,246,0.05)); border-radius: 20px; margin: 3rem 1.5rem; border: 1px solid rgba(124,58,237,0.15); }
+    .quiz-transition h3 { font-size: clamp(1.2rem, 4vw, 1.4rem); font-weight: 700; margin-bottom: 0.75rem; }
     .quiz-transition p { color: var(--gray); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
     .start-quiz-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: linear-gradient(135deg, var(--purple), var(--blue)); color: white; border: none; padding: 1rem 2.5rem; border-radius: 14px; font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s; text-decoration: none; }
     .start-quiz-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(124,58,237,0.4); }
@@ -226,19 +240,18 @@
     .quiz-section.active { display: block; }
     .quiz-header { text-align: center; margin-bottom: 2.5rem; }
     .quiz-header .section-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--purple-light); margin-bottom: 0.6rem; }
-    .quiz-header h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .quiz-header h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); font-weight: 700; margin-bottom: 0.5rem; }
     .quiz-header p { color: var(--gray); font-size: 0.95rem; }
 
-    .cheat-warning { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); border-radius: 12px; padding: 0.85rem 1.25rem; font-size: 0.85rem; color: var(--red); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem; }
+    .cheat-warning { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); border-radius: 12px; padding: 0.85rem 1.25rem; font-size: 0.85rem; color: var(--red); margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 0.6rem; }
 
-    /* MCQs */
     .mcq-item { background: var(--dark-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem; }
     .mcq-item .question { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 1rem; line-height: 1.5; }
     .mcq-options { display: flex; flex-direction: column; gap: 0.5rem; }
-    .mcq-option { display: flex; align-items: center; gap: 0.85rem; padding: 0.85rem 1.1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); background: transparent; cursor: pointer; transition: all 0.2s; font-size: 0.92rem; color: #cbd5e1; }
+    .mcq-option { display: flex; align-items: flex-start; gap: 0.85rem; padding: 0.85rem 1.1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); background: transparent; cursor: pointer; transition: all 0.2s; font-size: 0.92rem; color: #cbd5e1; }
     .mcq-option:hover { border-color: rgba(124,58,237,0.3); background: rgba(124,58,237,0.05); }
     .mcq-option input { display: none; }
-    .mcq-option .radio { width: 22px; height: 22px; border: 2px solid var(--gray); border-radius: 50%; flex-shrink: 0; transition: all 0.2s; position: relative; }
+    .mcq-option .radio { width: 22px; height: 22px; min-width: 22px; border: 2px solid var(--gray); border-radius: 50%; flex-shrink: 0; transition: all 0.2s; position: relative; margin-top: 1px; }
     .mcq-option.selected .radio { border-color: var(--purple-light); background: var(--purple-light); box-shadow: 0 0 0 4px rgba(124,58,237,0.15); }
     .mcq-option.selected .radio::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 8px; height: 8px; background: white; border-radius: 50%; }
     .mcq-option.correct { border-color: var(--green); background: rgba(16,185,129,0.08); }
@@ -248,7 +261,6 @@
     .mcq-feedback.correct { color: var(--green); background: rgba(16,185,129,0.1); }
     .mcq-feedback.wrong { color: var(--red); background: rgba(239,68,68,0.1); }
 
-    /* Short Answer */
     .short-item { background: var(--dark-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem; }
     .short-item .question { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; line-height: 1.5; }
     .short-item .hint { font-size: 0.82rem; color: var(--gray); margin-bottom: 0.85rem; font-style: italic; }
@@ -256,13 +268,11 @@
     .short-item textarea:focus { outline: none; border-color: var(--purple-light); }
     .word-count { font-size: 0.78rem; color: var(--gray); text-align: right; margin-top: 0.5rem; }
 
-    /* Quiz Actions */
     .quiz-actions { display: flex; gap: 1rem; justify-content: center; margin-top: 2.5rem; flex-wrap: wrap; }
     .submit-quiz { background: linear-gradient(135deg, var(--purple), var(--blue)); color: white; border: none; padding: 1rem 2.5rem; border-radius: 14px; font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: all 0.3s; }
     .submit-quiz:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(124,58,237,0.4); }
     .submit-quiz:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
-    /* Results */
     .quiz-results { text-align: center; padding: 3rem 2rem; background: var(--dark-2); border: 1px solid rgba(124,58,237,0.2); border-radius: 20px; margin-top: 2rem; display: none; }
     .quiz-results.show { display: block; }
     .score-circle { width: 140px; height: 140px; border-radius: 50%; background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(59,130,246,0.2)); border: 4px solid var(--purple); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: 'Space Grotesk', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--white); }
@@ -274,7 +284,6 @@
     .review-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--gray); border: 1px solid rgba(255,255,255,0.15); padding: 0.9rem 2rem; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
     .review-btn:hover { border-color: var(--purple-light); color: var(--white); }
 
-    /* Loading */
     .grading-loader { display: none; text-align: center; padding: 2.5rem; }
     .grading-loader.show { display: block; }
     .grading-loader p { color: var(--gray); font-size: 0.95rem; margin-top: 1.25rem; }
@@ -282,7 +291,7 @@
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* === SOCIAL SHARE === */
-    .social-share { display: flex; gap: 0.75rem; justify-content: center; margin: 2rem 0; }
+    .social-share { display: flex; gap: 0.75rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap; }
     .share-btn { width: 44px; height: 44px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: var(--dark-2); color: var(--gray); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; text-decoration: none; }
     .share-btn:hover { border-color: var(--purple-light); color: var(--white); background: rgba(124,58,237,0.1); }
 
@@ -292,48 +301,70 @@
     .footer-inner p { font-size: 0.85rem; color: var(--gray); }
     .footer-inner a { color: var(--purple-light); text-decoration: none; }
 
-    /* === MOBILE === */
+    /* === SECTION LABEL HELPER === */
+    .section-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--purple-light); }
+
+    /* =====================
+       MOBILE BREAKPOINTS
+    ===================== */
     @media (max-width: 768px) {
       .hamburger { display: flex; }
       .class-progress { display: none; }
-      .article-wrap { padding: 2rem 1rem; }
-      .myth-card { grid-template-columns: 1fr; text-align: center; }
+      .article-wrap { padding: 1.5rem 1rem; }
+
+      /* Myth cards stack on mobile */
+      .myth-card { grid-template-columns: 1fr; text-align: center; gap: 0.75rem; }
       .myth-divider { display: none; }
-      .roadmap { gap: 0.35rem; }
-      .roadmap-node { width: 130px; padding: 1rem 0.5rem; }
-      .quiz-transition { padding: 2rem 1rem; }
+
+      .quiz-transition { margin: 2rem 0.75rem; padding: 2rem 1rem; }
+      .quiz-section { padding: 2rem 1rem; }
       .quiz-results { padding: 2rem 1rem; }
+      .build-box { padding: 1.25rem 1rem; }
+
+      /* MCQ options full text wrap */
+      .mcq-item { padding: 1.25rem 1rem; }
+      .short-item { padding: 1.25rem 1rem; }
     }
+
     @media (max-width: 480px) {
       .toggle-buttons { flex-direction: column; }
-      .formula { font-size: 0.95rem !important; }
-      .formula span { margin: 0 0.1rem !important; }
+      .article-meta { gap: 0.6rem; font-size: 0.8rem; }
+      .score-circle { width: 110px; height: 110px; font-size: 1.8rem; }
+    }
+
+    /* === TABLET (iPad) === */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .article-wrap { padding: 2.5rem 2rem; }
+      .quiz-section { padding: 2.5rem 2rem; }
     }
   </style>
-<base target="_blank">
+  <!-- NO base target="_blank" — removed so internal links open in same tab -->
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav class="main-nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo" target="_self">🚀 Learn To Work</a>
+    <!-- Internal link: same tab -->
+    <a href="/" class="nav-logo">🚀 Learn To Work</a>
     <div class="class-progress">Class <span>1</span> of 25 — Build AI Products</div>
-    <div class="hamburger" onclick="toggleNav()">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Open menu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
 </nav>
 
 <!-- ARTICLE -->
 <article class="article-wrap">
 
-  <!-- Breadcrumb -->
+  <!-- Breadcrumb — all internal, same tab -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › <a href="/build-ai-products/">Build AI Products</a> › <a href="/build-ai-products/">Series 1</a> › <span>Class 1</span>
+    <a href="/">Home</a> ›
+    <a href="/build-ai-products/">Build AI Products</a> ›
+    <a href="/build-ai-products/">Series 1</a> ›
+    <span>Class 1</span>
   </nav>
 
-  <!-- Header -->
   <div class="class-badge">🎓 Series 1 — AI Foundations</div>
   <h1 class="article-title">What Is AI? <span class="gradient-text">The Truth Behind the Hype</span></h1>
   <div class="article-meta">
@@ -343,7 +374,7 @@
     <span>🎯 Beginner friendly</span>
   </div>
 
-  <!-- SECTION 1: Hook -->
+  <!-- SECTION 1 -->
   <section class="article-section" id="what-is-ai" aria-labelledby="section-1">
     <h2 id="section-1"><span class="section-num">1</span> Did AI Write This?</h2>
     <p class="lead">You just received an email so perfectly written, you wondered if a human actually sent it. Spoiler: it might have been AI. But here is the thing — by the end of this class, you will understand exactly how that happened. And soon, you will build tools like it yourself.</p>
@@ -351,15 +382,17 @@
     <div class="img-wrap">
       <picture>
         <source srcset="/images/build-ai-products/class-1/hero-ai-vs-human.webp" type="image/webp">
-        <img src="/images/build-ai-products/class-1/hero-ai-vs-human.png" alt="Comparison between human written email and AI generated email showing the difference in tone and style" loading="lazy" width="1200" height="600">
+        <img src="/images/build-ai-products/class-1/hero-ai-vs-human.png"
+             alt="Comparison between human written email and AI generated email showing the difference in tone and style"
+             loading="lazy" width="1200" height="600">
       </picture>
     </div>
     <p class="img-caption">Can you tell which side is human and which is AI? Try the interactive comparison below.</p>
 
     <div class="human-ai-toggle" role="tablist" aria-label="Human vs AI comparison">
       <div class="toggle-buttons">
-        <button class="toggle-btn active" role="tab" aria-selected="true" onclick="showToggle('human')">✍️ Human Written</button>
-        <button class="toggle-btn" role="tab" aria-selected="false" onclick="showToggle('ai')">🤖 AI Generated</button>
+        <button class="toggle-btn active" role="tab" aria-selected="true" onclick="showToggle('human', event)">✍️ Human Written</button>
+        <button class="toggle-btn" role="tab" aria-selected="false" onclick="showToggle('ai', event)">🤖 AI Generated</button>
       </div>
       <div id="toggle-human" class="toggle-content" role="tabpanel">
         "Hey! Just wanted to follow up about our meeting tomorrow. Something came up with my kid's school, so I need to push it to Thursday if that works for you? Sorry for the late notice — life's been chaotic this week. Let me know either way!"
@@ -372,11 +405,10 @@
     </div>
 
     <p>Notice the difference? The human version is messy, personal, has emotional texture. The AI version is polished, formal, slightly robotic. <strong>Both have uses.</strong> That is what this course is about — knowing when and how to use AI, not just what it is.</p>
-
     <p>Before we go further, let me be honest with you. I remember the first time I used ChatGPT. I asked it to write a birthday message for my mom. It gave me something so generic, I felt embarrassed sending it. But then I learned the formula you will learn in Section 5 of this class. The next message? My mom cried. Happy tears. That is the power of understanding AI instead of just using it.</p>
   </section>
 
-  <!-- SECTION 2: What AI Actually Is -->
+  <!-- SECTION 2 -->
   <section class="article-section" id="how-ai-works" aria-labelledby="section-2">
     <h2 id="section-2"><span class="section-num">2</span> The Simple Truth Nobody Explains</h2>
     <p class="lead">Forget the movies. AI is not a robot with feelings. It is not coming to steal your soul. It is something both simpler and more powerful than that — and once you get it, everything else clicks.</p>
@@ -384,52 +416,39 @@
     <div class="img-wrap">
       <picture>
         <source srcset="/images/build-ai-products/class-1/traditional-vs-ai-diagram.webp" type="image/webp">
-        <img src="/images/build-ai-products/class-1/traditional-vs-ai-diagram.png" alt="Diagram comparing traditional software workflow with AI workflow showing input rules output versus input neural network output" loading="lazy" width="1200" height="600">
+        <img src="/images/build-ai-products/class-1/traditional-vs-ai-diagram.png"
+             alt="Diagram comparing traditional software workflow with AI workflow"
+             loading="lazy" width="1200" height="600">
       </picture>
     </div>
 
     <p><strong>The Core Analogy (you will use this forever):</strong></p>
     <p>Imagine hiring an intern who has read every book, article, and conversation on the internet. They do not <em>think</em> like you do. They do not understand meaning. But they are incredibly good at recognizing patterns — what word usually comes next, what answer fits a question, what image matches a description.</p>
-
     <p>This intern never sleeps. Never takes a break. But here is the catch: <strong>they do not know if they are right.</strong> They just know what is most likely based on everything they have seen before.</p>
 
-    <table class="compare-table" aria-label="Comparison between traditional software and AI">
-      <thead>
-        <tr>
-          <th scope="col">Traditional Software</th>
-          <th scope="col">Artificial Intelligence</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Follows <strong>fixed rules</strong> you write</td>
-          <td>Learns <strong>patterns from data</strong></td>
-        </tr>
-        <tr>
-          <td>Calculator: 2+2 always = 4</td>
-          <td>ChatGPT: "Write a poem" = infinite variations</td>
-        </tr>
-        <tr>
-          <td>If-then logic</td>
-          <td>Probability-based prediction</td>
-        </tr>
-        <tr>
-          <td>Never surprises you</td>
-          <td>Sometimes surprises you (good and bad)</td>
-        </tr>
-        <tr>
-          <td>Needs a programmer to change</td>
-          <td>Adapts based on new examples</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll">
+      <table class="compare-table" aria-label="Comparison between traditional software and AI">
+        <thead>
+          <tr>
+            <th scope="col">Traditional Software</th>
+            <th scope="col">Artificial Intelligence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Follows <strong>fixed rules</strong> you write</td><td>Learns <strong>patterns from data</strong></td></tr>
+          <tr><td>Calculator: 2+2 always = 4</td><td>ChatGPT: "Write a poem" = infinite variations</td></tr>
+          <tr><td>If-then logic</td><td>Probability-based prediction</td></tr>
+          <tr><td>Never surprises you</td><td>Sometimes surprises you (good and bad)</td></tr>
+          <tr><td>Needs a programmer to change</td><td>Adapts based on new examples</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <p>Here is the key insight that took me months to truly understand: <strong>AI predicts, it does not understand.</strong> When ChatGPT writes you a poem, it is not feeling creative. It is calculating which word has the highest probability of coming next, based on millions of poems it has seen. The result <em>feels</em> creative. But it is advanced pattern matching — nothing more.</p>
-
     <p>Why does this matter? Because once you know AI is a pattern matcher, not a thinker, you stop asking it to think. You start asking it to match patterns. That is when you become dangerous with AI.</p>
   </section>
 
-  <!-- SECTION 3: Three Types -->
+  <!-- SECTION 3 -->
   <section class="article-section" id="types-of-ai" aria-labelledby="section-3">
     <h2 id="section-3"><span class="section-num">3</span> The Three Types You Will Actually Build</h2>
     <p>Not all AI is ChatGPT. In this course, you will build three distinct types — and you will use different tools for each. Let me show you what is coming so you know why we are learning what we are learning.</p>
@@ -437,43 +456,46 @@
     <div class="img-wrap">
       <picture>
         <source srcset="/images/build-ai-products/class-1/three-types-ai.webp" type="image/webp">
-        <img src="/images/build-ai-products/class-1/three-types-ai.png" alt="Three types of AI: Generative AI creating content, Analytical AI finding patterns, and Interactive AI engaging in conversations" loading="lazy" width="1200" height="500">
+        <img src="/images/build-ai-products/class-1/three-types-ai.png"
+             alt="Three types of AI: Generative AI creating content, Analytical AI finding patterns, and Interactive AI engaging in conversations"
+             loading="lazy" width="1200" height="500">
       </picture>
     </div>
 
-    <table class="compare-table" aria-label="Three types of AI you will build">
-      <thead>
-        <tr>
-          <th scope="col">Type</th>
-          <th scope="col">What It Does</th>
-          <th scope="col">You Will Build</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong style="color:var(--purple-light)">Generative AI</strong></td>
-          <td>Creates new content: text, images, code, audio</td>
-          <td>AI Writing Tool, Image Generator</td>
-        </tr>
-        <tr>
-          <td><strong style="color:var(--blue-light)">Analytical AI</strong></td>
-          <td>Finds patterns, makes predictions from data</td>
-          <td>Spam filter, recommendation engine</td>
-        </tr>
-        <tr>
-          <td><strong style="color:var(--green)">Interactive AI</strong></td>
-          <td>Converses, responds, takes action</td>
-          <td>Chatbot, Voice Assistant</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll">
+      <table class="compare-table three-col" aria-label="Three types of AI you will build">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">What It Does</th>
+            <th scope="col">You Will Build</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:var(--purple-light)">Generative AI</strong></td>
+            <td>Creates new content: text, images, code, audio</td>
+            <td>AI Writing Tool, Image Generator</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--blue-light)">Analytical AI</strong></td>
+            <td>Finds patterns, makes predictions from data</td>
+            <td>Spam filter, recommendation engine</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--green)">Interactive AI</strong></td>
+            <td>Converses, responds, takes action</td>
+            <td>Chatbot, Voice Assistant</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <p><strong>Classes 2–5 focus:</strong> Generative and Interactive — the most useful for beginners. You will write your first prompts, build a custom GPT, create a no-code chatbot, and set up AI automation. Series 2–5 expand into all three types with more advanced tools.</p>
-
     <p>Quick story: My first "build" was a simple chatbot that answered questions about my freelance services. It took 20 minutes. The next day, a client messaged me at 2 AM (their timezone), got instant answers, and booked a call by morning. I was asleep. That is the power of Interactive AI — and you will build yours in Class 4.</p>
   </section>
 
-  <!-- SECTION 4: Myths -->
+  <!-- SECTION 4 -->
   <section class="article-section" id="ai-myths" aria-labelledby="section-4">
     <h2 id="section-4"><span class="section-num">4</span> Myths That Stop Smart People</h2>
     <p>These myths cost you money, time, and opportunity. I have heard them from friends, family, even other developers. Let us kill them now so they do not slow you down.</p>
@@ -481,50 +503,34 @@
     <div class="img-wrap">
       <picture>
         <source srcset="/images/build-ai-products/class-1/myths-reality.webp" type="image/webp">
-        <img src="/images/build-ai-products/class-1/myths-reality.png" alt="AI myths versus reality showing three common misconceptions about AI thinking like humans being only for programmers and replacing all jobs" loading="lazy" width="1200" height="700">
+        <img src="/images/build-ai-products/class-1/myths-reality.png"
+             alt="AI myths versus reality showing three common misconceptions about AI"
+             loading="lazy" width="1200" height="700">
       </picture>
     </div>
 
     <div class="myth-grid">
       <div class="myth-card">
-        <div class="myth-side myth">
-          <div class="label">❌ Myth</div>
-          <div class="text">"AI thinks like a human brain"</div>
-        </div>
+        <div class="myth-side myth"><div class="label">❌ Myth</div><div class="text">"AI thinks like a human brain"</div></div>
         <div class="myth-divider">→</div>
-        <div class="myth-side reality">
-          <div class="label">✅ Reality</div>
-          <div class="text">AI predicts patterns. No consciousness. No understanding. Advanced statistics, not thought.</div>
-        </div>
+        <div class="myth-side reality"><div class="label">✅ Reality</div><div class="text">AI predicts patterns. No consciousness. No understanding. Advanced statistics, not thought.</div></div>
       </div>
       <div class="myth-card">
-        <div class="myth-side myth">
-          <div class="label">❌ Myth</div>
-          <div class="text">"AI is only for programmers"</div>
-        </div>
+        <div class="myth-side myth"><div class="label">❌ Myth</div><div class="text">"AI is only for programmers"</div></div>
         <div class="myth-divider">→</div>
-        <div class="myth-side reality">
-          <div class="label">✅ Reality</div>
-          <div class="text">You will build a working chatbot in Class 4 without writing code. This course proves it.</div>
-        </div>
+        <div class="myth-side reality"><div class="label">✅ Reality</div><div class="text">You will build a working chatbot in Class 4 without writing code. This course proves it.</div></div>
       </div>
       <div class="myth-card">
-        <div class="myth-side myth">
-          <div class="label">❌ Myth</div>
-          <div class="text">"AI will replace all jobs tomorrow"</div>
-        </div>
+        <div class="myth-side myth"><div class="label">❌ Myth</div><div class="text">"AI will replace all jobs tomorrow"</div></div>
         <div class="myth-divider">→</div>
-        <div class="myth-side reality">
-          <div class="label">✅ Reality</div>
-          <div class="text">AI changes how we work. People who use AI will replace people who do not. Adapt or fall behind.</div>
-        </div>
+        <div class="myth-side reality"><div class="label">✅ Reality</div><div class="text">AI changes how we work. People who use AI will replace people who do not. Adapt or fall behind.</div></div>
       </div>
     </div>
 
     <p>Here is what I tell people who worry about AI taking jobs: <strong>AI will not replace you. A person using AI will.</strong> The freelancers I know who embraced AI early now charge 3x more because they deliver faster. The ones who resisted are struggling to find work. Which group do you want to be in?</p>
   </section>
 
-  <!-- SECTION 5: Build-Along -->
+  <!-- SECTION 5 -->
   <section class="article-section" id="prompt-engineering" aria-labelledby="section-5">
     <h2 id="section-5"><span class="section-num">5</span> Your First Build: The Perfect Prompt</h2>
     <p class="lead">This is where theory becomes skill. Right now, open any AI chatbot — ChatGPT, Claude, Gemini, whatever you have. You are about to learn the single most valuable skill in the AI era. I use this formula every single day.</p>
@@ -532,7 +538,9 @@
     <div class="img-wrap">
       <picture>
         <source srcset="/images/build-ai-products/class-1/prompt-formula.webp" type="image/webp">
-        <img src="/images/build-ai-products/class-1/prompt-formula.png" alt="The prompt formula showing Role plus Task plus Context plus Format with definitions for each component" loading="lazy" width="1200" height="500">
+        <img src="/images/build-ai-products/class-1/prompt-formula.png"
+             alt="The prompt formula showing Role plus Task plus Context plus Format with definitions for each component"
+             loading="lazy" width="1200" height="500">
       </picture>
     </div>
 
@@ -540,30 +548,34 @@
       <h3>🛠 The Formula That Changes Everything</h3>
       <p>Do not just ask AI questions. Give it a job description. Every great prompt has four parts:</p>
       <div class="formula">
-        <span class="role">Role</span> <span class="plus">+</span> <span class="task">Task</span> <span class="plus">+</span> <span class="context">Context</span> <span class="plus">+</span> <span class="format">Format</span>
+        <span class="role">Role</span>
+        <span class="plus">+</span>
+        <span class="task">Task</span>
+        <span class="plus">+</span>
+        <span class="context">Context</span>
+        <span class="plus">+</span>
+        <span class="format">Format</span>
       </div>
-
       <p style="font-size:0.9rem; color:var(--gray); text-align:center; margin-top:0.5rem;">Define who AI is → What it should do → Background it needs → How to respond</p>
 
       <p><strong>Example in action:</strong></p>
       <div class="prompt-example">
-        <span class="highlight-role">You are a professional job coach.</span> 
-        <span class="highlight-task">Write a follow-up email to a hiring manager</span> 
-        <span class="highlight-context">after an interview for a marketing position where you discussed social media strategy.</span> 
+        <span class="highlight-role">You are a professional job coach.</span>
+        <span class="highlight-task">Write a follow-up email to a hiring manager</span>
+        <span class="highlight-context">after an interview for a marketing position where you discussed social media strategy.</span>
         <span class="highlight-format">Keep it under 150 words, polite but confident, and mention one specific detail from the conversation.</span>
       </div>
 
       <p>See how different that is from "Write me an email"? The first gives you generic garbage. The second gives you something you can actually send. That is the difference between using AI like a toy and using it like a tool.</p>
+      <p><strong>Your turn:</strong> Use this formula to write a prompt for something you actually need help with this week. Save it — you will submit it in the quiz.</p>
 
-      <p><strong>Your turn:</strong> Use this formula to write a prompt for something you actually need help with this week. A homework assignment? A work email? A meal plan? Anything. Save it — you will submit it in the quiz.</p>
-
-      <textarea class="student-input" id="savedPrompt" placeholder="Example: You are a travel planner who specializes in budget trips. Create a 3-day itinerary for Istanbul on a $200 budget. Include free activities, local food spots under $5, and walking routes between locations. Format as a day-by-day checklist with morning, afternoon, evening sections." aria-label="Write your prompt using the Role Task Context Format formula"></textarea>
+      <textarea class="student-input" id="savedPrompt" placeholder="Example: You are a travel planner who specializes in budget trips. Create a 3-day itinerary for Istanbul on a $200 budget. Include free activities, local food spots under $5, and walking routes. Format as a day-by-day checklist with morning, afternoon, evening sections." aria-label="Write your prompt using the Role Task Context Format formula"></textarea>
       <button class="save-btn" onclick="savePrompt()">💾 Save My Prompt</button>
       <p class="save-confirm" id="saveConfirm">✅ Saved! Your prompt will appear in the quiz automatically.</p>
     </div>
   </section>
 
-  <!-- SECTION 6: Roadmap -->
+  <!-- SECTION 6 -->
   <section class="article-section" id="what-is-next" aria-labelledby="section-6">
     <h2 id="section-6"><span class="section-num">6</span> What Is Coming Next</h2>
     <p>Today you learned what AI is and wrote your first engineered prompt. That is already more than most people know. Here is where you are headed in Series 1:</p>
@@ -571,50 +583,53 @@
     <div class="img-wrap">
       <picture>
         <source srcset="/images/build-ai-products/class-1/roadmap-series1.webp" type="image/webp">
-        <img src="/images/build-ai-products/class-1/roadmap-series1.png" alt="Series 1 roadmap showing 5 classes: What Is AI completed, ChatGPT Mastery, Custom GPT, No-Code Chatbot, and AI Automation upcoming" loading="lazy" width="1200" height="400">
+        <img src="/images/build-ai-products/class-1/roadmap-series1.png"
+             alt="Series 1 roadmap showing 5 classes: What Is AI completed, ChatGPT Mastery, Custom GPT, No-Code Chatbot, and AI Automation upcoming"
+             loading="lazy" width="1200" height="400">
       </picture>
     </div>
 
-    <div class="roadmap" role="list" aria-label="Series 1 class progression">
-      <div class="roadmap-node active" role="listitem">
-        <div class="node-num">1</div>
-        <div class="node-title">What Is AI?</div>
-      </div>
-      <div class="roadmap-arrow">→</div>
-      <div class="roadmap-node" role="listitem">
-        <div class="node-num">2</div>
-        <div class="node-title">ChatGPT Mastery</div>
-      </div>
-      <div class="roadmap-arrow">→</div>
-      <div class="roadmap-node" role="listitem">
-        <div class="node-num">3</div>
-        <div class="node-title">Custom GPT</div>
-      </div>
-      <div class="roadmap-arrow">→</div>
-      <div class="roadmap-node" role="listitem">
-        <div class="node-num">4</div>
-        <div class="node-title">No-Code Chatbot</div>
-      </div>
-      <div class="roadmap-arrow">→</div>
-      <div class="roadmap-node" role="listitem">
-        <div class="node-num">5</div>
-        <div class="node-title">AI Automation</div>
+    <!-- Roadmap wrapped in scrollable div for mobile -->
+    <div class="roadmap-outer">
+      <div class="roadmap" role="list" aria-label="Series 1 class progression">
+        <div class="roadmap-node active" role="listitem">
+          <div class="node-num">1</div>
+          <div class="node-title">What Is AI?</div>
+        </div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-node" role="listitem">
+          <div class="node-num">2</div>
+          <div class="node-title">ChatGPT Mastery</div>
+        </div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-node" role="listitem">
+          <div class="node-num">3</div>
+          <div class="node-title">Custom GPT</div>
+        </div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-node" role="listitem">
+          <div class="node-num">4</div>
+          <div class="node-title">No-Code Chatbot</div>
+        </div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-node" role="listitem">
+          <div class="node-num">5</div>
+          <div class="node-title">AI Automation</div>
+        </div>
       </div>
     </div>
 
     <p style="text-align:center; color:var(--gray); font-size:0.9rem; margin-top:1.25rem;">Complete all 5 classes + pass quizzes to unlock Series 2</p>
-
     <p>Before you go: take a breath. You just absorbed more real AI knowledge than 90% of people who throw around buzzwords. You know what AI actually is. You know the three types. You know the myths. And you have a prompt formula that works.</p>
-
     <p>Now let us prove you learned it.</p>
   </section>
 
-  <!-- Social Share -->
+  <!-- Social Share — external links get target="_blank" rel="noopener" -->
   <div class="social-share" aria-label="Share this class">
-    <a class="share-btn" href="https://twitter.com/intent/tweet?text=Just+finished+Class+1+of+%40Isbella_esa%27s+free+AI+course!+Learn+what+AI+actually+is+and+write+your+first+prompt.%20https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener" aria-label="Share on Twitter">𝕏</a>
-    <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">in</a>
-    <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener" aria-label="Share on Facebook">f</a>
-    <a class="share-btn" href="https://wa.me/?text=Check+out+this+free+AI+course!+Class+1+teaches+what+AI+actually+is+with+no+coding+needed.+https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener" aria-label="Share on WhatsApp">📱</a>
+    <a class="share-btn" href="https://twitter.com/intent/tweet?text=Just+finished+Class+1+of+%40Isbella_esa%27s+free+AI+course!+https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">𝕏</a>
+    <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">in</a>
+    <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">f</a>
+    <a class="share-btn" href="https://wa.me/?text=Check+out+this+free+AI+course!+https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-1%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">📱</a>
   </div>
 
 </article>
@@ -631,18 +646,16 @@
   <div class="quiz-header">
     <div class="section-label">Class 1 Assessment</div>
     <h2>Prove You Learned It</h2>
-    <p>10 multiple choice + 5 short answer questions. All based on the article you just read.<br>Minimum 70% required to pass. You can retake once if needed.</p>
+    <p>10 multiple choice + 5 short answer questions. All based on the article you just read.<br>Minimum 70% required to pass.</p>
   </div>
 
   <div class="cheat-warning">
     ⚠️ Tab switching is monitored for academic integrity. Multiple switches will auto-submit your quiz.
   </div>
 
-  <!-- MCQs -->
   <div id="mcqSection">
-    <div class="section-label" style="margin-bottom:1rem;">Part 1: Multiple Choice (10 questions)</div>
+    <div class="section-label" style="margin-bottom:1rem; display:block;">Part 1: Multiple Choice (10 questions)</div>
 
-    <!-- Q1 -->
     <div class="mcq-item" data-q="1" data-answer="B">
       <div class="question">1. In the "intern analogy" used throughout this class, what does the intern actually do?</div>
       <div class="mcq-options">
@@ -654,7 +667,6 @@
       <div class="mcq-feedback"></div>
     </div>
 
-    <!-- Q2 -->
     <div class="mcq-item" data-q="2" data-answer="B">
       <div class="question">2. Traditional software uses ____; AI uses ____.</div>
       <div class="mcq-options">
@@ -666,7 +678,6 @@
       <div class="mcq-feedback"></div>
     </div>
 
-    <!-- Q3 -->
     <div class="mcq-item" data-q="3" data-answer="B">
       <div class="question">3. Which type of AI creates entirely new content like poems, images, or code?</div>
       <div class="mcq-options">
@@ -678,7 +689,6 @@
       <div class="mcq-feedback"></div>
     </div>
 
-    <!-- Q4 -->
     <div class="mcq-item" data-q="4" data-answer="C">
       <div class="question">4. The chatbot you will build in this course (Class 4) is primarily what type of AI?</div>
       <div class="mcq-options">
@@ -690,9 +700,8 @@
       <div class="mcq-feedback"></div>
     </div>
 
-    <!-- Q5 -->
     <div class="mcq-item" data-q="5" data-answer="C">
-      <div class="question">5. What is the main difference between AI and human thinking, as explained in this class?</div>
+      <div class="question">5. What is the main difference between AI and human thinking?</div>
       <div class="mcq-options">
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q5" value="A"> AI is slower than humans at most tasks</label>
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q5" value="B"> AI can only do math, not creative tasks</label>
@@ -702,9 +711,8 @@
       <div class="mcq-feedback"></div>
     </div>
 
-    <!-- Q6 -->
     <div class="mcq-item" data-q="6" data-answer="B">
-      <div class="question">6. Which statement about AI and jobs is most accurate, based on what you learned?</div>
+      <div class="question">6. Which statement about AI and jobs is most accurate?</div>
       <div class="mcq-options">
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q6" value="A"> AI will eliminate all jobs within the next 2 years</label>
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q6" value="B"> AI changes how work is done; people using AI gain advantage over those who do not</label>
@@ -714,9 +722,8 @@
       <div class="mcq-feedback"></div>
     </div>
 
-    <!-- Q7 -->
     <div class="mcq-item" data-q="7" data-answer="A">
-      <div class="question">7. The prompt formula taught in Section 5 of this class is:</div>
+      <div class="question">7. The prompt formula taught in Section 5 is:</div>
       <div class="mcq-options">
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q7" value="A"> Role + Task + Context + Format</label>
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q7" value="B"> Ask + Wait + Copy + Paste</label>
@@ -726,21 +733,19 @@
       <div class="mcq-feedback"></div>
     </div>
 
-    <!-- Q8 -->
     <div class="mcq-item" data-q="8" data-answer="B">
       <div class="question">8. In the prompt formula, what does "Role" specifically do?</div>
       <div class="mcq-options">
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q8" value="A"> Tells AI exactly how many words the response should be</label>
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q8" value="B"> Sets the personality, expertise level, and perspective of the AI</label>
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q8" value="C"> Defines the file format like PDF or Word document</label>
-        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q8" value="D"> Chooses which AI model company to use (OpenAI, Google, etc.)</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q8" value="D"> Chooses which AI model company to use</label>
       </div>
       <div class="mcq-feedback"></div>
     </div>
 
-    <!-- Q9 -->
     <div class="mcq-item" data-q="9" data-answer="B">
-      <div class="question">9. Which of these prompts is better engineered according to the formula?</div>
+      <div class="question">9. Which of these prompts is better engineered?</div>
       <div class="mcq-options">
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q9" value="A"> "Write me an email"</label>
         <label class="mcq-option"><span class="radio"></span><input type="radio" name="q9" value="B"> "You are a senior marketing manager. Write a persuasive follow-up email to a client who has not responded in 2 weeks. Mention our new service tier. Keep it under 100 words, professional but warm."</label>
@@ -750,7 +755,6 @@
       <div class="mcq-feedback"></div>
     </div>
 
-    <!-- Q10 -->
     <div class="mcq-item" data-q="10" data-answer="C">
       <div class="question">10. What will you build by the end of Series 1 (Class 5)?</div>
       <div class="mcq-options">
@@ -763,9 +767,8 @@
     </div>
   </div>
 
-  <!-- Short Answers -->
   <div id="shortSection" style="margin-top:2rem;">
-    <div class="section-label" style="margin-bottom:1rem;">Part 2: Short Answer (5 questions)</div>
+    <div class="section-label" style="margin-bottom:1rem; display:block;">Part 2: Short Answer (5 questions)</div>
 
     <div class="short-item" data-q="11">
       <div class="question">11. Explain the "intern analogy" in your own words. What is the intern good at? What do they NOT do?</div>
@@ -803,38 +806,35 @@
     </div>
   </div>
 
-  <!-- Quiz Actions -->
   <div class="quiz-actions">
     <button class="submit-quiz" id="submitBtn" onclick="submitQuiz()">Submit Quiz</button>
   </div>
 
-  <!-- Grading Loader -->
   <div class="grading-loader" id="gradingLoader">
     <div class="spinner"></div>
     <p>Grading your answers... This takes a few seconds.</p>
   </div>
 
-  <!-- Results -->
   <div class="quiz-results" id="quizResults">
     <div class="score-circle" id="scoreCircle">0%</div>
     <h3 id="resultTitle">Quiz Complete!</h3>
     <p id="resultMessage">Checking your results...</p>
     <div class="result-actions" id="resultActions"></div>
   </div>
-
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <p>© 2026 <a href="/">LearnToWork.online</a> — Free AI education for everyone</p>
-    <p style="margin-top:0.5rem; font-size:0.78rem;">Made with ❤️ by <a href="https://twitter.com/Isbella_esa" target="_blank" rel="noopener">@Isbella_esa</a></p>
+    <!-- External social link: new tab -->
+    <p style="margin-top:0.5rem; font-size:0.78rem;">Made with ❤️ by <a href="https://twitter.com/Isbella_esa" target="_blank" rel="noopener noreferrer">@Isbella_esa</a></p>
   </div>
 </footer>
 
 <script>
 // === ARTICLE INTERACTIONS ===
-function showToggle(type) {
+function showToggle(type, event) {
   document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
   event.target.classList.add('active');
   document.getElementById('toggle-human').classList.toggle('hidden', type !== 'human');
@@ -842,51 +842,53 @@ function showToggle(type) {
 }
 
 function revealAnswer() {
-  document.getElementById('reveal-text').style.display = 'block';
-  document.getElementById('reveal-text').textContent = 'The RIGHT side was AI! Notice how formal and structured it is? The left side was human — messy, personal, emotional. Both have uses. That is the lesson.';
+  var el = document.getElementById('reveal-text');
+  el.style.display = 'block';
+  el.textContent = 'The RIGHT side was AI! Notice how formal and structured it is? The left side was human — messy, personal, emotional. Both have uses. That is the lesson.';
 }
 
 function savePrompt() {
-  const prompt = document.getElementById('savedPrompt').value;
+  var prompt = document.getElementById('savedPrompt').value;
   if (prompt.trim()) {
-    localStorage.setItem('class1_prompt', prompt);
+    try { localStorage.setItem('class1_prompt', prompt); } catch(e) {}
     document.getElementById('saveConfirm').style.display = 'flex';
     document.getElementById('quizPromptInput').value = prompt;
   }
 }
 
-// Load saved prompt into quiz
-window.addEventListener('load', () => {
-  const saved = localStorage.getItem('class1_prompt');
-  if (saved) document.getElementById('quizPromptInput').value = saved;
+window.addEventListener('load', function() {
+  try {
+    var saved = localStorage.getItem('class1_prompt');
+    if (saved) document.getElementById('quizPromptInput').value = saved;
+  } catch(e) {}
 });
 
 // === QUIZ FLOW ===
 function startQuiz() {
   document.getElementById('quizTransition').style.display = 'none';
-  document.getElementById('quizSection').classList.add('active');
-  document.getElementById('quizSection').scrollIntoView({ behavior: 'smooth' });
+  var qs = document.getElementById('quizSection');
+  qs.classList.add('active');
+  qs.scrollIntoView({ behavior: 'smooth' });
 }
 
 // MCQ selection
-document.querySelectorAll('.mcq-option').forEach(opt => {
+document.querySelectorAll('.mcq-option').forEach(function(opt) {
   opt.addEventListener('click', function() {
-    const item = this.closest('.mcq-item');
-    item.querySelectorAll('.mcq-option').forEach(o => o.classList.remove('selected'));
+    var item = this.closest('.mcq-item');
+    item.querySelectorAll('.mcq-option').forEach(function(o) { o.classList.remove('selected'); });
     this.classList.add('selected');
     this.querySelector('input').checked = true;
   });
 });
 
-// Word count for short answers
 function updateWordCount(textarea) {
-  const words = textarea.value.trim().split(/\s+/).filter(w => w.length > 0).length;
+  var words = textarea.value.trim().split(/\s+/).filter(function(w) { return w.length > 0; }).length;
   textarea.nextElementSibling.textContent = words + ' words';
 }
 
-// Anti-cheat: tab visibility
-let tabSwitchCount = 0;
-document.addEventListener('visibilitychange', () => {
+// Anti-cheat
+var tabSwitchCount = 0;
+document.addEventListener('visibilitychange', function() {
   if (document.hidden && document.getElementById('quizSection').classList.contains('active')) {
     tabSwitchCount++;
     if (tabSwitchCount >= 2) {
@@ -895,62 +897,46 @@ document.addEventListener('visibilitychange', () => {
   }
 });
 
-// === QUIZ GRADING (NO API - FREE) ===
-let mcqScore = 0;
-
 function submitQuiz() {
-  // Check all MCQs answered
-  const mcqItems = document.querySelectorAll('.mcq-item');
-  let answered = 0;
-  mcqItems.forEach(item => {
+  var mcqItems = document.querySelectorAll('.mcq-item');
+  var answered = 0;
+  mcqItems.forEach(function(item) {
     if (item.querySelector('input:checked')) answered++;
   });
+  if (answered < 10) { alert('Please answer all 10 multiple choice questions first.'); return; }
 
-  if (answered < 10) {
-    alert('Please answer all 10 multiple choice questions first.');
-    return;
-  }
+  var shortTexts = document.querySelectorAll('.short-item textarea');
+  var filled = 0;
+  shortTexts.forEach(function(t) { if (t.value.trim().length > 15) filled++; });
+  if (filled < 5) { alert('Please write at least a few sentences for each short answer.'); return; }
 
-  // Check short answers filled
-  const shortTexts = document.querySelectorAll('.short-item textarea');
-  let filled = 0;
-  shortTexts.forEach(t => { if (t.value.trim().length > 15) filled++; });
-
-  if (filled < 5) {
-    alert('Please write at least a few sentences for each short answer.');
-    return;
-  }
-
-  // Disable submit, show loader
   document.getElementById('submitBtn').disabled = true;
   document.getElementById('gradingLoader').classList.add('show');
 
-  // Grade MCQs instantly
-  mcqScore = 0;
-  mcqItems.forEach(item => {
-    const correct = item.dataset.answer;
-    const selected = item.querySelector('input:checked')?.value;
-    const feedback = item.querySelector('.mcq-feedback');
+  var mcqScore = 0;
+  mcqItems.forEach(function(item) {
+    var correct = item.dataset.answer;
+    var selected = item.querySelector('input:checked') ? item.querySelector('input:checked').value : null;
+    var feedback = item.querySelector('.mcq-feedback');
 
-    item.querySelectorAll('.mcq-option').forEach(opt => {
-      const val = opt.querySelector('input').value;
+    item.querySelectorAll('.mcq-option').forEach(function(opt) {
+      var val = opt.querySelector('input').value;
       if (val === correct) opt.classList.add('correct');
       else if (val === selected && val !== correct) opt.classList.add('wrong');
     });
 
     if (selected === correct) {
-      mcqScore += 1;
+      mcqScore++;
       feedback.textContent = '✓ Correct! Well done.';
       feedback.className = 'mcq-feedback correct show';
     } else {
-      const correctText = item.querySelector(`input[value="${correct}"]`).closest('label').textContent.trim().substring(3);
-      feedback.textContent = '✗ The correct answer is: ' + correctText;
+      var correctLabel = item.querySelector('input[value="' + correct + '"]').closest('label').textContent.trim().substring(3);
+      feedback.textContent = '✗ The correct answer is: ' + correctLabel;
       feedback.className = 'mcq-feedback wrong show';
     }
   });
 
-  // Simulate short answer grading (keyword-based, no API needed)
-  const shortAnswers = {
+  var s = {
     q11: document.querySelector('textarea[name="s1"]').value.toLowerCase(),
     q12: document.querySelector('textarea[name="s2"]').value.toLowerCase(),
     q13: document.querySelector('textarea[name="s3"]').value.toLowerCase(),
@@ -958,85 +944,49 @@ function submitQuiz() {
     q15: document.querySelector('textarea[name="s5"]').value.toLowerCase()
   };
 
-  let shortScore = 0;
+  var shortScore = 0;
+  if (s.q11.includes('pattern') || s.q11.includes('data') || s.q11.includes('read') || s.q11.includes('internet')) shortScore++;
+  var tools = ['chatgpt','midjourney','dall-e','claude','gemini','copilot','bard'];
+  var hasTool = tools.some(function(t) { return s.q12.includes(t); });
+  if (hasTool && (s.q12.includes('text')||s.q12.includes('image')||s.q12.includes('code')||s.q12.includes('video')||s.q12.includes('poem')||s.q12.includes('picture')||s.q12.includes('essay'))) shortScore++;
+  if (s.q13.includes('trust')||s.q13.includes('think')||s.q13.includes('understand')||s.q13.includes('believe')||s.q13.includes('danger')||s.q13.includes('mistake')||s.q13.includes('wrong')||s.q13.includes('human')) shortScore++;
+  var hasRole = s.q14.includes('role')||s.q14.includes('you are')||s.q14.includes('act as');
+  var hasTask = s.q14.includes('task')||s.q14.includes('write')||s.q14.includes('create')||s.q14.includes('make');
+  var hasCtx  = s.q14.includes('context')||s.q14.includes('about')||s.q14.includes('for')||s.q14.includes('who');
+  var hasFmt  = s.q14.includes('format')||s.q14.includes('words')||s.q14.includes('list')||s.q14.includes('bullet');
+  if ((hasRole && hasTask)||(hasCtx && hasFmt)||(hasRole && hasCtx)) shortScore++;
+  if (s.q15.length > 20 && (s.q15.includes('because')||s.q15.includes('excited')||s.q15.includes('want')||s.q15.includes('build')||s.q15.includes('learn'))) shortScore++;
 
-  // Q11: intern analogy - check for key concepts
-  if (shortAnswers.q11.includes('pattern') || shortAnswers.q11.includes('data') || shortAnswers.q11.includes('read') || shortAnswers.q11.includes('internet')) {
-    shortScore += 1;
-  }
-
-  // Q12: generative AI tool - check for tool name + generated content
-  const tools = ['chatgpt', 'midjourney', 'dall-e', 'claude', 'gemini', 'copilot', 'bard'];
-  const hasTool = tools.some(t => shortAnswers.q12.includes(t));
-  if (hasTool && (shortAnswers.q12.includes('text') || shortAnswers.q12.includes('image') || shortAnswers.q12.includes('code') || shortAnswers.q12.includes('video') || shortAnswers.q12.includes('audio') || shortAnswers.q12.includes('poem') || shortAnswers.q12.includes('essay') || shortAnswers.q12.includes('picture'))) {
-    shortScore += 1;
-  }
-
-  // Q13: myth danger - check for key concepts
-  if (shortAnswers.q13.includes('trust') || shortAnswers.q13.includes('think') || shortAnswers.q13.includes('understand') || shortAnswers.q13.includes('believe') || shortAnswers.q13.includes('danger') || shortAnswers.q13.includes('mistake') || shortAnswers.q13.includes('wrong') || shortAnswers.q13.includes('human')) {
-    shortScore += 1;
-  }
-
-  // Q14: prompt formula - check for all 4 parts
-  const hasRole = shortAnswers.q14.includes('role') || shortAnswers.q14.includes('you are') || shortAnswers.q14.includes('act as');
-  const hasTask = shortAnswers.q14.includes('task') || shortAnswers.q14.includes('write') || shortAnswers.q14.includes('create') || shortAnswers.q14.includes('make');
-  const hasContext = shortAnswers.q14.includes('context') || shortAnswers.q14.includes('about') || shortAnswers.q14.includes('for') || shortAnswers.q14.includes('who');
-  const hasFormat = shortAnswers.q14.includes('format') || shortAnswers.q14.includes('words') || shortAnswers.q14.includes('list') || shortAnswers.q14.includes('bullet');
-  if ((hasRole && hasTask) || (hasContext && hasFormat) || (hasRole && hasContext)) {
-    shortScore += 1;
-  }
-
-  // Q15: excitement - any answer with substance gets point
-  if (shortAnswers.q15.length > 20 && (shortAnswers.q15.includes('because') || shortAnswers.q15.includes('excited') || shortAnswers.q15.includes('want') || shortAnswers.q15.includes('build') || shortAnswers.q15.includes('learn'))) {
-    shortScore += 1;
-  }
-
-  // Simulate delay for "grading" feel
-  setTimeout(() => {
-    showResults(mcqScore, shortScore);
-  }, 2000);
+  setTimeout(function() { showResults(mcqScore, shortScore); }, 2000);
 }
 
 function showResults(mcqCorrect, shortCorrect) {
   document.getElementById('gradingLoader').classList.remove('show');
-  document.getElementById('quizResults').classList.add('show');
+  var results = document.getElementById('quizResults');
+  results.classList.add('show');
 
-  const totalScore = Math.round(((mcqCorrect + shortCorrect) / 15) * 100);
+  var totalScore = Math.round(((mcqCorrect + shortCorrect) / 15) * 100);
   document.getElementById('scoreCircle').textContent = totalScore + '%';
 
-  const passed = totalScore >= 70;
-
+  var passed = totalScore >= 70;
   if (passed) {
     document.getElementById('resultTitle').textContent = '🎉 Class 1 Passed!';
-    document.getElementById('resultMessage').innerHTML = `You scored <strong>${totalScore}%</strong>.<br>MCQs: ${mcqCorrect}/10 correct. Short answers: ${shortCorrect}/5 correct.<br>You are 20% closer to your certificate!`;
-    document.getElementById('resultActions').innerHTML = `
-      <a href="/build-ai-products/class-2/" class="next-class-btn">Continue to Class 2 →</a>
-      <br><br>
-      <div class="img-wrap" style="max-width:400px; margin:1rem auto;">
-        <picture>
-          <source srcset="/images/build-ai-products/class-1/quiz-complete.webp" type="image/webp">
-          <img src="/images/build-ai-products/class-1/quiz-complete.png" alt="Class 1 completion celebration with progress bar showing 20 percent toward certificate" loading="lazy" width="800" height="400">
-        </picture>
-      </div>
-    `;
-    localStorage.setItem('class1_passed', 'true');
-    localStorage.setItem('class1_score', totalScore);
+    document.getElementById('resultMessage').innerHTML = 'You scored <strong>' + totalScore + '%</strong>.<br>MCQs: ' + mcqCorrect + '/10 correct. Short answers: ' + shortCorrect + '/5 correct.<br>You are 20% closer to your certificate!';
+    document.getElementById('resultActions').innerHTML =
+      '<a href="/build-ai-products/class-2/" class="next-class-btn">Continue to Class 2 →</a>';
+    try { localStorage.setItem('class1_passed','true'); localStorage.setItem('class1_score', totalScore); } catch(e) {}
   } else {
     document.getElementById('resultTitle').textContent = 'Almost There';
-    document.getElementById('resultMessage').innerHTML = `You scored <strong>${totalScore}%</strong>. You need 70% to pass.<br>MCQs: ${mcqCorrect}/10. Short answers: ${shortCorrect}/5.<br>Review the article above and try again.`;
-    document.getElementById('resultActions').innerHTML = `
-      <button onclick="location.reload()" class="review-btn">↻ Retake Quiz</button>
-    `;
+    document.getElementById('resultMessage').innerHTML = 'You scored <strong>' + totalScore + '%</strong>. You need 70% to pass.<br>MCQs: ' + mcqCorrect + '/10. Short answers: ' + shortCorrect + '/5.<br>Review the article above and try again.';
+    document.getElementById('resultActions').innerHTML = '<button onclick="location.reload()" class="review-btn">↻ Retake Quiz</button>';
   }
-
-  document.getElementById('quizResults').scrollIntoView({ behavior: 'smooth' });
+  results.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Hamburger toggle (mobile)
 function toggleNav() {
-  // Add mobile nav logic if needed
+  // Mobile nav logic can be expanded here if a dropdown menu is added
 }
 </script>
 
 </body>
-  </html>
+</html>
