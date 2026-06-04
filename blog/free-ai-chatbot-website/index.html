@@ -496,6 +496,28 @@ Do not make up answers. Keep replies short — 2 to 3 sentences maximum.</div>
 <script>
   if (localStorage.getItem('cookies_ok')) document.getElementById('cookie-banner').style.display = 'none';
 </script>
+<!-- Mobile Menu Code -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    // Agar menu pehle se khula hai tou band karo, nahi tou kholo
+    if (navLinks.style.display === 'flex') {
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '64px';
+      navLinks.style.left = '0';
+      navLinks.style.width = '100%';
+      navLinks.style.background = 'var(--dark-2)';
+      navLinks.style.padding = '1rem';
+      navLinks.style.borderBottom = '1px solid rgba(124,58,237,0.2)';
+    }
+  });
+</script>
 
 </body>
 </html>
