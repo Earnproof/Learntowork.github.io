@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Automation with Make.com — No Code Workflows | LearnToWork</title>
+  <meta name="description" content="Class 5: Learn AI automation with Make.com. Build no-code workflows that connect apps and save hours every week. Free beginner class with quiz." />
+  <meta name="keywords" content="make.com tutorial, AI automation no code, automate with AI 2026, make.com free, no code automation, AI workflow automation" />
+  <meta name="author" content="Learn To Work" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://learntowork.online/build-ai-products/class-5/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://learntowork.online/build-ai-products/class-5/" />
+  <meta property="og:title" content="Class 5 — AI Automation with Make.com | LearnToWork" />
+  <meta property="og:description" content="Build no-code AI workflows that run automatically. Connect apps, add ChatGPT, save hours every week. Free class with hands-on build." />
+  <meta property="og:image" content="https://learntowork.online/images/build-ai-products/class-5/og-social-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Learn To Work" />
+  <meta property="article:published_time" content="2026-06-04" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Automation with Make.com — Build Workflows That Run Themselves" />
+  <meta name="twitter:description" content="Class 5: Connect apps + AI with Make.com. No code. Saves hours every week." />
+  <meta name="twitter:image" content="https://learntowork.online/images/build-ai-products/class-5/og-social-share.png" />
+  <meta name="twitter:creator" content="@Isbella_esa" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LearningResource","name":"Class 5 — AI Automation with Make.com","description":"Step-by-step guide to building AI-powered no-code automation workflows using Make.com.","provider":{"@type":"Organization","name":"Learn To Work","url":"https://learntowork.online"},"educationalLevel":"Beginner","inLanguage":"en","isAccessibleForFree":true,"learningResourceType":"Lesson","teaches":"AI Automation, Make.com, No-Code Workflows","timeRequired":"PT35M","url":"https://learntowork.online/build-ai-products/class-5/","datePublished":"2026-06-04","coursePrerequisites":"Class 4 — Build a Free AI Chatbot"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://learntowork.online/"},{"@type":"ListItem","position":2,"name":"Build AI Products","item":"https://learntowork.online/build-ai-products/"},{"@type":"ListItem","position":3,"name":"Class 5 — AI Automation","item":"https://learntowork.online/build-ai-products/class-5/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Make.com and is it really free?","acceptedAnswer":{"@type":"Answer","text":"Make.com (formerly Integromat) is a visual no-code automation platform. The free plan includes 1,000 operations per month and 2 active scenarios — no credit card required."}},{"@type":"Question","name":"What is the difference between Make.com and Zapier?","acceptedAnswer":{"@type":"Answer","text":"Make.com has a more generous free plan (1,000 ops vs Zapier's 100 tasks), supports complex logic on all plans, and costs less when upgrading ($9/month vs $20/month)."}},{"@type":"Question","name":"Can I automate tasks with ChatGPT using Make.com?","acceptedAnswer":{"@type":"Answer","text":"Yes. Make.com has a native OpenAI module. A form submits, Make sends the text to ChatGPT, ChatGPT replies, and Make emails the reply — all automatically."}}]}
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G023112WHJ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G023112WHJ');</script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{overflow-x:hidden;}
+    :root{
+      --dark:#020617;--dark-2:#0f172a;--dark-3:#1e293b;
+      --purple:#7c3aed;--purple-light:#a78bfa;
+      --blue:#3b82f6;--blue-light:#60a5fa;
+      --green:#10b981;--gray:#94a3b8;--white:#f8fafc;
+      --gold:#d4af37;--red:#ef4444;--orange:#f59e0b;
+    }
+    body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--white);line-height:1.7;min-height:100vh;}
+    h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;}
+
+    nav.main-nav{position:sticky;top:0;z-index:1000;background:rgba(2,6,23,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(124,58,237,0.2);padding:0 1.5rem;}
+    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:var(--white);text-decoration:none;}
+    .class-progress{font-size:0.8rem;color:var(--gray);}
+    .class-progress span{color:var(--purple-light);font-weight:600;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--gray);border-radius:2px;}
+
+    .article-wrap{max-width:720px;margin:0 auto;padding:3rem 1.5rem;min-width:0;width:100%;word-break:break-word;overflow-wrap:break-word;}
+
+    .breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.83rem;color:var(--gray);margin-bottom:1.5rem;flex-wrap:wrap;}
+    .breadcrumb a{color:var(--purple-light);text-decoration:none;}
+    .breadcrumb a:hover{text-decoration:underline;}
+
+    .class-nav{display:flex;justify-content:space-between;align-items:center;background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:1rem 1.25rem;margin-bottom:2.5rem;gap:1rem;flex-wrap:wrap;}
+    .class-nav a{display:flex;align-items:center;gap:0.5rem;color:var(--gray);text-decoration:none;font-size:0.88rem;font-weight:500;transition:color 0.2s;}
+    .class-nav a:hover{color:var(--purple-light);}
+    .class-nav .current{font-size:0.85rem;color:var(--purple-light);font-weight:600;}
+
+    .class-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.3);color:var(--purple-light);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:50px;margin-bottom:1.25rem;}
+    .class-badge::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;}
+
+    h1.article-title{font-size:clamp(1.6rem,5vw,2.6rem);font-weight:700;line-height:1.2;margin-bottom:1rem;}
+    h1.article-title .gradient-text{background:linear-gradient(135deg,var(--purple-light) 0%,var(--blue-light) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .article-meta{font-size:0.85rem;color:var(--gray);margin-bottom:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-meta span{display:flex;align-items:center;gap:0.4rem;white-space:nowrap;}
+
+    .article-section{margin-bottom:3.5rem;}
+    .article-section h2{font-size:clamp(1.1rem,3vw,1.35rem);font-weight:700;color:var(--white);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.6rem;}
+    .article-section h2 .section-num{width:36px;height:36px;min-width:36px;background:linear-gradient(135deg,var(--purple),var(--blue));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:white;flex-shrink:0;font-family:'Space Grotesk',sans-serif;}
+    .article-section p{font-size:1rem;color:#cbd5e1;margin-bottom:1.1rem;line-height:1.8;}
+    .article-section p.lead{font-size:clamp(1rem,2.5vw,1.15rem);color:var(--white);line-height:1.7;}
+    .article-section strong{color:var(--white);}
+    .article-section em{color:var(--purple-light);font-style:italic;}
+
+    .key-term{background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.25);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0;}
+    .key-term .term{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--purple-light);margin-bottom:0.4rem;}
+    .key-term p{font-size:0.95rem;color:#cbd5e1;margin-bottom:0;line-height:1.7;}
+
+    .analogy-box{background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.2);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+    .analogy-box .analogy-label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);margin-bottom:0.5rem;}
+    .analogy-box p{font-size:0.95rem;color:#cbd5e1;margin-bottom:0;line-height:1.7;}
+
+    .img-wrap{margin:2rem 0;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);width:100%;max-width:100%;}
+    .img-wrap img,.img-wrap picture{width:100%;max-width:100%;height:auto;display:block;}
+    .img-caption{font-size:0.85rem;color:var(--gray);text-align:center;margin-top:0.75rem;margin-bottom:1.5rem;font-style:italic;}
+
+    .table-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;}
+    .compare-table{width:100%;min-width:440px;border-collapse:collapse;margin:1.5rem 0;font-size:0.92rem;}
+    .compare-table th{background:rgba(124,58,237,0.1);color:var(--purple-light);padding:0.85rem;text-align:left;font-weight:600;border-bottom:1px solid rgba(124,58,237,0.2);font-family:'Space Grotesk',sans-serif;}
+    .compare-table td{padding:0.85rem;border-bottom:1px solid rgba(255,255,255,0.06);color:#cbd5e1;vertical-align:top;}
+    .compare-table td strong{color:var(--white);}
+
+    .build-steps{display:flex;flex-direction:column;gap:0;margin:1.5rem 0;}
+    .build-step{display:flex;gap:1.25rem;position:relative;padding-bottom:2rem;}
+    .build-step:last-child{padding-bottom:0;}
+    .build-step::before{content:'';position:absolute;left:20px;top:44px;bottom:0;width:2px;background:linear-gradient(to bottom,rgba(124,58,237,0.4),transparent);}
+    .build-step:last-child::before{display:none;}
+    .step-circle{width:42px;height:42px;min-width:42px;background:linear-gradient(135deg,var(--purple),var(--blue));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;color:white;flex-shrink:0;z-index:1;}
+    .step-body{flex:1;background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:1.25rem;transition:border-color 0.2s;min-width:0;}
+    .step-body:hover{border-color:rgba(124,58,237,0.25);}
+    .step-body h3{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;}
+    .step-body p{font-size:0.92rem;color:#cbd5e1;margin-bottom:0.75rem;line-height:1.75;}
+    .step-body p:last-child{margin-bottom:0;}
+    .step-tip{background:rgba(124,58,237,0.08);border-left:3px solid var(--purple-light);border-radius:0 8px 8px 0;padding:0.75rem 1rem;font-size:0.87rem;color:#cbd5e1;line-height:1.6;margin-top:0.75rem;}
+    .step-tip strong{color:var(--purple-light);}
+    .step-warning{background:rgba(245,158,11,0.06);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:0.75rem 1rem;font-size:0.87rem;color:#cbd5e1;line-height:1.6;margin-top:0.75rem;}
+    .step-warning strong{color:var(--orange);}
+
+    .code-block{background:rgba(0,0,0,0.45);border:1px solid rgba(124,58,237,0.2);border-radius:12px;padding:1.25rem;margin:1rem 0;font-family:'Space Grotesk',monospace;font-size:0.85rem;color:#e2e8f0;line-height:1.8;overflow-x:auto;white-space:pre-wrap;}
+    .code-block .label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--purple-light);margin-bottom:0.75rem;display:block;white-space:normal;}
+
+    .info-box{background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+    .info-box p{font-size:0.93rem;color:#cbd5e1;margin-bottom:0;line-height:1.7;}
+    .info-box strong{color:var(--blue-light);}
+    .warn-box{background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+    .warn-box p{font-size:0.93rem;color:#cbd5e1;margin-bottom:0;line-height:1.7;}
+    .warn-box strong{color:var(--orange);}
+    .success-box{background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+    .success-box p{font-size:0.93rem;color:#cbd5e1;margin-bottom:0;line-height:1.7;}
+    .success-box strong{color:var(--green);}
+
+    .build-box{background:linear-gradient(135deg,rgba(124,58,237,0.08),rgba(59,130,246,0.08));border:1px solid rgba(124,58,237,0.25);border-radius:18px;padding:2rem;margin:2rem 0;}
+    .build-box h3{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;}
+    .build-box p{font-size:0.95rem;color:#cbd5e1;margin-bottom:1rem;line-height:1.7;}
+    .student-input{width:100%;background:var(--dark);border:1px solid rgba(124,58,237,0.3);border-radius:12px;padding:1.25rem;color:var(--white);font-family:'Inter',sans-serif;font-size:0.95rem;line-height:1.7;margin-top:1rem;resize:vertical;min-height:120px;}
+    .student-input::placeholder{color:var(--gray);}
+    .student-input:focus{outline:none;border-color:var(--purple-light);}
+    .save-btn{margin-top:1rem;background:linear-gradient(135deg,var(--purple),var(--blue));color:white;border:none;padding:0.8rem 1.75rem;border-radius:12px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;}
+    .save-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,0.3);}
+    .save-confirm{font-size:0.85rem;color:var(--green);margin-top:0.75rem;display:none;align-items:center;gap:0.4rem;}
+
+    .use-case-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;}
+    .uc-card{background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:1.25rem;transition:border-color 0.2s;}
+    .uc-card:hover{border-color:rgba(124,58,237,0.3);}
+    .uc-icon{font-size:1.8rem;margin-bottom:0.6rem;}
+    .uc-card h4{font-size:0.95rem;font-weight:700;color:var(--white);margin-bottom:0.4rem;}
+    .uc-card p{font-size:0.85rem;color:var(--gray);margin:0;line-height:1.6;}
+
+    .roadmap-outer{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:0.75rem;}
+    .roadmap{display:flex;align-items:center;gap:0.5rem;margin:1.5rem 0;width:max-content;min-width:100%;}
+    .roadmap-node{flex-shrink:0;width:130px;text-align:center;padding:1.25rem 0.75rem;border-radius:14px;border:1px solid rgba(255,255,255,0.08);background:var(--dark-2);transition:all 0.2s;}
+    .roadmap-node.done{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.05);}
+    .roadmap-node.active{border-color:rgba(124,58,237,0.4);background:rgba(124,58,237,0.08);}
+    .roadmap-node .node-num{width:32px;height:32px;background:var(--dark-3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;margin:0 auto 0.6rem;color:var(--gray);font-family:'Space Grotesk',sans-serif;}
+    .roadmap-node.done .node-num{background:var(--green);color:white;}
+    .roadmap-node.active .node-num{background:linear-gradient(135deg,var(--purple),var(--blue));color:white;}
+    .roadmap-node .node-title{font-size:0.82rem;font-weight:600;color:var(--gray);line-height:1.3;}
+    .roadmap-node.done .node-title,.roadmap-node.active .node-title{color:var(--white);}
+    .roadmap-arrow{color:var(--gray);font-size:1.2rem;flex-shrink:0;}
+
+    .quiz-transition{text-align:center;padding:3rem 1.5rem;background:linear-gradient(135deg,rgba(124,58,237,0.05),rgba(59,130,246,0.05));border-radius:20px;margin:3rem 1.5rem;border:1px solid rgba(124,58,237,0.15);}
+    .quiz-transition h3{font-size:clamp(1.2rem,4vw,1.4rem);font-weight:700;margin-bottom:0.75rem;}
+    .quiz-transition p{color:var(--gray);font-size:0.95rem;margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto;}
+    .start-quiz-btn{display:inline-flex;align-items:center;gap:0.6rem;background:linear-gradient(135deg,var(--purple),var(--blue));color:white;border:none;padding:1rem 2.5rem;border-radius:14px;font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;cursor:pointer;transition:all 0.3s;}
+    .start-quiz-btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(124,58,237,0.4);}
+
+    .quiz-section{max-width:720px;margin:0 auto;padding:3rem 1.5rem;display:none;}
+    .quiz-section.active{display:block;}
+    .quiz-header{text-align:center;margin-bottom:2.5rem;}
+    .quiz-header .section-label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--purple-light);margin-bottom:0.6rem;display:block;}
+    .quiz-header h2{font-size:clamp(1.4rem,4vw,1.8rem);font-weight:700;margin-bottom:0.5rem;}
+    .quiz-header p{color:var(--gray);font-size:0.95rem;}
+    .cheat-warning{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:0.85rem 1.25rem;font-size:0.85rem;color:var(--red);margin-bottom:1.5rem;display:flex;align-items:flex-start;gap:0.6rem;}
+
+    .mcq-item{background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:1.5rem;margin-bottom:1rem;}
+    .mcq-item .question{font-size:1rem;font-weight:600;color:var(--white);margin-bottom:1rem;line-height:1.5;}
+    .mcq-options{display:flex;flex-direction:column;gap:0.5rem;}
+    .mcq-option{display:flex;align-items:flex-start;gap:0.85rem;padding:0.85rem 1.1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:transparent;cursor:pointer;transition:all 0.2s;font-size:0.92rem;color:#cbd5e1;}
+    .mcq-option:hover{border-color:rgba(124,58,237,0.3);background:rgba(124,58,237,0.05);}
+    .mcq-option input{display:none;}
+    .mcq-option .radio{width:22px;height:22px;min-width:22px;border:2px solid var(--gray);border-radius:50%;flex-shrink:0;transition:all 0.2s;position:relative;margin-top:1px;}
+    .mcq-option.selected .radio{border-color:var(--purple-light);background:var(--purple-light);box-shadow:0 0 0 4px rgba(124,58,237,0.15);}
+    .mcq-option.selected .radio::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;background:white;border-radius:50%;}
+    .mcq-option.correct{border-color:var(--green);background:rgba(16,185,129,0.08);}
+    .mcq-option.wrong{border-color:var(--red);background:rgba(239,68,68,0.08);}
+    .mcq-feedback{font-size:0.88rem;margin-top:0.85rem;padding:0.85rem;border-radius:10px;display:none;line-height:1.5;}
+    .mcq-feedback.show{display:block;}
+    .mcq-feedback.correct{color:var(--green);background:rgba(16,185,129,0.1);}
+    .mcq-feedback.wrong{color:var(--red);background:rgba(239,68,68,0.1);}
+
+    .short-item{background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:1.5rem;margin-bottom:1rem;}
+    .short-item .question{font-size:1rem;font-weight:600;color:var(--white);margin-bottom:0.5rem;line-height:1.5;}
+    .short-item .hint{font-size:0.82rem;color:var(--gray);margin-bottom:0.85rem;font-style:italic;}
+    .short-item textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.1rem;color:var(--white);font-family:'Inter',sans-serif;font-size:0.95rem;line-height:1.7;min-height:140px;resize:vertical;}
+    .short-item textarea:focus{outline:none;border-color:var(--purple-light);}
+    .word-count{font-size:0.78rem;color:var(--gray);text-align:right;margin-top:0.5rem;}
+
+    .quiz-actions{display:flex;gap:1rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap;}
+    .submit-quiz{background:linear-gradient(135deg,var(--purple),var(--blue));color:white;border:none;padding:1rem 2.5rem;border-radius:14px;font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;cursor:pointer;transition:all 0.3s;}
+    .submit-quiz:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(124,58,237,0.4);}
+    .submit-quiz:disabled{opacity:0.5;cursor:not-allowed;transform:none;}
+
+    .quiz-results{text-align:center;padding:3rem 2rem;background:var(--dark-2);border:1px solid rgba(124,58,237,0.2);border-radius:20px;margin-top:2rem;display:none;}
+    .quiz-results.show{display:block;}
+    .score-circle{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(59,130,246,0.2));border:4px solid var(--purple);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:'Space Grotesk',sans-serif;font-size:2.2rem;font-weight:700;color:var(--white);}
+    .quiz-results h3{font-size:1.5rem;font-weight:700;margin-bottom:0.75rem;}
+    .quiz-results p{color:var(--gray);font-size:0.95rem;margin-bottom:1.5rem;line-height:1.6;}
+    .result-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+    .next-class-btn{display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--purple),var(--blue));color:white;text-decoration:none;padding:0.9rem 2rem;border-radius:12px;font-weight:600;transition:all 0.3s;}
+    .next-class-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,0.4);}
+    .review-btn{display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:var(--gray);border:1px solid rgba(255,255,255,0.15);padding:0.9rem 2rem;border-radius:12px;font-weight:600;cursor:pointer;transition:all 0.2s;}
+    .review-btn:hover{border-color:var(--purple-light);color:var(--white);}
+
+    .grading-loader{display:none;text-align:center;padding:2.5rem;}
+    .grading-loader.show{display:block;}
+    .grading-loader p{color:var(--gray);font-size:0.95rem;margin-top:1.25rem;}
+    .spinner{width:48px;height:48px;border:3px solid rgba(124,58,237,0.2);border-top-color:var(--purple-light);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto;}
+    @keyframes spin{to{transform:rotate(360deg);}}
+
+    .social-share{display:flex;gap:0.75rem;justify-content:center;margin:2rem 0;flex-wrap:wrap;}
+    .share-btn{width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--dark-2);color:var(--gray);display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+    .share-btn:hover{border-color:var(--purple-light);color:var(--white);background:rgba(124,58,237,0.1);}
+
+    footer{background:var(--dark-2);border-top:1px solid rgba(255,255,255,0.06);padding:2.5rem 1.5rem;margin-top:3rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;text-align:center;}
+    .footer-inner p{font-size:0.85rem;color:var(--gray);}
+    .footer-inner a{color:var(--purple-light);text-decoration:none;}
+    .section-label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--purple-light);}
+
+    @media(max-width:768px){
+      .hamburger{display:flex;}
+      .class-progress{display:none;}
+      .article-wrap{padding:1.5rem 1rem;}
+      .quiz-transition{margin:2rem 0.75rem;padding:2rem 1rem;}
+      .quiz-section{padding:2rem 1rem;}
+      .quiz-results{padding:2rem 1rem;}
+      .build-box{padding:1.25rem 1rem;}
+      .mcq-item{padding:1.25rem 1rem;}
+      .short-item{padding:1.25rem 1rem;}
+      .class-nav{flex-direction:column;text-align:center;}
+      .build-step{gap:0.75rem;}
+      .use-case-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:480px){
+      .article-meta{gap:0.6rem;font-size:0.8rem;}
+      .score-circle{width:110px;height:110px;font-size:1.8rem;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">🚀 Learn To Work</a>
+    <div class="class-progress">Class <span>5</span> of 25 — Build AI Products</div>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<article class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> ›
+    <a href="/build-ai-products/">Build AI Products</a> ›
+    <a href="/build-ai-products/">Series 1</a> ›
+    <span>Class 5</span>
+  </nav>
+
+  <div class="class-nav">
+    <a href="/build-ai-products/class-4/">← Class 4: AI Chatbot</a>
+    <span class="current">📍 Class 5 of 5</span>
+    <a href="/build-ai-products/">All Classes →</a>
+  </div>
+
+  <div class="class-badge">🎓 Series 1 — AI Foundations · Final Class</div>
+<h1 class="article-title">How to Save 10 Hours a Week with AI<br><span class="gradient-text">Free Make.com Automation Course</span></h1>
+  <div class="article-meta">
+    <span>⏱ 30 min read</span>
+    <span>🛠 Live build-along</span>
+    <span>📝 Quiz at the end</span>
+    <span>🆓 Free tool used</span>
+  </div>
+
+  <!-- SECTION 1 -->
+  <section class="article-section" id="hook" aria-labelledby="section-1">
+    <h2 id="section-1"><span class="section-num">1</span> You Are Still Doing This by Hand?</h2>
+    <p class="lead">Every day, millions of people copy information from one app and paste it into another. They send the same type of email over and over. They check a spreadsheet, update a form, notify someone — the same chain of steps, repeated endlessly. It is not work. It is a machine pretending to be a human.</p>
+
+    <div class="img-wrap">
+      <picture>
+        <source srcset="/images/build-ai-products/class-5/automation-vs-manual.webp" type="image/webp">
+        <img src="/images/build-ai-products/class-5/automation-vs-manual.png" alt="Split image showing person doing repetitive manual tasks vs automated workflow running on its own" loading="lazy" width="1200" height="600">
+      </picture>
+    </div>
+    <p class="img-caption">Left: spending hours on copy-paste tasks every day. Right: building an automation once that handles it forever.</p>
+
+    <p>In Class 1, you learned what AI is. In Class 2, you mastered ChatGPT. In Class 3, you built a Custom GPT. In Class 4, you put a live chatbot on a website. Now comes the final piece — the one that ties everything together.</p>
+
+    <p><strong>Automation</strong> means you build a workflow <em>once</em>, and it runs on its own forever. Someone submits a form? An email goes out automatically. A new file appears in Google Drive? ChatGPT summarises it and saves the summary to Notion automatically. A new customer registers? They get a personalised welcome message automatically. <strong>You set it up once. Then you stop thinking about it.</strong></p>
+
+    <div class="info-box">
+      <p><strong>⚡ What you need:</strong> A free Make.com account (no credit card), and optionally a free OpenAI API key to add ChatGPT to your workflows. Everything runs in your browser. Zero coding required.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="article-section" id="what-is-make" aria-labelledby="section-2">
+    <h2 id="section-2"><span class="section-num">2</span> What Is Make.com — Simply Explained</h2>
+    <p class="lead">Before we build, let us understand exactly what Make.com is — with no technical words and a clear picture in mind.</p>
+
+    <div class="img-wrap">
+      <picture>
+        <source srcset="/images/build-ai-products/class-5/what-is-make.webp" type="image/webp">
+        <img src="/images/build-ai-products/class-5/what-is-make.png" alt="Make.com visual canvas showing apps connected by arrows forming an automated workflow" loading="lazy" width="1200" height="550">
+      </picture>
+    </div>
+
+    <div class="key-term">
+      <div class="term">📖 What Is Make.com?</div>
+      <p>Make.com is a website where you connect apps together using a visual drag-and-drop canvas — like drawing a flowchart. You pick which apps are involved, tell Make what to do when something happens, and it runs your workflow automatically. No coding. No technical setup. Just a visual map of actions that execute themselves.</p>
+    </div>
+
+    <p>Make.com was originally called <strong>Integromat</strong> and was rebranded in 2022. Today it is one of the most powerful automation platforms in the world, used by businesses, freelancers, and students in over 180 countries.</p>
+
+    <div class="analogy-box">
+      <div class="analogy-label">🍋 Think of it like this</div>
+      <p>Imagine you hire a personal assistant and give them instructions: <em>"Whenever I get an email with the subject 'New Order', open a spreadsheet, add the customer's name and email to a new row, then send them a welcome message."</em> That assistant never makes mistakes, never sleeps, never takes a day off, and can handle a thousand orders at once. That is Make.com. You write the instructions once. It works forever.</p>
+    </div>
+
+    <div class="table-scroll">
+      <table class="compare-table">
+        <thead><tr><th>Without Make.com</th><th>With Make.com</th></tr></thead>
+        <tbody>
+          <tr><td>You manually copy data between apps</td><td><strong>Data moves automatically the moment something happens</strong></td></tr>
+          <tr><td>You write the same emails over and over</td><td><strong>Emails are written and sent by AI automatically</strong></td></tr>
+          <tr><td>You check multiple apps to stay updated</td><td><strong>You get notified automatically when something needs your attention</strong></td></tr>
+          <tr><td>Tasks are forgotten if you are busy or asleep</td><td><strong>Every task is logged, tracked, and completed — always</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="article-section" id="key-terms" aria-labelledby="section-3">
+    <h2 id="section-3"><span class="section-num">3</span> Five Words You Must Know Before You Build</h2>
+    <p>Make.com has its own vocabulary. You will see these words everywhere inside the platform. Learn them now so nothing confuses you when you start clicking.</p>
+
+    <div class="img-wrap">
+      <picture>
+        <source srcset="/images/build-ai-products/class-5/make-key-terms.webp" type="image/webp">
+        <img src="/images/build-ai-products/class-5/make-key-terms.png" alt="Diagram showing Make.com key terms: scenario, module, trigger, operation, and data bundle" loading="lazy" width="1200" height="550">
+      </picture>
+    </div>
+    <p class="img-caption">These five terms are everything you need to understand Make.com before you start building your first scenario.</p>
+
+    <div class="key-term">
+      <div class="term">1. Scenario</div>
+      <p>A Scenario is your complete automation workflow — the whole thing from start to finish. Think of it as a recipe. It has a beginning (what triggers it), a middle (what happens step by step), and an end (the final output). Everything you build on Make.com is called a Scenario.</p>
+    </div>
+
+    <div class="key-term">
+      <div class="term">2. Module</div>
+      <p>A Module is one single step inside a scenario. "Search for an email" is one module. "Send a message to Slack" is another module. "Ask ChatGPT a question" is another module. You connect modules together like train carriages — each one receives data from the previous, does something, and passes the result forward.</p>
+    </div>
+
+    <div class="key-term">
+      <div class="term">3. Trigger</div>
+      <p>The Trigger is the very first module — the event that starts everything. Nothing runs until the trigger fires. A trigger could be: a new email arrives, a form is submitted, a new row is added to a spreadsheet, a scheduled time, or a file being uploaded. Without a trigger, your scenario just sits there doing nothing.</p>
+    </div>
+
+    <div class="key-term">
+      <div class="term">4. Operation</div>
+      <p>Every time one module runs once, that counts as 1 Operation. The free plan gives you 1,000 operations per month. If your scenario has 3 modules and it runs 10 times, that is 30 operations used. Operations reset every month. For most beginners, 1,000 operations is more than enough to build and test multiple real automations.</p>
+    </div>
+
+    <div class="key-term">
+      <div class="term">5. Data Bundle</div>
+      <p>A Data Bundle is the package of information that flows from one module to the next. For example, when a form is submitted, the bundle contains the person's name, email, and message. Each module receives this bundle, does something with it, and passes an updated bundle forward. You can use any piece of bundle data in any later module — just click on it.</p>
+    </div>
+
+    <div class="info-box">
+      <p><strong>💡 One more: Filters.</strong> A Filter sits between two modules and says: <em>"Only continue if this condition is true."</em> For example: only process an email if the sender is a client, or only send an alert if the order value is over $50. Filters give you precise control so your automation does not run for every single event — only the ones that matter.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="article-section" id="make-vs-zapier" aria-labelledby="section-4">
+    <h2 id="section-4"><span class="section-num">4</span> Make.com vs Zapier — Which Should You Use?</h2>
+    <p class="lead">You may have heard of Zapier — the most famous automation tool. Here is the honest comparison of both for beginners building AI workflows.</p>
+
+    <div class="table-scroll">
+      <table class="compare-table">
+        <thead><tr><th>Feature</th><th>Make.com</th><th>Zapier</th></tr></thead>
+        <tbody>
+          <tr><td>Free plan allowance</td><td><strong style="color:var(--green)">1,000 operations/month</strong></td><td>100 tasks/month only</td></tr>
+          <tr><td>Visual editor</td><td><strong style="color:var(--green)">Full canvas — drag, connect, zoom</strong></td><td>Linear steps only</td></tr>
+          <tr><td>Complex logic (loops, routers, filters)</td><td><strong style="color:var(--green)">Built in on ALL plans including free</strong></td><td>Paid plans only ($49+/month)</td></tr>
+          <tr><td>Ease for beginners</td><td>Moderate — 30 mins to feel comfortable</td><td><strong style="color:var(--green)">Very easy — fastest to start</strong></td></tr>
+          <tr><td>Total app integrations</td><td>1,600+ apps</td><td><strong style="color:var(--green)">6,000+ apps</strong></td></tr>
+          <tr><td>Paid plan starting price</td><td><strong style="color:var(--green)">$9/month</strong></td><td>$20/month</td></tr>
+          <tr><td>Native OpenAI / ChatGPT module</td><td><strong style="color:var(--green)">Yes</strong></td><td>Yes</td></tr>
+          <tr><td>Error handling and retry logic</td><td><strong style="color:var(--green)">Advanced — built in</strong></td><td>Basic on lower plans</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The verdict:</strong> For AI-powered workflows on the free plan, use <strong>Make.com</strong>. Its 10x more generous free tier and built-in complex logic make it the obvious choice. Zapier is only better if you need a very specific app that Make.com does not support — which is rare for common tools.</p>
+
+    <p>Go to <a href="https://www.make.com" target="_blank" rel="noopener noreferrer">make.com</a> and create your free account now. No credit card. No expiry. Come back once you are logged in and ready to build.</p>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="article-section" id="real-workflows" aria-labelledby="section-5">
+    <h2 id="section-5"><span class="section-num">5</span> Six Real AI Workflows You Can Build Today</h2>
+    <p class="lead">These are not ideas for the future. These are workflows that exist right now, being used by real people to save real hours every week. All six work on Make.com's free plan.</p>
+
+    <div class="img-wrap">
+      <picture>
+        <source srcset="/images/build-ai-products/class-5/six-workflows.webp" type="image/webp">
+        <img src="/images/build-ai-products/class-5/six-workflows.png" alt="Six AI automation workflow examples shown as visual diagrams using Make.com and ChatGPT" loading="lazy" width="1200" height="550">
+      </picture>
+    </div>
+
+    <div class="use-case-grid">
+      <div class="uc-card">
+        <div class="uc-icon">📧</div>
+        <h4>Email Summarizer</h4>
+        <p>New Gmail arrives → Make sends the full email text to ChatGPT → ChatGPT writes a 3-bullet summary → Make saves it to a Google Sheet. Check all summaries in seconds instead of reading every email in full.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-icon">✍️</div>
+        <h4>Blog Post Generator</h4>
+        <p>You add a keyword to Notion → Make detects the new row → Sends it to ChatGPT with your style instructions → ChatGPT writes an 800-word draft → Make saves it back to Notion, ready for you to edit and publish.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-icon">💬</div>
+        <h4>Customer Reply Bot</h4>
+        <p>A visitor fills your contact form → Make sends the message to ChatGPT with context about your business → ChatGPT writes a personalised reply → Make sends it via Gmail automatically within 30 seconds.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-icon">📱</div>
+        <h4>Social Media Scheduler</h4>
+        <p>New blog post published → Make detects it → ChatGPT writes 3 social captions in different tones → Make saves them to a Google Sheet and automatically posts one to Twitter or LinkedIn.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-icon">🔔</div>
+        <h4>Lead Alert System</h4>
+        <p>A new lead is added to Airtable → Make sends the details to ChatGPT → ChatGPT rates lead quality and writes a follow-up note → Make sends you a Slack or WhatsApp message with the rating and next action.</p>
+      </div>
+      <div class="uc-card">
+        <div class="uc-icon">📂</div>
+        <h4>Document Summarizer</h4>
+        <p>A PDF is uploaded to Google Drive → Make detects it → Extracts text and sends to ChatGPT → ChatGPT writes a clear summary with key points → Make saves the summary to a Notion page automatically.</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <p><strong>💡 Where to start:</strong> Begin with the <strong>Customer Reply Bot</strong> or <strong>Email Summarizer</strong>. These are the fastest to build and immediately useful. Once you understand the trigger → AI → output pattern, every other automation becomes easy to reason about.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="article-section" id="build" aria-labelledby="section-6">
+    <h2 id="section-6"><span class="section-num">6</span> Build Your First Scenario — Step by Step</h2>
+    <p class="lead">We are going to build a real, working automation together: <strong>When a Google Form is submitted → Make sends the response to ChatGPT → ChatGPT writes a personalised thank-you reply → Make saves it to Google Sheets.</strong> Follow every step exactly. Read each one fully before you click.</p>
+
+    <div class="img-wrap">
+      <picture>
+        <source srcset="/images/build-ai-products/class-5/build-scenario-overview.webp" type="image/webp">
+        <img src="/images/build-ai-products/class-5/build-scenario-overview.png" alt="Step by step overview of building a Make.com scenario with Google Forms, OpenAI module, and Google Sheets output" loading="lazy" width="1200" height="500">
+      </picture>
+    </div>
+
+    <div class="build-steps">
+
+      <div class="build-step">
+        <div class="step-circle">1</div>
+        <div class="step-body">
+          <h3>Log In and Create a New Scenario</h3>
+          <p>Once inside Make.com, look for the blue <strong>"Create a new scenario"</strong> button on your dashboard. Click it. You will be taken to a blank white canvas — this is where you build your workflow visually.</p>
+          <p>In the centre of the canvas you will see a large circle with a <strong>"+"</strong> icon. This is where your first module goes. Think of it as the empty first page of your recipe. Nothing runs until you fill it.</p>
+          <div class="step-tip"><strong>💡 Get comfortable with the canvas first:</strong> You can zoom in and out using your scroll wheel. You can move around by clicking and dragging the empty background. Spend one minute just exploring before adding anything — it will make the rest much less confusing.</div>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <div class="step-circle">2</div>
+        <div class="step-body">
+          <h3>Add Your Trigger: Google Forms — Watch Responses</h3>
+          <p>Click the large <strong>"+"</strong> circle. A search panel appears. Type <strong>"Google Forms"</strong> and click the app when it shows. From the module list, choose <strong>"Watch Responses"</strong>.</p>
+          <p>Make will ask you to connect your Google account. Click <strong>"Add"</strong>, sign in, and grant permission. This is a one-time setup — Make remembers this connection for all future scenarios you build.</p>
+          <p>After connecting, select the specific Google Form you want to monitor. If you do not have one yet, open Google Forms in another tab, create a simple form with a "Name" and "Message" field, save it, then come back and select it here.</p>
+          <div class="step-tip"><strong>💡 What "Watch Responses" means:</strong> Make will check your Google Form for new submissions at regular intervals. Each new submission fires the trigger and your scenario runs. On the free plan, the minimum check interval is 15 minutes — meaning automation runs within 15 minutes of each submission.</div>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <div class="step-circle">3</div>
+        <div class="step-body">
+          <h3>Add the OpenAI Module: Create a Completion</h3>
+          <p>Hover over the Google Forms module on your canvas. A small <strong>"+"</strong> appears on its right side. Click it to add the next module. Search for <strong>"OpenAI"</strong> and select it. Choose <strong>"Create a Completion"</strong>.</p>
+          <p>Make will ask for your OpenAI API key. This is NOT your ChatGPT password — it is a separate key from <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">platform.openai.com/api-keys</a>. Create a free account there, generate a key, and paste it into Make. New accounts come with free credits — enough to test this scenario many times over.</p>
+          <p>Now write your prompt. Click inside the <strong>"Prompt"</strong> field. You will see small coloured tags — these are data bundles from your Google Form. Click the bundle tags to insert the actual form data into your prompt dynamically. For example:</p>
+          <div class="code-block"><span class="label">📝 Example Prompt — Edit This for Your Own Use</span>Write a short, warm, and professional thank-you reply to this message.
+
+The person's name is: [click the Name bundle tag here]
+Their message was: [click the Message bundle tag here]
+
+Keep your reply to 3 sentences maximum.
+Be genuine and specific to what they wrote.
+End with: "We will get back to you within 24 hours."</div>
+          <div class="step-tip"><strong>💡 Which model to choose:</strong> In the "Model" dropdown, select <strong>gpt-3.5-turbo</strong>. It is fast and uses minimal API credits. Only switch to GPT-4 if you need much higher quality for professional client-facing use — it costs more credits per run.</div>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <div class="step-circle">4</div>
+        <div class="step-body">
+          <h3>Add Google Sheets: Save the AI Reply</h3>
+          <p>Add another module after OpenAI. Search <strong>"Google Sheets"</strong> and choose <strong>"Add a Row"</strong>. Connect your Google account. Select a spreadsheet — or create a new Google Sheet with these columns: <em>Name, Original Message, AI Reply, Date.</em></p>
+          <p>Now map the data bundles to each column:</p>
+          <p>→ <strong>Name column</strong> → click the "Name" bundle from your Google Form<br>
+          → <strong>Original Message column</strong> → click the "Message" bundle from your Google Form<br>
+          → <strong>AI Reply column</strong> → click the "choices[] → message → content" bundle from the OpenAI module — this is the actual ChatGPT text<br>
+          → <strong>Date column</strong> → type <code>{{now}}</code> to auto-insert the current date and time</p>
+          <div class="step-warning"><strong>⚠️ Finding the right OpenAI bundle:</strong> Look for a field called <strong>"choices[] → message → content"</strong> or similar — this is ChatGPT's actual reply. If you accidentally select a different bundle field, your sheet will fill with numbers or empty values. If this happens, just click the field, clear it, and choose a different bundle option.</div>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <div class="step-circle">5</div>
+        <div class="step-body">
+          <h3>Run Once to Test Everything</h3>
+          <p>Before you activate, you must test. Click <strong>"Run once"</strong> at the bottom left of your canvas. This tells Make: run the scenario one time right now and show me exactly what happens at each step.</p>
+          <p>Now go to your Google Form in another tab and submit a test response — use a real name and write a short message. Come back to Make. You should see coloured bubbles appearing on each module: <strong>green = success, red = error</strong>.</p>
+          <p>Click each green bubble to inspect exactly what data flowed through. For the OpenAI module, you should see the full ChatGPT reply that was generated. For Google Sheets, you should see a confirmation that a row was added. Open your spreadsheet — one new row should now exist with all the data correctly filled in.</p>
+          <div class="step-tip"><strong>💡 If you get an error:</strong> Click the red bubble to read the error message. The most common causes are: wrong API key, spreadsheet column names do not match what Make expects, or the form has no responses yet. Fix the issue and click "Run once" again. Errors during testing are completely normal — they are how you learn how Make.com works.</div>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <div class="step-circle">6</div>
+        <div class="step-body">
+          <h3>Activate Your Scenario</h3>
+          <p>Once your test run works perfectly with no errors, it is time to go live. At the bottom left of the canvas, you will see a toggle switch showing <strong>"OFF"</strong>. Click it to turn it <strong>"ON"</strong>. A confirmation will appear — click confirm.</p>
+          <p>Your scenario is now active and running in the background. From this moment forward, Make.com will automatically check your Google Form every 15 minutes. Any new submission will trigger the full chain — ChatGPT generates a reply, the reply gets saved to your spreadsheet — with zero input from you.</p>
+
+          <div class="success-box">
+            <p><strong>🎉 Your first AI automation is live.</strong> Every time someone fills your form, AI will automatically process their message and save a personalised reply — while you sleep, while you are busy, while you do anything else entirely. You built this with no code, in under 30 minutes, using only free tools.</p>
+          </div>
+
+          <div class="step-tip"><strong>💡 Want to also send the reply by email?</strong> Add one more module after Google Sheets: search "Gmail" → choose "Send an Email" → map the recipient's email from the form bundle, and the ChatGPT reply as the email body. Now every person who fills your form gets a personalised AI-written reply in their inbox within 15 minutes — automatically.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section class="article-section" id="free-plan" aria-labelledby="section-7">
+    <h2 id="section-7"><span class="section-num">7</span> Make.com Free Plan — What You Actually Get</h2>
+    <p>The free plan is genuinely powerful. Here is exactly what each limit means in real practice:</p>
+
+    <div class="table-scroll">
+      <table class="compare-table">
+        <thead><tr><th>What You Get</th><th>What It Means in Practice</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1,000 operations/month</strong></td><td>If your scenario has 3 modules, you can run it ~333 times per month. For most beginners building and testing automations, this is more than enough.</td></tr>
+          <tr><td><strong>2 active scenarios</strong></td><td>You can have 2 automations running simultaneously. You can build and save more — just not have more than 2 turned on at the same time.</td></tr>
+          <tr><td><strong>15 minute minimum interval</strong></td><td>Your scenarios check for triggers every 15 minutes. For form submissions, emails, and spreadsheets — 15 minutes is perfectly fine for most use cases.</td></tr>
+          <tr><td><strong>All 1,600+ apps available</strong></td><td>Make.com does NOT lock apps behind paid plans. Every integration — OpenAI, Gmail, Notion, Airtable, Slack, Google Sheets — works on the free plan.</td></tr>
+          <tr><td><strong>5 MB data storage</strong></td><td>For text-based automations (which is 99% of AI workflows), this limit is almost never reached in normal use.</td></tr>
+          <tr><td><strong>Full scenario history / logs</strong></td><td>You can see every time your scenario ran, what data went through, and whether it succeeded or failed. Essential for debugging problems.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warn-box">
+      <p><strong>⚠️ When to upgrade:</strong> If you need more than 2 active automations running at once, or if you have a real business with many daily form submissions, the Core plan at <strong>$9/month</strong> gives 10,000 operations and unlimited active scenarios. Only upgrade when you have outgrown the free plan — not before. The skills are identical on both plans.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section class="article-section" id="earn" aria-labelledby="section-8">
+    <h2 id="section-8"><span class="section-num">8</span> How People Are Earning with Make.com + AI</h2>
+    <p class="lead">The skill you just learned — building AI-powered automations — is one of the most in-demand skills in 2026. Here is exactly how people are turning it into real income.</p>
+
+    <div class="img-wrap">
+      <picture>
+        <source srcset="/images/build-ai-products/class-5/earn-with-automation.webp" type="image/webp">
+        <img src="/images/build-ai-products/class-5/earn-with-automation.png" alt="Three earning methods using AI automation skills: freelance service, own business productivity, and selling templates" loading="lazy" width="1200" height="500">
+      </picture>
+    </div>
+
+    <p><strong>Way 1 — Sell automations as a freelance service</strong></p>
+    <p>Businesses constantly need automations but have no one to build them. An automation that saves a business owner 5 hours a week is worth $200–$500 to build. That is a one-time fee for work that takes you 2–4 hours. You can offer this on <a href="https://www.fiverr.com" target="_blank" rel="noopener noreferrer">Fiverr</a> or <a href="https://www.upwork.com" target="_blank" rel="noopener noreferrer">Upwork</a>, or approach local businesses directly. Specialise in one niche — e-commerce, real estate, coaching businesses — and you become the obvious expert to hire.</p>
+
+    <p><strong>Way 2 — Automate your own freelance or online business</strong></p>
+    <p>If you already offer any service — design, writing, tutoring, social media — automation multiplies your output without multiplying your hours. One freelance writer who builds a "topic → AI research → draft" Make.com workflow can produce 3x more content in the same time. The automation handles the repetitive parts; you do the high-value creative work clients actually pay for.</p>
+
+    <p><strong>Way 3 — Build and sell automation templates</strong></p>
+    <p>Make.com lets you export your scenarios as blueprint files. Build a polished, well-documented automation template — a "7-step client onboarding workflow" or "ecommerce order management system" — and sell it as a digital product on Gumroad or Payhip. A good template sells hundreds of times with zero ongoing work. You build it once; it earns forever.</p>
+
+    <div class="info-box">
+      <p><strong>💡 Real example:</strong> A freelancer built a Make.com automation for a real estate agent: new property enquiries from a website form are automatically sent to ChatGPT, which qualifies the lead, writes a personalised response, and adds the contact to a CRM spreadsheet. The agent saved 3 hours a day. The freelancer charged $300 for the build and $50/month for maintenance. Within 3 months she had 8 recurring clients — $400/month in passive income from maintenance alone.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 9 -->
+  <section class="article-section" id="your-build" aria-labelledby="section-9">
+    <h2 id="section-9"><span class="section-num">9</span> Save What You Built</h2>
+    <p class="lead">Write down your automation details below. This records your work and auto-fills your quiz answers so you do not have to type the same things twice.</p>
+
+    <div class="build-box">
+      <h3>🛠 Your Automation Details</h3>
+      <p>Fill this in with the scenario you built today — or the one you plan to build. Be specific. The more detail here, the better your quiz answers will be.</p>
+      <textarea class="student-input" id="savedScenario"
+        placeholder="My scenario name: [NAME]&#10;&#10;What triggers it: [what event starts the workflow]&#10;&#10;What each module does: [Module 1 does X, Module 2 does Y...]&#10;&#10;What prompt I wrote for ChatGPT: [the actual prompt text]&#10;&#10;What the final output is: [where does the result go and what does it look like]&#10;&#10;A problem I ran into and how I fixed it: [be honest — errors are normal]&#10;&#10;How this could save me or someone else real time every week: [be specific]"
+        aria-label="Describe your automation scenario"></textarea>
+      <button class="save-btn" onclick="saveScenario()">💾 Save My Scenario</button>
+      <p class="save-confirm" id="saveConfirm">✅ Saved! This will auto-load in your quiz.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 10 -->
+  <section class="article-section" id="certificate" aria-labelledby="section-10">
+    <h2 id="section-10"><span class="section-num">10</span> You Made It — Series 1 Complete</h2>
+    <p>Five classes. Five real AI products built. Look at what you have done:</p>
+
+    <div class="roadmap-outer">
+      <div class="roadmap" role="list" aria-label="Series 1 completion roadmap">
+        <div class="roadmap-node done" role="listitem"><div class="node-num">✓</div><div class="node-title">What Is AI?</div></div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-node done" role="listitem"><div class="node-num">✓</div><div class="node-title">ChatGPT Mastery</div></div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-node done" role="listitem"><div class="node-num">✓</div><div class="node-title">Custom GPT</div></div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-node done" role="listitem"><div class="node-num">✓</div><div class="node-title">AI Chatbot</div></div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-node active" role="listitem"><div class="node-num">5</div><div class="node-title">AI Automation</div></div>
+      </div>
+    </div>
+
+    <p style="text-align:center; color:var(--gray); font-size:0.9rem; margin-top:1.25rem;">All 5 classes complete · Certificate unlocking after quiz 🎓</p>
+
+    <div class="img-wrap">
+      <picture>
+        <source srcset="/images/build-ai-products/class-5/series1-complete.webp" type="image/webp">
+        <img src="/images/build-ai-products/class-5/series1-complete.png" alt="Series 1 completion banner showing all five classes done with certificate badge" loading="lazy" width="1200" height="400">
+      </picture>
+    </div>
+
+    <p>In Class 1, you did not know what AI was. Today you have built a Custom GPT, a live website chatbot, and a working AI automation. You understand how these tools work — not just which buttons to click, but <em>why</em> each piece exists and what it does. That is the difference between a user and a builder.</p>
+
+    <p>Pass this quiz and your <strong>Series 1 Certificate</strong> unlocks. Your certificate is designed in Canva with your name and completion date — a real credential you can share on LinkedIn, add to your CV, or show clients as proof of your AI skills.</p>
+
+    <p>One quiz stands between you and your certificate. Let us finish this.</p>
+  </section>
+
+  <div class="social-share" aria-label="Share this class">
+    <a class="share-btn" href="https://twitter.com/intent/tweet?text=Just+built+my+first+AI+automation+with+Make.com+—+no+code!+Finishing+Series+1+of+%40Isbella_esa%27s+free+AI+course+🤖+https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-5%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">𝕏</a>
+    <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-5%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">in</a>
+    <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-5%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">f</a>
+    <a class="share-btn" href="https://wa.me/?text=Completed+Series+1+of+a+free+AI+course!+Built+an+AI+automation+with+Make.com+🚀+https%3A%2F%2Flearntowork.online%2Fbuild-ai-products%2Fclass-5%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">📱</a>
+  </div>
+
+</article>
+
+<!-- QUIZ TRANSITION -->
+<div class="quiz-transition" id="quizTransition">
+  <h3>🏆 Final Quiz — Unlock Your Certificate!</h3>
+  <p>10 multiple choice + 5 short answers. All based on the class above. Score 70%+ to pass and unlock your Series 1 Certificate.</p>
+  <button class="start-quiz-btn" onclick="startQuiz()">Start Final Quiz →</button>
+</div>
+
+<!-- QUIZ -->
+<section class="quiz-section" id="quizSection" aria-label="Class 5 Final Quiz">
+  <div class="quiz-header">
+    <div class="section-label">Class 5 — Series 1 Final Assessment</div>
+    <h2>Unlock Your Certificate</h2>
+    <p>10 multiple choice + 5 short answers · All from this class · 70% to pass and earn your Series 1 Certificate.</p>
+  </div>
+
+  <div class="cheat-warning">⚠️ Tab switching is monitored. Multiple switches will flag your submission.</div>
+
+  <div id="mcqSection">
+    <div class="section-label" style="margin-bottom:1rem; display:block;">Part 1: Multiple Choice (10 questions)</div>
+
+    <div class="mcq-item" data-q="1" data-answer="C">
+      <div class="question">1. What was Make.com originally called before its 2022 rebrand?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q1" value="A"> Automate.io</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q1" value="B"> Pabbly Connect</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q1" value="C"> Integromat</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q1" value="D"> Workato</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="mcq-item" data-q="2" data-answer="A">
+      <div class="question">2. In Make.com, what is a "Scenario"?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q2" value="A"> Your complete automation workflow from trigger to final output</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q2" value="B"> A single action like sending an email</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q2" value="C"> A pre-built template downloaded from the Make marketplace</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q2" value="D"> The monthly billing plan you are subscribed to</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="mcq-item" data-q="3" data-answer="B">
+      <div class="question">3. What is a "Trigger" in Make.com?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q3" value="A"> The last module that delivers the final output of a scenario</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q3" value="B"> The first module — the event that starts the entire workflow running</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q3" value="C"> A button inside Make.com that you manually click to run a scenario</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q3" value="D"> An error that stops a scenario from completing</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="mcq-item" data-q="4" data-answer="D">
+      <div class="question">4. How many operations does Make.com's free plan include per month?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q4" value="A"> 100</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q4" value="B"> 500</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q4" value="C"> 2,000</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q4" value="D"> 1,000</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="mcq-item" data-q="5" data-answer="C">
+      <div class="question">5. What is the main reason Make.com is better than Zapier for beginners building AI workflows?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q5" value="A"> Make.com has more total app integrations than Zapier (6,000+)</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q5" value="B"> Make.com is easier and faster for complete beginners with no experience</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q5" value="C"> Make.com's free plan gives 10x more operations and includes complex logic built in</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q5" value="D"> Make.com does not require an API key to use ChatGPT inside workflows</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="mcq-item" data-q="6" data-answer="A">
+      <div class="question">6. In the scenario built in this class, what does the OpenAI module do?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q6" value="A"> It receives the form response data, sends it to ChatGPT with a prompt, and returns the generated reply</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q6" value="B"> It saves the form response to a Google Sheet automatically</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q6" value="C"> It monitors Google Forms and triggers the scenario when a new submission arrives</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q6" value="D"> It sends the final email reply to the person who submitted the form</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="mcq-item" data-q="7" data-answer="B">
+      <div class="question">7. What is a "Data Bundle" in Make.com?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q7" value="A"> A group of scenarios saved together inside one Make.com folder</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q7" value="B"> The package of information (name, email, message, etc.) that flows from one module to the next</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q7" value="C"> A paid add-on that unlocks advanced features in Make.com</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q7" value="D"> The exported blueprint file of a finished scenario</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="mcq-item" data-q="8" data-answer="D">
+      <div class="question">8. What is the minimum interval between scenario runs on Make.com's free plan?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q8" value="A"> 1 minute</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q8" value="B"> 5 minutes</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q8" value="C"> 30 minutes</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q8" value="D"> 15 minutes</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="mcq-item" data-q="9" data-answer="C">
+      <div class="question">9. From Section 8, which of these is a real example of selling automation as a freelance service?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q9" value="A"> Building a Make.com workflow for your own blog to automate social media posting</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q9" value="B"> Downloading a free template from Make.com's marketplace to use yourself</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q9" value="C"> Charging a real estate agent $300 to build a lead qualification automation for their business</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q9" value="D"> Using Make.com to organise your own personal email inbox automatically</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+
+    <div class="mcq-item" data-q="10" data-answer="A">
+      <div class="question">10. What is the correct order to build and launch a Make.com scenario?</div>
+      <div class="mcq-options">
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q10" value="A"> Add trigger → Add modules → Map data bundles → Run once to test → Activate</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q10" value="B"> Activate → Add modules → Test → Add trigger → Map bundles</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q10" value="C"> Test first → Add trigger → Add modules → Activate → Map bundles last</label>
+        <label class="mcq-option"><span class="radio"></span><input type="radio" name="q10" value="D"> The order does not matter — Make.com figures it out automatically</label>
+      </div>
+      <div class="mcq-feedback"></div>
+    </div>
+  </div>
+
+  <div id="shortSection" style="margin-top:2rem;">
+    <div class="section-label" style="margin-bottom:1rem; display:block;">Part 2: Short Answer (5 questions)</div>
+
+    <div class="short-item" data-q="11">
+      <div class="question">11. Describe the automation scenario you built or plan to build. Walk through it step by step — what triggers it, what does each module do, and what is the final output?</div>
+      <div class="hint">Like explaining a recipe: Trigger → Module 1 does X → Module 2 (ChatGPT) does Y → Final result goes to Z.</div>
+      <textarea name="s1" placeholder="My scenario starts when... Then the first module... Then ChatGPT... The final output is..." oninput="updateWordCount(this)"></textarea>
+      <div class="word-count">0 words</div>
+    </div>
+
+    <div class="short-item" data-q="12">
+      <div class="question">12. What prompt did you write for the OpenAI module? Describe or paste it here, and explain why you wrote it that way.</div>
+      <div class="hint">Include the actual prompt text you typed inside Make.com. Explain your reasoning — why those instructions, why that tone, why that length limit.</div>
+      <textarea name="s2" id="quizScenarioInput" placeholder="The prompt I wrote was: [paste your prompt here]. I wrote it this way because..." oninput="updateWordCount(this)"></textarea>
+      <div class="word-count">0 words</div>
+    </div>
+
+    <div class="short-item" data-q="13">
+      <div class="question">13. Explain the difference between a "Trigger" and a "Module" in Make.com. Why does this distinction matter when building a scenario?</div>
+      <div class="hint">Use the definitions from the class but put them in your own words. Give a specific example from a real scenario to show you understand — not just repeat the definition.</div>
+      <textarea name="s3" placeholder="A trigger is... A module is... The difference matters because... For example, in my scenario the trigger is..." oninput="updateWordCount(this)"></textarea>
+      <div class="word-count">0 words</div>
+    </div>
+
+    <div class="short-item" data-q="14">
+      <div class="question">14. From the three earning methods in Section 8, which would you actually try first — and what is your specific, concrete plan?</div>
+      <div class="hint">Name the method, your target client or audience, what automation you would build for them, and how you would find your first customer. The more specific you are, the better.</div>
+      <textarea name="s4" placeholder="I would try [method name] because... My target client would be... The automation I would build is... My first step to find a client is..." oninput="updateWordCount(this)"></textarea>
+      <div class="word-count">0 words</div>
+    </div>
+
+    <div class="short-item" data-q="15">
+      <div class="question">15. You have now completed all 5 classes of Series 1. Looking back from Class 1 to Class 5 — what was the biggest shift in how you think about AI? What can you do now that you could not do before?</div>
+      <div class="hint">No right or wrong answer. We want genuine reflection. What surprised you? What changed your thinking the most? What will you actually do with what you have learned?</div>
+      <textarea name="s5" placeholder="The biggest shift in how I think about AI is... Before this course I thought... Now I understand... What I will actually do next is..." oninput="updateWordCount(this)"></textarea>
+      <div class="word-count">0 words</div>
+    </div>
+  </div>
+
+  <div class="quiz-actions">
+    <button class="submit-quiz" id="submitBtn" onclick="submitQuiz()">Submit Final Quiz</button>
+  </div>
+
+  <div class="grading-loader" id="gradingLoader">
+    <div class="spinner"></div>
+    <p>Grading your answers... Just a moment.</p>
+  </div>
+
+  <div class="quiz-results" id="quizResults">
+    <div class="score-circle" id="scoreCircle">0%</div>
+    <h3 id="resultTitle">Quiz Complete!</h3>
+    <p id="resultMessage"></p>
+    <div class="result-actions" id="resultActions"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 <a href="/">LearnToWork.online</a> — Free AI education for everyone</p>
+    <p style="margin-top:0.5rem; font-size:0.78rem;">Made with ❤️ for learners worldwide · <a href="https://twitter.com/Isbella_esa" target="_blank" rel="noopener noreferrer">@Isbella_esa</a></p>
+  </div>
+</footer>
+
+<script>
+var CLAUDE_API_KEY = 'YOUR_API_KEY_HERE';
+
+var shortQuestions = [
+  { name: 's1', question: 'Describe your automation scenario — trigger, modules, final output.', rubric: 'Student should clearly describe a multi-step workflow with a specific trigger event, at least one intermediate step, and a clear final output. Any genuine description of a real or planned scenario earns full credit.' },
+  { name: 's2', question: 'What prompt did you write for the OpenAI module and why?', rubric: 'Student should describe or paste an actual prompt and show understanding that the prompt controls what ChatGPT does inside the automation. Partial credit if they explain the reasoning without a specific prompt.' },
+  { name: 's3', question: 'Explain the difference between a Trigger and a Module in Make.com with an example.', rubric: 'Student should correctly explain that a Trigger is the first module that starts the scenario when an event occurs, while Modules are individual processing steps. A concrete example earns full credit even if the definition is slightly imprecise.' },
+  { name: 's4', question: 'Which earning method would you try first and what is your specific plan?', rubric: 'Student should name one of the three methods and provide at least one concrete specific detail — a target client type, a type of automation to build, or a platform to use. Vague answers without specifics should receive partial credit only.' },
+  { name: 's5', question: 'What was the biggest shift in how you think about AI after completing all 5 classes?', rubric: 'This is a reflection question — any thoughtful, honest answer showing genuine engagement with the course deserves full credit. Look for evidence of real engagement with the material. Even short but genuine reflections should pass.' }
+];
+
+window.addEventListener('load', function() {
+  try {
+    var saved = localStorage.getItem('class5_scenario');
+    if (saved) document.getElementById('quizScenarioInput').value = saved;
+  } catch(e) {}
+});
+
+function saveScenario() {
+  var val = document.getElementById('savedScenario').value;
+  if (val.trim()) {
+    try { localStorage.setItem('class5_scenario', val); } catch(e) {}
+    var c = document.getElementById('saveConfirm');
+    c.style.display = 'flex';
+    document.getElementById('quizScenarioInput').value = val;
+  }
+}
+
+function startQuiz() {
+  document.getElementById('quizTransition').style.display = 'none';
+  var qs = document.getElementById('quizSection');
+  qs.classList.add('active');
+  qs.scrollIntoView({ behavior: 'smooth' });
+}
+
+document.querySelectorAll('.mcq-option').forEach(function(opt) {
+  opt.addEventListener('click', function() {
+    var item = this.closest('.mcq-item');
+    item.querySelectorAll('.mcq-option').forEach(function(o) { o.classList.remove('selected'); });
+    this.classList.add('selected');
+    this.querySelector('input').checked = true;
+  });
+});
+
+function updateWordCount(textarea) {
+  var words = textarea.value.trim().split(/\s+/).filter(function(w){ return w.length > 0; }).length;
+  textarea.nextElementSibling.textContent = words + ' words';
+}
+
+var tabSwitches = 0;
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden && document.getElementById('quizSection').classList.contains('active')) {
+    tabSwitches++;
+    if (tabSwitches >= 2) alert('Warning: Tab switching detected. Please stay on this page during the quiz.');
+  }
+});
+
+async function gradeWithClaude(question, rubric, answer) {
+  try {
+    var res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': CLAUDE_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 150,
+        messages: [{ role: 'user', content: 'Grade this student quiz answer fairly. Give credit if they show genuine understanding.\n\nQuestion: ' + question + '\nRubric: ' + rubric + '\nStudent answer: ' + answer + '\n\nRespond ONLY with valid JSON: {"score": 0 or 1, "feedback": "one short encouraging sentence"}' }]
+      })
+    });
+    var data = await res.json();
+    if (data.error) throw new Error(data.error.message);
+    var text = data.content[0].text.trim().replace(/```json|```/g, '').trim();
+    var result = JSON.parse(text);
+    return { score: result.score || 0, feedback: result.feedback || 'Answer reviewed.' };
+  } catch(e) {
+    return { score: answer.trim().length > 40 ? 1 : 0, feedback: answer.trim().length > 40 ? 'Answer accepted.' : 'Please write a more detailed answer.' };
+  }
+}
+
+async function submitQuiz() {
+  var mcqItems = document.querySelectorAll('.mcq-item');
+  var answered = 0;
+  mcqItems.forEach(function(item) { if (item.querySelector('input:checked')) answered++; });
+  if (answered < 10) { alert('Please answer all 10 multiple choice questions first.'); return; }
+
+  var shorts = document.querySelectorAll('.short-item textarea');
+  var filled = 0;
+  shorts.forEach(function(t) { if (t.value.trim().length > 15) filled++; });
+  if (filled < 5) { alert('Please write at least a few sentences for each short answer question.'); return; }
+
+  document.getElementById('submitBtn').disabled = true;
+  document.getElementById('gradingLoader').classList.add('show');
+  document.getElementById('gradingLoader').querySelector('p').textContent = 'Grading MCQs...';
+
+  var mcqScore = 0;
+  mcqItems.forEach(function(item) {
+    var correct = item.dataset.answer;
+    var selected = item.querySelector('input:checked') ? item.querySelector('input:checked').value : null;
+    var feedback = item.querySelector('.mcq-feedback');
+    item.querySelectorAll('.mcq-option').forEach(function(opt) {
+      var val = opt.querySelector('input').value;
+      if (val === correct) opt.classList.add('correct');
+      else if (val === selected && val !== correct) opt.classList.add('wrong');
+    });
+    if (selected === correct) {
+      mcqScore++;
+      feedback.textContent = '✓ Correct!';
+      feedback.className = 'mcq-feedback correct show';
+    } else {
+      var correctText = item.querySelector('input[value="' + correct + '"]').closest('label').textContent.trim().substring(3);
+      feedback.textContent = '✗ Correct answer: ' + correctText;
+      feedback.className = 'mcq-feedback wrong show';
+    }
+  });
+
+  document.getElementById('gradingLoader').querySelector('p').textContent = 'AI is reviewing your short answers... 10–20 seconds.';
+
+  var shortScore = 0;
+  var shortItems = document.querySelectorAll('.short-item');
+  for (var i = 0; i < shortQuestions.length; i++) {
+    var q = shortQuestions[i];
+    var textarea = document.querySelector('textarea[name="' + q.name + '"]');
+    var answer = textarea ? textarea.value : '';
+    document.getElementById('gradingLoader').querySelector('p').textContent = 'Grading short answer ' + (i+1) + ' of 5...';
+    var result = await gradeWithClaude(q.question, q.rubric, answer);
+    shortScore += result.score;
+    var shortItem = shortItems[i];
+    if (shortItem) {
+      var fb = document.createElement('div');
+      fb.style.cssText = 'margin-top:0.75rem;padding:0.75rem 1rem;border-radius:10px;font-size:0.87rem;line-height:1.5;';
+      if (result.score === 1) {
+        fb.style.cssText += 'color:#10b981;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);';
+        fb.innerHTML = '✓ ' + result.feedback;
+      } else {
+        fb.style.cssText += 'color:#f59e0b;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);';
+        fb.innerHTML = '○ ' + result.feedback;
+      }
+      shortItem.appendChild(fb);
+    }
+  }
+  showResults(mcqScore, shortScore);
+}
+
+function showResults(mcq, sa) {
+  document.getElementById('gradingLoader').classList.remove('show');
+  var results = document.getElementById('quizResults');
+  results.classList.add('show');
+  var total = Math.round(((mcq + sa) / 15) * 100);
+  document.getElementById('scoreCircle').textContent = total + '%';
+  var passed = total >= 70;
+  if (passed) {
+    document.getElementById('resultTitle').textContent = '🎓 Series 1 Complete!';
+    document.getElementById('resultMessage').innerHTML = 'You scored <strong>' + total + '%</strong> — MCQs: ' + mcq + '/10, Short answers: ' + sa + '/5.<br>You have completed all 5 classes of Series 1. Your certificate is ready!';
+    document.getElementById('resultActions').innerHTML = '<a href="/build-ai-products/certificate/" class="next-class-btn">🏆 Get My Certificate →</a>';
+    try { localStorage.setItem('class5_passed','true'); localStorage.setItem('class5_score', total); localStorage.setItem('series1_complete','true'); } catch(e) {}
+  } else {
+    document.getElementById('resultTitle').textContent = 'Almost There!';
+    document.getElementById('resultMessage').innerHTML = 'You scored <strong>' + total + '%</strong>. Need 70% to unlock your certificate.<br>MCQs: ' + mcq + '/10, Short answers: ' + sa + '/5.<br>Review the class above and try again — you are very close!';
+    document.getElementById('resultActions').innerHTML = '<button onclick="location.reload()" class="review-btn">↻ Retake Quiz</button>';
+  }
+  results.scrollIntoView({ behavior: 'smooth' });
+}
+
+function toggleNav() {}
+</script>
+
+</body>
+</html>
