@@ -580,5 +580,70 @@
     }
     window.addEventListener('load', showCookieBanner);
   </script>
+  <!-- Isabella Chatbot -->
+<style>
+#dm-btn{position:fixed;bottom:24px;right:24px;width:64px;height:64px;border-radius:50%;border:none;cursor:pointer;background:none;z-index:9999;padding:0;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+#dm-btn img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+#dm-box{position:fixed;bottom:100px;right:24px;width:320px;height:420px;background:#1a1a2e;border-radius:16px;display:none;flex-direction:column;z-index:9998;box-shadow:0 8px 32px rgba(0,0,0,0.4);border:1px solid #7c3aed}
+#dm-head{background:#7c3aed;padding:12px 16px;border-radius:16px 16px 0 0;display:flex;align-items:center;gap:10px}
+#dm-head img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+#dm-head span{color:white;font-weight:bold;font-size:14px;font-family:sans-serif}
+#dm-msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+#dm-msgs div{padding:8px 12px;border-radius:12px;font-size:13px;font-family:sans-serif;max-width:85%;line-height:1.4}
+.dm-bot{background:#2d2d44;color:#e2e8f0;align-self:flex-start}
+.dm-user{background:#7c3aed;color:white;align-self:flex-end}
+#dm-inp{display:flex;padding:10px;gap:8px;border-top:1px solid #2d2d44}
+#dm-inp input{flex:1;background:#2d2d44;border:none;color:white;padding:8px 12px;border-radius:20px;font-size:13px;outline:none}
+#dm-inp button{background:#7c3aed;border:none;color:white;padding:8px 14px;border-radius:20px;cursor:pointer;font-size:13px}
+</style>
+
+<button id="dm-btn" onclick="document.getElementById('dm-box').style.display=document.getElementById('dm-box').style.display==='flex'?'none':'flex'">
+<img src="https://learntowork.online/images/isabella-avatar.png" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><circle cx=%2232%22 cy=%2232%22 r=%2232%22 fill=%22%237c3aed%22/><text x=%2232%22 y=%2238%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2224%22>👩‍💻</text></svg>'">
+</button>
+
+<div id="dm-box">
+<div id="dm-head">
+<img src="https://learntowork.online/images/isabella-avatar.png" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><circle cx=%2232%22 cy=%2232%22 r=%2232%22 fill=%22%237c3aed%22/><text x=%2232%22 y=%2238%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2224%22>👩‍💻</text></svg>'">
+<span>Isabella</span>
+</div>
+<div id="dm-msgs">
+<div class="dm-bot">Hi! I'm Isabella 👋 How can I help you today?</div>
+</div>
+<div id="dm-inp">
+<input id="dm-input" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')dmSend()">
+<button onclick="dmSend()">Send</button>
+</div>
+</div>
+
+<script>
+const WORKER="https://isabella-bot.anayakhan9122.workers.dev";
+let dmHistory=[];
+async function dmSend(){
+const input=document.getElementById('dm-input');
+const msg=input.value.trim();
+if(!msg)return;
+input.value='';
+dmAddMsg(msg,'dm-user');
+dmHistory.push({role:"user",parts:[{text:msg}]});
+dmAddMsg('...','dm-bot','dm-typing');
+try{
+const r=await fetch(WORKER,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,history:dmHistory.slice(-10)})});
+const d=await r.json();
+document.getElementById('dm-typing').remove();
+const reply=d.reply||'Sorry, try again.';
+dmAddMsg(reply,'dm-bot');
+dmHistory.push({role:"model",parts:[{text:reply}]});
+}catch(e){document.getElementById('dm-typing')?.remove();dmAddMsg('Connection error. Try again.','dm-bot');}
+}
+function dmAddMsg(text,cls,id){
+const msgs=document.getElementById('dm-msgs');
+const div=document.createElement('div');
+div.className=cls;
+if(id)div.id=id;
+div.textContent=text;
+msgs.appendChild(div);
+msgs.scrollTop=msgs.scrollHeight;
+}
+</script>
 </body>
 </html>
