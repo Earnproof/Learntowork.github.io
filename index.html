@@ -618,6 +618,17 @@
 <script>
 const WORKER="https://isabella-bot.anayakhan9122.workers.dev";
 let dmHistory=[];
+  setTimeout(()=>{
+const bubble=document.createElement('div');
+bubble.id='dm-bubble';
+bubble.innerHTML='💬 Chat with Isabella';
+bubble.style.cssText='position:fixed;bottom:100px;right:24px;background:#7c3aed;color:white;padding:10px 16px;border-radius:20px;font-family:sans-serif;font-size:13px;font-weight:bold;cursor:pointer;z-index:9997;box-shadow:0 4px 16px rgba(124,58,237,0.4);animation:dmPop 0.4s ease';
+bubble.onclick=()=>{bubble.remove();document.getElementById('dm-box').style.display='flex';};
+document.body.appendChild(bubble);
+const style=document.createElement('style');
+style.textContent='@keyframes dmPop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}';
+document.head.appendChild(style);
+},4000);
 async function dmSend(){
 const input=document.getElementById('dm-input');
 const msg=input.value.trim();
