@@ -31,7 +31,6 @@
     gtag('config', 'G-G023112WHJ');
   </script>
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,7 +58,7 @@
     h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; }
     a { color: var(--blue-light); }
 
-    /* NAV */
+    /* ── NAV ── */
     nav { position: sticky; top: 0; z-index: 1000; background: rgba(2,6,23,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(124,58,237,0.2); padding: 0 1.5rem; }
     .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--white); text-decoration: none; }
@@ -67,8 +66,32 @@
     .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 0.5rem 0.85rem; border-radius: 8px; transition: all 0.2s; }
     .nav-links a:hover { color: var(--white); background: rgba(124,58,237,0.12); }
     .nav-links a.active { color: var(--purple-light); background: rgba(124,58,237,0.12); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gray); border-radius: 2px; }
+
+    /* ── HAMBURGER ── */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 1100; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gray); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── MOBILE NAV ── */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 64px; left: 0; right: 0;
+        background: rgba(2,6,23,0.98);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(124,58,237,0.2);
+        padding: 1.5rem;
+        gap: 0.25rem;
+        z-index: 999;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1rem; padding: 0.75rem 1rem; border-radius: 10px; display: block; }
+      .hamburger { display: flex; }
+    }
 
     /* HERO */
     .hero { position: relative; padding: 5rem 1.5rem 4rem; text-align: center; overflow: hidden; }
@@ -114,11 +137,12 @@
     .class-card:hover .class-card-image img { transform: scale(1.05); }
     .class-card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
     .class-label { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple-light); background: rgba(124,58,237,0.1); padding: 0.25rem 0.7rem; border-radius: 50px; margin-bottom: 0.75rem; align-self: flex-start; }
+    .class-label.series2 { color: var(--blue-light); background: rgba(59,130,246,0.1); }
     .class-card-content h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem; line-height: 1.3; }
     .class-card-content p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; margin-bottom: 1rem; flex-grow: 1; }
     .read-time { font-size: 0.82rem; color: #475569; }
 
-    /* TOOLS SECTION — External links */
+    /* TOOLS */
     .tools-section { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
     .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
     .tool-card { background: var(--dark-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 1.25rem; display: flex; align-items: flex-start; gap: 0.85rem; transition: all 0.25s; text-decoration: none; color: var(--white); }
@@ -132,7 +156,8 @@
     .series-section { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
     .series-card { background: var(--dark-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 18px; padding: 1.75rem; margin-bottom: 1.25rem; transition: all 0.3s; }
     .series-card:hover { border-color: rgba(124,58,237,0.3); }
-    .series-card.active-series { border-color: rgba(124,58,237,0.4); background: rgba(124,58,237,0.05); }
+    .series-card.active-series { border-color: rgba(16,185,129,0.4); background: rgba(16,185,129,0.03); }
+    .series-card.active-series2 { border-color: rgba(124,58,237,0.4); background: rgba(124,58,237,0.05); }
     .series-card.locked { opacity: 0.6; }
     .series-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.1rem; flex-wrap: wrap; gap: 0.75rem; }
     .series-left { display: flex; align-items: center; gap: 1rem; }
@@ -142,11 +167,13 @@
     .series-info p { font-size: 0.82rem; color: var(--gray); }
     .series-badge { font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 50px; white-space: nowrap; }
     .badge-live { background: rgba(16,185,129,0.12); color: var(--green); border: 1px solid rgba(16,185,129,0.25); }
-    .badge-soon { background: rgba(124,58,237,0.12); color: var(--purple-light); border: 1px solid rgba(124,58,237,0.25); }
+    .badge-progress { background: rgba(124,58,237,0.12); color: var(--purple-light); border: 1px solid rgba(124,58,237,0.25); }
+    .badge-soon { background: rgba(59,130,246,0.1); color: var(--blue-light); border: 1px solid rgba(59,130,246,0.2); }
     .badge-locked { background: var(--dark-3); color: var(--gray); }
     .series-classes { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
     .class-pill { font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 50px; background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.15); color: var(--purple-light); text-decoration: none; transition: all 0.2s; }
     .class-pill:hover { background: rgba(124,58,237,0.2); border-color: rgba(124,58,237,0.4); }
+    .class-pill.done { background: rgba(16,185,129,0.08); border-color: rgba(16,185,129,0.2); color: var(--green); }
     .class-pill.locked-class { color: #475569; background: var(--dark-3); border-color: transparent; cursor: not-allowed; }
     .class-pill.coming { color: var(--gray); background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.08); cursor: default; }
 
@@ -212,9 +239,6 @@
     .cookie-btn { background: linear-gradient(135deg, var(--purple), var(--blue)); color: white; border: none; padding: 0.6rem 1.25rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--dark-2); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem; z-index: 999; }
       .build-grid { grid-template-columns: 1fr 1fr; }
       .audience-grid { grid-template-columns: 1fr 1fr; }
       .cert-preview-wrap { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -245,7 +269,7 @@
       <li><a href="video-automation/">Video</a></li>
       <li><a href="build-ai-products/" class="active">Build AI</a></li>
     </ul>
-    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -287,17 +311,14 @@
 
 <div class="divider"><hr /></div>
 
-<!-- ALL 5 CLASS CARDS -->
+<!-- SERIES 1 CLASS CARDS -->
 <div class="class-cards-section">
-  <div class="section-label">Available Classes</div>
-  <h2 class="section-title">Series 1 — All 5 Classes Live</h2>
-  <p class="section-desc">Complete all 5 classes to unlock your Series 1 Certificate!</p>
+  <div class="section-label">Series 1 — AI Foundations</div>
+  <h2 class="section-title">All 5 Classes — Complete & Free</h2>
+  <p class="section-desc">Complete all 5 to unlock your Series 1 Certificate!</p>
   <div class="class-cards-grid">
-
     <a href="build-ai-products/class-1/" class="class-card">
-      <div class="class-card-image">
-        <img src="/images/build-ai-products/class-1/og-social-share.png" alt="Class 1 What Is AI" loading="lazy">
-      </div>
+      <div class="class-card-image"><img src="/images/build-ai-products/class-1/og-social-share.png" alt="Class 1 What Is AI" loading="lazy"></div>
       <div class="class-card-content">
         <span class="class-label">G1 — Series 1</span>
         <h3>What Is AI? The Truth Behind the Hype</h3>
@@ -305,11 +326,8 @@
         <span class="read-time">⏱ 20 min · 📝 Quiz included</span>
       </div>
     </a>
-
     <a href="build-ai-products/class-2/" class="class-card">
-      <div class="class-card-image">
-        <img src="/images/build-ai-products/class-2/og-social-share.png" alt="Class 2 ChatGPT Mastery" loading="lazy">
-      </div>
+      <div class="class-card-image"><img src="/images/build-ai-products/class-2/og-social-share.png" alt="Class 2 ChatGPT Mastery" loading="lazy"></div>
       <div class="class-card-content">
         <span class="class-label">G2 — Series 1</span>
         <h3>ChatGPT Mastery: From Basic User to Power User</h3>
@@ -317,11 +335,8 @@
         <span class="read-time">⏱ 25 min · 📝 Quiz included</span>
       </div>
     </a>
-
     <a href="build-ai-products/class-3/" class="class-card">
-      <div class="class-card-image">
-        <img src="/images/build-ai-products/class-3/og-social-share.png" alt="Class 3 Build a Custom GPT" loading="lazy">
-      </div>
+      <div class="class-card-image"><img src="/images/build-ai-products/class-3/og-social-share.png" alt="Class 3 Build a Custom GPT" loading="lazy"></div>
       <div class="class-card-content">
         <span class="class-label">G3 — Series 1</span>
         <h3>Build Your Own Custom GPT in 20 Minutes</h3>
@@ -329,11 +344,8 @@
         <span class="read-time">⏱ 25 min · 📝 Quiz included</span>
       </div>
     </a>
-
     <a href="build-ai-products/class-4/" class="class-card">
-      <div class="class-card-image">
-        <img src="/images/build-ai-products/class-4/og-social-share.png" alt="Class 4 Build AI Chatbot" loading="lazy">
-      </div>
+      <div class="class-card-image"><img src="/images/build-ai-products/class-4/og-social-share.png" alt="Class 4 Build AI Chatbot" loading="lazy"></div>
       <div class="class-card-content">
         <span class="class-label">G4 — Series 1</span>
         <h3>Build a Free AI Chatbot for Any Website</h3>
@@ -341,11 +353,8 @@
         <span class="read-time">⏱ 25 min · 📝 Quiz included</span>
       </div>
     </a>
-
     <a href="build-ai-products/class-5/" class="class-card">
-      <div class="class-card-image">
-        <img src="/images/build-ai-products/class-5/og-social-share.png" alt="Class 5 AI Automation Make.com" loading="lazy">
-      </div>
+      <div class="class-card-image"><img src="/images/build-ai-products/class-5/og-social-share.png" alt="Class 5 AI Automation Make.com" loading="lazy"></div>
       <div class="class-card-content">
         <span class="class-label">G5 — Series 1 · Final</span>
         <h3>AI Automation with Make.com — Workflows That Run Themselves</h3>
@@ -353,65 +362,70 @@
         <span class="read-time">⏱ 30 min · 📝 Quiz + Certificate</span>
       </div>
     </a>
-
   </div>
 </div>
 
 <div class="divider"><hr /></div>
 
-<!-- TOOLS USED — External Links for SEO -->
+<!-- SERIES 2 CLASS CARDS -->
+<div class="class-cards-section">
+  <div class="section-label">Series 2 — Build AI Chatbots</div>
+  <h2 class="section-title">Series 2 — Now Live!</h2>
+  <p class="section-desc">Build real AI chatbots for business — customer service, sales, and more.</p>
+  <div class="class-cards-grid">
+    <a href="build-ai-products/class-6/" class="class-card">
+      <div class="class-card-image"><img src="/images/build-ai-products/class-6/og-social-share.png" alt="Class 6 AI Customer Service Chatbot" loading="lazy"></div>
+      <div class="class-card-content">
+        <span class="class-label series2">G6 — Series 2 · New</span>
+        <h3>Build a Free AI Customer Service Chatbot</h3>
+        <p>Build a chatbot that handles complaints, refunds, and angry customers professionally — 24/7, automatically.</p>
+        <span class="read-time">⏱ 30 min · 📝 Quiz included</span>
+      </div>
+    </a>
+    <!-- G7-G10 coming soon placeholders -->
+    <div class="class-card" style="opacity:0.5;cursor:default;">
+      <div class="class-card-image" style="display:flex;align-items:center;justify-content:center;background:var(--dark-3);"><span style="font-size:2rem;">🔒</span></div>
+      <div class="class-card-content">
+        <span class="class-label series2">G7 — Series 2</span>
+        <h3>Coming Soon</h3>
+        <p>Next class in Series 2 — releasing soon. Complete Class 6 to prepare!</p>
+        <span class="read-time">⏳ Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><hr /></div>
+
+<!-- TOOLS -->
 <div class="tools-section">
   <div class="section-label">Tools You Will Use</div>
   <h2 class="section-title">Free Tools Used in This Course</h2>
-  <p class="section-desc">Every tool below is free to start. No paid subscriptions needed for Series 1.</p>
+  <p class="section-desc">Every tool below is free to start. No paid subscriptions needed for Series 1 or 2.</p>
   <div class="tools-grid">
     <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="tool-card">
       <div class="tool-icon">🤖</div>
-      <div class="tool-text">
-        <h4>ChatGPT</h4>
-        <p>AI assistant by OpenAI — used in Classes 1, 2 and 3</p>
-        <span class="ext-label">↗ chat.openai.com</span>
-      </div>
+      <div class="tool-text"><h4>ChatGPT</h4><p>AI assistant by OpenAI — Classes 1, 2, 3</p><span class="ext-label">↗ chat.openai.com</span></div>
     </a>
     <a href="https://www.chatbase.co" target="_blank" rel="noopener noreferrer" class="tool-card">
       <div class="tool-icon">💬</div>
-      <div class="tool-text">
-        <h4>Chatbase</h4>
-        <p>Build and embed AI chatbots — used in Class 4</p>
-        <span class="ext-label">↗ chatbase.co</span>
-      </div>
+      <div class="tool-text"><h4>Chatbase</h4><p>Build AI chatbots — Classes 4 and 6</p><span class="ext-label">↗ chatbase.co</span></div>
     </a>
     <a href="https://www.make.com" target="_blank" rel="noopener noreferrer" class="tool-card">
       <div class="tool-icon">⚡</div>
-      <div class="tool-text">
-        <h4>Make.com</h4>
-        <p>Visual automation platform — used in Class 5</p>
-        <span class="ext-label">↗ make.com</span>
-      </div>
+      <div class="tool-text"><h4>Make.com</h4><p>Visual automation platform — Class 5</p><span class="ext-label">↗ make.com</span></div>
     </a>
     <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" class="tool-card">
       <div class="tool-icon">🔑</div>
-      <div class="tool-text">
-        <h4>OpenAI API</h4>
-        <p>Free API key for Make.com automation — Class 5</p>
-        <span class="ext-label">↗ platform.openai.com</span>
-      </div>
+      <div class="tool-text"><h4>OpenAI API</h4><p>Free API key for automation — Class 5</p><span class="ext-label">↗ platform.openai.com</span></div>
     </a>
     <a href="https://www.google.com/forms/about/" target="_blank" rel="noopener noreferrer" class="tool-card">
       <div class="tool-icon">📋</div>
-      <div class="tool-text">
-        <h4>Google Forms</h4>
-        <p>Free form builder — used as trigger in Class 5</p>
-        <span class="ext-label">↗ google.com/forms</span>
-      </div>
+      <div class="tool-text"><h4>Google Forms</h4><p>Free form builder — trigger in Class 5</p><span class="ext-label">↗ google.com/forms</span></div>
     </a>
     <a href="https://www.notion.so" target="_blank" rel="noopener noreferrer" class="tool-card">
       <div class="tool-icon">📓</div>
-      <div class="tool-text">
-        <h4>Notion</h4>
-        <p>Free workspace — used for automation workflows</p>
-        <span class="ext-label">↗ notion.so</span>
-      </div>
+      <div class="tool-text"><h4>Notion</h4><p>Free workspace — automation workflows</p><span class="ext-label">↗ notion.so</span></div>
     </a>
   </div>
 </div>
@@ -422,40 +436,53 @@
 <div class="series-section">
   <div class="section-label">Course Structure</div>
   <h2 class="section-title" style="margin-bottom:0.5rem;">5 Series — 25 Classes</h2>
-  <p class="section-desc">Complete one series — then the next one unlocks!</p>
+  <p class="section-desc">Complete one series at a time — each one builds on the last!</p>
 
+  <!-- Series 1 — Complete -->
   <div class="series-card active-series">
     <div class="series-header">
       <div class="series-left">
         <div class="series-num">1</div>
-        <div class="series-info"><h3>Series 1 — AI Foundations</h3><p>From absolute zero — what is AI, how it works, tools, prompting, chatbots and automation</p></div>
+        <div class="series-info"><h3>Series 1 — AI Foundations</h3><p>What is AI, ChatGPT, Custom GPT, chatbots, automation</p></div>
       </div>
-      <span class="series-badge badge-live">🟢 All 5 Live</span>
+      <span class="series-badge badge-live">✅ All 5 Complete</span>
     </div>
     <div class="series-classes">
-      <a href="build-ai-products/class-1/" class="class-pill">G1 — What Is AI?</a>
-      <a href="build-ai-products/class-2/" class="class-pill">G2 — ChatGPT Mastery</a>
-      <a href="build-ai-products/class-3/" class="class-pill">G3 — Custom GPT</a>
-      <a href="build-ai-products/class-4/" class="class-pill">G4 — AI Chatbot</a>
-      <a href="build-ai-products/class-5/" class="class-pill">G5 — AI Automation</a>
+      <a href="build-ai-products/class-1/" class="class-pill done">✓ G1 — What Is AI?</a>
+      <a href="build-ai-products/class-2/" class="class-pill done">✓ G2 — ChatGPT Mastery</a>
+      <a href="build-ai-products/class-3/" class="class-pill done">✓ G3 — Custom GPT</a>
+      <a href="build-ai-products/class-4/" class="class-pill done">✓ G4 — AI Chatbot</a>
+      <a href="build-ai-products/class-5/" class="class-pill done">✓ G5 — AI Automation</a>
     </div>
   </div>
 
-  <div class="series-card locked">
-    <div class="series-header"><div class="series-left"><div class="series-num">2</div><div class="series-info"><h3>Series 2 — Build AI Chatbots</h3><p>Build real AI chatbots — customer service, games, assistants</p></div></div><span class="series-badge badge-soon">🔜 Coming Soon</span></div>
-    <div class="series-classes"><span class="class-pill locked-class">🔒 G6</span><span class="class-pill locked-class">🔒 G7</span><span class="class-pill locked-class">🔒 G8</span><span class="class-pill locked-class">🔒 G9</span><span class="class-pill locked-class">🔒 G10</span></div>
+  <!-- Series 2 — In Progress -->
+  <div class="series-card active-series2">
+    <div class="series-header">
+      <div class="series-left">
+        <div class="series-num">2</div>
+        <div class="series-info"><h3>Series 2 — Build AI Chatbots</h3><p>Customer service bots, sales assistants, business chatbots</p></div>
+      </div>
+      <span class="series-badge badge-progress">🟣 In Progress — 1/5 Live</span>
+    </div>
+    <div class="series-classes">
+      <a href="build-ai-products/class-6/" class="class-pill">G6 — CS Chatbot</a>
+      <span class="class-pill coming">G7 — Coming Soon</span>
+      <span class="class-pill coming">G8 — Coming Soon</span>
+      <span class="class-pill coming">G9 — Coming Soon</span>
+      <span class="class-pill coming">G10 — Coming Soon</span>
+    </div>
   </div>
 
+  <!-- Series 3-5 Locked -->
   <div class="series-card locked">
     <div class="series-header"><div class="series-left"><div class="series-num">3</div><div class="series-info"><h3>Series 3 — Build AI Apps & Tools</h3><p>Voice AI, image generators, writing tools and more</p></div></div><span class="series-badge badge-locked">🔒 Locked</span></div>
     <div class="series-classes"><span class="class-pill locked-class">🔒 G11</span><span class="class-pill locked-class">🔒 G12</span><span class="class-pill locked-class">🔒 G13</span><span class="class-pill locked-class">🔒 G14</span><span class="class-pill locked-class">🔒 G15</span></div>
   </div>
-
   <div class="series-card locked">
-    <div class="series-header"><div class="series-left"><div class="series-num">4</div><div class="series-info"><h3>Series 4 — AI for Business</h3><p>AI SaaS, mobile apps, Chrome extensions — real products</p></div></div><span class="series-badge badge-locked">🔒 Locked</span></div>
+    <div class="series-header"><div class="series-left"><div class="series-num">4</div><div class="series-info"><h3>Series 4 — AI for Business</h3><p>AI SaaS, mobile apps, Chrome extensions</p></div></div><span class="series-badge badge-locked">🔒 Locked</span></div>
     <div class="series-classes"><span class="class-pill locked-class">🔒 G16</span><span class="class-pill locked-class">🔒 G17</span><span class="class-pill locked-class">🔒 G18</span><span class="class-pill locked-class">🔒 G19</span><span class="class-pill locked-class">🔒 G20</span></div>
   </div>
-
   <div class="series-card locked">
     <div class="series-header"><div class="series-left"><div class="series-num">5</div><div class="series-info"><h3>Series 5 — Expert Level</h3><p>Python, OpenAI API, custom models, launch & monetize</p></div></div><span class="series-badge badge-locked">🔒 Locked</span></div>
     <div class="series-classes"><span class="class-pill locked-class">🔒 G21</span><span class="class-pill locked-class">🔒 G22</span><span class="class-pill locked-class">🔒 G23</span><span class="class-pill locked-class">🔒 G24</span><span class="class-pill locked-class">🔒 G25</span></div>
@@ -489,7 +516,7 @@
     <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Do I need a laptop or does my phone work?</div><div class="faq-answer"><div class="faq-answer-inner">Your phone works perfectly for Series 1 and 2. For later series involving SaaS and Python, a laptop makes things easier.</div></div></div>
     <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">How long is each class?</div><div class="faq-answer"><div class="faq-answer-inner">Each class is 20–30 minutes — short enough to finish in one sitting, long enough to build something real.</div></div></div>
     <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Can I put the certificate on my resume or LinkedIn?</div><div class="faq-answer"><div class="faq-answer-inner">Absolutely. The certificate is a downloadable PDF with your name on it. Add it to LinkedIn, your portfolio, or job applications.</div></div></div>
-    <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What tools do I need to get started?</div><div class="faq-answer"><div class="faq-answer-inner">Just a free ChatGPT account to start. Class 4 uses Chatbase (free) and Class 5 uses Make.com (free) and an OpenAI API key (free credits included for new accounts).</div></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What tools do I need to get started?</div><div class="faq-answer"><div class="faq-answer-inner">Just a free ChatGPT account to start. Later classes use Chatbase, Make.com and OpenAI API — all free to begin.</div></div></div>
   </div>
 </div>
 
@@ -515,10 +542,10 @@
     <div class="cert-text">
       <div class="section-label">Course Certificate</div>
       <h2>Complete Series 1 —<br><span>Get Your Certificate!</span></h2>
-      <p>Complete all 5 classes, pass the quizzes — and download your official LearnToWork Series 1 Certificate with your name and completion date on it.</p>
+      <p>Complete all 5 classes of Series 1, pass the quizzes — and download your official LearnToWork Certificate with your name and completion date on it.</p>
       <ul class="cert-requirements">
-        <li>All 5 classes must be completed</li>
-        <li>Pass the quiz for each class (70%+)</li>
+        <li>All 5 Series 1 classes completed</li>
+        <li>Pass each quiz with 70%+</li>
         <li>Your name printed on the certificate</li>
         <li>PDF download — share on LinkedIn or CV</li>
       </ul>
@@ -578,7 +605,35 @@
 <script>
   if (localStorage.getItem('cookieAccepted')) document.getElementById('cookieBanner').classList.add('hidden');
   function acceptCookies() { localStorage.setItem('cookieAccepted','true'); document.getElementById('cookieBanner').classList.add('hidden'); }
-  function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+
+  // ── HAMBURGER NAV — FIXED ──
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close nav when a link is clicked
+  navLinks.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close nav when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  });
 </script>
 </body>
 </html>
