@@ -676,7 +676,7 @@
     document.addEventListener("mousemove", dragMove);
     document.addEventListener("mouseup", dragEnd);
 
-    dmBtn.addEventListener("touchstart", dragStart, { passive: false });
+    dmBtn.addEventListener("touchstart", dragStart, { passive: true });
     document.addEventListener("touchmove", dragMove, { passive: false });
     document.addEventListener("touchend", dragEnd);
 
@@ -703,7 +703,7 @@
       const clientY = e.type === "touchmove" ? e.touches[0].clientY : e.clientY;
       const dx = clientX - startX;
       const dy = clientY - startY;
-      if (Math.abs(dx) > 5 || Math.abs(dy) > 5) { hasMoved = true; }
+      if (Math.abs(dx) > 15 || Math.abs(dy) > 15) { hasMoved = true; }
       let newLeft = initialLeft + dx;
       let newTop = initialTop + dy;
       if (newLeft < 0) newLeft = 0;
