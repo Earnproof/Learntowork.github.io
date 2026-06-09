@@ -238,6 +238,52 @@
       .cta-box { padding:2.5rem 1.5rem; }
       .cta-box h2 { font-size:1.5rem; }
     }
+
+    /* --- 🤖 ISABELLA CHATBOT NEW STYLING --- */
+    #dm-btn {
+      position: fixed; bottom: 24px; right: 24px; width: 64px; height: 64px;
+      border-radius: 50%; border: 3px solid #7c3aed; cursor: move; background: none;
+      z-index: 9999; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      user-select: none; -webkit-user-drag: none;
+      animation: dm-breathe 3s ease-in-out infinite;
+    }
+    #dm-btn img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; pointer-events: none; }
+    #dm-btn::after {
+      content: ''; position: absolute; top: -3px; left: -3px; width: 100%; height: 100%;
+      border-radius: 50%; border: 3px solid rgba(124, 58, 237, 0.6); z-index: -1;
+      animation: dm-glow 2s linear infinite; pointer-events: none;
+    }
+    @keyframes dm-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+    @keyframes dm-glow { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.4); opacity: 0; } }
+
+    #dm-welcome-popup {
+      position: fixed; bottom: 100px; right: 24px; background: #7c3aed; color: white;
+      padding: 10px 14px; border-radius: 12px; font-size: 13px; font-family: sans-serif;
+      font-weight: 500; white-space: nowrap; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: opacity 0.5s ease, transform 0.5s ease; z-index: 10000; pointer-events: none;
+    }
+    .dm-popup-hidden { opacity: 0 !important; transform: translateY(10px) scale(0.9) !important; }
+    .dm-popup-arrow {
+      position: absolute; bottom: -6px; right: 22px; width: 0; height: 0;
+      border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid #7c3aed;
+    }
+
+    #dm-box {
+      position: fixed; bottom: 100px; right: 24px; width: 320px; height: 420px;
+      background: #1a1a2e; border-radius: 16px; display: none; flex-direction: column;
+      z-index: 9998; box-shadow: 0 8px 32px rgba(0,0,0,0.4); border: 1px solid #7c3aed;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    #dm-head { background: #7c3aed; padding: 12px 16px; border-radius: 16px 16px 0 0; display: flex; align-items: center; gap: 10px; }
+    #dm-head img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+    #dm-head span { color: white; font-weight: bold; font-size: 14px; font-family: sans-serif; }
+    #dm-msgs { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    #dm-msgs div { padding: 8px 12px; border-radius: 12px; font-size: 13px; font-family: sans-serif; max-width: 85%; line-height: 1.4; word-wrap: break-word; }
+    .dm-bot { background: #2d2d44; color: #e2e8f0; align-self: flex-start; }
+    .dm-user { background: #7c3aed; color: white; align-self: flex-end; }
+    #dm-inp { display: flex; padding: 10px; gap: 8px; border-top: 1px solid #2d2d44; }
+    #dm-inp input { flex: 1; background: #2d2d44; border: none; color: white; padding: 8px 12px; border-radius: 20px; font-size: 13px; outline: none; }
+    #dm-inp button { background: #7c3aed; border: none; color: white; padding: 8px 14px; border-radius: 20px; cursor: pointer; font-size: 13px; }
   </style>
 </head>
 <body>
@@ -409,9 +455,6 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════
-       BLOG SECTION — NEW
-  ═══════════════════════════════════ -->
   <section id="blog" class="blog-section">
     <div class="section-header">
       <div class="section-tag">From the Blog</div>
@@ -419,14 +462,10 @@
       <p>Short, practical guides you can read in 5 minutes and apply today.</p>
     </div>
     <div class="blog-grid">
-
-      <!-- Blog Post 1 -->
       <a href="blog/free-ai-chatbot-website/" class="blog-card" target="_self">
         <span class="blog-badge">New</span>
         <div class="blog-image">
-          <img src="images/blog/free-ai-chatbot-website/hero.png"
-               alt="How to Build a Free AI Chatbot for Your Website — 4 step guide"
-               loading="lazy" width="600" height="315">
+          <img src="images/blog/free-ai-chatbot-website/hero.png" alt="How to Build a Free AI Chatbot for Your Website" loading="lazy" width="600" height="315">
         </div>
         <div class="blog-content">
           <span class="blog-cat">🤖 AI Tools</span>
@@ -439,14 +478,10 @@
         </div>
       </a>
 
-      <!-- Blog Post 2 — placeholder until built -->
       <a href="blog/make-com-tutorial-beginners/" class="blog-card" target="_self">
         <span class="blog-badge">New</span>
         <div class="blog-image" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(59,130,246,0.1));">
-          <img src="images/blog/make-com-tutorial-beginners/hero.png"
-               alt="Make.com Tutorial for Beginners — How to automate with ChatGPT for free"
-               loading="lazy" width="600" height="315"
-               onerror="this.style.display='none'">
+          <img src="images/blog/make-com-tutorial-beginners/hero.png" alt="Make.com Tutorial for Beginners" loading="lazy" width="600" height="315" onerror="this.style.display='none'">
         </div>
         <div class="blog-content">
           <span class="blog-cat">⚡ Automation</span>
@@ -458,7 +493,6 @@
           </div>
         </div>
       </a>
-
     </div>
   </section>
 
@@ -539,323 +573,224 @@
     </div>
   </div>
 
-  <script>
-    <style>
-/* --- 1. APKI ORIGINAL STYLING (WITH MOVABLE & ANIMATION UPDATES) --- */
-#dm-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 3px solid #7c3aed; /* Neon border */
-  cursor: move; /* Dragging indicator */
-  background: none;
-  z-index: 9999;
-  padding: 0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  user-select: none;
-  -webkit-user-drag: none;
-  /* ✅ LIVING EFFECT: Breathing Animation */
-  animation: dm-breathe 3s ease-in-out infinite;
-}
 
-#dm-btn img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  pointer-events: none; /* Image drag ko disturb nahi karegi */
-}
+  <div id="dm-welcome-popup" class="dm-popup-hidden">
+    Hi! How can I help you today? 👋
+    <div class="dm-popup-arrow"></div>
+  </div>
 
-/* ✅ LIVING EFFECT: Pulse Glow Wave Behind Avatar */
-#dm-btn::after {
-  content: '';
-  position: absolute;
-  top: -3px; left: -3px; width: 100%; height: 100%;
-  border-radius: 50%;
-  border: 3px solid rgba(124, 58, 237, 0.6);
-  z-index: -1;
-  animation: dm-glow 2s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes dm-breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-}
-
-@keyframes dm-glow {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(1.4); opacity: 0; }
-}
-
-/* ✅ NEW EFFECT: Welcome Popup Bubble */
-#dm-welcome-popup {
-  position: fixed;
-  bottom: 100px;
-  right: 24px;
-  background: #7c3aed;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-family: sans-serif;
-  font-weight: 500;
-  white-space: nowrap;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  z-index: 10000;
-  pointer-events: none;
-}
-.dm-popup-hidden {
-  opacity: 0 !important;
-  transform: translateY(10px) scale(0.9) !important;
-}
-.dm-popup-arrow {
-  position: absolute;
-  bottom: -6px;
-  right: 22px;
-  width: 0; height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #7c3aed;
-}
-
-/* Chat Box Base Styles */
-#dm-box {
-  position: fixed;
-  bottom: 100px;
-  right: 24px;
-  width: 320px;
-  height: 420px;
-  background: #1a1a2e;
-  border-radius: 16px;
-  display: none;
-  flex-direction: column;
-  z-index: 9998;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-  border: 1px solid #7c3aed;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-#dm-head { background: #7c3aed; padding: 12px 16px; border-radius: 16px 16px 0 0; display: flex; align-items: center; gap: 10px; }
-#dm-head img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
-#dm-head span { color: white; font-weight: bold; font-size: 14px; font-family: sans-serif; }
-#dm-msgs { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
-#dm-msgs div { padding: 8px 12px; border-radius: 12px; font-size: 13px; font-family: sans-serif; max-width: 85%; line-height: 1.4; word-wrap: break-word; }
-.dm-bot { background: #2d2d44; color: #e2e8f0; align-self: flex-start; }
-.dm-user { background: #7c3aed; color: white; align-self: flex-end; }
-#dm-inp { display: flex; padding: 10px; gap: 8px; border-top: 1px solid #2d2d44; }
-#dm-inp input { flex: 1; background: #2d2d44; border: none; color: white; padding: 8px 12px; border-radius: 20px; font-size: 13px; outline: none; }
-#dm-inp button { background: #7c3aed; border: none; color: white; padding: 8px 14px; border-radius: 20px; cursor: pointer; font-size: 13px; }
-</style>
-
-<div id="dm-welcome-popup" class="dm-popup-hidden">
-  Hi! How can I help you today? 👋
-  <div class="dm-popup-arrow"></div>
-</div>
-
-<button id="dm-btn">
-  <img src="https://learntowork.online/images/isabella-avatar.png" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><circle cx=%2232%22 cy=%2232%22 r=%2232%22 fill=%22%237c3aed%22/><text x=%2232%22 y=%2238%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2224%22>👩‍💻</text></svg>'">
-</button>
-
-<div id="dm-box">
-  <div id="dm-head">
+  <button id="dm-btn">
     <img src="https://learntowork.online/images/isabella-avatar.png" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><circle cx=%2232%22 cy=%2232%22 r=%2232%22 fill=%22%237c3aed%22/><text x=%2232%22 y=%2238%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2224%22>👩‍💻</text></svg>'">
-    <span>Isabella</span>
+  </button>
+
+  <div id="dm-box">
+    <div id="dm-head">
+      <img src="https://learntowork.online/images/isabella-avatar.png" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><circle cx=%2232%22 cy=%2232%22 r=%2232%22 fill=%22%237c3aed%22/><text x=%2232%22 y=%2238%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2224%22>👩‍💻</text></svg>'">
+      <span>Isabella</span>
+    </div>
+    <div id="dm-msgs">
+      <div class="dm-bot">Hi! I'm Isabella 👋 How can I help you today?</div>
+    </div>
+    <div id="dm-inp">
+      <input id="dm-input" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')dmSend()">
+      <button onclick="dmSend()">Send</button>
+    </div>
   </div>
-  <div id="dm-msgs">
-    <div class="dm-bot">Hi! I'm Isabella 👋 How can I help you today?</div>
-  </div>
-  <div id="dm-inp">
-    <input id="dm-input" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')dmSend()">
-    <button onclick="dmSend()">Send</button>
-  </div>
-</div>
 
-<script>
-const WORKER = "https://isabella-bot.anayakhan9122.workers.dev";
-let dmHistory = [];
 
-const dmBtn = document.getElementById("dm-btn");
-const dmBox = document.getElementById("dm-box");
-const dmPopup = document.getElementById("dm-welcome-popup");
-
-// --- ⏰ 1. TIMED WELCOME POPUP LOGIC ---
-window.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    if (dmBox.style.display !== 'flex') {
-      dmPopup.classList.remove("dm-popup-hidden");
-      // Exact 4.5 seconds baad fade out ho jayega
-      setTimeout(() => {
-        dmPopup.classList.add("dm-popup-hidden");
-      }, 4500);
-    }
-  }, 1500);
-});
-
-// --- 🖱️ 2. DRAG LOGIC (MOUSE & TOUCH) ---
-let isDragging = false;
-let startX, startY, initialLeft, initialTop;
-let hasMoved = false;
-
-dmBtn.addEventListener("mousedown", dragStart);
-document.addEventListener("mousemove", dragMove);
-document.addEventListener("mouseup", dragEnd);
-
-dmBtn.addEventListener("touchstart", dragStart, { passive: false });
-document.addEventListener("touchmove", dragMove, { passive: false });
-document.addEventListener("touchend", dragEnd);
-
-function dragStart(e) {
-  isDragging = true;
-  hasMoved = false;
-  
-  const clientX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
-  const clientY = e.type === "touchstart" ? e.touches[0].clientY : e.clientY;
-  
-  startX = clientX;
-  startY = clientY;
-  
-  const rect = dmBtn.getBoundingClientRect();
-  initialLeft = rect.left;
-  initialTop = rect.top;
-  
-  dmBtn.style.right = "auto";
-  dmBtn.style.bottom = "auto";
-  dmBtn.style.left = initialLeft + "px";
-  dmBtn.style.top = initialTop + "px";
-  
-  // Drag start hote hi popup gayab kar dein
-  dmPopup.classList.add("dm-popup-hidden");
-}
-
-function dragMove(e) {
-  if (!isDragging) return;
-  
-  const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
-  const clientY = e.type === "touchmove" ? e.touches[0].clientY : e.clientY;
-  
-  const dx = clientX - startX;
-  const dy = clientY - startY;
-  
-  if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
-    hasMoved = true;
-  }
-  
-  let newLeft = initialLeft + dx;
-  let newTop = initialTop + dy;
-  
-  // Screen boundaries check (Scren se baahar na nikal sake)
-  if (newLeft < 0) newLeft = 0;
-  if (newLeft > window.innerWidth - 70) newLeft = window.innerWidth - 70;
-  if (newTop < 0) newTop = 0;
-  if (newTop > window.innerHeight - 70) newTop = window.innerHeight - 70;
-  
-  dmBtn.style.left = newLeft + "px";
-  dmBtn.style.top = newTop + "px";
-  
-  // Dynamic follow position for chat window and welcome bubble
-  dmBox.style.left = "auto";
-  dmBox.style.top = "auto";
-  
-  if (newLeft < window.innerWidth / 2) {
-    dmBox.style.right = "auto";
-    dmBox.style.left = (newLeft) + "px";
-    dmBox.style.bottom = (window.innerHeight - newTop + 12) + "px";
-    
-    dmPopup.style.right = "auto";
-    dmPopup.style.left = (newLeft) + "px";
-    dmPopup.style.bottom = (window.innerHeight - newTop + 12) + "px";
-    document.querySelector('.dm-popup-arrow').style.right = "auto";
-    document.querySelector('.dm-popup-arrow').style.left = "22px";
-  } else {
-    dmBox.style.left = "auto";
-    dmBox.style.right = (window.innerWidth - newLeft - 64) + "px";
-    dmBox.style.bottom = (window.innerHeight - newTop + 12) + "px";
-    
-    dmPopup.style.left = "auto";
-    dmPopup.style.right = (window.innerWidth - newLeft - 64) + "px";
-    dmPopup.style.bottom = (window.innerHeight - newTop + 12) + "px";
-    document.querySelector('.dm-popup-arrow').style.left = "auto";
-    document.querySelector('.dm-popup-arrow').style.right = "22px";
-  }
-  
-  if (e.cancelable) e.preventDefault();
-}
-
-function dragEnd() {
-  isDragging = false;
-  // Agar hilaaya nahi hai, sirf touch/click kiya hai, toh box toggle hoga
-  if (!hasMoved) {
-    toggleDmBox();
-  }
-}
-
-function toggleDmBox() {
-  const isFlex = dmBox.style.display === 'flex';
-  dmBox.style.display = isFlex ? 'none' : 'flex';
-  dmPopup.classList.add("dm-popup-hidden");
-  
-  // Box opening location correction
-  const rect = dmBtn.getBoundingClientRect();
-  if (rect.left < window.innerWidth / 2) {
-    dmBox.style.right = "auto";
-    dmBox.style.left = rect.left + "px";
-    dmBox.style.bottom = (window.innerHeight - rect.top + 12) + "px";
-  } else {
-    dmBox.style.left = "auto";
-    dmBox.style.right = (window.innerWidth - rect.left - 64) + "px";
-    dmBox.style.bottom = (window.innerHeight - rect.top + 12) + "px";
-  }
-}
-
-// --- 💬 3. APKI ORIGINAL CHAT LOGIC (WITH OPTIMIZATIONS) ---
-async function dmSend(){
-  const input = document.getElementById('dm-input');
-  const msg = input.value.trim();
-  if(!msg) return;
-  
-  input.value = '';
-  dmAddMsg(msg, 'dm-user');
-  dmHistory.push({role: "user", parts: [{text: msg}]});
-  dmAddMsg('...', 'dm-bot', 'dm-typing');
-  
-  try {
-    const r = await fetch(WORKER, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        message: msg,
-        history: dmHistory.slice(-10) // Akhiri 10 messages context ke liye
-      })
+  <script>
+    // --- 🌐 1. NATIVE WEBSITE UI LOGIC ---
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', function() {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) { nav.classList.add('scrolled'); } 
+      else { nav.classList.remove('scrolled'); }
     });
-    
-    const d = await r.json();
-    const typingIndicator = document.getElementById('dm-typing');
-    if(typingIndicator) typingIndicator.remove();
-    
-    const reply = d.reply || 'Sorry, try again.';
-    dmAddMsg(reply, 'dm-bot');
-    dmHistory.push({role: "model", parts: [{text: reply}]});
-  } catch(e) {
-    const typingIndicator = document.getElementById('dm-typing');
-    if(typingIndicator) typingIndicator.remove();
-    dmAddMsg('Connection error. Try again.', 'dm-bot');
-  }
-}
 
-function dmAddMsg(text, cls, id){
-  const msgs = document.getElementById('dm-msgs');
-  const div = document.createElement('div');
-  div.className = cls;
-  if(id) div.id = id;
-  div.textContent = text;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-</script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    if(mobileMenuBtn && navLinks) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-active');
+        const icon = mobileMenuBtn.querySelector('i');
+        if(icon.classList.contains('fa-bars')) {
+          icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+          icon.classList.replace('fa-times', 'fa-bars');
+        }
+      });
+      // Close menu on link click
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('mobile-active');
+          mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+        });
+      });
+    }
+
+    // Cookie Consent Banner Logic
+    function getCookie(name) {
+      let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+    window.addEventListener('load', function() {
+      if (!getCookie('cookieConsent')) {
+        document.getElementById('cookieBanner').classList.add('show');
+      }
+    });
+    function acceptCookies() {
+      document.cookie = "cookieConsent=accepted; max-age=" + (365*24*60*60) + "; path=/";
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+    function declineCookies() {
+      document.cookie = "cookieConsent=declined; max-age=" + (365*24*60*60) + "; path=/";
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+
+
+    // --- 🤖 2. ISABELLA CHATBOT CORE LOGIC ---
+    const WORKER = "https://isabella-bot.anayakhan9122.workers.dev";
+    let dmHistory = [];
+
+    const dmBtn = document.getElementById("dm-btn");
+    const dmBox = document.getElementById("dm-box");
+    const dmPopup = document.getElementById("dm-welcome-popup");
+
+    // Welcoming Popup Timer
+    setTimeout(() => {
+      if (dmBox.style.display !== 'flex') {
+        dmPopup.classList.remove("dm-popup-hidden");
+        setTimeout(() => {
+          dmPopup.classList.add("dm-popup-hidden");
+        }, 4500);
+      }
+    }, 1500);
+
+    // Draggable Touch & Mouse Logic
+    let isDragging = false;
+    let startX, startY, initialLeft, initialTop;
+    let hasMoved = false;
+
+    dmBtn.addEventListener("mousedown", dragStart);
+    document.addEventListener("mousemove", dragMove);
+    document.addEventListener("mouseup", dragEnd);
+
+    dmBtn.addEventListener("touchstart", dragStart, { passive: false });
+    document.addEventListener("touchmove", dragMove, { passive: false });
+    document.addEventListener("touchend", dragEnd);
+
+    function dragStart(e) {
+      isDragging = true;
+      hasMoved = false;
+      const clientX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+      const clientY = e.type === "touchstart" ? e.touches[0].clientY : e.clientY;
+      startX = clientX;
+      startY = clientY;
+      const rect = dmBtn.getBoundingClientRect();
+      initialLeft = rect.left;
+      initialTop = rect.top;
+      dmBtn.style.right = "auto";
+      dmBtn.style.bottom = "auto";
+      dmBtn.style.left = initialLeft + "px";
+      dmBtn.style.top = initialTop + "px";
+      dmPopup.classList.add("dm-popup-hidden");
+    }
+
+    function dragMove(e) {
+      if (!isDragging) return;
+      const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+      const clientY = e.type === "touchmove" ? e.touches[0].clientY : e.clientY;
+      const dx = clientX - startX;
+      const dy = clientY - startY;
+      if (Math.abs(dx) > 5 || Math.abs(dy) > 5) { hasMoved = true; }
+      let newLeft = initialLeft + dx;
+      let newTop = initialTop + dy;
+      if (newLeft < 0) newLeft = 0;
+      if (newLeft > window.innerWidth - 70) newLeft = window.innerWidth - 70;
+      if (newTop < 0) newTop = 0;
+      if (newTop > window.innerHeight - 70) newTop = window.innerHeight - 70;
+      dmBtn.style.left = newLeft + "px";
+      dmBtn.style.top = newTop + "px";
+      
+      // Follow updates for chat window layout boundaries
+      if (newLeft < window.innerWidth / 2) {
+        dmBox.style.right = "auto"; dmBox.style.left = (newLeft) + "px";
+        dmBox.style.bottom = (window.innerHeight - newTop + 12) + "px";
+        dmPopup.style.right = "auto"; dmPopup.style.left = (newLeft) + "px";
+        dmPopup.style.bottom = (window.innerHeight - newTop + 12) + "px";
+        document.querySelector('.dm-popup-arrow').style.right = "auto";
+        document.querySelector('.dm-popup-arrow').style.left = "22px";
+      } else {
+        dmBox.style.left = "auto"; dmBox.style.right = (window.innerWidth - newLeft - 64) + "px";
+        dmBox.style.bottom = (window.innerHeight - newTop + 12) + "px";
+        dmPopup.style.left = "auto"; dmPopup.style.right = (window.innerWidth - newLeft - 64) + "px";
+        dmPopup.style.bottom = (window.innerHeight - newTop + 12) + "px";
+        document.querySelector('.dm-popup-arrow').style.left = "auto";
+        document.querySelector('.dm-popup-arrow').style.right = "22px";
+      }
+      if (e.cancelable) e.preventDefault();
+    }
+
+    function dragEnd() {
+      isDragging = false;
+      if (!hasMoved) { toggleDmBox(); }
+    }
+
+    function toggleDmBox() {
+      const isFlex = dmBox.style.display === 'flex';
+      dmBox.style.display = isFlex ? 'none' : 'flex';
+      dmPopup.classList.add("dm-popup-hidden");
+      const rect = dmBtn.getBoundingClientRect();
+      if (rect.left < window.innerWidth / 2) {
+        dmBox.style.right = "auto"; dmBox.style.left = rect.left + "px";
+        dmBox.style.bottom = (window.innerHeight - rect.top + 12) + "px";
+      } else {
+        dmBox.style.left = "auto"; dmBox.style.right = (window.innerWidth - rect.left - 64) + "px";
+        dmBox.style.bottom = (window.innerHeight - rect.top + 12) + "px";
+      }
+    }
+
+    // Chat Processing Pipeline
+    async function dmSend(){
+      const input = document.getElementById('dm-input');
+      const msg = input.value.trim();
+      if(!msg) return;
+      
+      input.value = '';
+      dmAddMsg(msg, 'dm-user');
+      dmHistory.push({role: "user", parts: [{text: msg}]});
+      dmAddMsg('...', 'dm-bot', 'dm-typing');
+      
+      try {
+        const r = await fetch(WORKER, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ message: msg, history: dmHistory.slice(-10) })
+        });
+        const d = await r.json();
+        const typingIndicator = document.getElementById('dm-typing');
+        if(typingIndicator) typingIndicator.remove();
+        
+        const reply = d.reply || 'Sorry, try again.';
+        dmAddMsg(reply, 'dm-bot');
+        dmHistory.push({role: "model", parts: [{text: reply}]});
+      } catch(e) {
+        const typingIndicator = document.getElementById('dm-typing');
+        if(typingIndicator) typingIndicator.remove();
+        dmAddMsg('Connection error. Try again.', 'dm-bot');
+      }
+    }
+
+    function dmAddMsg(text, cls, id){
+      const msgs = document.getElementById('dm-msgs');
+      const div = document.createElement('div');
+      div.className = cls;
+      if(id) div.id = id;
+      div.textContent = text;
+      msgs.appendChild(div);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+  </script>
 </body>
 </html>
