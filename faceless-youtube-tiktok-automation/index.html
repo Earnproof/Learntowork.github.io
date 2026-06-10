@@ -197,7 +197,12 @@
       border: 1px solid #1e293b;
       box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
-    .hero-image-wrap img { width: 100%; display: block; }
+    .hero-image-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
 
     /* ===== LAYOUT ===== */
     .page-wrap {
@@ -206,12 +211,17 @@
       padding: 48px 24px 80px;
     }
 
-    /* ===== ARTICLE ===== */
+    /* ===== ARTICLE — FIXED ===== */
     .article-content {
       min-width: 0;
       width: 100%;
       overflow-wrap: break-word;
       word-break: break-word;
+      display: block;
+    }
+    .article-content > * {
+      display: block;
+      position: relative;
     }
     .article-content h2 {
       font-family: 'Space Grotesk', sans-serif;
@@ -230,10 +240,15 @@
       color: #e2e8f0;
       margin: 32px 0 12px;
     }
-    .article-content p { color: #cbd5e1; margin-bottom: 18px; font-size: 16px; }
+    .article-content p {
+      color: #cbd5e1;
+      margin-bottom: 18px;
+      font-size: 16px;
+      display: block;
+    }
     .article-content strong { color: #f1f5f9; font-weight: 600; }
 
-    /* ===== TOC — FIXED ===== */
+    /* ===== TOC — COMPLETELY FIXED ===== */
     .toc {
       background: #0f172a;
       border: 1px solid #1e293b;
@@ -244,6 +259,12 @@
       z-index: 1;
       display: block;
       width: 100%;
+      isolation: isolate;
+    }
+    .toc::after {
+      content: "";
+      display: table;
+      clear: both;
     }
     .toc-title {
       font-family: 'Space Grotesk', sans-serif;
@@ -251,20 +272,32 @@
       color: #fff;
       font-size: 16px;
       margin-bottom: 16px;
+      display: block;
     }
     .toc ol {
-      padding-left: 20px;
-      list-style: decimal;
+      display: block;
+      padding-left: 24px;
       margin: 0;
+      list-style: decimal;
+      list-style-position: outside;
     }
     .toc li {
+      display: list-item;
       margin-bottom: 10px;
       color: #94a3b8;
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
-    .toc a { color: #94a3b8; font-size: 14px; line-height: 1.5; }
-    .toc a:hover { color: #a78bfa; text-decoration: none; }
+    .toc a {
+      display: inline;
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .toc a:hover {
+      color: #a78bfa;
+      text-decoration: none;
+    }
 
     /* ===== BOXES ===== */
     .analogy-box {
@@ -429,9 +462,12 @@
     .step-content h4 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #fff; font-size: 16px; margin-bottom: 6px; margin-top: 10px; }
     .step-content p { color: #94a3b8; margin: 0; font-size: 15px; }
 
-    /* ===== BODY IMAGE ===== */
+    /* ===== BODY IMAGE — FIXED ===== */
     .body-image {
       width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
       border-radius: 12px;
       margin: 32px 0;
       box-shadow: 0 8px 32px rgba(0,0,0,0.4);
@@ -534,6 +570,7 @@
     gtag('js', new Date());
     gtag('config', 'G-G023112WHJ');
   </script>
+<base target="_blank">
 </head>
 <body>
 
@@ -580,7 +617,7 @@
   <div class="hero-image-wrap">
     <img src="images/faceless-youtube-tiktok-automation/faceless-youtube-tiktok-hero.png"
          alt="Faceless YouTube and TikTok Automation Guide 2026 — AI tools, niches, and how to make money without showing your face"
-         width="860" height="484">
+         loading="eager">
   </div>
 </section>
 
@@ -650,7 +687,7 @@
 
   <img src="images/faceless-youtube-tiktok-automation/best-niches-cpm-chart.png"
        alt="Best faceless YouTube and TikTok niches with CPM data 2026"
-       class="body-image" loading="lazy" width="860" height="484">
+       class="body-image" loading="lazy">
 
   <div class="table-wrap">
   <table class="niche-table">
@@ -753,7 +790,7 @@
 
   <img src="images/faceless-youtube-tiktok-automation/ai-video-tools-comparison.png"
        alt="AI video tools comparison 2026"
-       class="body-image" loading="lazy" width="860" height="484">
+       class="body-image" loading="lazy">
 
   <div class="tools-grid">
     <a class="tool-card" href="https://invideo.io" target="_blank" rel="noopener noreferrer">
@@ -1120,4 +1157,4 @@
 </script>
 
 </body>
-</html>
+                                      </html>
