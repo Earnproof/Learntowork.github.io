@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="https://learntowork.online/">
-  <title>Amazon FBA Complete Guide 2026: How to Start, What It Really Costs & How Much You Can Earn | LearnToWork</title>
+  <title>Amazon FBA Complete Guide 2026: How to Start, What It Really Costs & How Much You Can Earn | Learn To Work</title>
   <meta name="description" content="The honest Amazon FBA guide for 2026. Learn how to start, real startup costs ($500–$15,000), realistic earnings, step-by-step product research, and Pakistan alternatives.">
   <meta name="keywords" content="Amazon FBA 2026, Amazon FBA beginners, how to start Amazon FBA, Amazon FBA costs, Amazon FBA earnings, Amazon FBA Pakistan, FBA vs dropshipping">
   <meta name="author" content="Isabella">
@@ -82,6 +82,7 @@
     .nav-links a:hover { color: var(--white); text-decoration: none; }
     .nav-cta { background: var(--accent); color: var(--white) !important; padding: 8px 18px; border-radius: 8px; }
     .nav-cta:hover { background: var(--accent-hover) !important; }
+    .mobile-menu-btn { display: none; background: none; border: none; color: #f8fafc; font-size: 1.5rem; cursor: pointer; padding: 4px; line-height: 1; }
 
     /* HERO */
     .hero {
@@ -212,7 +213,10 @@
 
     /* RESPONSIVE */
     @media(max-width: 768px) {
-      .nav-links { display: none; }
+      .nav-links { position: fixed; top: 64px; left: 0; right: 0; background: rgba(2,6,23,0.98); backdrop-filter: blur(10px); flex-direction: column; padding: 2rem; gap: 1.5rem; transform: translateY(-150%); transition: transform 0.4s ease; border-bottom: 1px solid rgba(59,130,246,0.2); z-index: 999; display: flex !important; }
+      .nav-links.mobile-active { transform: translateY(0); }
+      .nav-links a { font-size: 1.05rem; padding: 0.4rem 0; }
+      .mobile-menu-btn { display: block; }
       .hero { padding: 40px 16px 32px; }
       .hero-sub { font-size: 0.95rem; }
       .hero-img { max-height: 35vh; }
@@ -239,20 +243,55 @@
       .hero-meta { gap: 12px; font-size: 0.78rem; }
     }
   </style>
+  <link rel="canonical" href="https://learntowork.online/amazon-fba-guide/" />
+  <meta name="twitter:title" content="Amazon FBA Complete Guide 2026: How to Start, What It Really Costs & How Much You Can Earn | Learn To Work" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Amazon FBA Complete Guide 2026: How to Start, What It Really Costs & How Much You Can Earn",
+    "description": "The honest Amazon FBA guide for 2026. Learn how to start, real costs, profit margins, and step-by-step setup.",
+    "image": "https://learntowork.online/images/amazon-fba-guide/amazon-fba-guide-social-share.png",
+    "url": "https://learntowork.online/amazon-fba-guide/",
+    "datePublished": "2026-02-15",
+    "dateModified": "2026-06-01",
+    "author": { "@type": "Person", "name": "Isabella", "url": "https://learntowork.online/about/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Learn To Work",
+      "url": "https://learntowork.online",
+      "logo": { "@type": "ImageObject", "url": "https://learntowork.online/favicon.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://learntowork.online/amazon-fba-guide/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://learntowork.online/"},
+      {"@type":"ListItem","position":2,"name":"Amazon Fba Guide","item":"https://learntowork.online/amazon-fba-guide/"}
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="/" class="nav-logo" target="_self">Learn<span>To</span>Work</a>
-  <ul class="nav-links">
+  <a href="/" class="nav-logo" target="_self"><i class="fas fa-rocket" style="color:#d4af37;margin-right:6px"></i> Learn To Work</a>
+  <ul class="nav-links" id="navLinks">
     <li><a href="/" target="_self">Home</a></li>
     <li><a href="/online-store/" target="_self">Online Store</a></li>
     <li><a href="/ai-earning/" target="_self">AI Earning</a></li>
     <li><a href="/video-automation/" target="_self">Video</a></li>
     <li><a href="/contact/" target="_self" class="nav-cta">Contact</a></li>
   </ul>
-</nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -932,5 +971,27 @@
   }
 </script>
 
+
+  <script>
+
+    // Mobile hamburger menu
+    (function() {
+      var btn = document.getElementById('mobileMenuBtn');
+      var links = document.getElementById('navLinks');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function() {
+        links.classList.toggle('mobile-active');
+        var icon = btn.querySelector('i');
+        if (icon) { icon.classList.toggle('fa-bars'); icon.classList.toggle('fa-times'); }
+      });
+      links.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          links.classList.remove('mobile-active');
+          var icon = btn.querySelector('i');
+          if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
