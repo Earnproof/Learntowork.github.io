@@ -334,15 +334,15 @@
     <aside class="toc-sidebar">
       <div class="toc-label"><i class="fas fa-list"></i> Table of Contents</div>
       <ul class="toc-list">
-        <li><a href="#what-is">1. What is Leverage?</a></li>
-        <li><a href="#how-works">2. How Leverage Works (Real Numbers)</a></li>
-        <li><a href="#types">3. Types of Leverage</a></li>
-        <li><a href="#margin-call">4. What is a Margin Call?</a></li>
-        <li><a href="#how-destroys">5. How Leverage Destroys Accounts</a></li>
-        <li><a href="#how-to-use">6. How to Use Leverage Safely</a></li>
-        <li><a href="#golden-rules">7. Golden Rules of Leverage</a></li>
-        <li><a href="#pakistan">8. Pakistan Angle</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="leverage-trading-guide/#what-is">1. What is Leverage?</a></li>
+        <li><a href="leverage-trading-guide/#how-works">2. How Leverage Works (Real Numbers)</a></li>
+        <li><a href="leverage-trading-guide/#types">3. Types of Leverage</a></li>
+        <li><a href="leverage-trading-guide/#margin-call">4. What is a Margin Call?</a></li>
+        <li><a href="leverage-trading-guide/#how-destroys">5. How Leverage Destroys Accounts</a></li>
+        <li><a href="leverage-trading-guide/#how-to-use">6. How to Use Leverage Safely</a></li>
+        <li><a href="leverage-trading-guide/#golden-rules">7. Golden Rules of Leverage</a></li>
+        <li><a href="leverage-trading-guide/#pakistan">8. Pakistan Angle</a></li>
+        <li><a href="leverage-trading-guide/#faq">FAQ</a></li>
       </ul>
     </aside>
 
@@ -645,6 +645,102 @@
           </a>
 
         </div>
+      </div>
+
+    </article>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" target="_self"><i class="fas fa-rocket"></i> Learn To Work</a>
+        <p>Free education for online earning — no scams, no shortcuts. Just real skills and real results. Built with passion by Isabella for learners worldwide.</p>
+        <div class="social-row">
+          <a href="https://www.youtube.com/@inkandechoes" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="trading-education/" target="_self">Trading Education</a></li>
+          <li><a href="ai-earning/" target="_self">AI Earning</a></li>
+          <li><a href="online-store/" target="_self">Online Store</a></li>
+          <li><a href="build-ai-products/" target="_self">Build AI Products</a></li>
+          <li><a href="video-automation/" target="_self">Video Automation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about/" target="_self">About Isabella</a></li>
+          <li><a href="contact/" target="_self">Contact</a></li>
+          <li><a href="blog/" target="_self">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy/" target="_self">Privacy Policy</a></li>
+          <li><a href="terms/" target="_self">Terms of Service</a></li>
+          <li><a href="disclaimer/" target="_self">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Learn To Work. All rights reserved. Built with passion for free education by Isabella.</p>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p>🍪 We use cookies and Google Analytics to improve your experience. <a href="privacy-policy/" target="_self">Privacy Policy</a>.</p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
+      <button class="cookie-decline" onclick="declineCookies()">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+      });
+    });
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const sections = document.querySelectorAll('article h2[id], .pk-section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 110) current = s.id; });
+      tocLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+    });
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        const isOpen = q.classList.contains('open');
+        document.querySelectorAll('.faq-q').forEach(x => x.classList.remove('open'));
+        document.querySelectorAll('.faq-a').forEach(x => x.classList.remove('open'));
+        if (!isOpen) { q.classList.add('open'); answer.classList.add('open'); }
+      });
+    });
+    function showCookieBanner() { if (!localStorage.getItem('cookieConsent')) document.getElementById('cookieBanner').classList.add('show'); }
+    function acceptCookies() { localStorage.setItem('cookieConsent','accepted'); document.getElementById('cookieBanner').classList.remove('show'); }
+    function declineCookies() { localStorage.setItem('cookieConsent','declined'); document.getElementById('cookieBanner').classList.remove('show'); }
+    window.addEventListener('load', showCookieBanner);
+  </script>
+
+</body>
+</html>
       </div>
 
     </article>
