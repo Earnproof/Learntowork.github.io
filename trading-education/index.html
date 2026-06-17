@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G023112WHJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,18 +12,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trading Education — Learn to Trade Smarter | Learn To Work</title>
-
   <link rel="icon" type="image/png" href="/favicon.png">
-
-  <meta name="description" content="Free trading education for beginners — candlestick patterns, AI chart tools, technical indicators, risk management, and geopolitical trading guides." />
-  <meta name="keywords" content="trading education, candlestick patterns, technical indicators, risk management trading, AI chart analysis" />
+  <meta name="description" content="Free trading education for beginners — candlestick patterns, AI chart tools, technical indicators, risk management, leverage, and geopolitical trading guides." />
+  <meta name="keywords" content="trading education, candlestick patterns, technical indicators, risk management trading, AI chart analysis, leverage trading" />
   <meta name="author" content="Isabella" />
   <meta name="robots" content="index, follow" />
-
   <link rel="canonical" href="https://learntowork.online/trading-education/" />
-
   <meta property="og:title" content="Trading Education — Learn to Trade Smarter | Learn To Work" />
-  <meta property="og:description" content="Free trading education for beginners — candlestick patterns, AI chart tools, technical indicators, risk management, and geopolitical trading guides." />
+  <meta property="og:description" content="Free trading education for beginners — candlestick patterns, AI chart tools, technical indicators, risk management, leverage, and geopolitical trading guides." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://learntowork.online/trading-education/" />
   <meta property="og:image" content="https://learntowork.online/images/Image.png" />
@@ -32,12 +27,8 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Learn To Work" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Trading Education — Learn to Trade Smarter | Learn To Work" />
-  <meta name="twitter:description" content="Free trading education for beginners — candlestick patterns, AI chart tools, technical indicators, risk management, and geopolitical trading guides." />
   <meta name="twitter:image" content="https://learntowork.online/images/Image.png" />
-
   <base href="/" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -46,10 +37,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; overflow-x: hidden; }
-    img { max-width: 100%; height: auto; display: block; } /* ✅ global image fix */
+    img { max-width: 100%; height: auto; display: block; }
     body { font-family: 'Inter', sans-serif; background: #020617; color: #f8fafc; line-height: 1.6; min-height: 100vh; overflow-x: hidden; width: 100%; }
     h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
-
     :root {
       --dark: #020617; --dark-2: #0f172a; --dark-3: #1e293b;
       --accent: #3b82f6; --accent-hover: #2563eb;
@@ -109,9 +99,12 @@
     .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
 
     /* ARTICLE CARD */
-    .article-card { background: var(--dark-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; overflow: hidden; transition: all 0.3s ease; text-decoration: none; display: block; }
+    .article-card { background: var(--dark-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; overflow: hidden; transition: all 0.3s ease; text-decoration: none; display: block; position: relative; }
     .article-card:hover { border-color: rgba(245,158,11,0.3); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(245,158,11,0.08); }
-    .card-img { width: 100%; max-width: 100%; height: 200px; object-fit: cover; object-position: center; display: block; flex-shrink: 0; } /* ✅ image overflow fix */
+    .new-badge { position: absolute; top: 12px; left: 12px; background: var(--trading); color: #000; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 50px; letter-spacing: 0.05em; text-transform: uppercase; z-index: 2; }
+    .card-img-wrap { width: 100%; height: 200px; overflow: hidden; flex-shrink: 0; background: var(--dark-3); }
+    .card-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.4s; }
+    .article-card:hover .card-img { transform: scale(1.04); }
     .card-body { padding: 1.5rem; }
     .card-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
     .card-tag { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--trading); background: rgba(245,158,11,0.1); padding: 0.2rem 0.6rem; border-radius: 50px; }
@@ -182,14 +175,8 @@
       .cookie-btns { width: 100%; }
       .cookie-accept, .cookie-decline { flex: 1; }
     }
-    @media (max-width: 480px) {
-      .nav-logo { font-size: 1rem; }
-      .hero h1 { font-size: 1.8rem; }
-    }
-
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--dark); }
-    ::-webkit-scrollbar-thumb { background: var(--dark-3); border-radius: 3px; }
+    @media (max-width: 480px) { .nav-logo { font-size: 1rem; } .hero h1 { font-size: 1.8rem; } }
+    ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: var(--dark); } ::-webkit-scrollbar-thumb { background: var(--dark-3); border-radius: 3px; }
   </style>
 </head>
 <body>
@@ -243,17 +230,52 @@
 
   <div class="section-header">
     <h2 class="section-title">Trading Guides</h2>
-    <span class="articles-count">6 articles + 5 quizzes</span>
+    <span class="articles-count">7 articles + 5 quizzes</span>
   </div>
 
   <div class="articles-grid">
 
-    <!-- Article 1: Candlestick Patterns -->
+    <!-- Article 7: Leverage — NEW (first position) -->
+    <a href="leverage-trading-guide/" class="article-card" target="_self">
+      <span class="new-badge">🆕 New</span>
+      <div class="card-img-wrap">
+        <picture>
+          <source srcset="images/leverage-trading-guide/leverage-trading-social-share.webp" type="image/webp">
+          <img src="images/leverage-trading-guide/leverage-trading-social-share.png" class="card-img" alt="What is Leverage in Trading Guide 2026" loading="eager" width="680" height="200">
+        </picture>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-tag">⚠️ High Risk Topic</span><span class="card-date">🗓 2026</span></div>
+        <h3 class="card-title">What is Leverage in Trading? How It Works and Why It Can Wipe Your Account</h3>
+        <p class="card-desc">Leverage explained with real numbers. How it works, how to use it safely — and exactly why it destroys most trading accounts. Must-read before using leverage.</p>
+        <div class="card-footer"><span class="card-read-time">⏱ 18 min read</span><span class="card-arrow">Read Guide →</span></div>
+      </div>
+    </a>
+
+    <!-- Article 6: Geopolitical -->
+    <a href="geopolitical-trading-guide/" class="article-card" target="_self">
+      <div class="card-img-wrap">
+        <picture>
+          <source srcset="images/geopolitical-trading-guide/geopolitical-trading-guide-social-share.webp" type="image/webp">
+          <img src="images/geopolitical-trading-guide/geopolitical-trading-guide-social-share.png" class="card-img" alt="How War and Geopolitical Events Affect Stock Markets" loading="lazy" width="680" height="200">
+        </picture>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-tag">Capital Protection</span><span class="card-date">🗓 2026</span></div>
+        <h3 class="card-title">How War & Geopolitical Events Affect the Stock Market (And How to Trade It)</h3>
+        <p class="card-desc">Wars and breaking news move markets in minutes. Learn which assets go up, which crash, how to protect your money, and how to profit — even during chaos.</p>
+        <div class="card-footer"><span class="card-read-time">⏱ 16 min read</span><span class="card-arrow">Read Guide →</span></div>
+      </div>
+    </a>
+
+    <!-- Article 1: Candlestick -->
     <a href="candlestick-patterns-guide/" class="article-card" target="_self">
-      <picture>
-        <source srcset="images/candlestick-patterns-guide/candlestick-guide-social-share.webp" type="image/webp">
-        <img src="images/candlestick-patterns-guide/candlestick-guide-social-share.png" class="card-img" alt="Candlestick Patterns Guide" loading="lazy" width="680" height="200">
-      </picture>
+      <div class="card-img-wrap">
+        <picture>
+          <source srcset="images/candlestick-patterns-guide/candlestick-guide-social-share.webp" type="image/webp">
+          <img src="images/candlestick-patterns-guide/candlestick-guide-social-share.png" class="card-img" alt="Candlestick Patterns Guide" loading="lazy" width="680" height="200">
+        </picture>
+      </div>
       <div class="card-body">
         <div class="card-meta"><span class="card-tag">Basics to Expert</span><span class="card-date">🗓 2026</span></div>
         <h3 class="card-title">Candlestick Patterns: Complete Guide — Basics to Expert</h3>
@@ -270,12 +292,14 @@
       <div class="quiz-footer"><span class="quiz-count">📝 15 Questions</span><span class="quiz-btn">Take Quiz →</span></div>
     </a>
 
-    <!-- Article 2: AI Chart Analysis -->
+    <!-- Article 2: AI Chart -->
     <a href="ai-chart-analysis-guide/" class="article-card" target="_self">
-      <picture>
-        <source srcset="images/ai-chart-analysis-guide/ai-chart-analysis-social-share.webp" type="image/webp">
-        <img src="images/ai-chart-analysis-guide/ai-chart-analysis-social-share.png" class="card-img" alt="AI Chart Analysis Guide" loading="lazy" width="680" height="200">
-      </picture>
+      <div class="card-img-wrap">
+        <picture>
+          <source srcset="images/ai-chart-analysis-guide/ai-chart-analysis-social-share.webp" type="image/webp">
+          <img src="images/ai-chart-analysis-guide/ai-chart-analysis-social-share.png" class="card-img" alt="AI Chart Analysis Guide" loading="lazy" width="680" height="200">
+        </picture>
+      </div>
       <div class="card-body">
         <div class="card-meta"><span class="card-tag">Free & Paid Tools</span><span class="card-date">🗓 2026</span></div>
         <h3 class="card-title">I Used AI to Analyze My Charts for 30 Days — Full Guide 2026</h3>
@@ -292,12 +316,14 @@
       <div class="quiz-footer"><span class="quiz-count">📝 15 Questions</span><span class="quiz-btn">Take Quiz →</span></div>
     </a>
 
-    <!-- Article 3: How AI is Changing Trading -->
+    <!-- Article 3: AI Changing Trading -->
     <a href="how-ai-is-changing-trading/" class="article-card" target="_self">
-      <picture>
-        <source srcset="images/how-ai-is-changing-trading/how-ai-is-changing-trading-social-share.webp" type="image/webp">
-        <img src="images/how-ai-is-changing-trading/how-ai-is-changing-trading-social-share.png" class="card-img" alt="How AI Is Changing Trading 2026" loading="lazy" width="680" height="200">
-      </picture>
+      <div class="card-img-wrap">
+        <picture>
+          <source srcset="images/how-ai-is-changing-trading/how-ai-is-changing-trading-social-share.webp" type="image/webp">
+          <img src="images/how-ai-is-changing-trading/how-ai-is-changing-trading-social-share.png" class="card-img" alt="How AI Is Changing Trading 2026" loading="lazy" width="680" height="200">
+        </picture>
+      </div>
       <div class="card-body">
         <div class="card-meta"><span class="card-tag">Free Tools & Strategy</span><span class="card-date">🗓 2026</span></div>
         <h3 class="card-title">How AI Is Changing Trading in 2026 — Free Tools & Strategies Every Retail Trader Needs</h3>
@@ -316,10 +342,12 @@
 
     <!-- Article 4: Technical Indicators -->
     <a href="technical-indicators-guide/" class="article-card" target="_self">
-      <picture>
-        <source srcset="images/technical-indicators-guide/technical-indicators-social-share.webp" type="image/webp">
-        <img src="images/technical-indicators-guide/technical-indicators-social-share.png" class="card-img" alt="Technical Indicators Guide" loading="lazy" width="680" height="200">
-      </picture>
+      <div class="card-img-wrap">
+        <picture>
+          <source srcset="images/technical-indicators-guide/technical-indicators-social-share.webp" type="image/webp">
+          <img src="images/technical-indicators-guide/technical-indicators-social-share.png" class="card-img" alt="Technical Indicators Guide" loading="lazy" width="680" height="200">
+        </picture>
+      </div>
       <div class="card-body">
         <div class="card-meta"><span class="card-tag">Basics to Expert</span><span class="card-date">🗓 2026</span></div>
         <h3 class="card-title">RSI, MACD & Bollinger Bands: Complete Technical Indicators Guide</h3>
@@ -338,10 +366,12 @@
 
     <!-- Article 5: Risk Management -->
     <a href="risk-management-guide/" class="article-card" target="_self">
-      <picture>
-        <source srcset="images/risk-management-guide/risk-management-social-share.webp" type="image/webp">
-        <img src="images/risk-management-guide/risk-management-social-share.png" class="card-img" alt="Risk Management Guide 2026" loading="lazy" width="680" height="200">
-      </picture>
+      <div class="card-img-wrap">
+        <picture>
+          <source srcset="images/risk-management-guide/risk-management-social-share.webp" type="image/webp">
+          <img src="images/risk-management-guide/risk-management-social-share.png" class="card-img" alt="Risk Management Guide 2026" loading="lazy" width="680" height="200">
+        </picture>
+      </div>
       <div class="card-body">
         <div class="card-meta"><span class="card-tag">A to Z Guide</span><span class="card-date">🗓 2026</span></div>
         <h3 class="card-title">Why 90% of Traders Lose Money — Risk Management Guide 2026</h3>
@@ -350,26 +380,12 @@
       </div>
     </a>
 
-    <!-- Quiz 5: Risk Management -->
+    <!-- Quiz 5 -->
     <a href="risk-management-guide/quiz/" class="quiz-card" target="_self">
       <div class="quiz-header"><span class="quiz-icon">🛡️</span><span class="quiz-score-badge empty" id="badge-riskmanagement">Not taken yet</span></div>
       <h3 class="quiz-title">Test Your Risk Management Knowledge</h3>
       <p class="quiz-desc">1% rule, stop loss, position sizing, risk/reward, leverage, psychology — how well do you know risk management? 15 MCQs.</p>
       <div class="quiz-footer"><span class="quiz-count">📝 15 Questions</span><span class="quiz-btn">Take Quiz →</span></div>
-    </a>
-
-    <!-- Article 6: Geopolitical Trading — NEW ✅ -->
-    <a href="geopolitical-trading-guide/" class="article-card" target="_self">
-      <picture>
-        <source srcset="images/geopolitical-trading-guide/geopolitical-trading-guide-social-share.webp" type="image/webp">
-        <img src="images/geopolitical-trading-guide/geopolitical-trading-guide-social-share.png" class="card-img" alt="How War and Geopolitical Events Affect Stock Markets" loading="lazy" width="680" height="200">
-      </picture>
-      <div class="card-body">
-        <div class="card-meta"><span class="card-tag">Capital Protection</span><span class="card-date">🗓 2026</span></div>
-        <h3 class="card-title">How War & Geopolitical Events Affect the Stock Market (And How to Trade It)</h3>
-        <p class="card-desc">Wars and breaking news move markets in minutes. Learn which assets go up, which crash, how to protect your money, and how to profit — even during chaos.</p>
-        <div class="card-footer"><span class="card-read-time">⏱ 16 min read</span><span class="card-arrow">Read Guide →</span></div>
-      </div>
     </a>
 
   </div>
@@ -381,7 +397,7 @@
       <div class="learn-item"><div class="learn-icon">🕯️</div><div class="learn-text"><h4>Candlestick Patterns</h4><p>Read the market's language from basic to advanced patterns</p></div></div>
       <div class="learn-item"><div class="learn-icon">📈</div><div class="learn-text"><h4>Chart Reading</h4><p>Understand trends, support, resistance, and price action</p></div></div>
       <div class="learn-item"><div class="learn-icon">🤖</div><div class="learn-text"><h4>AI Trading Tools</h4><p>Use AI to analyze charts and make more informed decisions</p></div></div>
-      <div class="learn-item"><div class="learn-icon">🎯</div><div class="learn-text"><h4>Demo Account Practice</h4><p>Practice everything risk-free before using real money</p></div></div>
+      <div class="learn-item"><div class="learn-icon">⚠️</div><div class="learn-text"><h4>Leverage & Risk</h4><p>Understand leverage before you use it — the most dangerous tool</p></div></div>
       <div class="learn-item"><div class="learn-icon">🛡️</div><div class="learn-text"><h4>Risk Management</h4><p>Learn how to protect your capital — the most important skill</p></div></div>
       <div class="learn-item"><div class="learn-icon">🌍</div><div class="learn-text"><h4>Geopolitical Trading</h4><p>Trade wars, crises, and breaking news the smart way</p></div></div>
     </div>
@@ -389,7 +405,6 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -404,11 +419,11 @@
     <div class="footer-col">
       <h4>Categories</h4>
       <ul>
+        <li><a href="trading-education/" target="_self">Trading Education</a></li>
         <li><a href="ai-earning/" target="_self">AI Earning</a></li>
-        <li><a href="video-automation/" target="_self">Video Automation</a></li>
         <li><a href="online-store/" target="_self">Online Store</a></li>
         <li><a href="build-ai-products/" target="_self">Build AI Products</a></li>
-        <li><a href="trading-education/" target="_self">Trading Education</a></li>
+        <li><a href="video-automation/" target="_self">Video Automation</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -433,7 +448,6 @@
   </div>
 </footer>
 
-<!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
   <p>🍪 We use cookies and Google Analytics to improve your experience. <a href="privacy-policy/" target="_self">Privacy Policy</a>.</p>
   <div class="cookie-btns">
@@ -443,12 +457,9 @@
 </div>
 
 <script>
-  // Nav scroll
   window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
   });
-
-  // Hamburger
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
   hamburger.addEventListener('click', () => {
@@ -461,14 +472,10 @@
       mobileNav.classList.remove('open');
     });
   });
-
-  // Cookie
   function showCookieBanner() { if (!localStorage.getItem('cookieConsent')) document.getElementById('cookieBanner').classList.add('show'); }
   function acceptCookies() { localStorage.setItem('cookieConsent','accepted'); document.getElementById('cookieBanner').classList.remove('show'); }
   function declineCookies() { localStorage.setItem('cookieConsent','declined'); document.getElementById('cookieBanner').classList.remove('show'); }
   window.addEventListener('load', showCookieBanner);
-
-  // Quiz scores from localStorage
   (function() {
     const quizzes = [
       { key: 'trading_quiz_candlesticks_score', badge: 'badge-candlesticks' },
