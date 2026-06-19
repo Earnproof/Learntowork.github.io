@@ -53,7 +53,7 @@
       --primary: #0f172a; --primary-light: #1e293b; --accent: #3b82f6; --accent-hover: #2563eb;
       --gold: #d4af37; --dark: #020617; --light: #f8fafc; --gray: #94a3b8; --gray-dark: #475569;
       --border: rgba(148,163,184,0.1); --card-bg: rgba(15,23,42,0.7); --green: #10b981; --trading: #f59e0b;
-      --purple: #7c3aed; --purple-light: #a78bfa;
+      --purple: #7c3aed; --purple-light: #a78bfa; --orange: #f97316; --teal: #0d9488;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -109,6 +109,11 @@
     .cat-ai-products .earning-range { color:var(--purple); }
     .cat-ai-products .explore-link:hover { color:var(--purple); background:rgba(124,58,237,0.1); }
     .cat-ai-products .category-title-link:hover h3 { color:var(--purple); }
+    .cat-ecommerce .category-icon { background:rgba(249,115,22,0.1); color:var(--orange); }
+    .cat-ecommerce:hover { border-color:rgba(249,115,22,0.3) !important; }
+    .cat-ecommerce .earning-range { color:var(--orange); }
+    .cat-ecommerce .explore-link:hover { color:var(--orange); background:rgba(249,115,22,0.1); }
+    .cat-ecommerce .category-title-link:hover h3 { color:var(--orange); }
     .category-title-link { text-decoration:none; color:var(--light); display:block; }
     .category-card h3 { font-size:1.15rem; font-weight:600; margin-bottom:0.5rem; transition:color 0.3s; }
     .category-title-link:hover h3 { color:var(--accent); }
@@ -143,6 +148,7 @@
     .tag-trading { background:rgba(245,158,11,0.1); color:var(--trading); }
     .tag-ai { background:rgba(124,58,237,0.1); color:var(--purple-light); }
     .tag-blog { background:rgba(59,130,246,0.1); color:var(--accent); }
+    .tag-ecommerce { background:rgba(249,115,22,0.1); color:var(--orange); }
     .social-share-bar { display:flex; align-items:center; gap:0.75rem; padding:1rem 0; border-top:1px solid var(--border); margin-top:0.5rem; }
     .social-share-bar span { font-size:0.8rem; color:var(--gray); margin-right:0.5rem; }
     .share-btn { width:36px; height:36px; border-radius:8px; border:1px solid var(--border); background:var(--card-bg); color:var(--gray); display:flex; align-items:center; justify-content:center; font-size:0.9rem; cursor:pointer; transition:all 0.2s; text-decoration:none; }
@@ -326,6 +332,16 @@
           <a href="online-store/" class="explore-link" target="_self">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+      <div class="category-card cat-ecommerce">
+        <div class="category-icon"><i class="fas fa-shopping-cart"></i></div>
+        <a href="ecommerce/" class="category-title-link" target="_self"><h3>E-commerce</h3></a>
+        <p>Start and grow your own online store — platforms, payments, suppliers, and scaling strategies.</p>
+        <div class="article-count"><i class="fas fa-file-alt"></i> 1 Guide</div>
+        <div class="category-meta">
+          <span class="earning-range">$500–5,000/mo</span>
+          <a href="ecommerce/" class="explore-link" target="_self">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
       <div class="category-card cat-trading">
         <div class="category-icon"><i class="fas fa-chart-line"></i></div>
         <a href="trading-education/" class="category-title-link" target="_self"><h3>Trading Education</h3></a>
@@ -347,9 +363,43 @@
     </div>
     <div class="articles-grid">
 
-      <!-- 1. Faceless YouTube & TikTok — NEW -->
-      <a href="faceless-youtube-tiktok-automation/" class="article-card" target="_self">
+      <!-- 1. E-commerce vs Dropshipping — NEW -->
+      <a href="ecommerce-vs-dropshipping/" class="article-card" target="_self">
         <span class="new-badge">New</span>
+        <div class="article-image">
+          <picture>
+            <source srcset="images/ecommerce-vs-dropshipping/ecommerce-vs-dropshipping-social-share.webp" type="image/webp">
+            <img src="images/ecommerce-vs-dropshipping/ecommerce-vs-dropshipping-social-share.png" alt="E-commerce vs Dropshipping 2026" loading="lazy">
+          </picture>
+        </div>
+        <div class="article-content">
+          <h4>E-commerce vs Dropshipping: Which Should You Start in 2026?</h4>
+          <p>Real costs, real risks, and an honest breakdown of which business model actually fits your budget and goals — with a Pakistan-specific section.</p>
+          <div class="article-tags">
+            <span class="tag tag-new">New</span>
+            <span class="tag tag-ecommerce">E-commerce</span>
+            <span class="tag">Dropshipping</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2. Leverage Trading Guide -->
+      <a href="leverage-trading-guide/" class="article-card" target="_self">
+        <div class="article-image">
+          <img src="images/leverage-trading-guide/leverage-trading-guide-social-share.png" alt="What is Leverage in Trading 2026" loading="lazy">
+        </div>
+        <div class="article-content">
+          <h4>What is Leverage in Trading? The 1:100 Risk Explained</h4>
+          <p>Control $100,000 with just $1,000 — but is it worth the risk? A clear breakdown of how leverage works and how to use it safely.</p>
+          <div class="article-tags">
+            <span class="tag tag-trading">Trading</span>
+            <span class="tag">Risk Management</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 3. Faceless YouTube & TikTok -->
+      <a href="faceless-youtube-tiktok-automation/" class="article-card" target="_self">
         <div class="article-image">
           <img src="images/faceless-youtube-tiktok-automation/faceless-youtube-tiktok-social-share.png" alt="Faceless YouTube and TikTok Automation Guide 2026" loading="lazy">
         </div>
@@ -357,7 +407,6 @@
           <h4>Faceless YouTube & TikTok Automation 2026</h4>
           <p>Make money without showing your face. Best AI tools, high-CPM niches, platform policies, and a step-by-step guide to start your first faceless channel today.</p>
           <div class="article-tags">
-            <span class="tag tag-new">New</span>
             <span class="tag tag-ai">AI Tools</span>
             <span class="tag">Niches & CPM</span>
             <span class="tag">TikTok</span>
@@ -365,7 +414,7 @@
         </div>
       </a>
 
-      <!-- 2. Build AI Products — FEATURED -->
+      <!-- 4. Build AI Products — FEATURED -->
       <a href="build-ai-products/class-1/" class="article-card" target="_self">
         <span class="featured-badge">🚀 Free Course</span>
         <div class="article-image">
@@ -389,7 +438,7 @@
         </div>
       </a>
 
-      <!-- 3. AI Chart Analysis -->
+      <!-- 5. AI Chart Analysis -->
       <a href="ai-chart-analysis-guide/" class="article-card" target="_self">
         <div class="article-image">
           <img src="images/ai-chart-analysis-guide/ai-chart-analysis-social-share.png" alt="AI Chart Analysis Guide" loading="lazy">
@@ -404,7 +453,7 @@
         </div>
       </a>
 
-      <!-- 4. Shopify Dropshipping -->
+      <!-- 6. Shopify Dropshipping -->
       <a href="shopify-dropshipping-guide/" class="article-card" target="_self">
         <div class="article-image">
           <img src="images/shopify-dropshipping-guide/shopify-dropshipping-guide-social-share.png" alt="Shopify Dropshipping Complete Guide" loading="lazy">
@@ -420,7 +469,7 @@
         </div>
       </a>
 
-      <!-- 5. YouTube Automation -->
+      <!-- 7. YouTube Automation -->
       <a href="youtube-automation/" class="article-card" target="_self">
         <div class="article-image">
           <img src="images/youtube-automation/youtube-automation-social-share.jpg" alt="YouTube Automation Mastery Guide" loading="lazy">
@@ -522,6 +571,7 @@
           <li><a href="ai-earning/" target="_self">Earn with AI</a></li>
           <li><a href="video-automation/" target="_self">Video Automation</a></li>
           <li><a href="online-store/" target="_self">Online Store</a></li>
+          <li><a href="ecommerce/" target="_self">E-commerce</a></li>
           <li><a href="trading-education/" target="_self">Trading Education</a></li>
         </ul>
       </div>
